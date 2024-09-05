@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f616-3f08-ee8e-3349" name="Xenos - Leagues of Votann" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="f616-3f08-ee8e-3349" name="Xenos - Leagues of Votann" revision="22" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <categoryEntries>
     <categoryEntry id="5a53-ae58-e0d9-0616" name="Hearthkyn Warriors" hidden="false"/>
     <categoryEntry id="a360-cb11-e139-55df" name="Ûthar the Destined" hidden="false"/>
@@ -54,6 +54,47 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hearthfire Strike" hidden="false" id="ff18-89b8-2364-9f5a" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Wrought in Wrath" id="e03d-4670-1ae7-5604" hidden="false">
+                  <description>Add 1 to Advance and Charge rolls made for LEAGUES OF VOTANN units from your army.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Void Salvagers" hidden="false" id="a385-cc3a-7903-2c3d" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Stalwart Advance" id="1030-6413-c399-dd34" hidden="false">
+                  <description>In your Shooting phase, each time a LEAGUES OF VOTANN unit from your army has shot, if one or more enemy units were destroyed by those attacks and that LEAGUES OF VOTANN unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 3&quot; and can then attempt to operate a Hatchway.</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -105,6 +146,7 @@
         <infoLink id="fabe-a7e6-dff1-f548" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="53a7-126c-5f2f-903c" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
         <infoLink id="a502-4760-9e5e-6207" name="Grim Efficiency" hidden="false" targetId="d3b8-a9b6-d4ff-013e" type="profile"/>
+        <infoLink name="Eternal Resentment" id="1df4-162f-1510-5267" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="45c4-5b27-8c57-32df" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -154,6 +196,32 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="e6e2-b39e-2350-43c2">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ba4f-c3f9-6925-af0c" name="Hearthkyn Warriors" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -164,6 +232,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="15e9-df12-30b7-42cb" name="Hearthkyn Warriors" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
           <characteristics>
@@ -179,6 +259,7 @@
       <infoLinks>
         <infoLink id="38fc-9cf5-b104-3ff8" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="1667-8d87-9cd8-7512" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="fe30-43af-f96e-0467" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="af3d-c404-9093-025e" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -770,6 +851,31 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="22c9-8d24-b1de-91ba" type="selectionEntry" targetId="3ca5-ff1a-193a-bd6f"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="bb5d-3510-9d18-c809"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="0369-3c56-a9d1-307d" name="Rampart crest" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -824,6 +930,7 @@
         <infoLink id="9255-8508-8525-ab6e" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="20d5-8358-15be-4342" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="8ea7-9090-9f3b-b1be" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="2d56-c8c6-fba8-e66f" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8eba-a0ee-7c2e-467c" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -893,7 +1000,20 @@
           </constraints>
           <entryLinks>
             <entryLink id="13c9-0632-b390-34b5" name="Rampart crest" hidden="false" collective="false" import="true" targetId="0369-3c56-a9d1-307d" type="selectionEntry"/>
-            <entryLink id="ffd1-aac2-01c0-c05a" name="Teleport crest" hidden="false" collective="false" import="true" targetId="0a19-2550-9aad-a268" type="selectionEntry"/>
+            <entryLink id="ffd1-aac2-01c0-c05a" name="Teleport crest" hidden="false" collective="false" import="true" targetId="0a19-2550-9aad-a268" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -904,6 +1024,33 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="54aa-a4a8-5f6c-c86a"/>
+            <modifier type="set" value="0" field="54aa-a4a8-5f6c-c86a">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6a0b-0a93-2494-57f9" name="Autoch-pattern combi-bolter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -997,12 +1144,25 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model ends a Charge move, you can select one enemy unit within Engagement Range of this unit and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="6cc9-5433-eeba-da44" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="ad43-385c-5be2-2557" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="7b88-68ad-3a1f-880b" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="64c5-8885-a6b6-207e" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8847-5ae0-2651-281f" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -1018,7 +1178,20 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b39-07da-c195-9314" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="9fc0-572e-c94d-dfda" name="Teleport crest" hidden="false" collective="false" import="true" targetId="0a19-2550-9aad-a268" type="selectionEntry"/>
+            <entryLink id="9fc0-572e-c94d-dfda" name="Teleport crest" hidden="false" collective="false" import="true" targetId="0a19-2550-9aad-a268" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
             <entryLink id="e5d4-81b0-9513-29fe" name="Weavefield crest" hidden="false" collective="false" import="true" targetId="7133-f7e4-5925-8200" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -1080,6 +1253,42 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9c7b-a06f-79ab-c6d5"/>
+            <modifier type="set" value="0" field="9c7b-a06f-79ab-c6d5">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="9c7b-a06f-79ab-c6d5"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="7133-f7e4-5925-8200" name="Weavefield crest" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -1127,6 +1336,7 @@
         <infoLink id="1bd1-ef88-51ab-dd6e" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="0e55-0790-09f9-cab6" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="7549-30e2-7891-6780" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="3096-cb8f-9390-550d" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c7c5-6c5f-51e4-8ef8" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -1154,7 +1364,6 @@
             </profile>
           </profiles>
           <categoryLinks>
-            <categoryLink id="7ef1-175d-96db-fe06" name="Character" hidden="false" targetId="9cfd-1c32-585f-7d5c" primary="false"/>
             <categoryLink id="5162-8b23-2071-ae87" name="Psyker" hidden="false" targetId="13bf-2bee-3ae0-b414" primary="false"/>
           </categoryLinks>
           <selectionEntries>
@@ -1300,6 +1509,33 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="7d6f-8a91-3a8c-7d76"/>
+            <modifier type="set" value="0" field="7d6f-8a91-3a8c-7d76">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3bb3-2054-8746-01ca" name="Autoch-pattern bolter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1346,6 +1582,7 @@
         <infoLink id="b8b2-1ac7-9247-ce63" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="b758-0ae9-517e-8e53" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="dbc4-b749-1b8d-7750" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="55e1-724a-c550-e91e" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dc3a-2d6a-8123-2be9" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -1371,9 +1608,6 @@
               </characteristics>
             </profile>
           </profiles>
-          <categoryLinks>
-            <categoryLink id="11c6-eb95-0b57-a687" name="Character" hidden="false" targetId="9cfd-1c32-585f-7d5c" primary="false"/>
-          </categoryLinks>
           <selectionEntries>
             <selectionEntry id="0206-aa8c-5d20-9fc5" name="Graviton rifle" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1641,6 +1875,33 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="aa75-c505-8fff-0e59"/>
+            <modifier type="set" value="0" field="aa75-c505-8fff-0e59">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="09d3-6357-7888-00d9" name="Einhyr Hearthguard" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1648,6 +1909,17 @@
           <conditions>
             <condition field="selections" scope="09d3-6357-7888-00d9" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1663,6 +1935,7 @@
       <infoLinks>
         <infoLink id="1d85-675b-599d-1ec8" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="a71c-a52a-c2c3-7b6e" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="c0ab-fabf-9b10-bfe2" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f112-a95c-a22b-1eec" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -2062,11 +2335,43 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="4" field="7c47-f666-0370-415b">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="160"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e2c9-d752-828a-7fc2" type="selectionEntry" targetId="3ca5-ff1a-193a-bd6f"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e590-68f0-b33c-9664"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff18-89b8-2364-9f5a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="e590-68f0-b33c-9664"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="415a-e6f6-d17f-d700" name="Cthonian Beserks" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2074,6 +2379,16 @@
           <conditions>
             <condition field="selections" scope="415a-e6f6-d17f-d700" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2094,6 +2409,7 @@
             <modifier type="append" field="name" value="5+"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Eternal Resentment" id="09d9-3db6-ed09-3af8" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="05cf-0add-745b-1c65" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -2320,6 +2636,19 @@ Designer’s Note: While a unit is shaken, place a Mole Grenade token next to th
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="d316-b944-1245-2299" type="selectionEntry" targetId="3ca5-ff1a-193a-bd6f"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="733b-21a8-cda0-eede"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="9086-5272-398b-bbce" name="Hernkyn Pioneers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2327,6 +2656,15 @@ Designer’s Note: While a unit is shaken, place a Mole Grenade token next to th
           <conditions>
             <condition field="selections" scope="9086-5272-398b-bbce" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2856,6 +3194,17 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ea1b-99f6-c398-06b1" name="Brôkhyr Thunderkyn" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2863,6 +3212,16 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <conditions>
             <condition field="selections" scope="ea1b-99f6-c398-06b1" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2888,6 +3247,7 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
       <infoLinks>
         <infoLink id="182a-bf4e-0a00-23a6" name="Eye of the Ancestors" hidden="false" targetId="351a-a702-9080-7f08" type="rule"/>
         <infoLink id="a3c0-16dc-0a99-2e7a" name="Ruthless Efficiency" hidden="false" targetId="ac1b-7bc9-3778-09a1" type="rule"/>
+        <infoLink name="Eternal Resentment" id="eb6d-67db-2994-3053" hidden="false" type="rule" targetId="8e45-43e6-0384-7779"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="438e-266b-89e1-a213" name="Faction: Leagues of Votann" hidden="false" targetId="8474-765-16a9-f00d" primary="false"/>
@@ -3012,11 +3372,35 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="5f97-c7df-7155-bd5e">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="ec5b-d99e-7dcb-319f" type="selectionEntry" targetId="3ca5-ff1a-193a-bd6f"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e567-c551-a298-34b8"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="a110-e538-4e85-159b" name="Hekaton Land Fortress" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -3248,6 +3632,17 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1f5d-cdd3-b35e-edef" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="43cd-5e9f-e550-83e0" name="Twin bolt cannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3557,14 +3952,48 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="3ca5-ff1a-193a-bd6f" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1315-f3a1-f9c3-69e2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="bc99-c76b-20e9-6ed5" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="06ba-6740-bf71-0eea" name="Enhancements" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="2" field="7161-ad42-57a5-8b41">
           <conditions>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8103-5cc7-c12e-efc5" type="equalTo"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3587,6 +4016,13 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="8103-5cc7-c12e-efc5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="dc6c-e67b-cada-188a" name="Appraising Glare" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3602,6 +4038,13 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="8103-5cc7-c12e-efc5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="8be4-a0be-9a63-183c" name="Grim Demeanour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3617,6 +4060,13 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="8103-5cc7-c12e-efc5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="69b9-f4ed-6370-e85e" name="Wayfarer&apos;s Grace" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3632,8 +4082,94 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="8103-5cc7-c12e-efc5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="b89d-0341-4c68-0920" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Hearthfire Strike Enhancements" id="6145-42a4-28dc-360c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Celebrated Folk Hero" hidden="false" id="aa7b-8d22-703d-5666" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9b0-20e4-e93c-e811" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2bec-6031-3082-c8e0" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Celebrated Folk Hero" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="710b-4f8e-c4d8-dedf">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">The first time the bearer is destroyed, each enemy unit on the battlefield gains 1 Judgement token.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gulyk&apos;s Stars" hidden="false" id="8604-4685-458a-bbd2" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="49f8-68dc-5862-4a33" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="271c-7623-0ec0-01f5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Gulyk&apos;s Stars" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2a7d-1359-60a1-2bc5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-4, that enemy unit suffers 1 mortal wound; on a 5+ that enemy unit suffers 2 mortal wounds. If this results in one or more enemy models being destroyed, you can select one closed Hatchway within 6&quot; of the bearer and open it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="ff18-89b8-2364-9f5a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Void Salvagers Enhancements" id="12f9-2fb3-0f57-c096" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Masterful Construction" hidden="false" id="f223-a830-5e0d-d61c" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94ad-f123-4b57-0e14" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7a7a-1a24-ca3b-7371" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Masterful Construction" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="63e6-962b-e6bf-3a46">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer is selected to shoot or fight, you can select one of the following weapon abilities: [DEVASTATING WOUNDS], [LETHAL HITS], [SUSTAINED HITS 1]. Until the end of the phase, weapons equipped by the bearer (excluding Psychic weapons) have that ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Obsessive Drive" hidden="false" id="c8f0-8759-4389-3a86" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3660-1cf1-6074-228f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c70-1919-30a7-a28c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Obsessive Drive" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ced3-541c-6fb4-a5eb">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the first battle round, select one objective marker. While the bearer is on the battlefield, each time a LEAGUES OF VOTANN unit from your army is selected to shoot or fight, each enemy unit within range of that objective marker is considered to have 1 additional Judgement token when resolving those attacks.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="a385-cc3a-7903-2c3d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -3669,6 +4205,16 @@ Unit destroyed by the start of your fifth Command phase: You gain 1CP</descripti
     </rule>
     <rule id="5cfb-f5b5-a838-4622" name="Conversion" hidden="false">
       <description>Each time an attack is made with this weapon, if the target is more than 12&quot; from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.</description>
+    </rule>
+    <rule name="Eternal Resentment" id="8e45-43e6-0384-7779" hidden="false">
+      <description>At the start of the first battle round, select one enemy unit on the battlefield. That unit gains 1 Judgement token. In addition, each time an enemy unit with 1 or more Judgement tokens is destroyed, you can place 1 Judgement token on an enemy unit that is visible to 1 or more LEAGUES OF VOTANN models from your army.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

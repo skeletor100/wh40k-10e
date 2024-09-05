@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="36d3-36bc-68dd-40ac" name="Imperium - Adeptus Astartes - Black Templars" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="20" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="36d3-36bc-68dd-40ac" name="Imperium - Adeptus Astartes - Black Templars" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="21" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Imperium - Space Marines" id="2137-605d-109a-d3b2" targetId="e0af-67df-9d63-8fb7" importRootEntries="true"/>
   </catalogueLinks>
@@ -200,6 +200,32 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="c975-ec44-4490-ad47">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="High Marshal Helbrecht" hidden="false" id="da8a-de9f-1fe7-2513">
       <costs>
@@ -318,6 +344,32 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="bd58-f8e3-ea61-da21">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Primaris Crusader Squad" hidden="false" id="8bbe-e7fc-44b7-ed94">
       <costs>
@@ -544,6 +596,13 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="10" field="563a-9ade-39ae-ecd8">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -551,6 +610,16 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           <conditions>
             <condition type="atLeast" value="11" field="selections" scope="8bbe-e7fc-44b7-ed94" childId="6fc8-d787-7895-ec66" shared="true" id="f8f1-a0a-81ed-680b"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -601,6 +670,19 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
       <constraints>
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="98a9-82fe-9519-62f2"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="542f-fce6-95d5-2210" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="3" field="98a9-82fe-9519-62f2"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pyre Pistol" hidden="false" id="bb21-4114-6b0c-634d">
       <profiles>
@@ -847,6 +929,16 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
             <condition type="atLeast" value="6" field="selections" scope="206c-6b4d-4aaa-7e79" childId="93d5-a2f6-533-694f" shared="true" id="8c55-cc1f-8b59-6cc0"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="b381-39f1-153a-b902"/>
@@ -854,6 +946,19 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="1371-cfd0-4de9-fa94" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="3934-20db-2dca-d759" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="b381-39f1-153a-b902"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="The Emperor&apos;s Champion" hidden="false" id="ca2f-f408-c1bd-b87f">
       <constraints>
@@ -958,6 +1063,32 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="4203-5e64-70bd-9412">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Crusader Squad" hidden="false" id="2da2-ad08-6057-5a1c">
       <categoryLinks>
@@ -1106,6 +1237,21 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
               </conditions>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="10" field="6ff1-d42c-ee12-75bf"/>
+                <modifier type="decrement" value="1" field="6ff1-d42c-ee12-75bf">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="2da2-ad08-6057-5a1c" childId="6413-eee8-56ef-f697" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
         <selectionEntryGroup name="Initiates" hidden="false" id="6413-eee8-56ef-f697" defaultSelectionEntryId="a2f6-3946-52df-35f5">
           <selectionEntries>
@@ -1372,6 +1518,20 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="423d-9446-4d50-a285"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="8f3a-67df-d747-3b"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="decrement" value="1" field="8f3a-67df-d747-3b">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="2da2-ad08-6057-5a1c" childId="8a26-cdbf-3480-3ec7" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1404,7 +1564,30 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="60b1-521a-d821-dcec" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="3" field="16cf-7135-d9d5-9c25"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Gladiator Lancer" hidden="false" id="7dec-dc3d-c40a-8ce">
       <categoryLinks>
@@ -1516,6 +1699,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Gladiator Reaper" hidden="false" id="bfb6-4320-74cf-bbda">
       <constraints>
@@ -1632,6 +1826,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Gladiator Valiant" hidden="false" id="5704-ffe4-4a53-8789">
       <costs>
@@ -1747,6 +1952,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Impulsor" hidden="false" id="fa27-4bc1-72c9-894f">
       <costs>
@@ -1924,6 +2140,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
       <constraints>
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="813d-ffc1-1acf-8f71"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Repulsor" hidden="false" id="c3e8-3cde-8b39-4b19">
       <costs>
@@ -2054,6 +2281,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Black Templars Repulsor Executioner" hidden="false" id="a344-192f-aae2-16e5">
       <costs>
@@ -2197,6 +2435,17 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
         <categoryLink targetId="6e7-40c-58d9-e402" id="ef48-c8a4-5c3d-c867" primary="false" name="Faction: Adeptus Astartes"/>
         <categoryLink targetId="9249-acae-2882-d95" id="7c1-ee-7f0c-addd" primary="false" name="Faction: Black Templars"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Castellan" hidden="false" id="f151-e676-d3b8-200c">
       <costs>
@@ -2293,6 +2542,33 @@ You can attach this model to one of the above units even if one Captain or Chap
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c8b4-d1c3-2ecb-e24b"/>
+            <modifier type="set" value="0" field="c8b4-d1c3-2ecb-e24b">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Marshal" hidden="false" id="68dd-5f49-4f17-cd84">
       <entryLinks>
@@ -2415,6 +2691,33 @@ You can attach this model to one of the above units even if one Captain or Chap
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="7b14-70f8-fb08-4b9e"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="7b14-70f8-fb08-4b9e"/>
+            <modifier type="set" value="0" field="7b14-70f8-fb08-4b9e">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="28" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="015a-6212-d737-9044" name="Index - Thousand Sons"/>
   </publications>
@@ -319,6 +319,64 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Chosen Cabal" hidden="false" id="4667-97b0-afff-e270" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Witchsight" id="50dd-0c36-ab5e-9a2e" hidden="false">
+                  <description>Ranged weapons equipped by THOUSAND SONS models from your army have the [IGNORES COVER] ability.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Devoted Thralls" hidden="false" id="fe8e-6862-74fd-0037" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Fervent Devotees" id="69bf-f2a3-68a2-c696" hidden="false">
+                  <description>Melee weapons equipped by THOUSAND SONS models from your army have the [SUSTAINED HITS 1] ability while targeting an enemy unit within range of an objective marker.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fateseekers" hidden="false" id="6431-a48d-3b46-d9eb" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Methodical Conquest" id="b3ae-9542-f84f-4696" hidden="false">
+                  <description>Each time a THOUSAND SONS models from your army makes an attack while firing Overwatch, an unmodified Hit roll of 5+ is required to score a hit, instead of an unmodified 6. In addition, SCARAB OCCULT TERMINATORS units from your army can perform the Set Overwatch Tactical Manoeuvre in the same turn as performing the Secure Site Tactical Manoeuvre</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -345,6 +403,17 @@
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3bfa-bf00-b5ed-cc81" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9403-dbf7-4d98-f7c6" type="max"/>
@@ -369,6 +438,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, you can select this model to use a Ritual for 0 Cabal points (see Cabal of Sorcerers). If you do, all the other rules for using Rituals still apply.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="dea9-e361-a24a-1b5d" name="Invulnerable Save" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -390,6 +471,7 @@
             <modifier type="append" field="name" value="3"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Twisting Fate" id="1032-e402-0d52-d6b7" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a845-9408-da08-dc2e" name="Faction: Thousand Sons" hidden="false" targetId="7002-1fbb-7571-e8e7" primary="false"/>
@@ -486,6 +568,32 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="3"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="9403-dbf7-4d98-f7c6">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="9403-dbf7-4d98-f7c6">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3bfa-bf00-b5ed-cc81" name="Ahriman on Disc of Tzeentch" publicationId="015a-6212-d737-9044" page="9-10" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -493,6 +601,15 @@
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="05f1-7fda-a0da-ea40" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -750,6 +867,17 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="240"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="6cce-b8be-75bc-c249" name="Havoc launcher" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -958,6 +1086,17 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="04ac-1d06-d97b-2787" name="Inferno heavy bolter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1134,6 +1273,17 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8d9b-b949-2557-dcc4" name="Thousand Sons Rhino" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="17-18">
       <constraints>
@@ -1207,6 +1357,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="60de-4c77-95e1-1337" name="Thousand Sons Chaos Spawn" hidden="false" collective="false" import="true" type="unit" publicationId="015a-6212-d737-9044" page="19-20">
       <constraints>
@@ -1227,6 +1388,19 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of each player’s Command phase, one model in this unit regains up to D3 lost wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="bc90-518c-1b07-1238">
           <characteristics>
@@ -1241,6 +1415,7 @@
           </modifiers>
         </infoLink>
         <infoLink id="2a10-0ce5-0373-ea8b" name="Kindred Sorcery" hidden="false" targetId="4258-60ff-8457-a123" type="rule"/>
+        <infoLink name="Twisting Fate" id="f120-249c-32d0-a2ef" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c277-d7ae-063b-5a34" name="Faction: Thousand Sons" hidden="false" targetId="7002-1fbb-7571-e8e7" primary="false"/>
@@ -1287,6 +1462,62 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="375c-2154-c643-b9ba" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9f3a-bee0-a8c9-7e27"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9f3a-bee0-a8c9-7e27"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="9f3a-bee0-a8c9-7e27"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3413-b8fd-e22c-da4f" name="Thousand Sons Vindicator" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="21-22">
       <profiles>
@@ -1372,6 +1603,17 @@
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0858-3078-f052-b11b" name="Thousand Sons Defiler" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="23-24">
       <constraints>
@@ -1567,6 +1809,17 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="2a9b-ad35-cc84-4bc4" name="Twin lascannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1615,6 +1868,19 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="da97-ede2-a5bc-461d" name="Leader" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -1924,6 +2190,17 @@
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d2f1-7a0b-f7cd-9b46" name="Thousand Sons Forgefiend" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="29-30">
       <constraints>
@@ -2071,6 +2348,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9d23-6265-b5c6-934e" name="Ectoplasma cannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -2434,6 +2722,17 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="637a-d542-35aa-e95c" name="Thousand Sons Heldrake" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="33-34">
       <constraints>
@@ -2545,6 +2844,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="195"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="1693-5e00-da69-57bb" name="Infernal Master" hidden="false" collective="false" import="true" type="model" publicationId="48fc-15aa-b307-9443" page="35-36">
       <profiles>
@@ -2588,6 +2898,7 @@
         </infoLink>
         <infoLink id="21c4-cd75-730c-4d1a" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="78fe-6e06-fd57-943e" name="Kindred Sorcery" hidden="false" targetId="4258-60ff-8457-a123" type="rule"/>
+        <infoLink name="Twisting Fate" id="510d-417f-f429-dc77" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="7280-b5c4-b7ca-d0c0" name="Faction: Thousand Sons" hidden="false" targetId="7002-1fbb-7571-e8e7" primary="false"/>
@@ -2678,6 +2989,63 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="0b58-95bc-981c-a2e5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="0b58-95bc-981c-a2e5"/>
+            <modifier type="set" value="0" field="0b58-95bc-981c-a2e5">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="0b58-95bc-981c-a2e5"/>
+            <modifier type="set" value="0" field="0b58-95bc-981c-a2e5">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="0b58-95bc-981c-a2e5">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="74f5-4553-6d71-b44c" name="Force weapon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2875,6 +3243,17 @@
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="f2aa-19fd-335a-09b3" name="Thousand Sons Maulerfiend" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="39-40">
       <constraints>
@@ -2994,6 +3373,17 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="094c-c618-92c1-b394" name="Mutalith Vortex Beast" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="41-42">
       <profiles>
@@ -3138,6 +3528,17 @@
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rubric Marines" hidden="false" id="5d3d-e13b-8b76-dad3" publicationId="015a-6212-d737-9044" page="43-44">
       <costs>
@@ -3150,9 +3551,20 @@
             <condition type="greaterThan" value="5" field="selections" scope="5d3d-e13b-8b76-dad3" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Kindred Sorcery" hidden="false" type="rule" id="851c-88d1-39ec-3d1" targetId="4258-60ff-8457-a123"/>
+        <infoLink name="Twisting Fate" id="b572-793f-bced-3195" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <profiles>
         <profile name="Bringers of Change" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9b81-e167-c93c-61d4">
@@ -3503,6 +3915,32 @@
       <constraints>
         <constraint field="selections" scope="force" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="e884-dead-461f-fb98" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="4c74-f13c-d125-ee54"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scarab Occult Terminators" hidden="false" id="b1cf-c5-5121-92a4" publicationId="015a-6212-d737-9044" page="45-46">
       <costs>
@@ -3514,6 +3952,17 @@
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="b1cf-c5-5121-92a4" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3542,6 +3991,7 @@ Wound roll.</characteristic>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="dfb7-7d34-fe2b-810" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Kindred Sorcery" hidden="false" type="rule" id="ab32-485a-bfb2-7b4a" targetId="4258-60ff-8457-a123"/>
+        <infoLink name="Twisting Fate" id="0783-585b-885c-85c9" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Scarab Occult Sorcerer" hidden="false" id="4aa5-24c5-89bc-7023">
@@ -3845,6 +4295,17 @@ Wound roll.</characteristic>
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="57d5-9a4c-87b8-86a0"/>
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="23d9-a462-8f17-3ba"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="4" field="23d9-a462-8f17-3ba">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -3858,6 +4319,40 @@ Wound roll.</characteristic>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="89f5-557a-8485-2547" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4c74-f13c-d125-ee54"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="4c74-f13c-d125-ee54"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Thousand Sons Sorcerer" hidden="false" id="af1e-9a3d-785c-47f8" publicationId="015a-6212-d737-9044" page="47-48">
       <categoryLinks>
@@ -3907,6 +4402,7 @@ Wound roll.</characteristic>
         </infoLink>
         <infoLink name="Leader" hidden="false" type="rule" id="2d54-32f-7fae-ca4b" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Empyric Guidance (Psychic)" hidden="false" type="profile" id="bb31-6d83-f20f-a06" targetId="660e-ccb9-65e7-19f"/>
+        <infoLink name="Twisting Fate" id="db7a-0408-bb73-e7a6" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <entryLinks>
         <entryLink id="275c-eee9-4ed3-bb0e" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
@@ -3980,6 +4476,47 @@ Wound roll.</characteristic>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4c74-f13c-d125-ee54"/>
+            <modifier type="set" value="0" field="4c74-f13c-d125-ee54">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4c74-f13c-d125-ee54"/>
+            <modifier type="set" value="0" field="4c74-f13c-d125-ee54">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Thousand Sons Sorcerer in Terminator Armour" hidden="false" id="c6d1-e73b-9d26-5d8b" publicationId="015a-6212-d737-9044" page="49-50">
       <costs>
@@ -4006,6 +4543,7 @@ Wound roll.</characteristic>
         <infoLink name="Leader" hidden="false" type="rule" id="30ba-d2d7-3e01-d034" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="5809-dff1-77dc-886e" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Empyric Guidance (Psychic)" hidden="false" type="profile" id="c6dd-b0d5-68c2-7cab" targetId="660e-ccb9-65e7-19f"/>
+        <infoLink name="Twisting Fate" id="7e2a-1430-d287-6287" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <entryLinks>
         <entryLink id="a4f9-5084-b8ef-c7b8" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
@@ -4119,6 +4657,46 @@ Wound roll.</characteristic>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4c74-f13c-d125-ee54" type="max"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4c74-f13c-d125-ee54"/>
+            <modifier type="set" value="0" field="4c74-f13c-d125-ee54">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6431-a48d-3b46-d9eb" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="4c74-f13c-d125-ee54">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Thousand Sons Cultists" hidden="false" id="9cd8-1a0-914b-c212">
       <costs>
@@ -4142,12 +4720,25 @@ Wound roll.</characteristic>
             <modifier type="append" value="6&quot;" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Twisting Fate" id="df41-bc2d-da3b-9782" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
       <profiles>
         <profile name="Pawns of Fate" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f614-a4d2-cb7c-4e">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this unit destroys an enemy unit, roll one D6: on a 2+, you gain 1CP. When this unit is destroyed, roll one D6: on a 2+, you gain 1CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5784-9ad8-f6b6-4ff4">
           <characteristics>
@@ -4324,6 +4915,18 @@ Wound roll.</characteristic>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="9" field="b50-d9f0-8f84-8496">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4332,7 +4935,54 @@ Wound roll.</characteristic>
             <condition type="greaterThan" value="10" field="selections" scope="9cd8-1a0-914b-c212" childId="model" shared="true" id="da29-67e8-894c-732" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="9a4b-9aa4-2890-309d" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="4c74-f13c-d125-ee54"/>
+            <modifier type="increment" value="1" field="4c74-f13c-d125-ee54">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5d3d-e13b-8b76-dad3" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="4c74-f13c-d125-ee54">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="f5b9-50c8-5c60-d8ea" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Cultist firearm" hidden="false" id="e215-5f19-8d65-cd21" collective="true">
       <profiles>
@@ -4488,6 +5138,17 @@ Wound roll.</characteristic>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="66f4-929e-1769-f277" name="Thousand Sons Daemon Prince with wings" hidden="false" collective="false" import="true" type="model" page="55-56" publicationId="015a-6212-d737-9044">
       <constraints>
@@ -4606,6 +5267,17 @@ Wound roll.</characteristic>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tzaangor Enlightened" hidden="false" id="1703-3edd-5eb3-fcef">
       <categoryLinks>
@@ -4790,6 +5462,15 @@ Wound roll.</characteristic>
             <condition type="greaterThan" value="3" field="selections" scope="1703-3edd-5eb3-fcef" childId="model" shared="true" id="f967-eaea-fef9-e164" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tzaangor Shaman" hidden="false" id="c251-bd54-441-4799">
@@ -4905,6 +5586,17 @@ Wound roll.</characteristic>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tzaangors" hidden="false" id="f5b9-50c8-5c60-d8ea">
       <costs>
@@ -4915,6 +5607,17 @@ Wound roll.</characteristic>
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="f5b9-50c8-5c60-d8ea" childId="model" shared="true" id="ece4-2cf1-277-83d0" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -4948,6 +5651,18 @@ Wound roll.</characteristic>
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Command phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it: for each 4+, you gain 1 Cabal point.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntryGroups>
@@ -5026,6 +5741,18 @@ Wound roll.</characteristic>
               </selectionEntries>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="10" field="3f8c-46f1-937f-44ef">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Wargear" hidden="false" id="70a4-9194-b0ad-ef03">
           <selectionEntries>
@@ -5058,7 +5785,52 @@ Wound roll.</characteristic>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Kindred Sorcery" hidden="false" type="rule" id="3f28-2c07-313f-10eb" targetId="4258-60ff-8457-a123"/>
+        <infoLink name="Twisting Fate" id="39a3-59ba-f3a0-5581" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="c74d-3b8c-8a3d-111b" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4667-97b0-afff-e270" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="2b10-13dc-60b-4933"/>
+            <modifier type="increment" value="1" field="2b10-13dc-60b-4933">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5d3d-e13b-8b76-dad3" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="2b10-13dc-60b-4933">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="9cd8-1a0-914b-c212" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fe8e-6862-74fd-0037" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="2b10-13dc-60b-4933"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hellblade [Legends]" hidden="false" id="c4ab-b52d-3ac0-5d56">
       <costs>
@@ -5887,13 +6659,36 @@ Wound roll.</characteristic>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1e72-ed41-b9bb-a9e3" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="a3ad-f479-58c8-c846" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02c1-eb60-73b2-fbcf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="c235-0258-4557-5f9a" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="25f1-9949-5ee8-8b93" name="Enhancements" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="2" field="c3a6-0da1-ace0-94eb">
           <conditions>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="16cb-7eb7-e9fc-f7ea" type="equalTo"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5904,10 +6699,15 @@ Wound roll.</characteristic>
       <selectionEntries>
         <selectionEntry id="eef6-4b12-1eff-f412" name="Lord of Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13bf-2bee-3ae0-b414" type="notInstanceOf"/>
-              </conditions>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5939,6 +6739,13 @@ Wound roll.</characteristic>
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="7213-a7b3-4c8e-96bc" name="Arcane Vortex" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5955,13 +6762,25 @@ Wound roll.</characteristic>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
             <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="1150-7501-d526-d373" name="Athenaen Scrolls" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13bf-2bee-3ae0-b414" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -5979,11 +6798,152 @@ Wound roll.</characteristic>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="b953-0de7-03aa-4ce4" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Chosen Cabal Enhancements" id="9a8a-b9c7-527c-dff6" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warp Mastery" hidden="false" id="b206-c509-84da-62ef" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="595c-04e8-6041-cdb2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b43b-32fd-adfe-8582" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Warp Mastery" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="83d5-9739-e653-5c2e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time you roll to determine the number of attacks made with a Psychic weapon equipped by the bearer, you can re-roll the result.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fires of Change" hidden="false" id="24bf-e789-6b23-b255" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2c0-4e58-2cc1-03ad" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7381-66bf-7319-e7fe" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Fires of Change" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ebc6-d29f-cfa6-e793">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer shoots, after it has shot, select one enemy unit hit by one or more of those attacks made with a Psychic weapon. That unit must take a Battle-shock test, subtracting 1 from the result.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="4667-97b0-afff-e270" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Devoted Thralls Enhancements" id="48b7-536d-da5e-d7ab" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Thrallmaster" hidden="false" id="9e3b-0906-fa76-e623" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5da0-d852-2e25-1ddc" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c38-4ebd-edec-7729" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Thrallmaster" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9633-b902-bd84-64bb">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the first battle round, you can select  one friendly THOUSAND SONS CULTISTS or TZAANGORS unit within the same Entry Zone as the bearer. If you do, that unit can make a Normal move of up to 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Prescient Authority" hidden="false" id="ebd8-3961-321d-6238" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1a9e-a09b-e69d-dc68" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7413-2e8a-9e90-7d5d" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Prescient Authority" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="22be-d2a7-b4ca-0e85">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per turn, when a friendly THOUSAND SONS CULTISTS or TZAANGORS unit within 3&quot; of the bearer is selected to shoot or fight, the bearer can use this Enhancement. If it does, until the end of the phase, each time a model in that THOUSAND SONS CULTISTS or TZAANGORS unit makes an attack, re-roll a Wound roll of 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="fe8e-6862-74fd-0037" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Fateseekers Enhancements" id="14ac-16a7-efb5-56fc" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Predestined Champion" hidden="false" id="2997-18f7-6ecb-0049" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ead6-2374-9d66-d5eb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="851c-97f5-f185-46d1" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Predestined Champion" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c244-8a73-3621-7e5f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While the bearer is on the battlefield, you are considered to control one additional objective marker for the purposes of the Twisting Fate army rule.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Astral Predation" hidden="false" id="efa1-99a8-7c6a-4753" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7213-d226-8e84-ad73" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92dc-9577-e436-5c49" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Astral Predation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5b38-06af-b6ba-a0d0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, in your Movement phase, when the bearer is selected to move, it can use this Enhancement. If it does, select one closed Hatchway on the battlefield. Until the end of the phase, the bearer can move through that Hatchway as if it was open (note that this does not open that Hatchway - it remains closed).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="6431-a48d-3b46-d9eb" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="a70c-2007-30f7-a357" name="Cabal of Sorcerers" hidden="false">
       <description>If your Army Faction is THOUSAND SONS, at the end of your Command phase, each model from your army with this ability that is on the battlefield (excluding Battle-shocked models) generates you a number of Cabal points equal to the number shown in its ability (e.g. a model with the Cabal of Sorcerers 2 ability would generate you 2 Cabal points). The combined total of these is your Cabal points pool. During the battle round, you can use Rituals from the list below, deducting the Cabal points cost of each one from your Cabal points pool. If you do not have enough Cabal points for a Ritual, you cannot use it. Each Ritual can only be used once per phase. At the start of your next Command phase, your Cabal points pool resets to zero. Each time you use a Ritual, select one THOUSAND SONS PSYKER model from your army (excluding models that have already been selected for this rule this turn), then apply that Ritual’s effect using that PSYKER.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="1d6e-2579-8e7f-1ed4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="4258-60ff-8457-a123" name="Kindred Sorcery" hidden="false">
       <modifiers>
@@ -6000,6 +6960,16 @@ PSYCHIC MAELSTROM
 Psychic weapons equipped by THOUSAND SONS models from your army have the [SUSTAINED HITS 1] ability.
 WRATH OF THE IMMATERIUM
 Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.</description>
+    </rule>
+    <rule name="Twisting Fate" id="c212-8746-aa4c-95d0" hidden="false">
+      <description>While a THOUSAND SONS PSYKER model from your army is on the battlefield and you control at least as many objective markers as your opponent does, your plan is considered to be in Ascendance. Each time you or your opponent spend one or more Command points to use a Stratagem, roll one D6, adding 1 if your plan is in Ascendance: on a 1-2, your opponent gains 1CP; on a 6+, you gain 1CP.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="1d6e-2579-8e7f-1ed4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

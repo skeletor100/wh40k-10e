@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="4ef9-15ce-e3e6-36de" name="Imperium - Adeptus Astartes - Blood Angels" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="22" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="4ef9-15ce-e3e6-36de" name="Imperium - Adeptus Astartes - Blood Angels" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="23" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Imperium - Space Marines" id="abd0-8ebd-6fbd-2d94" targetId="e0af-67df-9d63-8fb7" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Imperium - Imperial Knights - Library" id="9c08-8ffc-d746-7384" targetId="1b6d-dc06-5db9-c7d1" importRootEntries="true"/>
@@ -33,6 +33,13 @@
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">5+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Redeemer of the Lost" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c5e1-99a6-a51e-251e">
           <characteristics>
@@ -55,7 +62,19 @@
       <infoLinks>
         <infoLink name="Leader" hidden="false" type="rule" id="7b0-1020-2ea9-e14e" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="adae-4433-67ed-1793" targetId="3b76-4053-ece9-6e7d"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="87bd-4a20-9d91-21bd" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="87bd-4a20-9d91-21bd" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Invulnerable Save" hidden="false" type="profile" id="5e2e-f2fa-5963-b8e4" targetId="db19-dee7-9530-ef0e"/>
       </infoLinks>
       <entryLinks>
@@ -97,10 +116,39 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="f062-b0e3-cac0-f447" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="373e-99de-ce49-806b">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Baal Predator" hidden="false" id="640-9969-d5b9-875c">
       <categoryLinks>
@@ -210,6 +258,17 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brother Corbulo" hidden="false" id="8d87-ee8a-6af4-3715">
       <costs>
@@ -306,7 +365,31 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="32c0-959b-4d0-60b0" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="85f0-ec14-4435-8845">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Captain Tycho" hidden="false" id="ae0a-e23c-2184-7c65">
       <categoryLinks>
@@ -336,6 +419,16 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="6285-f5d7-9ad4-363d" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -442,6 +535,20 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="cbf0-6863-deea-572a">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tycho the Lost" hidden="false" id="8577-8a5d-75f6-a630">
       <constraints>
@@ -457,6 +564,16 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="3833-ee0-9388-6eec" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -524,6 +641,20 @@
         <categoryLink targetId="6e7-40c-58d9-e402" id="3027-f9d4-1b79-275a" primary="false" name="Faction: Adeptus Astartes"/>
         <categoryLink targetId="62ac-ef42-27b4-ae7" id="248c-290a-adfd-5577" primary="false" name="Faction: Blood Angels"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="96ce-1ad2-d58f-e368">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chief Librarian Mephiston" hidden="false" id="ab35-2c36-9389-d1d5">
       <costs>
@@ -689,10 +820,34 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="f953-ecb8-9398-b16c" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="27f7-9d4c-d894-cc79" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="76f1-154d-581a-b2ae">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Commander Dante" hidden="false" id="7323-ebf-9afe-7e7a">
       <constraints>
@@ -722,6 +877,13 @@
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Death Mask of Sanguinius" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="edcb-c05a-9bcb-12c7">
           <characteristics>
@@ -746,7 +908,19 @@
       </profiles>
       <infoLinks>
         <infoLink name="Leader" hidden="false" type="rule" id="c160-102b-4a96-6800" targetId="b4dd-3e1f-41cb-218f"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="9f0a-5bd0-d9ad-c5dd" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="9f0a-5bd0-d9ad-c5dd" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="9b64-f32e-a05d-fa35" targetId="3b76-4053-ece9-6e7d"/>
         <infoLink name="Invulnerable Save" hidden="false" type="profile" id="36e7-4ae0-3619-8e6" targetId="db19-dee7-9530-ef0e"/>
       </infoLinks>
@@ -807,10 +981,39 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="1660-1af7-6773-9f58" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="75b-952d-efa4-257c" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="573f-bbc-4c57-25ce">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Death Company Dreadnought" hidden="false" id="e7ee-e70-bd87-7c5c">
       <categoryLinks>
@@ -865,6 +1068,15 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="e10f-d69c-d7f4-2da2" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -1218,10 +1430,33 @@
             <condition type="atLeast" value="6" field="selections" scope="bb83-db85-6ce1-9a61" childId="4519-b054-bbd5-2a26" shared="true" id="529b-d79f-8274-41d5" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="540f-f347-c069-b8f0"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="00e0-2933-9757-e619" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="540f-f347-c069-b8f0"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Death Company Marines" hidden="false" id="6562-9dcd-afea-d4ae">
       <costs>
@@ -1352,10 +1587,33 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <condition type="atLeast" value="6" field="selections" scope="6562-9dcd-afea-d4ae" childId="d39b-8861-f88d-b9ac" shared="true" id="dd0-d0a6-bc24-a640" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="723b-d326-b431-0f3f"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="23bd-a7b9-c613-8821" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="723b-d326-b431-0f3f"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Death Company Marines with Jump Packs" hidden="false" id="65f6-18df-f6df-7e39">
       <costs>
@@ -1379,6 +1637,13 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Berserk Fury" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6353-b576-82ad-a3fb">
           <characteristics>
@@ -1397,7 +1662,19 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <modifier type="append" value="6+" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="e219-6ef-4e05-b7f5" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="e219-6ef-4e05-b7f5" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Black Rage" hidden="false" type="profile" id="77ac-5760-e406-c03b" targetId="3e0a-31f-8be-e293"/>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="f664-ff26-126a-6ec4" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
@@ -1479,10 +1756,49 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <condition type="atLeast" value="6" field="selections" scope="65f6-18df-f6df-7e39" childId="38dc-f876-6405-8f17" shared="true" id="4a95-a7bd-d401-9728" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="9b2e-0e52-83e9-d072"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="519d-e5cc-ff6a-9a05" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="9b2e-0e52-83e9-d072"/>
+            <modifier type="set" value="0" field="9b2e-0e52-83e9-d072">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cdd9-efda-95-e7b2" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="25e4-ead-faac-2531" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Furioso Dreadnought" hidden="false" id="c954-8157-25fd-5f99">
       <costs>
@@ -1690,6 +2006,15 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="e10f-d69c-d7f4-2da2" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="79e8-0386-2930-ca7e"/>
@@ -1850,7 +2175,31 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="c6ed-8693-8973-2bd7">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lemartes" hidden="false" id="cbc2-18c9-45b6-6327">
       <costs>
@@ -1896,6 +2245,13 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">5+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Guardian of the Lost" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e07d-ca56-c77-2dce">
           <characteristics>
@@ -1945,7 +2301,36 @@ Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="3dc1-3c2b-f008-ae5" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="c4cb-6409-6c33-6458">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Librarian Dreadnought" hidden="false" id="b6e0-b465-801c-24c8">
       <costs>
@@ -2088,6 +2473,17 @@ horizontally away from all enemy models.</characteristic>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="3782-2bd7-740d-8cab"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sanguinary Guard" hidden="false" id="25e4-ead-faac-2531">
       <costs>
@@ -2116,6 +2512,13 @@ horizontally away from all enemy models.</characteristic>
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Angelic Visage" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5a4f-9341-88c9-9038">
           <characteristics>
@@ -2256,6 +2659,21 @@ horizontally away from all enemy models.</characteristic>
             <condition type="atLeast" value="6" field="selections" scope="25e4-ead-faac-2531" childId="b36d-e83-6a91-e2b4" shared="true" id="91f1-bb67-e1ee-4bad"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Sanguinary Banner" hidden="false" id="8352-c4fb-89d7-30d6">
@@ -2272,9 +2690,45 @@ horizontally away from all enemy models.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="446-c76b-af18-5955" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="446-c76b-af18-5955" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="d9bb-e847-88d0-2cc3" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="2f9d-2db3-b8a2-fc16" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e74-7290-177d-cfc1"/>
+            <modifier type="set" value="0" field="e74-7290-177d-cfc1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cdd9-efda-95-e7b2" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="65f6-18df-f6df-7e39" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sanguinary Priest" hidden="false" id="f80-be5-d17c-db23">
       <costs>
@@ -2363,6 +2817,33 @@ You can attach this model to one of the above units, even if one Captain, Chapt
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="e307-825-e350-b927"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e307-825-e350-b927"/>
+            <modifier type="set" value="0" field="e307-825-e350-b927">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="The Sanguinor" hidden="false" id="29f1-bb28-6424-6d14">
       <constraints>
@@ -2370,7 +2851,19 @@ You can attach this model to one of the above units, even if one Captain, Chapt
       </constraints>
       <infoLinks>
         <infoLink name="Lone Operative" hidden="false" type="rule" id="500a-4188-24fe-2fa6" targetId="a8a0-8fe7-898-e0f3"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="e0f3-23fc-e379-144b" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="e0f3-23fc-e379-144b" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fights First" hidden="false" type="rule" id="2da8-9c6e-5181-3fbc" targetId="24-c886-e8ba-5a89"/>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="df39-e8fc-3c61-7a37" targetId="3b76-4053-ece9-6e7d"/>
         <infoLink name="Invulnerable Save" hidden="false" type="profile" id="91ee-a59-f248-6fde" targetId="db19-dee7-9530-ef0e"/>
@@ -2385,6 +2878,13 @@ You can attach this model to one of the above units, even if one Captain, Chapt
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Aura of Fervour (Aura)" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a3b2-4a68-fe8f-f5fa">
           <characteristics>
@@ -2441,10 +2941,39 @@ You can attach this model to one of the above units, even if one Captain, Chapt
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9276-a8c8-908a-463d" shared="true" id="f838-c6da-a604-98d4" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="c335-71bb-55b2-31a1" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="f8a8-20a9-9ba4-1851">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sanguinary Priest with Jump Pack" hidden="false" id="fa13-ba8a-8711-87b6">
       <costs>
@@ -2471,6 +3000,13 @@ You can attach this model to one of the above units, even if one Captain, Chapt
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Sanguinary Priest" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a752-2aba-3ea3-4da8">
           <characteristics>
@@ -2532,6 +3068,38 @@ You can attach this model to one of the above units, even if one Captain, Chapt
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="e307-825-e350-b927"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e307-825-e350-b927"/>
+            <modifier type="set" value="0" field="e307-825-e350-b927">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sanguinary Priest on Bike [Legends]" hidden="false" id="3621-b460-722-8954">
       <costs>

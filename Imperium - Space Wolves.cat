@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="94bb-3284-ee14-57a1" name="Imperium - Adeptus Astartes - Space Wolves" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="25" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur/Mad Spy">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="94bb-3284-ee14-57a1" name="Imperium - Adeptus Astartes - Space Wolves" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="26" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur/Mad Spy">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Imperium - Space Marines" id="cb5b-3605-7522-c561" targetId="e0af-67df-9d63-8fb7" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Imperium - Imperial Knights - Library" id="2e06-13ae-6789-b591" targetId="1b6d-dc06-5db9-c7d1" importRootEntries="true"/>
@@ -65,6 +65,18 @@
         <infoLink name="Logan" hidden="false" type="infoGroup" id="b103-35da-21bb-d23d" targetId="976-2d16-9324-f92"/>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="ab13-aaf3-b21a-58ce" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Logan Grimnar on Stormrider" hidden="false" id="54e3-9fb6-416-8a90">
       <costs>
@@ -149,6 +161,17 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="The Axe Morkai" hidden="false" id="df54-1796-1f2-851e">
       <constraints>
@@ -302,6 +325,18 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bjorn the Fell-Handed" hidden="false" id="c35a-6d78-2169-3d23">
       <costs>
@@ -510,6 +545,17 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Arjac Rockfist" hidden="false" id="a9c8-1a6-a0e1-7698">
       <costs>
@@ -563,6 +609,13 @@ You can attach this model to one of the above units even if one Captain or Chap
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">You can target this model with the Epic Challenge Stratagem for 0CP. In addition, each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -604,6 +657,18 @@ You can attach this model to one of the above units even if one Captain or Chap
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="2623-5127-398d-59a7" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ulric the Slayer" hidden="false" id="fc7c-83a5-7106-41ab">
       <infoLinks>
@@ -719,6 +784,18 @@ You can attach this model to one of the above units even if one Captain or Chap
         <categoryLink targetId="aff3-d6a3-2a95-9dc" id="d95d-b224-3d7f-f0e0" primary="false" name="Imperium"/>
         <categoryLink targetId="594a-6b8b-3a63-14c5" id="538d-f86e-fae5-2439" primary="false" name="Ulric the Slayer"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ragnar Blackmane" hidden="false" id="23d2-ea9a-cc45-476">
       <costs>
@@ -808,6 +885,18 @@ You can attach this model to one of the above units even if one Captain or Chap
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Krom Dragongaze" hidden="false" id="af71-2b1b-2eee-d2be">
       <costs>
@@ -893,6 +982,18 @@ You can attach this model to one of the above units even if one Captain or Chap
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Harald Deathwolf" hidden="false" id="7d72-63bf-a5f2-bb6c">
       <costs>
@@ -995,6 +1096,17 @@ You can attach this model to one of the above units even if one Captain or Chap
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Crushing teeth and claws" hidden="false" id="4700-100e-6b9e-336a" collective="true">
       <constraints>
@@ -1115,6 +1227,17 @@ You can attach this model to one of the above units even if one Captain or Chap
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Guard Battle Leader in Terminator Armour" hidden="false" id="bcab-c09a-6584-3b26">
       <costs>
@@ -1322,6 +1445,18 @@ You can attach this model to one of the above units even if one Captain or Chap
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Power weapon" hidden="false" id="d4e4-919a-1dd-ab43">
       <profiles>
@@ -1487,6 +1622,17 @@ You can attach this model to one of the above units even if one Captain or Chap
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Guard Battle Leader on Thunderwolf" hidden="false" id="6ec-fcf9-ebb6-7c55">
       <costs>
@@ -1628,6 +1774,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Thunder hammer" hidden="false" id="ad5b-c310-db86-a58c">
       <profiles>
@@ -1761,6 +1918,16 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <condition type="atLeast" value="11" field="selections" scope="fa8f-f5a2-993-bdbb" childId="model" shared="true" id="9637-69a3-7f0f-f34c" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile name="Blood Claws" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="4b3b-9bda-4668-8075">
@@ -1848,6 +2015,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="2" field="2da8-cc2e-918-d57c">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -1919,11 +2097,34 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="9" field="3a8a-189-b295-ada8">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="4" field="7633-563-6d29-2c17">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="b1a3-f1b6-13ff-4c0d" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a15d-bc9a-fee1-5c67" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Astartes chainsword" hidden="false" id="11dc-5929-3558-3b91" collective="true">
       <profiles>
@@ -1972,6 +2173,16 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="60ce-47ea-50fa-53f2" childId="model" shared="true" id="42cd-1f16-c00c-26e2" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2155,6 +2366,9 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="9721-d9e3-e7df-a872" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="876f-7f0c-85ae-2e3d" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Astartes chainsword" hidden="false" id="2230-ea82-78d-707c" collective="false">
       <profiles>
@@ -2419,10 +2633,23 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <condition type="atLeast" value="6" field="selections" scope="8486-fe44-efc3-e51b" childId="model" shared="true" id="ab3e-381e-7ea5-8b4a" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="9f09-7558-a55d-4e25" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="9b43-ce7a-cda1-7657" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heirloom weapon" hidden="false" id="d40e-e25e-d3c2-679c" collective="true">
       <constraints>
@@ -2576,6 +2803,18 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wolf Guard Terminators" hidden="false" id="ca30-caf3-d7a8-1d32">
       <costs>
@@ -2608,6 +2847,15 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="ca30-caf3-d7a8-1d32" childId="model" shared="true" id="f400-1fa2-8969-b370" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
@@ -3106,6 +3354,16 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <condition type="atLeast" value="6" field="selections" scope="f37d-87d6-e14c-e697" childId="model" shared="true" id="da10-c77c-339e-5568" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="22ee-beda-b324-dbab" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="5-10 Hounds of Morkai" hidden="false" id="1d97-5558-aade-e48e">
@@ -3205,6 +3463,9 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
         </infoLink>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="69-4e4e-f405-ee91" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="72f1-717b-2939-2aad" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wulfen" hidden="false" id="d937-bd7d-618d-4e2d">
       <costs>
@@ -3222,6 +3483,16 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="d937-bd7d-618d-4e2d" childId="model" shared="true" id="5aef-47e5-58e1-5de9" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -3295,6 +3566,9 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
         </infoLink>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="510a-b1f4-657a-6bd4" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="23d6-5666-61d4-0307" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Stormfrag auto-launcher" hidden="false" id="2b70-55e9-caf0-c94d" collective="true">
       <constraints>
@@ -3417,6 +3691,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Murderfang" hidden="false" id="6ef5-6700-d888-df3b">
       <costs>
@@ -3506,6 +3791,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Thunderwolf Cavalry" hidden="false" id="7a50-3722-8195-5877">
       <costs>
@@ -3524,6 +3820,15 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="7a50-3722-8195-5877" childId="model" shared="true" id="75dd-2178-4086-f46e" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -3704,6 +4009,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
                   </profiles>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="5" field="3044-8897-46f2-25f7">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3731,10 +4047,23 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <condition type="atLeast" value="6" field="selections" scope="dc75-5a79-4121-1d72" childId="model" shared="true" id="79db-1719-becb-4d42" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="c1d5-a1f4-d62d-a1ad" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="f58c-20bf-c231-cacb" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skyclaws" hidden="false" id="b556-b0e1-3b4e-597a">
       <costs>
@@ -3751,7 +4080,19 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
         <categoryLink targetId="136d-4905-129b-ff78" id="7e9f-43e0-d47f-3cd5" primary="false" name="Skyclaws"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="1328-cf76-90e2-374c" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="1328-cf76-90e2-374c" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="ea2f-4c72-2c17-533a" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
       <profiles>
@@ -3764,6 +4105,13 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Headstrong" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="7d00-f80f-c11-4992">
           <characteristics>
@@ -3897,6 +4245,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="9" field="2884-7b87-e399-5263">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -3910,7 +4269,25 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
             <condition type="atLeast" value="11" field="selections" scope="b556-b0e1-3b4e-597a" childId="model" shared="true" id="735c-5213-4e87-a465" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c007-6d1b-f048-db08" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Long Fangs" hidden="false" id="47fa-f42-bb06-77d2">
       <costs>
@@ -3921,6 +4298,15 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="47fa-f42-bb06-77d2" childId="model" shared="true" id="8095-cf30-5200-2f2d" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -4502,6 +4888,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stormwolf" hidden="false" id="b85d-d565-d3a4-8f8b">
       <costs>
@@ -4633,6 +5030,17 @@ You can attach this model to the above unit even if one Captain or Chapter Mast
         </entryLink>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="4cff-9335-5d9d-bc83" targetId="3fc0-1753-fefb-89b5"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Guard Pack Leader" hidden="false" id="5d99-8592-a934-48d9">
       <costs>
@@ -4816,6 +5224,18 @@ You must attach this model to one of the above units, and can do so even if one
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Guard Pack Leader with Jump Pack" hidden="false" id="a60f-7d3a-d2f8-60cd">
       <costs>
@@ -4843,6 +5263,13 @@ You must attach this model to one of the above units, and can do so even if one
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e86c-2118-cc7e-4b23">
           <characteristics>
@@ -4996,10 +5423,35 @@ You must attach this model to the above unit, and can do so even if one or more
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Guard Pack Leader in Terminator Armour" hidden="false" id="a341-f355-7305-58bb">
       <infoLinks>
-        <infoLink name="Pack Leader" hidden="false" type="infoGroup" id="5a22-5bfd-4170-8950" targetId="8b86-90f0-b9f3-a8c3"/>
+        <infoLink name="Pack Leader" hidden="false" type="infoGroup" id="5a22-5bfd-4170-8950" targetId="8b86-90f0-b9f3-a8c3">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Invulnerable Save" hidden="false" type="profile" id="2c6a-1090-35b8-4819" targetId="db19-dee7-9530-ef0e"/>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="6a18-f83f-600d-6f5f" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
@@ -5270,6 +5722,38 @@ You must attach this model to one of the above units, and can do so even if one
         <categoryLink targetId="439c-19bf-5342-96db" id="1af6-696c-5cb1-5958" primary="false" name="Pack Leader"/>
         <categoryLink targetId="80f7-b02e-c2-1c49" id="221d-6a72-6e8a-8abc" primary="false" name="Wolf Guard Pack Leader in Terminator Armour"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="cbc0-0fd7-77e7-b141" type="selectionEntry" targetId="caa-f869-3cbd-b48e">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Enhancements" hidden="false" id="e080-db7d-0231-576f" type="selectionEntryGroup" targetId="9e5d-de4c-c5d1-1d3e">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Iron Priest" hidden="false" id="3212-bec7-a50e-3363">
       <costs>
@@ -5407,6 +5891,18 @@ You must attach this model to one of the above units, and can do so even if one
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="23f3-dff-17f4-479a" targetId="caa-f869-3cbd-b48e"/>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="bf16-53de-2e57-1f2" targetId="9e5d-de4c-c5d1-1d3e"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Cyberwolf" hidden="false" id="6a06-e50c-2c7d-3ec3">
       <costs>
@@ -5485,6 +5981,17 @@ You must attach this model to the above unit, even if Canis Wolfborn has been a
       <infoLinks>
         <infoLink name="Oath of Moment" hidden="false" type="rule" id="5366-4362-8e8-cdec" targetId="3b76-4053-ece9-6e7d"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wolf Scouts" hidden="false" id="91e4-38c4-a96f-2090">
       <costs>
@@ -5914,6 +6421,15 @@ Strategic Reserves.</characteristic>
             <condition type="atLeast" value="6" field="selections" scope="91e4-38c4-a96f-2090" childId="model" shared="true" id="7811-a191-ebc5-392d" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Space Wolves Venerable Dreadnought" hidden="false" id="c125-1106-f06d-9682">
@@ -6148,6 +6664,17 @@ Strategic Reserves.</characteristic>
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Blizzard shield" hidden="false" id="d837-153d-f6ae-2a87">
       <profiles>
@@ -6362,6 +6889,16 @@ Strategic Reserves.</characteristic>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="8775-713f-8b6c-f54f" shared="true" id="4502-420c-d6c2-dfed" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="9143-436-39f7-3420">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9143-436-39f7-3420" includeChildSelections="true"/>
@@ -6383,6 +6920,18 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a42-1fd-66a0-998" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a42-1fd-66a0-998">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Bjorn the Fell-Handed" hidden="false" id="1c1d-1797-2e31-ed34">
       <constraints>
@@ -6393,21 +6942,69 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Ulric the Slayer" hidden="false" id="594a-6b8b-3a63-14c5">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Ragnar Blackmane" hidden="false" id="ff0e-8156-6e6b-8e60">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Krom Dragongaze" hidden="false" id="3658-9233-93cb-c8b">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Harald Deathwolf" hidden="false" id="2c46-1db8-f41b-29f2">
       <constraints>
@@ -6423,6 +7020,27 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wolf Lord on Thunderwolf" hidden="false" id="42f7-7d32-b2eb-7a5">
       <constraints>
@@ -6438,21 +7056,66 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Grey Hunters" hidden="false" id="447f-4fc0-7630-a9f7">
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wolf Guard" hidden="false" id="180b-bab2-a59f-44bc">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Lukas the Trickster" hidden="false" id="3e7d-6254-65cf-fe96">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="a3fa-f659-b61-d66b">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wolf Guard Terminators" hidden="false" id="4554-88b1-466c-d9f5">
       <constraints>
@@ -6463,11 +7126,33 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="22ee-beda-b324-dbab" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wulfen" hidden="false" id="19ab-c0ae-7b00-dc0c">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wulfen Dreadnought" hidden="false" id="d8f-dda1-f160-f0a0">
       <constraints>
@@ -6488,11 +7173,65 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cdd9-efda-95-e7b2" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b556-b0e1-3b4e-597a" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Skyclaws" hidden="false" id="136d-4905-129b-ff78">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cdd9-efda-95-e7b2" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc75-5a79-4121-1d72" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Long Fangs" hidden="false" id="200a-c333-3440-f3ca">
       <constraints>
@@ -6513,22 +7252,106 @@ Strategic Reserves.</characteristic>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1843-2d87-93cc-24c7" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Pack Leader" hidden="false" id="439c-19bf-5342-96db"/>
     <categoryEntry name="Wolf Guard Pack Leader with Jump Pack" hidden="false" id="4017-5de3-cb4f-1b8b">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1843-2d87-93cc-24c7" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wolf Guard Pack Leader in Terminator Armour" hidden="false" id="80f7-b02e-c2-1c49">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1843-2d87-93cc-24c7" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1843-2d87-93cc-24c7">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Iron Priest" hidden="false" id="a604-b7ef-c095-b672">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e54d-8d2-8d82-d5f4" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="e54d-8d2-8d82-d5f4">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Cyberwolf" hidden="false" id="3755-99a6-5326-139a">
       <constraints>
@@ -6596,6 +7419,13 @@ Strategic Reserves.</characteristic>
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model destroys an enemy unit, you gain 1CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2f3a-a7b9-6de6-67e6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
     </infoGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b984-7317-81cc-20f" name="Xenos - Tyranids" revision="56" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="FitalShell" authorContact="fitalshell">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b984-7317-81cc-20f" name="Xenos - Tyranids" revision="57" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="FitalShell" authorContact="fitalshell">
   <categoryEntries>
     <categoryEntry name="Synapse" hidden="false" id="4129-a453-686a-d38a"/>
     <categoryEntry id="4f10-fe01-4b80-8d6b" name="Winged Hive Tyrant" hidden="false"/>
@@ -130,7 +130,15 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink id="3f5a-9872-f34d-05e3" name="Tyrant Guard" hidden="false" collective="false" import="true" targetId="1645-5407-92c8-1441" type="selectionEntry"/>
+    <entryLink id="3f5a-9872-f34d-05e3" name="Tyrant Guard" hidden="false" collective="false" import="true" targetId="1645-5407-92c8-1441" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink import="true" name="Winged Tyranid Prime" hidden="false" type="selectionEntry" id="58d8-21cb-ed36-94b6" targetId="507d-5ea4-6ef1-bf66"/>
     <entryLink import="true" name="Lictor" hidden="false" type="selectionEntry" id="deb6-2fc2-a1ad-cde1" targetId="da44-72c9-7a27-48aa"/>
     <entryLink import="true" name="Deathleaper" hidden="false" type="selectionEntry" id="8b6a-3050-501a-db63" targetId="bc36-92fe-ecc6-58b3"/>
@@ -170,10 +178,26 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Venomthropes" hidden="false" type="selectionEntry" id="b25f-20ce-a25a-1642" targetId="b563-c6d3-d0e5-1b78"/>
+    <entryLink import="true" name="Venomthropes" hidden="false" type="selectionEntry" id="b25f-20ce-a25a-1642" targetId="b563-c6d3-d0e5-1b78">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink import="true" name="Von Ryan&apos;s Leapers" hidden="false" type="selectionEntry" id="25ba-6e30-d587-a57e" targetId="9bd8-ac8c-2d3b-79f6"/>
     <entryLink import="true" name="Neurogaunts" hidden="false" type="selectionEntry" id="adb8-1b04-9c1b-84e4" targetId="8ccc-3f27-7e4e-da81"/>
-    <entryLink import="true" name="Zoanthropes" hidden="false" type="selectionEntry" id="fe7f-7bff-cc64-ef7" targetId="b622-a22-a04f-6303"/>
+    <entryLink import="true" name="Zoanthropes" hidden="false" type="selectionEntry" id="fe7f-7bff-cc64-ef7" targetId="b622-a22-a04f-6303">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink import="true" name="Ripper Swarms" hidden="false" type="selectionEntry" id="cbe1-73ce-de38-219e" targetId="1de2-b57b-aa0a-1f0d"/>
     <entryLink import="true" name="Parasite of Mortrex" hidden="false" type="selectionEntry" id="b027-cb31-1000-7231" targetId="d213-efd8-a2b4-42d2">
       <modifiers>
@@ -395,15 +419,7 @@
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Show/Hide Options" hidden="false" type="selectionEntry" id="8f9e-ad26-3fe8-f3a3" targetId="e8ef-836a-a9d1-901d"/>
-    <entryLink import="true" name="Neurolictor" hidden="false" type="selectionEntry" id="2de5-fe7f-6b98-5156" targetId="642f-9302-4fdc-ab68">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink import="true" name="Neurolictor" hidden="false" type="selectionEntry" id="2de5-fe7f-6b98-5156" targetId="642f-9302-4fdc-ab68"/>
     <entryLink import="true" name="Norn Emissary" hidden="false" type="selectionEntry" id="7f4b-9c76-78fe-6dc0" targetId="5720-2873-8c2c-edc3">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -438,6 +454,24 @@
 
 ■ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 ■ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.</description>
+      <modifiers>
+        <modifier type="append" value="When measuring whether a unit from your army is within Synapse Range of a friendly SYNAPSE model, Walls and closed Hatchways are ignored." field="description">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -785,7 +819,6 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a9c-a415-9934-68cc" type="max"/>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6e88-7ea5-92d6-b492" type="max"/>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db48-6e99-34f8-d883" type="min"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="463c-5eaf-3d99-5917" name="Warlord" hidden="false" targetId="5c0e-4c31-d51b-e470" primary="false"/>
@@ -1138,12 +1171,24 @@
           <modifiers>
             <modifier type="set" value="1" field="382-80da-29d9-e165">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="507d-5ea4-6ef1-bf66" name="Winged Tyranid Prime" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1169,6 +1214,13 @@
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -1245,14 +1297,37 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="e86d-792-10b7-df58">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-              </conditions>
+            <modifier type="set" value="2" field="e86d-792-10b7-df58">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9184-9ab6-9238-f558" name="Old One Eye" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1377,6 +1452,21 @@
             <condition type="greaterThan" value="3" field="selections" scope="a125-b6fb-2945-56a" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="2" field="40be-d448-295c-f3f3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="40be-d448-295c-f3f3" includeChildSelections="true" includeChildForces="true"/>
@@ -1484,6 +1574,15 @@
           </profiles>
           <entryLinks>
             <entryLink import="true" name="Tyranid Warrior Claws and Talons" hidden="false" type="selectionEntry" id="6666-26c0-47c3-445" targetId="d9b4-8d0f-91f9-d114"/>
+            <entryLink import="true" name="Enhancements" hidden="true" id="c868-703b-2597-8132" type="selectionEntryGroup" targetId="fa5b-f646-b960-a8d3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Tyranid Warrior Loadout" hidden="false" id="b441-eb66-481c-7354" defaultSelectionEntryId="99c5-292-af3d-1d28">
@@ -1524,6 +1623,9 @@
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="36ae-2e1d-9e04-da8e" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="5815-871c-9260-287a" name="Tyranid Warriors with Melee Bio-Weapons" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1571,7 +1673,7 @@
               <modifiers>
                 <modifier type="set" value="2" field="c7cb-2b48-7c6e-859b">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1600,6 +1702,15 @@
           </costs>
           <entryLinks>
             <entryLink import="true" name="Tyranid Warrior Claws and Talons" hidden="false" type="selectionEntry" id="b35-3a56-6366-f7ff" targetId="cce-e9cd-6bac-df4d"/>
+            <entryLink import="true" name="Enhancements" hidden="true" id="4e9e-7512-44f8-a7b6" type="selectionEntryGroup" targetId="fa5b-f646-b960-a8d3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1612,6 +1723,21 @@
             <condition type="greaterThan" value="3" field="selections" scope="5815-871c-9260-287a" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="2" field="40be-d448-295c-f3f3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="40be-d448-295c-f3f3" includeChildSelections="true" includeChildForces="true"/>
@@ -1620,6 +1746,9 @@
         <infoLink name="Shadow in the Warp" hidden="false" type="rule" id="7b3e-d941-8ec7-cf66" targetId="395b-a159-b293-27aa"/>
         <infoLink name="Synapse" hidden="false" type="rule" id="72af-f501-afc8-f297" targetId="86aa-437f-260b-5cad"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="4fbc-dce5-0121-5e7f" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="359c-db2c-681a-8d62" name="Termagants" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1655,6 +1784,17 @@
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="359c-db2c-681a-8d62" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
@@ -1884,9 +2024,14 @@
             <modifierGroup type="and">
               <modifiers>
                 <modifier type="set" value="10" field="18fa-3a07-f023-e066">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </modifierGroup>
@@ -1898,12 +2043,20 @@
           <modifiers>
             <modifier type="set" value="3" field="b666-1f95-8d37-b195">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="b666-1f95-8d37-b195">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="654c-0901-ef2f-5379" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="f15b-9f9c-9bf0-8160" name="Hormagaunts" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1967,9 +2120,15 @@
             <modifierGroup type="and">
               <modifiers>
                 <modifier type="set" value="10" field="2015-a152-93d3-a73e">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </modifierGroup>
@@ -1985,6 +2144,18 @@
             <condition type="atLeast" value="11" field="selections" scope="f15b-9f9c-9bf0-8160" childId="model" shared="true" id="95a5-2185-1210-de69" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Synapse" hidden="false" type="rule" id="353f-9cfc-9696-900c" targetId="86aa-437f-260b-5cad"/>
@@ -1994,12 +2165,25 @@
           <modifiers>
             <modifier type="set" value="3" field="02aa-eefd-b9e7-cf60">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="02aa-eefd-b9e7-cf60">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="02aa-eefd-b9e7-cf60">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="8f98-fa40-629f-1c80" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="9ce8-7a63-15c3-0347" name="Gargoyles" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2500,30 +2684,23 @@
       </costs>
       <entryLinks>
         <entryLink targetId="dc9f-b3bb-9b44-cb92" id="baa2-9f2b-a204-96ce" type="selectionEntry" name="Lictor Claws and Talons" hidden="false"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7ae4-a5fe-c063-6a1b" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="set" value="1" field="ed75-3ce-a894-9253">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="0" field="ed75-3ce-a894-9253">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc36-92fe-ecc6-58b3" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1de2-b57b-aa0a-1f0d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="3f5-f7d6-1ce8-e6b9" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9bd8-ac8c-2d3b-79f6" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6467-972f-c95c-d414" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="de12-e6b6-16c1-47b0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2531,6 +2708,18 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Deathleaper" hidden="false" id="bc36-92fe-ecc6-58b3">
       <categoryLinks>
@@ -2604,18 +2793,10 @@
             <modifier type="set" value="0" field="40be-d448-295c-f3f3">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="da44-72c9-7a27-48aa" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1de2-b57b-aa0a-1f0d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="3f5-f7d6-1ce8-e6b9" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9bd8-ac8c-2d3b-79f6" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="da44-72c9-7a27-48aa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="de12-e6b6-16c1-47b0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2623,6 +2804,18 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lictor Claws and Talons" hidden="false" id="dc9f-b3bb-9b44-cb92">
       <constraints>
@@ -3073,6 +3266,16 @@
             <condition type="greaterThan" value="3" field="selections" scope="9bd8-ac8c-2d3b-79f6" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Von Ryan&apos;s Leaper" hidden="false" id="e439-47c1-afed-50c4">
@@ -3113,6 +3316,13 @@
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="3" field="eb36-fa83-7d24-3c75">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
@@ -3153,33 +3363,17 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="40be-d448-295c-f3f3">
+            <modifier type="set" value="2" field="40be-d448-295c-f3f3">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="40be-d448-295c-f3f3">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="da44-72c9-7a27-48aa" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc36-92fe-ecc6-58b3" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1de2-b57b-aa0a-1f0d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="3f5-f7d6-1ce8-e6b9" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="cc1a-575f-772a-9507" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Neurogaunts" hidden="false" id="8ccc-3f27-7e4e-da81">
       <selectionEntries>
@@ -3207,9 +3401,14 @@
             <modifierGroup type="and">
               <modifiers>
                 <modifier type="set" value="10" field="265d-3f60-9b44-1219">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </modifierGroup>
@@ -3260,6 +3459,17 @@
             <condition type="greaterThan" value="11" field="selections" scope="8ccc-3f27-7e4e-da81" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile name="Neurocytes" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3a53-28b0-3c8e-6108">
@@ -3277,14 +3487,17 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="a080-e499-e8d4-1b8">
+            <modifier type="set" value="1" field="40be-d448-295c-f3f3">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="990a-c8b2-485e-96e5" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Xenos Claws and Teeth" hidden="false" id="7d9a-61f6-867-5d83" collective="true">
       <constraints>
@@ -3648,27 +3861,8 @@
           <modifiers>
             <modifier type="set" value="1" field="aaa4-ecd6-4d33-9def">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="aaa4-ecd6-4d33-9def">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="da44-72c9-7a27-48aa" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc36-92fe-ecc6-58b3" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="3f5-f7d6-1ce8-e6b9" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9bd8-ac8c-2d3b-79f6" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </modifier>
           </modifiers>
         </modifierGroup>
@@ -3689,7 +3883,21 @@
             <condition type="equalTo" value="3" field="selections" scope="1de2-b57b-aa0a-1f0d" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="314a-5896-013f-eb09" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Parasite of Mortrex" hidden="false" id="d213-efd8-a2b4-42d2">
       <categoryLinks>
@@ -6029,18 +6237,20 @@
             <condition type="atLeast" value="6" field="selections" scope="853e-48b8-4cc5-3704" childId="model" shared="true" id="52ff-9693-18ed-8ce1" includeChildSelections="true"/>
           </conditions>
         </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="1" field="a080-e499-e8d4-1b8">
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="822f-0cbe-6111-44ef" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Raveners" hidden="false" id="3f5-f7d6-1ce8-e6b9">
       <profiles>
@@ -6076,6 +6286,16 @@
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="3f5-f7d6-1ce8-e6b9" childId="model" shared="true" id="fe8e-fdbb-c14f-157" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -6155,7 +6375,7 @@
           <modifiers>
             <modifier type="set" value="3" field="a61c-39d8-f2ab-9363">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6164,33 +6384,17 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="6da2-caf8-12c9-798c">
+            <modifier type="set" value="2" field="6da2-caf8-12c9-798c">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="6da2-caf8-12c9-798c">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="da44-72c9-7a27-48aa" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bc36-92fe-ecc6-58b3" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1de2-b57b-aa0a-1f0d" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9bd8-ac8c-2d3b-79f6" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a7f8-eb9f-36ab-70c2" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ravener claws and talons" hidden="false" id="ad4d-e5d1-8ffb-da22" collective="true">
       <constraints>
@@ -6604,6 +6808,43 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="dcd7-7228-8906-08ca" type="selectionEntry" targetId="ce91-9fa3-2a36-7260"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="6a75-a5f5-1da7-a85c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="c073-00a9-24df-4209" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="6a75-a5f5-1da7-a85c">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6467-972f-c95c-d414" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ff-bd00-eca8-bff7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Norn Assimilator" hidden="false" id="6a9b-8e2f-edac-fa2d">
       <costs>
@@ -7087,6 +7328,37 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="ce91-9fa3-2a36-7260" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d934-ba02-a027-fefa" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0045-722a-64db-8187" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="4807-fc71-a73e-237a" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bc36-92fe-ecc6-58b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="7ada-e361-1f7e-af" name="Detachment Rule" hidden="false" collective="false" import="true">
@@ -7116,6 +7388,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Assimilation Swarm" hidden="false" id="bba-65f6-a4d1-66ae">
           <profiles>
@@ -7129,6 +7408,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Crusher Stampede" hidden="false" id="850e-bee1-4845-820d">
           <profiles>
@@ -7138,6 +7424,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Synaptic Nexus" hidden="false" id="16ff-a068-4c31-285a">
           <profiles>
@@ -7152,6 +7445,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Unending Swarm" hidden="false" id="4cd9-313f-cd9b-c85a">
           <profiles>
@@ -7161,6 +7461,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Vanguard Onslaught" hidden="false" id="f773-f91c-2999-c7e1">
           <profiles>
@@ -7175,8 +7482,66 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Biotide" hidden="false" id="2788-f8a7-809a-438a">
+          <profiles>
+            <profile name="Unstoppable Swarm" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="94e1-060c-c7d7-27bc">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a TYRANIDS unit from your army moves, models in that unit can move through friendly TYRANIDS models as if they were not there. In addition, each time a TYRANIDS unit from your army attempts to operate a closed Hatchway, if your opponent tries to prevent it, add 1 to your result of the roll-off.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Boarding Swarm" hidden="false" id="c073-00a9-24df-4209">
+          <profiles>
+            <profile name="Priority Predation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e843-a6a8-0cb8-1b62">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit within Engagement Range of one or more TYRANIDS units from your army is selected to Fall Back, after that enemy unit has made that Fall Back move, for each of those TYRANIDS units, if there are no other enemy units within Engagement Range of it, it can make a Normal move of up to 3&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Tyranid Attack" hidden="false" id="2713-6bad-fd18-bdb8">
+          <profiles>
+            <profile name="Xeno-Terror" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6ecb-c6a5-823a-1959">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">When you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result. For each enemy unit that fails one of those tests, that enemy unit cannot Fire Overwatch this turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Infestation Swarm" hidden="false" id="da11-ca45-ee4a-bcfc" type="selectionEntry" targetId="1e58-2607-7b86-27b9"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="fa5b-f646-b960-a8d3" name="Enhancements" hidden="false" collective="false" import="true">
       <constraints>
@@ -7878,7 +8243,98 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Biotide Enhancements" id="ea70-47a3-30e3-1dd1" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="roster" childId="2788-f8a7-809a-438a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32b2-da09-7d99-6d46" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Synaptic Beacon" hidden="false" id="2166-24b2-dfbb-695a" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a96f-910f-69a9-79cb" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9e58-f899-afe8-5ac4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Synaptic Beacon" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a674-0c90-20a5-6326">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While a friendly TYRANIDS unit is within 9&quot; of the bearer (ignoring Walls and closed Hatchways), that unit is within Synapse Range of the bearer and of your army.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hypersurge Gland" hidden="false" id="ee9e-53f5-4ec4-7720" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0ab-139a-c120-5440" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa3d-34da-df09-274e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Hypersurge Gland" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1685-e72f-accd-348d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the end of your opponent&apos;s Charge phase, the bearer can use this Enhancement. If it does, it can declare a charge as if it were your Charge phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Tyranid Attack Enhancements" id="cffa-ffbb-9569-ea5a" hidden="true" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="roster" childId="2713-6bad-fd18-bdb8" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12b8-adb0-9683-4f02" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Synaptic Goad" hidden="false" id="d747-e7cf-ae92-092d" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a81d-464e-3d6a-a7f0" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="51db-5ce3-6e7a-465e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Synaptic Goad" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b435-defe-242c-f182">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, select one friendly TYRANID WARRIORS WITH MELEE BIO-WEAPONS or TYRANID WARRIORS WITH RANGED BIO-WEAPONS unit within 6&quot; of the bearer. Until the end of the turn, add 2&quot; to the Move characteristic of models in that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Reinforced Carapace" hidden="false" id="9926-a639-3087-70fe" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c73-aa04-3afb-8fe9" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="071f-e532-7881-77d4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Reinforced Carapace" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="cb4e-c796-6927-f883">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (note that if give to a Tyranid Prime model, this only affects that model and not other models in its unit).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="2" field="4856-7562-fc89-349b">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="75ea-1678-2e8f-812f" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+        <entryLink import="true" name="Infestation Swarm Enhancements" hidden="false" id="1463-8945-0c78-ef20" type="selectionEntryGroup" targetId="85df-b7cf-8ae8-ad86"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
@@ -7956,6 +8412,13 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
   <sharedRules>
     <rule id="395b-a159-b293-27aa" name="Shadow in the Warp" hidden="false">
       <description>If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6&quot; of one or more Synapse units from your army, subtract 1 from that test.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
 </catalogue>

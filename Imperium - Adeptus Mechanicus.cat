@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="77b9-2f66-3f9b-5cf3" name="Imperium - Adeptus Mechanicus" revision="40" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="77b9-2f66-3f9b-5cf3" name="Imperium - Adeptus Mechanicus" revision="41" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <categoryEntries>
     <categoryEntry id="f826-1ad1-a542-2058" name="Archaeopter Fusilave" hidden="false"/>
     <categoryEntry id="37b3-cded-c814-6e63" name="Archaeopter Stratoraptor" hidden="false"/>
@@ -183,6 +183,17 @@
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="a34b-6a88-3768-3a37" targetId="eea3-949a-21d2-d33f"/>
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="66b0-cc6a-fae-50c8" targetId="5e69-8258-9ee5-3b6b"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d54e-1007-26b5-6a79" name="Archaeopter Stratoraptor" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -331,6 +342,17 @@
       <entryLinks>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="c3fa-7553-d82e-bfa8" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="295-769-8893-2bb0" name="Archaeopter Transvector" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -420,6 +442,17 @@
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="562b-78e8-ea0b-3ed3" targetId="5e69-8258-9ee5-3b6b"/>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="1732-1849-97cf-d8f8" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="1f1e-2989-4762-cf88" name="Belisarius Cawl" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -571,6 +604,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="fd5a-f7a3-833c-85b" name="Corpuscarii Electro-Priests" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -578,6 +622,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           <conditions>
             <condition field="selections" scope="fd5a-f7a3-833c-85b" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -606,6 +661,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
         <infoLink id="8d21-7717-af43-ce33" name="Feel No Pain" hidden="false" targetId="9bf4-280f-bbe2-6fbb" type="rule"/>
         <infoLink id="4d74-808f-32e2-e4a7" name="Invulnerable Save" hidden="false" targetId="8c24-fbe9-b191-175f" type="profile"/>
         <infoLink name="Doctrina Imperatives" id="021a-ae09-d3af-8518" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="895a-ded5-66fc-e9cb" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="284d-218a-1603-8cd2" name="Electro-Priests" hidden="false" targetId="439d-b5b7-5fcc-a665" primary="false"/>
@@ -665,6 +721,30 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="6958-586c-6fd5-06f5" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1097-4be8-b6db-c014"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="1097-4be8-b6db-c014"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="1097-4be8-b6db-c014"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="841-f339-8086-efe2" name="Fulgurite Electro-Priests" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -672,6 +752,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           <conditions>
             <condition field="selections" scope="841-f339-8086-efe2" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -699,6 +790,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
         </infoLink>
         <infoLink id="360a-3951-b7ee-0247" name="Invulnerable Save" hidden="false" targetId="8c24-fbe9-b191-175f" type="profile"/>
         <infoLink name="Doctrina Imperatives" id="7630-3256-6de7-ff86" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="e23f-cf6c-9149-8361" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a951-c509-365-5eb1" name="Electro-Priests" hidden="false" targetId="439d-b5b7-5fcc-a665" primary="false"/>
@@ -746,6 +838,30 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7871-312d-70bf-fbd2" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="bd59-0f31-0dfd-4f27"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bd59-0f31-0dfd-4f27"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bd59-0f31-0dfd-4f27"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="7efb-de37-79c4-cccb" name="Ironstrider Ballistarii" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -871,6 +987,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="bd6c-8683-8bc4-962d" name="Kastelan Robots" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -878,6 +1005,15 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           <conditions>
             <condition field="selections" scope="bd6c-8683-8bc4-962d" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1119,6 +1255,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition field="selections" scope="a46f-848-b87d-4484" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="c97f-7f22-6d6f-1bcc" name="Kataphron Breachers" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
@@ -1206,6 +1353,18 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="3" field="2cb8-aaea-4033-0392">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1213,7 +1372,32 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </costs>
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="8a8c-65e2-c178-aaf2" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="ebc7-b881-aeca-f114" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="0e7b-3e2e-edcb-880d" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e0a3-ecc7-f56f-878c"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e0a3-ecc7-f56f-878c"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e0a3-ecc7-f56f-878c"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="7bee-a476-2167-76e7" name="Kataphron Destroyers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1221,6 +1405,17 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           <conditions>
             <condition field="selections" scope="7bee-a476-2167-76e7" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1301,6 +1496,18 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="3" field="dd67-6780-c089-2365">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1308,7 +1515,32 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </costs>
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="1cfb-fe6e-c15b-c844" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="16f0-b31f-853e-b3bd" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="bbd9-afb1-5bcd-c9a7" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4ad0-fdfa-9746-2bec"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4ad0-fdfa-9746-2bec"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4ad0-fdfa-9746-2bec"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ea05-4db7-9ee6-7a87" name="Onager Dunecrawler" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -1600,6 +1832,15 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="ea05-4db7-9ee6-7a87" childId="407b-a252-25b0-0cf4" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="b31e-5003-5b63-a305" name="Pteraxii Skystalkers" hidden="false" collective="false" import="true" type="unit">
@@ -1608,6 +1849,15 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           <conditions>
             <condition field="selections" scope="b31e-5003-5b63-a305" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1778,6 +2028,15 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           <conditions>
             <condition field="selections" scope="958-a256-360-8620" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -1966,6 +2225,15 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           <conditions>
             <condition field="selections" scope="5797-adb8-930-e832" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2208,6 +2476,15 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           <conditions>
             <condition field="selections" scope="e775-4fe1-832b-95ca" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2530,6 +2807,17 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition field="selections" scope="9b4-26b2-9e6d-a62d" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="da3a-8bea-e360-b178" name="Sicarian Infiltrators" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
@@ -2557,6 +2845,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
         <infoLink id="1705-cfa2-e00f-b1e0" name="Infiltrators" hidden="false" targetId="c05d-f4c3-f091-4938" type="rule"/>
         <infoLink id="36ce-3394-5494-ad8a" name="Stealth" hidden="false" targetId="bec5-4288-34a6-ccfa" type="rule"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="46e0-7573-2c51-7e33" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="0d5c-dc7c-35f9-03da" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c384-8a26-21b-a09b" name="Imperium" hidden="false" targetId="aff3-d6a3-2a95-9dc" primary="false"/>
@@ -2784,6 +3073,30 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="b687-7337-b110-85c3" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="31cd-56c4-2366-b514"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="31cd-56c4-2366-b514"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="31cd-56c4-2366-b514"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="8863-9784-8377-aa7a" name="Sicarian Ruststalkers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2791,6 +3104,17 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           <conditions>
             <condition field="selections" scope="8863-9784-8377-aa7a" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2818,6 +3142,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       <infoLinks>
         <infoLink id="44b7-203f-d216-754b" name="Stealth" hidden="false" targetId="bec5-4288-34a6-ccfa" type="rule"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="8763-a5c1-c9d9-1151" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="296a-e021-d0d3-7afd" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2d47-4ca5-556b-2cb7" name="Sicarian Ruststalkers" hidden="false" targetId="e659-53c-94b7-7428" primary="false"/>
@@ -2968,6 +3293,30 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="372d-8a46-b26d-8f87" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2477-2173-44e7-cf50"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="2477-2173-44e7-cf50"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="2477-2173-44e7-cf50"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="b897-e4c6-fcb6-6538" name="Skitarii Marshal" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -3007,6 +3356,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       <infoLinks>
         <infoLink id="25ba-ea35-bb5d-5e66" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="10d8-e42a-8b37-76fc" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="2f76-bbb3-bb0d-c24c" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fb47-5f3-4c3e-d253" name="Marshal" hidden="false" targetId="58c1-8e13-6d05-ee24" primary="false"/>
@@ -3052,6 +3402,40 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5a39-ec55-33dc-f946"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="5a39-ec55-33dc-f946"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="5a39-ec55-33dc-f946"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="de59-f65c-181a-8509" name="Skitarii Rangers" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -3069,6 +3453,18 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="90a-4e07-da10-357b" name="Invulnerable Save" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -3083,6 +3479,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           </modifiers>
         </infoLink>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="4d4b-44a-be85-c96" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="2e46-f732-b86a-b1c7" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3e7b-9755-65b-6730" name="Rangers" hidden="false" targetId="bdec-fa84-45c0-24dc" primary="false"/>
@@ -3452,11 +3849,60 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="4" field="0748-8852-2e32-1a8f">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c3a1-ece1-2389-d6fc" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="646c-5cda-89c8-08c9"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="646c-5cda-89c8-08c9"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="646c-5cda-89c8-08c9"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ba33-c21-bddc-ab0" name="Skitarii Vanguard" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -3860,6 +4306,18 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="4" field="9839-3b18-4e5d-56d2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -3867,7 +4325,45 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       </costs>
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="f4e4-5bc-bcea-6d16" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="ba99-23ab-cd94-8b20" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="0f62-c24b-9683-54a1" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="c54a-d26d-6473-92d6"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c54a-d26d-6473-92d6"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c54a-d26d-6473-92d6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3fcc-b6a1-399b-1a29" name="Skorpius Disintegrator" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4016,6 +4512,17 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       <entryLinks>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="95ee-4601-8c92-b047" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="2b9c-3982-701d-f8fd" name="Skorpius Dunerider" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4075,6 +4582,17 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="9cc2-72a4-c4-60aa" targetId="eea3-949a-21d2-d33f"/>
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="4ed3-afa8-1416-9c20" targetId="5e69-8258-9ee5-3b6b"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3053-c0c1-aedd-b211" name="Sydonian Dragoons (Taser Lance)" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -4226,6 +4744,17 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <infoLink name="Stealth" hidden="false" type="rule" id="f172-e613-bcd5-7da" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="aed5-a853-ce89-2ae8" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="6424-ed86-9e15-3e14" name="Tech-Priest Dominus" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4264,11 +4793,24 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the Fight phase, you can select one enemy Vehicle unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="9e9d-d78c-46d2-1a09" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink name="Doctrina Imperatives" id="dd95-0c96-df5f-a022" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="bb16-0fff-98e6-a9a5" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="da06-9c8f-c2b8-1681" name="Dominus" hidden="false" targetId="c39d-5908-6bc1-8212" primary="false"/>
@@ -4410,6 +4952,50 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="c453-ca29-fe42-fa2e"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c453-ca29-fe42-fa2e"/>
+            <modifier type="set" value="0" field="c453-ca29-fe42-fa2e">
+              <conditions>
+                <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c453-ca29-fe42-fa2e"/>
+            <modifier type="set" value="0" field="c453-ca29-fe42-fa2e">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="c0e0-4d86-96d2-ec86" name="Tech-Priest Enginseer" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4459,6 +5045,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       <infoLinks>
         <infoLink id="7c93-6b84-4456-676d" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink name="Doctrina Imperatives" id="29f3-b362-ac17-ca57" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="a49e-ce1e-4e1f-b9b1" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="99ec-3242-86e-66ea" name="Enginseer" hidden="false" targetId="c23-782d-e9c1-1da5" primary="false"/>
@@ -4528,6 +5115,50 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="9539-cd35-0573-04e9"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9539-cd35-0573-04e9"/>
+            <modifier type="set" value="0" field="9539-cd35-0573-04e9">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9539-cd35-0573-04e9"/>
+            <modifier type="set" value="0" field="9539-cd35-0573-04e9">
+              <conditions>
+                <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="2d9b-610a-dc4d-15ae" name="Tech-Priest Manipulus" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4571,6 +5202,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       <infoLinks>
         <infoLink id="a45f-f785-d90c-b13f" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink name="Doctrina Imperatives" id="516d-6d0d-0501-7b7d" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="38e0-bdd9-9b97-d648" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="869e-344a-f17b-e8c9" name="Manipulus" hidden="false" targetId="63f-669c-2b61-cb04" primary="false"/>
@@ -4660,6 +5292,50 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="71db-a6f5-7284-5713"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="71db-a6f5-7284-5713"/>
+            <modifier type="set" value="0" field="71db-a6f5-7284-5713">
+              <conditions>
+                <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="71db-a6f5-7284-5713"/>
+            <modifier type="set" value="0" field="71db-a6f5-7284-5713">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="fa82-61cc-aa85-e94c" name="Technoarcheologist" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4703,6 +5379,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       <infoLinks>
         <infoLink id="2d20-460a-3b47-7f9c" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink name="Doctrina Imperatives" id="e6e0-cb40-c801-004b" hidden="false" type="rule" targetId="7a21-a958-e47d-5c0d"/>
+        <infoLink name="Close Quarters Doctrina" id="e612-12fd-188b-ce70" hidden="false" type="rule" targetId="f1e0-e600-d782-b7ef"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f985-e63f-c6b0-a79f" name="Technoarcheologist" hidden="false" targetId="5441-b72-c2ad-f28a" primary="false"/>
@@ -4754,6 +5431,50 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d3f1-8822-5285-e124"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="d3f1-8822-5285-e124"/>
+            <modifier type="set" value="0" field="d3f1-8822-5285-e124">
+              <conditions>
+                <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="d3f1-8822-5285-e124"/>
+            <modifier type="set" value="0" field="d3f1-8822-5285-e124">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="d59d-ef1-9ef8-4f44" name="Cybernetica Datasmith" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4834,6 +5555,17 @@ You must attach this model to a Kastelan Robots unit, even if one or more other 
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0580-79ca-da98-77c3" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
@@ -5756,6 +6488,13 @@ FALLOUT
 At the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Skitarii Hunter Cohort" hidden="false" id="48bd-eeae-171d-a10a">
               <rules>
@@ -5763,6 +6502,13 @@ At the start of your Command phase during the second, third, fourth and fifth ba
                   <description>SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units from your army have the Stealth ability, and each time a ranged attack targets a Sicarian unit from your army, unless the attacking model is within 12&quot;, the target has the Benefit of Cover against that attack.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Explorator Maniple" hidden="false" id="e01f-8783-4769-2eb6">
               <rules>
@@ -5770,6 +6516,13 @@ At the start of your Command phase during the second, third, fourth and fifth ba
                   <description>At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s  unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Data-psalm Conclave" hidden="false" id="e282-2b49-bd6a-679c">
               <rules>
@@ -5785,6 +6538,13 @@ Citation in Savagery:
 Each time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Cohort Cybernetica" hidden="false" id="f67d-6f59-21b8-e1f9">
               <rules>
@@ -5792,6 +6552,55 @@ Each time a CULT MECHANICUS unit from your army is selected to fight, if that u
                   <description>LEGIO CYBERNETICA units from your army gain the Doctrina Imperatives army rule.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Electromartyrs" hidden="false" id="0591-34e3-2836-f46e">
+              <rules>
+                <rule name="Overload Machine Spirits" id="11ce-c7d3-f2fe-3d31" hidden="false">
+                  <description>Each time an ADEPTUS MECHANICUS unit from your army is selected to shoot, it can use this ability. If it does, until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in that unit by 1 and those weapons have the [HAZARDOUS] ability.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Machine Cult" hidden="false" id="db37-19bc-3450-585f">
+              <rules>
+                <rule name="Canticles of the Omnissiah" id="f39a-91ff-8511-9514" hidden="false">
+                  <description>Add 1 to Advance rolls, Charge rolls and Battle-shock tests for TECH-PRIEST and ELECTRO-PRIEST units from your army.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Response Clade" hidden="false" id="f44b-f954-695d-acad">
+              <rules>
+                <rule name="Procedural Elimination" id="5de1-4d33-a6da-caa4" hidden="false">
+                  <description>At the start of the battle round, select either melee attacks or ranged attacks. Until the end of the battle round, each time a SKITARII model from your army makes an attack of the selected type, re-roll a Hit roll of 1.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6335,6 +7144,17 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d99a-6563-8c08-23c" name="Sydonian Dragoons (Radium jezzail)" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -6492,6 +7312,17 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
         <infoLink name="Stealth" hidden="false" type="rule" id="9dff-defa-50e9-dfa3" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="fd54-fdd2-2501-524e" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Servitors [Legends]" hidden="false" id="2183-5b38-1726-2a11">
       <costs>
@@ -6724,6 +7555,29 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
         <infoLink name="Devastating Wounds" hidden="false" type="rule" id="cc67-53b6-9c74-b181" targetId="be1e-ac8e-1e2c-3528"/>
         <infoLink name="Pistol" hidden="false" type="rule" id="9170-907c-d0ef-225d" targetId="8bf7-8812-923d-29e4"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="3ffa-e8d5-a54a-fcac" collective="false">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="f4ea-f1a0-d1ae-2aa1" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5f1-7f6d-fefe-50de"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -7214,6 +8068,107 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="451c-2fb0-82f3-d893" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Electromartyrs Enhancements" id="79ad-7061-f119-95bb" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Remote Lockdown" hidden="false" id="35af-c703-e318-f295">
+              <profiles>
+                <profile name="Remote Lockdown" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ad97-c4ae-2bbb-a0e4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, when an enemy unit attempts to operate a Hatchway, if that Hatchway is within 9&quot; of and visible to the bearer, it can use this Enhancement. If it does, it can attempt to prevent that unit from operating that Hatchway as if the bearer was within 1&quot; of that Hatchway.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Multi-dimensional Auspex" hidden="false" id="1b52-f095-4007-2dd6">
+              <profiles>
+                <profile name="Multi-dimensional Auspex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="460e-79c9-2a66-7197">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, in your Shooting phase, when the bearer is selected to shoot, it can use this Enhancement. If it does, until the end of the phase, it can ignore Walls and closed Hatchways for the purposes of determining visibility, and the Range characteristic of ranged weapons it is equipped with is changed to 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" id="10f8-9dea-e3e2-e438" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f772-df7f-5e48-98bc"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Machine Cult Enhancements" id="9df0-09da-7524-6d73" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Beseech the Machine Spirits" hidden="false" id="e3d9-32d9-a213-8be7">
+              <profiles>
+                <profile name="Beseech the Machine Spirits" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="955a-1b52-c106-f05a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of the Move Units step of your Movement phase, the bearer can attempt to operate a Hatchway that is visible to and within 9&quot; of it, instead of one within 1&quot;. When doing so, if your opponent attempts to prevent it, add the bearer&apos;s Toughness characteristic to your result of the roll-off, instead of that of a friendly model within 1&quot; of that Hatchway.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Harmonic Discordator" hidden="false" id="3e00-241f-579b-6802">
+              <profiles>
+                <profile name="Harmonic Discordator" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5001-d630-3c35-c823">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Battle-shock step of your opponent&apos;s Command phase, if an enemy unit that is below its Starting Strength is within 3&quot; of the bearer, that unit must take a Battle-shock test. If that enemy unit is also Below Half-strength, subtract 1 from that test. This Enhancement cannot cause a unit to take two Battle-shock tests in the same phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" id="b52b-edc2-01a6-d168" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e58-b769-102c-a6b5"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Response Clade Enhancements" id="d722-1446-062b-5729" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Admonissor Shunt" hidden="false" id="07c1-16fd-7d94-4c03">
+              <profiles>
+                <profile name="Admonissor Shunt" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4a58-65fa-7d25-adf0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the start of any phase, if the bearer is on the battlefield, you can select one friendly SKITARII unit that is Battle-shocked. That unit is no longer Battle-shocked.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Optimised Cogitators" hidden="false" id="80a2-0389-c378-dcb2">
+              <profiles>
+                <profile name="Optimised Cogitators" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="05c2-26c2-25d3-ca18">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, when you target the bearer with a Stratagem, that use of that Stratagem costs 1 less CP than normal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" id="5ece-bf45-ad11-d3c3" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0698-cb1d-f092-3a0c"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -7229,6 +8184,23 @@ CONQUEROR IMPERATIVE
 ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
 ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.
 ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6&quot; of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Close Quarters Doctrina" id="f1e0-e600-d782-b7ef" hidden="false">
+      <description>At the start of the battle round, select one of the following weapon abilities: [ASSAULT]; [IGNORES COVER]; [PISTOL]. Until the end of the battle round, ranged weapons equipped by models from your army with this ability have that weapon ability.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

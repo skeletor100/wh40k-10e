@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="50c4-3e83-fe54-97c4" name="Imperium - Grey Knights" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="26" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="50c4-3e83-fe54-97c4" name="Imperium - Grey Knights" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="27" battleScribeVersion="2.03" type="catalogue">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Imperium - Imperial Knights - Library" id="f3e4-7fc3-8f57-6303" importRootEntries="true" targetId="1b6d-dc06-5db9-c7d1"/>
     <catalogueLink type="catalogue" name="Imperium - Agents of the Imperium" id="575c-d0f9-7fdc-2ddb" targetId="b00-cd86-4b4c-97ba" importRootEntries="true"/>
@@ -52,6 +52,7 @@
         <infoLink name="Leader" hidden="false" type="rule" id="b773-10b6-7cd6-ddeb" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="4e1d-9c76-976f-4395" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="5c10-dc0-a977-a135" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="13e9-3da2-0709-357f" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapon Choice" hidden="false" id="20a2-ba8f-784c-3bf" defaultSelectionEntryId="26b7-e7cf-33d8-9abe">
@@ -176,6 +177,42 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="4071-afce-23e1-75ca" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="9cf4-4ded-1e84-1743" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="77ab-3f34-1fae-f6fb"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="77ab-3f34-1fae-f6fb"/>
+            <modifier type="set" value="0" field="77ab-3f34-1fae-f6fb">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brother-Captain Stern" hidden="false" id="aec2-ded6-fa0-3b75">
       <costs>
@@ -224,6 +261,7 @@
         <infoLink name="Leader" hidden="false" type="rule" id="9ea3-9c24-9f8d-78e" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="64bc-82bf-52d3-2541" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="e6d0-ebde-69a5-a757" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="68c2-49e1-2531-509e" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Nemesis Force Sword" hidden="false" id="1b42-d922-74f0-c474" collective="true">
@@ -278,6 +316,41 @@
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="20d3-9bd5-ea7-2688" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faa2-b25d-f74c-b46d"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="faa2-b25d-f74c-b46d">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brotherhood Champion" hidden="false" id="2c81-4e74-8707-3117">
       <costs>
@@ -325,6 +398,7 @@
         <infoLink name="Deep Strike" hidden="false" type="rule" id="36b8-36f5-d613-ca9e" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Fights First" hidden="false" type="rule" id="4f48-4dcb-6d3e-72e9" targetId="24-c886-e8ba-5a89"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="40ed-1437-38dd-6487" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="9483-53a7-e7a8-778b" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="e4f1-7c06-108f-dda3" collective="true">
@@ -381,6 +455,36 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="4ef6-82e7-5d90-dfa9" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="79a5-e051-9aec-325d" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d7cb-3c5a-5d16-90e3"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="d7cb-3c5a-5d16-90e3"/>
+            <modifier type="set" value="0" field="d7cb-3c5a-5d16-90e3">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brotherhood Chaplain" hidden="false" id="b9b1-d698-1e98-da45">
       <costs>
@@ -428,6 +532,7 @@
         <infoLink name="Leader" hidden="false" type="rule" id="6f29-bc30-ecca-c1a1" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="ce58-94f6-4b8f-3c7b" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="7aae-62a1-b668-1" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="9703-109d-10f8-af56" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="6fc3-5e9-2ebc-b8b8">
@@ -480,6 +585,42 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="bce8-46bb-af2e-7a00" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="8315-c234-f1b1-ace7" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="5354-aa77-25c7-6f76"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="5354-aa77-25c7-6f76"/>
+            <modifier type="set" value="0" field="5354-aa77-25c7-6f76">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brotherhood Librarian" hidden="false" id="5412-1f01-b7cc-bf12">
       <costs>
@@ -509,11 +650,24 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, you can select one enemy unit within 18&quot; of and visible to this Psyker (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12&quot; of this Psyker). If you do, roll one D6: on a 1, this Psyker’s unit suffers D6 mortal wounds; on a 2-5, that enemy unit suffers 2D3 mortal wounds; on a 6, that enemy unit suffers 2D6 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="aabc-18b2-e696-ba9e" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="b7b2-cc96-7c3e-d100" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="af69-c652-1f8b-0e38" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="fffe-abc5-ac4f-6eda" collective="true">
@@ -653,6 +807,42 @@
           </infoLinks>
         </infoGroup>
       </infoGroups>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="cebf-f1c0-fdf2-c951"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="cebf-f1c0-fdf2-c951"/>
+            <modifier type="set" value="0" field="cebf-f1c0-fdf2-c951">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brotherhood Techmarine" hidden="false" id="f667-5267-f241-37">
       <costs>
@@ -703,6 +893,7 @@
       <infoLinks>
         <infoLink name="Leader" hidden="false" type="rule" id="c2d8-8565-c5d5-e49e" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="c43e-345d-bb6-9dd1" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Eye of the Prognosticars" id="8d22-46c0-96c7-8bf6" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Ranged Weapon" hidden="false" id="9fd1-cdfd-7fbd-70ef" defaultSelectionEntryId="3116-6dc9-27ee-97bb">
@@ -837,6 +1028,36 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="8221-d7ae-98a7-7bb7" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="4688-73ca-5595-3348" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="3b23-d0fe-bfa9-509d"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3b23-d0fe-bfa9-509d"/>
+            <modifier type="set" value="0" field="3b23-d0fe-bfa9-509d">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Brotherhood Terminator Squad" hidden="false" id="a037-a89c-f59f-8b1e">
       <costs>
@@ -847,6 +1068,17 @@
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="a037-a89c-f59f-8b1e" childId="model" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -879,6 +1111,7 @@
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="8924-88a6-d109-fc61" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="51b9-edbc-12d7-a878" targetId="a343-738-c273-4e13"/>
+        <infoLink name="Eye of the Prognosticars" id="3aa6-3d0b-b2b0-ceba" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Terminators (4-9)" hidden="false" id="2da-fe4-d745-7dda" defaultSelectionEntryId="f5c5-56fd-51ec-d1a6">
@@ -1142,6 +1375,17 @@
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="e99f-6e07-1a6b-a4a4"/>
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="e3fa-db46-4723-6423"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="4" field="e3fa-db46-4723-6423">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
@@ -1202,6 +1446,35 @@
           </selectionEntries>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a4f8-db8c-f4ce-6247" type="selectionEntry" targetId="18ef-bd43-42fa-5a96"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="be8b-8def-17e5-f32f"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="be8b-8def-17e5-f32f"/>
+            <modifier type="set" value="0" field="be8b-8def-17e5-f32f">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6528-4634-c2cf-2840" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="be8b-8def-17e5-f32f"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Castellan Crowe" hidden="false" id="9ddb-760d-8cf7-1c8a">
       <costs>
@@ -1248,6 +1521,7 @@
         <infoLink name="Deep Strike" hidden="false" type="rule" id="e09e-913c-8134-757b" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="d946-7c6-9030-b5d7" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="3d0f-ed92-a950-b8f" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="96ae-4d36-c48c-f69e" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Purifying Flame" hidden="false" id="ba75-d1eb-5347-28b3" collective="false">
@@ -1327,6 +1601,35 @@
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="29ce-108e-9134-cf64" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="718d-af5b-8936-b783"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="718d-af5b-8936-b783">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grand Master" hidden="false" id="1a56-706b-a8f1-631a">
       <costs>
@@ -1374,6 +1677,7 @@
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="14-5133-4c03-b851" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="c3ec-3c2e-bfc9-8c11" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="5961-a79b-17f8-956f" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapon Choice" hidden="false" id="1afc-d16b-2a31-bea8" defaultSelectionEntryId="903a-b2d-bf56-4652">
@@ -1498,6 +1802,42 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="1a4e-5c6c-8439-14cb" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="c39a-5b6b-531e-dabb" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="5c1b-476e-2eec-e375"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="5c1b-476e-2eec-e375"/>
+            <modifier type="set" value="0" field="5c1b-476e-2eec-e375">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grand Master in Nemesis Dreadknight" hidden="false" id="3625-f9f1-122b-bf9d">
       <costs>
@@ -1586,6 +1926,17 @@
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="13f3-6d13-7623-8dec" targetId="c440-b056-f09a-c88a"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="9bc3-1965-bdc8-2169" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grand Master Voldus" hidden="false" id="7256-bb3a-3e79-31fe">
       <costs>
@@ -1621,6 +1972,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6, adding 2 to the result if that unit has the Daemon keyword: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3de3-b31e-7c05-aba8">
           <characteristics>
@@ -1634,6 +1997,7 @@
         <infoLink name="Deep Strike" hidden="false" type="rule" id="4369-e175-5ac5-231b" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="5034-3b66-4628-9ee0" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="8636-b62a-9ee4-842a" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="3f6e-bc87-73b7-5693" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="90bf-576e-e6e1-34f3">
@@ -1685,6 +2049,41 @@
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="b226-1312-fee6-ae5e" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2efd-c61f-179e-d1b4"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="2efd-c61f-179e-d1b4">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Land Raider" hidden="false" id="512d-b972-911e-4cac">
       <costs>
@@ -1851,6 +2250,17 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Land Raider Crusader" hidden="false" id="4c63-cca-8d26-6330">
       <costs>
@@ -2018,6 +2428,17 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Land Raider Redeemer" hidden="false" id="ada7-eb0b-c920-d77f">
       <costs>
@@ -2186,6 +2607,17 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Razorback" hidden="false" id="841f-98b-fbf3-c8ee">
       <costs>
@@ -2348,6 +2780,17 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Rhino" hidden="false" id="5ffd-f698-a1bb-fba7">
       <costs>
@@ -2462,6 +2905,17 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Stormhawk Interceptor" hidden="false" id="fa-e288-2107-d22e">
       <costs>
@@ -2645,6 +3099,17 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Stormraven Gunship" hidden="false" id="2efe-459b-9562-e7a9">
       <costs>
@@ -2886,6 +3351,17 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Stormtalon Gunship" hidden="false" id="84ac-b9ea-921f-9082">
       <costs>
@@ -3045,6 +3521,17 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Venerable Dreadnought" hidden="false" id="bd43-b303-66e0-4c10">
       <costs>
@@ -3261,6 +3748,17 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Interceptor Squad" hidden="false" id="d9f7-71b7-8e67-7f44">
       <costs>
@@ -3271,6 +3769,25 @@
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="d9f7-71b7-8e67-7f44" childId="model" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -3292,15 +3809,38 @@
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Personal Teleporters" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8d05-c69c-2572-99ba">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6&quot; as if it were your Movement phase. If it does, until the end of the turn, this unit is not eligible to declare a charge</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="e69a-c87-618-f1b3" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Eye of the Prognosticars" id="e826-d82a-9761-311a" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="1 Justicar and 4-9 Interceptors" hidden="false" id="5e2b-e394-45b-4674" defaultSelectionEntryId="2906-2dfd-6dbe-ca8">
@@ -3538,6 +4078,22 @@
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="ea37-c017-713e-bd96" type="selectionEntry" targetId="18ef-bd43-42fa-5a96"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c112-1a8b-5383-bb58"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c112-1a8b-5383-bb58"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Kaldor Draigo" hidden="false" id="7a19-5235-692b-320d">
       <costs>
@@ -3574,6 +4130,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, when this model’s unit declares a charge in the same turn it was set up on the battlefield using the Deep Strike or Teleport Assault ability, add 3 to the Charge roll.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d668-10b1-f5d9-9bd0">
           <characteristics>
@@ -3587,6 +4155,7 @@
         <infoLink name="Deep Strike" hidden="false" type="rule" id="64e5-ddc6-93b6-845d" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="413b-33bd-e69-59ba" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="acfb-af78-3ddc-69f7" targetId="df6-e949-835b-ad0d"/>
+        <infoLink name="Eye of the Prognosticars" id="ef55-76e3-8096-5499" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="1934-6940-4a56-4ac3">
@@ -3657,6 +4226,41 @@
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="11ba-e4a9-aa6-2721" targetId="beae-4593-3686-1672"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24e4-b9b1-ab05-5ca2"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="24e4-b9b1-ab05-5ca2">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nemesis Dreadknight" hidden="false" id="5458-a458-c51d-c4e9">
       <costs>
@@ -3735,6 +4339,17 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Paladin Squad" hidden="false" id="6528-4634-c2cf-2840">
       <costs>
@@ -3745,6 +4360,17 @@
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="6528-4634-c2cf-2840" childId="model" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -3776,6 +4402,7 @@
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="733f-208f-7345-4c92" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="a6ad-579-5c78-6d6a" targetId="a343-738-c273-4e13"/>
+        <infoLink name="Eye of the Prognosticars" id="187c-5da9-b3b9-9467" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="1 Paragon and 4-9 Paladins" hidden="false" id="fc49-2cb9-b72-9890" defaultSelectionEntryId="d1b3-96e2-43e6-6bf4">
@@ -4136,8 +4763,48 @@
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="e99f-6e07-1a6b-a4a4"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="e3fa-db46-4723-6423"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="5" field="e3fa-db46-4723-6423">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="4330-1652-8689-2d76" type="selectionEntry" targetId="18ef-bd43-42fa-5a96"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="580c-a74c-5257-bce5"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="580c-a74c-5257-bce5"/>
+            <modifier type="set" value="0" field="580c-a74c-5257-bce5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a037-a89c-f59f-8b1e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="580c-a74c-5257-bce5"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purgation Squad" hidden="false" id="e8ad-bd40-5952-6859">
       <costs>
@@ -4148,6 +4815,15 @@
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="e8ad-bd40-5952-6859" childId="model" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -4415,6 +5091,16 @@
             <condition type="atLeast" value="6" field="selections" scope="8865-df22-1629-bf02" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
@@ -4446,6 +5132,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="6e98-731d-58d-389" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Eye of the Prognosticars" id="59c0-fce8-5c6b-17f4" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="1 Knight of the Flame and 4-9 Purifiers" hidden="false" id="868b-4c64-84da-f47c" defaultSelectionEntryId="2105-9372-a043-df0c">
@@ -4821,8 +5508,35 @@
               </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="5" field="832a-b37e-7fa1-9eb3">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c17c-7ef4-d08b-e0ef" type="selectionEntry" targetId="18ef-bd43-42fa-5a96"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="d7ea-129d-6382-2580"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="d7ea-129d-6382-2580"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Servitors" hidden="false" id="35ed-7890-6c56-18b7">
       <costs>
@@ -4994,6 +5708,17 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Strike Squad" hidden="false" id="d81f-c9ac-e338-ba37">
       <modifiers>
@@ -5001,6 +5726,16 @@
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="d81f-c9ac-e338-ba37" childId="model" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -5030,6 +5765,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under you control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -5039,6 +5785,7 @@
             <modifier type="append" value="6&quot;" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Eye of the Prognosticars" id="7894-0f13-685b-ca15" hidden="false" type="rule" targetId="5bb6-a0bb-bbf5-62dd"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="1 Justicar and 4-9 Grey Knights" hidden="false" id="38d6-858d-42f5-c38d" defaultSelectionEntryId="2e8c-d8a7-b77c-d2ad">
@@ -5261,6 +6008,22 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="892f-911d-f038-ce76" type="selectionEntry" targetId="18ef-bd43-42fa-5a96"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="cc6b-0e09-889e-7ebc"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="cc6b-0e09-889e-7ebc"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grey Knights Thunderhawk Gunship" hidden="false" id="8989-2fd2-4d29-e795">
       <costs>
@@ -5455,6 +6218,17 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Land Raider Banisher" hidden="false" id="69d-a656-fde3-6c3e">
       <costs>
@@ -5637,6 +6411,17 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="28d0-5a52-501a-441d" name="Grey Knights Dreadnought [Legends]" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -6398,6 +7183,27 @@
         <infoLink name="Psychic" hidden="false" id="e79f-5b26-db3-a37a" type="rule" targetId="e9c4-2bb8-12ee-cd1b"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="18ef-bd43-42fa-5a96">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="b94f-3401-fda1-877e" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b1a-e272-d046-d276"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cdfd-7055-3c74-a327"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Enhancements" hidden="false" id="c440-b056-f09a-c88a">
@@ -6413,11 +7219,18 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5311-c819-50b2-1464" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="5311-c819-50b2-1464" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bcb7-c2a7-e7fb-3aae" shared="true" includeChildSelections="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="5311-c819-50b2-1464" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="5311-c819-50b2-1464" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -6437,11 +7250,18 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="f290-4bcc-1798-6868" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="f290-4bcc-1798-6868" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bcb7-c2a7-e7fb-3aae" shared="true" includeChildSelections="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="f290-4bcc-1798-6868" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f290-4bcc-1798-6868" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -6461,10 +7281,17 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="8084-85d-a3a4-87e6" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8084-85d-a3a4-87e6" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8084-85d-a3a4-87e6" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="8084-85d-a3a4-87e6" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bcb7-c2a7-e7fb-3aae" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6485,11 +7312,18 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d0c9-fd98-de1b-6d43" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="d0c9-fd98-de1b-6d43" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bcb7-c2a7-e7fb-3aae" shared="true" includeChildSelections="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="d0c9-fd98-de1b-6d43" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="d0c9-fd98-de1b-6d43" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -6504,10 +7338,136 @@
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="1d7d-b153-bb06-1a4f" includeChildForces="true" includeChildSelections="true"/>
       </constraints>
       <comment>Teleport Strike Force</comment>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Baneslayer Strike Enhancements" id="da35-5f24-f291-40eb" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shield of Admonishment" hidden="false" id="cc5b-4cff-06c1-3d0a">
+              <profiles>
+                <profile name="Shield of Admonishment" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2bd6-bb2e-cb50-ca6f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a melee attack targets the bearer, subtract 1 from the Hit roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6787-6b75-bce0-6d01" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd5c-5ed1-0092-f4f7" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Close and Sanction" hidden="false" id="8ab5-23e9-05b0-d069">
+              <profiles>
+                <profile name="Close and Sanction" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8e65-b1c8-cd1a-c9b6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your opponent&apos;s Shooting phase, each time an enemy unit is selected to shoot, after that unit has shot, if the bearer was hit by one or more of those attacks, the bearer can make a Dash move. To do so, roll one D6: the bearer can move a distance in inches up to the result, but it must finish that move as close as possible to the closes visible enemy unit. When doing so, it can be moved within Engagement Range of that enemy unit. The bearer can only make one Dash move per phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9bbc-5b31-9a7f-c43b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73d9-0f7f-a320-104b" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ea0a-8acc-62a6-d1f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Void Purge Force Enhancements" id="cf9f-82c4-ec18-d4cd" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tactical Haruspexy" hidden="false" id="d653-d624-f461-1a0d">
+              <profiles>
+                <profile name="Tactical Haruspexy" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="87d2-b5c2-fb20-46c0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, when the bearer declares a charge, it can use this Enhancement. If it does, it can select units that are not visible to it as targets of that charge, provided they are within 9&quot; of it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="55d2-64d0-9c89-0b23" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2079-4937-1f58-bd3a" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sigil of Warding" hidden="false" id="db63-814d-7931-48d1">
+              <profiles>
+                <profile name="Sigil of Warding" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0658-ee0e-b546-8b35">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the end of your Shooting phase, the bearer can use this Enhancement. If it does, it can make a Normal move of up to 3&quot; and can then attempt to operate a Hatchway. The bearer is then not eligible to declare a charge this turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="77c0-5591-712f-496d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee6e-023a-34ff-54af" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="91c7-3128-c4b7-fa16" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="d14e-246c-7fe0-45a0" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="2" field="1d7d-b153-bb06-1a4f">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Detachments" hidden="false" id="f7f3-a061-3f69-1432" defaultSelectionEntryId="bcb7-c2a7-e7fb-3aae">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Teleport Strike Force" hidden="false" id="bcb7-c2a7-e7fb-3aae"/>
+        <selectionEntry type="upgrade" import="true" name="Teleport Strike Force" hidden="false" id="bcb7-c2a7-e7fb-3aae">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Baneslayer Strike" hidden="false" id="ea0a-8acc-62a6-d1f3">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Pre-emptive Strike" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1e4a-79c0-2c0a-5b80">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Reinforcements step of your first Movement phase, you can set up on the battlefield one GREY KNIGHTS Reserves unit from your army using the Deep Strike ability. When doing so, you can set up that unit anywhere on the battlefield that is more than 6&quot; horizontally away from all enemy models (measure this distance as you would normally for the Deep Strike ability). Until the end of the turn, that unit is not eligible to declare a charge.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Void Purge Force" hidden="false" id="91c7-3128-c4b7-fa16">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="An Urgent Duty" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="7b00-c871-e6f5-3081">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Add 1 to Advance and Charge rolls made for GREY KNIGHTS units from your army.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -6601,4 +7561,16 @@
       <comment>4+ Unit</comment>
     </profile>
   </sharedProfiles>
+  <sharedRules>
+    <rule name="Eye of the Prognosticars" id="5bb6-a0bb-bbf5-62dd" hidden="false">
+      <description>Each time you target this unit with a Stratagem, roll a D6: adding 1 to the result if this unit is within range of an objective marker you control: on a 5+, you gain 1CP.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+  </sharedRules>
 </catalogue>

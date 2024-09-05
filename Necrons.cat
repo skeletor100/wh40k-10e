@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="b654-a18a-ea1-3bf2" name="Xenos - Necrons" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="47" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="b654-a18a-ea1-3bf2" name="Xenos - Necrons" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="48" battleScribeVersion="2.03" type="catalogue">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Enhancements" hidden="false" id="9574-b5d1-8b0a-d95d">
       <constraints>
@@ -521,6 +521,136 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="d75f-002a-8679-e13f" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Canoptek Harvesters Enhancements" id="c847-789e-c6ca-322a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Impromptu Translocation" hidden="false" id="990a-eb48-6b8b-dc16">
+              <profiles>
+                <profile name="Impromptu Translocation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0f30-9b1f-45af-f55c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, after the bearer has shot, it can make a Normal move of up to 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7157-fe50-6c6b-1e45"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bdb9-24ee-e343-c05a" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Nanoscarab Reconstitution" hidden="false" id="e142-8afa-a596-16bd">
+              <profiles>
+                <profile name="Nanoscarab Reconstitution" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f81e-6937-92db-65fd">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In each player&apos;s Command phase, the bearer regains 1 lost wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9393-271e-f39c-0d24"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33d4-37fa-5fa1-0b2a" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="09ce-fcbe-97c2-67c6" shared="true" id="3784-a85d-d185-62c4" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Deranged Outcasts Enhancements" id="30bf-eb57-4950-58a2" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inured to Damage" hidden="false" id="4062-e90b-a6a2-a5f7">
+              <profiles>
+                <profile name="Inured to Damage" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5a21-2e37-6457-4622">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">The bearer has the Feel No Pain 6+ ability. Once the bearer has destroyed one or more enemy units, it has the Feel No Pain 5+ ability instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21ca-6534-b282-21a5"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="de8d-8d61-0839-7f32" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Domineering Presence" hidden="false" id="eac5-6845-e2bb-e89d">
+              <profiles>
+                <profile name="Domineering Presence" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="78ea-aeea-02b4-b4ac">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your opponent&apos;s Command phase, at the start of the Battle-shock step, select one enemy unit within 3&quot; of the bearer: that enemy unit must take a Battle-shock test. When doing so, if that enemy unit is Below Half-strength, subtract 1 from that test. This Enhancement cannot cause a unit to take two Battle-shock tests in the same phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="958c-3666-197f-4e5e"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="857d-9fa4-824f-d741" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="880c-877e-9545-6ea0" shared="true" id="a8e7-fe0f-da04-a8d9" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Tomb Ship Complement Enhancements" id="77bf-82b6-57b0-b12b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Mindshackle Scarabs" hidden="false" id="de5e-7c4f-0faa-35d9">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="a98a-4cc0-5f02-e078" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Mindshackle Scarabs" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5102-7b27-c022-fd55">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">CRYPTEK model only. In your Command phase, select one enemy unit within 12&quot; of and visible to the bearer. That enemy unit must take a Leadership test, subtracting 1 from the result: if failed, until the start of your next Command phase, subtract 2&quot; from the Move characteristic of models in that enemy unit and subtract 2 from Advance and Charge rolls made for it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8827-faae-462f-1917"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="82d7-0ea5-37c3-78f7" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Resurrection Protocols" hidden="false" id="ebdb-1cb3-181c-7b22">
+              <profiles>
+                <profile name="Resurrection Protocols" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="16e5-17b0-8f96-5636">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D3 wounds remaining.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c0d-cecd-1351-4f2e"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fe1c-1a03-d093-b96e" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="1340-1c35-248f-3956" shared="true" id="0484-4526-6848-9304" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="2" field="946-bfa0-af93-2909">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -540,26 +670,109 @@
               <infoLinks>
                 <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="165-6ed5-27b-28a3" targetId="4ee-d749-4ddc-323d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Annihilation Legion" hidden="false" id="6493-9079-727d-d95f">
               <infoLinks>
                 <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="6178-3942-2e5a-88c0" targetId="4ee-d749-4ddc-323d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Canoptek Court" hidden="false" id="aed9-cb3b-1d0c-f87d">
               <infoLinks>
                 <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="121c-c2f9-161c-64dd" targetId="4ee-d749-4ddc-323d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Obeisance Phalanx" hidden="false" id="163f-63bd-f2e1-5e7">
               <infoLinks>
                 <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="46a9-38f0-ca26-a142" targetId="4ee-d749-4ddc-323d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Hypercrypt Legion" hidden="false" id="8861-5385-8fd1-dfee">
               <infoLinks>
                 <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="ce23-8601-27b1-b629" targetId="4ee-d749-4ddc-323d"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Canoptek Harvesters" hidden="false" id="09ce-fcbe-97c2-67c6">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Retribution Protocols" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="76dd-046c-644f-ba3c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit destroys a CRYPTEK model from your army, until the end of the battle, each time a NECRONS model from your army makes an attack that targets that enemy unit, you can re-roll the Hit roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Deranged Outcasts" hidden="false" id="880c-877e-9545-6ea0">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Terrifying Charge" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f7f6-9df0-1b37-6c2f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a NECRONS unit from your army declares a charge, each enemy unit that is a target of that charge must take a Leadership test: if failed, until the end of the turn, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tomb Ship Complement" hidden="false" id="1340-1c35-248f-3956">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Conquest Protocols" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="91b6-c151-6551-4593">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a NECRONS model from your army makes an attack, if that model is within range of an objective marker or the target of that attack is within range of an objective marker, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -606,6 +819,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, triple the Attacks and Strength characteristics of this model’s Staff of Tomorrow and every successful Wound roll made for this model’s attacks scores a Critical Wound.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b567-98ec-597b-f8c9">
           <characteristics>
@@ -648,6 +873,19 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="58c3-e7aa-889e-4187" targetId="2c98-86cf-889-2293"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Imotekh the Stormlord" hidden="false" id="49fd-a80d-8cc0-c76b">
       <costs>
@@ -684,11 +922,33 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of your Command phase, if this model is on the battlefield, you gain 1CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Lord of the Storm" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="608f-b219-23b8-5568">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12&quot; of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Imotekh the Stormlord" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="2421-336c-d2d0-fef5">
           <characteristics>
@@ -762,6 +1022,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="8490-3933-af8d-e29b" targetId="2c98-86cf-889-2293"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Anrakyr the Traveller [Legends]" hidden="false" id="43b5-f4f9-f7c6-327a">
       <costs>
@@ -1046,6 +1318,19 @@ You can attach this model to one of the above units even if NEMESOR ZAHNDREKH h
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="59c9-9fa3-b769-6ea5" targetId="2c98-86cf-889-2293"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nemesor Zahndrekh [Legends]" hidden="false" id="8386-4191-ac3a-aa28">
       <categoryLinks>
@@ -1190,6 +1475,17 @@ You can attach this model to one of the above units even if NEMESOR ZAHNDREKH h
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model is leading a unit, at the end of your Command phase, if that unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Surrogate Hosts" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4bc-1a26-267-ad58">
           <characteristics>
@@ -1225,6 +1521,18 @@ in its place, with all of its wounds remaining (if the selected model was leadi
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="197f-6560-9e54-6484" targetId="2c98-86cf-889-2293"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Royal Warden" hidden="false" id="379b-d6a0-cd05-ef89">
       <costs>
@@ -1318,6 +1626,18 @@ in its place, with all of its wounds remaining (if the selected model was leadi
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="2c98-86cf-889-2293">
       <constraints>
@@ -1373,6 +1693,18 @@ in its place, with all of its wounds remaining (if the selected model was leadi
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D3+3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="fae1-b4ef-7e00-1eb8">
           <characteristics>
@@ -1442,6 +1774,19 @@ in its place, with all of its wounds remaining (if the selected model was leadi
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lokhust Lord" hidden="false" id="8725-de36-7ef7-45f6">
       <costs>
@@ -1581,6 +1926,17 @@ in its place, with all of its wounds remaining (if the selected model was leadi
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord [Legends]" hidden="false" id="8005-b0eb-72ab-aed5">
       <costs>
@@ -1865,6 +2221,17 @@ in its place, with all of its wounds remaining (if the selected model was leadi
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Overlord" hidden="false" id="dbe5-257e-e2bd-1b40">
       <costs>
@@ -2008,6 +2375,48 @@ in its place, with all of its wounds remaining (if the selected model was leadi
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="bd62-c048-76ec-bb6a" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="bd62-c048-76ec-bb6a">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="bd62-c048-76ec-bb6a">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6ab6-f4b-9f11-394f" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Overlord&apos;s blade" hidden="false" id="10c5-11df-dd25-b5b0">
       <profiles>
@@ -2088,6 +2497,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">6+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Rites of Reanimation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ff0b-8063-e5bc-1646">
           <characteristics>
@@ -2098,6 +2518,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Movement phase, select one friendly NECRONS model within 6&quot; of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -2132,6 +2564,28 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Psychomancer" hidden="false" id="aea6-b6a1-a924-d31">
       <costs>
@@ -2181,6 +2635,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per turn, at the start of your Command, Movement, Shooting, Charge or Fight phase, you can select one enemy unit within 18&quot; of this model. That unit must take a Battle-shock test, subtracting 1 from the roll when it does so.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -2215,6 +2681,19 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chronomancer" hidden="false" id="5b7d-54ea-f7a8-9688">
       <costs>
@@ -2264,6 +2743,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of any enemy units, that unit can make a Normal move of up to 5&quot;. If it does, until the end of the turn, that unit is not eligible to declare a charge.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d972-5e2-b478-f439">
           <characteristics>
@@ -2309,6 +2800,55 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4363-bd37-61aa-e46c"/>
+            <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d977-6a26-bc03-4722" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ba86-eaad-5396-fc07" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bc-87b1-1eec-f574" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="aea6-b6a1-a924-d31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="852a-ba39-e93f-6b62" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4363-bd37-61aa-e46c"/>
+            <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+              <conditions>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Plasmancer" hidden="false" id="84bc-87b1-1eec-f574">
       <categoryLinks>
@@ -2355,6 +2895,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, select one enemy unit within 18&quot; of and visible to this model and roll four D6: for each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -2392,6 +2944,19 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Necron Warriors" hidden="false" id="58e9-5212-f5a6-c12d">
       <costs>
@@ -2406,6 +2971,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="3795-c62-af99-8eaf" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="42aa-f2b7-dca2-cb15" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="09d2-c9c2-2f31-9036" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <profiles>
         <profile name="Necron Warriors" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="b82c-b711-6d65-30b5">
@@ -2497,6 +3063,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="10" field="7ea5-a13f-31a6-b292">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -2505,7 +3083,21 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <condition type="atLeast" value="11" field="selections" scope="58e9-5212-f5a6-c12d" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="59a9-628e-e6a9-2f1a" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Close combat weapon" hidden="false" id="69d2-ffd6-3daf-b437" collective="true">
       <comment>Warriors</comment>
@@ -2540,12 +3132,23 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="1756-fe04-1d17-a095" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="2642-3dbc-27a8-2b99" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="b2f8-5aa2-8155-5ab5" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="150" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="f81-b23c-e183-39d7" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -2654,6 +3257,9 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="3428-4d9d-b168-321f" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Canoptek Reanimator" hidden="false" id="7c45-2aab-7526-febe">
       <costs>
@@ -2732,6 +3338,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <categoryLink targetId="79e3-91-f577-a6a6" id="5e0-accf-ccf6-9b22" primary="false" name="Canoptek"/>
         <categoryLink targetId="721c-7a0-a813-bafa" id="102f-d7bd-4982-d017" primary="false" name="Reanimator"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hexmark Destroyer" hidden="false" id="d504-e79e-f4d9-90aa">
       <categoryLinks>
@@ -2762,6 +3379,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per turn, one unit from your army with this ability can be targeted with the Fire Overwatch Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase. In addition, each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 2+.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Multi-threat Eliminator" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5fb0-75f-103d-6ab9">
           <characteristics>
@@ -2820,6 +3449,19 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="7b00-2ba1-f33b-e58d" targetId="2c98-86cf-889-2293"/>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="632-c214-2404-84e3" targetId="9574-b5d1-8b0a-d95d"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lychguard" hidden="false" id="c4e3-f6b0-f3aa-9d90">
       <costs>
@@ -2833,12 +3475,23 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="e832-4032-8c7c-9216" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="3965-8c31-1f73-6cc7" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="9da2-9906-d3b9-9522" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="170" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="c4e3-f6b0-f3aa-9d90" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -2927,18 +3580,32 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="2e40-d04d-3fd4-bc9a" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathmarks" hidden="false" id="b7d7-14c9-63c1-ded5">
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="712a-15eb-31f5-57a3" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="5742-db8f-1bdc-d3d1" targetId="a511-d9ca-17d0-42c5"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="3c64-302e-2acf-b51f" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Transdimensional Reinforcement" id="8564-831d-a470-3bf2" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="120" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="b7d7-14c9-63c1-ded5" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -3025,6 +3692,9 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="feb1-ff62-c039-8a3b" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flayed Ones" hidden="false" id="c219-a708-f5b0-f0e7">
       <costs>
@@ -3040,12 +3710,24 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="ca6f-64ae-3214-418c" targetId="a511-d9ca-17d0-42c5"/>
         <infoLink name="Stealth" hidden="false" type="rule" id="40da-e811-b869-511" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Infiltrators" hidden="false" type="rule" id="4dd5-3f-d334-c5d8" targetId="c05d-f4c3-f091-4938"/>
+        <infoLink name="Transdimensional Reinforcement" id="99b8-9087-f05e-5ae5" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="120" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="c219-a708-f5b0-f0e7" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3105,6 +3787,9 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="b194-9fb8-11f7-d417" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cryptothralls" hidden="false" id="ef7a-c413-c779-2d18">
       <costs>
@@ -3194,6 +3879,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <categoryLink targetId="cf47-a0d7-7207-29dc" id="3a79-a81a-4a2c-3cb4" primary="true" name="Infantry"/>
         <categoryLink targetId="fe62-becb-cbf6-8327" id="1190-ffad-4e37-bc58" primary="false" name="Cryptothralls"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skorpekh Destroyers" hidden="false" id="66e-26f2-7c38-e4d8">
       <costs>
@@ -3208,6 +3904,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="87b1-1a9f-599c-52a6" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="217-34d4-3fe8-c121" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="7e5e-d32d-3962-a5a9" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <profiles>
         <profile name="Skorpekh Destroyers" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="14d-53e1-498-7525">
@@ -3261,6 +3958,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
               </selectionEntries>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="3" field="6729-5a2d-b2de-6f83">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -3268,6 +3977,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="66e-26f2-7c38-e4d8" childId="model" shared="true" id="ef32-2f6b-da53-db48" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -3283,6 +4003,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="82b2-8719-622a-18b8" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Triarch Stalker" hidden="false" id="14fa-6813-e51b-7942">
@@ -3430,6 +4151,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="C&apos;tan Shard of the Deceiver" hidden="false" id="e09-d7d6-e4e3-42c1">
       <costs>
@@ -3527,6 +4259,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="C&apos;tan Shard of the Nightbringer" hidden="false" id="f926-a2fe-3494-24b7">
       <costs>
@@ -3629,6 +4372,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="C&apos;tan Shard of the Void Dragon" hidden="false" id="8065-e9c0-dcb5-be1d">
       <costs>
@@ -3771,6 +4525,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Transcendant C&apos;tan" hidden="false" id="276e-bc21-e1d0-3c41">
       <costs>
@@ -3874,6 +4639,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoptek Spyders" hidden="false" id="cae9-5277-87f4-54b8">
       <selectionEntries>
@@ -3986,6 +4762,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoptek Scarab Swarms" hidden="false" id="259b-a8e3-928f-1d0c">
       <categoryLinks>
@@ -4030,6 +4817,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="3" field="d26e-756d-b5fc-e64e">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4037,6 +4836,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="7c68-4015-3415-ebf4" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="1255-c410-3c25-5e7c" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="3b2a-3571-49b1-353d" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <profiles>
         <profile name="Canoptek Scarab Swarms" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="971b-8c49-4470-694a">
@@ -4048,11 +4848,26 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">8+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">0</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1"/>
+          </modifiers>
         </profile>
         <profile name="Self-destruction" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="cd1b-54d7-820c-cd0b">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the Fight phase, if this unit is within Engagement Range of one or more enemy units, you can select one model in this unit to destroy. If you do, select one enemy unit within Engagement Range of that model and roll one D6, adding 1 to the result if that unit is a VEHICLE. On a 2-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Chittering Swarm" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="91c6-fc89-f3ab-c7e2">
           <characteristics>
@@ -4066,7 +4881,30 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <condition type="atLeast" value="4" field="selections" scope="259b-a8e3-928f-1d0c" childId="model" shared="true" id="a9ae-d3af-8847-b3be" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="ff14-c611-99ca-08c5" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ophydian Destroyers" hidden="false" id="c6db-9736-4d53-3ef6">
       <costs>
@@ -4082,12 +4920,24 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="5b21-9d02-525-2d49" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="979e-e886-a5dc-da71" targetId="a511-d9ca-17d0-42c5"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="79b6-4004-1655-d9a3" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Transdimensional Reinforcement" id="11bf-8a34-60e5-19ee" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="180" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="c6db-9736-4d53-3ef6" childId="model" shared="true" id="db70-3966-b824-3330" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -4119,6 +4969,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
                   </profiles>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="3" field="2155-80-5e8f-642e">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4128,6 +4990,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield. In the Reinforcements step of your next Movement phase, set it up anywhere on the battlefield that is more than 9&quot; horizontally away from all enemy models.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Ophydian Destroyers" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="689c-1c75-aeac-10fa">
           <characteristics>
@@ -4153,6 +5027,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="8846-5f58-2518-1377" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasmacyte" hidden="false" id="dbff-daf7-edb0-1524">
@@ -4163,6 +5038,18 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tomb Blades" hidden="false" id="77d-d442-a3-422c">
       <costs>
@@ -4195,6 +5082,15 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="77d-d442-a3-422c" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -4375,13 +5271,45 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="2f54-1645-f716-1866" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="8601-755c-4bda-fe21" targetId="a511-d9ca-17d0-42c5"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="e05c-998b-5d5b-cce6" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="e05c-998b-5d5b-cce6" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Transdimensional Reinforcement" id="a3d7-81dc-0b59-2dc1" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="240" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="6829-6dcb-b342-afe4" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -4478,6 +5406,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Relentless Combatants" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c070-2782-440f-5647">
           <characteristics>
@@ -4485,6 +5424,9 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="18b6-d5c1-d36b-abef" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoptek Wraiths" hidden="false" id="a022-9bf6-f08b-c416">
       <costs>
@@ -4500,6 +5442,7 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <infoLinks>
         <infoLink name="Detachment Rules" hidden="false" type="infoGroup" id="b58c-204f-d3ae-fede" targetId="4ee-d749-4ddc-323d"/>
         <infoLink name="Reanimation Protocols" hidden="false" type="rule" id="e1f5-7704-408c-b9f4" targetId="a511-d9ca-17d0-42c5"/>
+        <infoLink name="Transdimensional Reinforcement" id="9d02-16c8-eb0d-f8ca" hidden="false" type="rule" targetId="4a53-d1af-3dae-6300"/>
       </infoLinks>
       <profiles>
         <profile name="Canoptek Wraiths" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="619a-b8da-477b-3995">
@@ -4511,11 +5454,33 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">8+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Wraith Form" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b3e0-9cd2-735c-91f1">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a6dd-2eb2-3b5a-c6a4">
           <characteristics>
@@ -4583,6 +5548,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1960-9617-2b7b-4f54"/>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="cfdd-5d61-a5eb-1ba8"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="cfdd-5d61-a5eb-1ba8">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -4591,7 +5567,29 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
             <condition type="atLeast" value="4" field="selections" scope="a022-9bf6-f08b-c416" childId="model" shared="true" id="f080-bdee-2b3b-843d" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7ab7-b369-61a3-357f" type="selectionEntry" targetId="fbb8-b171-163f-9c74"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Vicious claws" hidden="false" id="f702-9067-d0c3-4240" collective="true">
       <constraints>
@@ -4788,6 +5786,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Armoured bulk" hidden="false" type="selectionEntry" id="801d-4444-6e10-c462" targetId="927a-5f3d-6d88-260"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Doomsday Ark" hidden="false" id="e046-8220-d8a2-1d19">
       <costs>
@@ -4886,6 +5895,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Armoured bulk" hidden="false" type="selectionEntry" id="3d52-97fe-d379-5382" targetId="927a-5f3d-6d88-260"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Armoured bulk" hidden="false" id="927a-5f3d-6d88-260">
       <constraints>
@@ -4932,6 +5952,15 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="6f72-b8f7-fd8d-5c2c" childId="model" shared="true" id="37a3-66bd-b138-9f7f" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -5123,6 +6152,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <categoryLink targetId="b43e-b010-7d4a-3302" id="5587-9ff9-d21b-59ad" primary="false" name="Destroyer Cult"/>
         <categoryLink targetId="587d-d85b-8af-f640" id="a6cb-a694-bc60-99cd" primary="false" name="Lokhust Heavy Destroyers"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Canoptek Doomstalker" hidden="false" id="ff8f-2e43-8af1-3470">
       <costs>
@@ -5239,6 +6279,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ghost Ark" hidden="false" id="9928-da6-4e86-ec9f">
       <entryLinks>
@@ -5316,6 +6367,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
         <categoryLink targetId="ba07-411c-2832-1f79" id="3c98-de0-e06a-92d2" primary="true" name="Dedicated Transport"/>
         <categoryLink targetId="6c94-8c39-5b8-f764" id="c23e-43c6-1e3f-a007" primary="false" name="Ghost Ark"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Night Scythe" hidden="false" id="2a86-2d6-6446-7f1">
       <costs>
@@ -5399,6 +6461,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Armoured bulk" hidden="false" type="selectionEntry" id="a34a-c88f-dc13-cb49" targetId="927a-5f3d-6d88-260"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Doom Scythe" hidden="false" id="52fb-edb1-c747-415a">
       <costs>
@@ -5494,6 +6567,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <entryLinks>
         <entryLink import="true" name="Armoured bulk" hidden="false" type="selectionEntry" id="ddcd-f493-ea4c-7b90" targetId="927a-5f3d-6d88-260"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Obelisk" hidden="false" id="256d-92cd-5d14-bbab">
       <costs>
@@ -5583,6 +6667,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tesseract Vault" hidden="false" id="5451-67b5-a66c-71d2">
       <costs>
@@ -5725,6 +6820,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Monolith" hidden="false" id="db10-2662-da6a-516e">
       <costs>
@@ -5877,6 +6983,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="The Silent King" hidden="false" id="7422-7fbf-8694-364c">
       <costs>
@@ -6097,6 +7214,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Convergence of Dominion" hidden="false" id="919f-7076-c827-b844">
       <categoryLinks>
@@ -6169,6 +7297,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Canoptek Tomb Stalker [Legends]" hidden="false" id="f868-afbc-9f6b-e4e9">
       <costs>
@@ -6821,6 +7960,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gauss Pylon [Legends]" hidden="false" id="b6b0-9a60-d2e4-7ef0">
       <costs>
@@ -7202,6 +8352,17 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model&apos;s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6&quot; to the Move characteristic of models in that unit. In addition, each time a model in that unit makes a Normal, Advance or Fall Back move, until that move is finished, it can move horizontally through models and terrain features (it cannot finish a move on top of another model or its base).</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="70d5-9a58-6ff2-b4a3">
           <characteristics>
@@ -7212,8 +8373,70 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="883b-9b05-a6e5-d85" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="883b-9b05-a6e5-d85">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="883b-9b05-a6e5-d85">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4c4e-f077-670e-1de9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Tomb Citadel Walls" hidden="false" id="32fd-f21-a91b-768a"/>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="fbb8-b171-163f-9c74">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="45f9-5318-6a9d-b06c"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="5f06-94e8-a897-235f" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Reanimation Protocols" hidden="false" id="a511-d9ca-17d0-42c5">
@@ -7221,6 +8444,26 @@ You can attach this model to one of the above units even if one ROYAL WARDEN or
 ■ If that unit contains one or more models with fewer than their starting number of wounds remaining, select one of those models; that model regains one lost wound.
 ■ If all models in that unit have their starting number of wounds, but that unit is not at its Starting Strength, one destroyed model is returned to that unit with one wound remaining.
 Once such a unit is at its Starting Strength and all of its models have their starting number of wounds, nothing further happens.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Transdimensional Reinforcement" id="4a53-d1af-3dae-6300" hidden="false">
+      <description>Once per battle, in your Command phase, this unit can request reinforcement. When it does, roll one D6 for each destroyed model in this unit: for each 5+, return 1 destroyed model to this unit with its full wounds remaining.
+
+
+If this unit is destroyed without having requested reinforcement, after removing the last model from the battlefield, it immediately requests reinforcement as above. If one or more destroyed models are returned to this unit, set it back up on the battlefield wholly within one of your Entry Zones, containing just the returned models. If this is not possible, the unit remains destroyed.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <categoryEntries>
@@ -7228,6 +8471,38 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ecdd-2754-441c-8e52" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5b7d-54ea-f7a8-9688" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d977-6a26-bc03-4722" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bc-87b1-1eec-f574" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="aea6-b6a1-a924-d31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="852a-ba39-e93f-6b62" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Cryptek" hidden="false" id="a98a-4cc0-5f02-e078"/>
     <categoryEntry name="Chronomancer" hidden="false" id="1ea8-946a-4ac8-a74f"/>
@@ -7236,6 +8511,29 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ecdd-2754-441c-8e52" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dbe5-257e-e2bd-1b40" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2e4-afdd-efdd-c5c8" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Anrakyr the Traveller" hidden="false" id="b8ad-2a93-ce18-9e25">
       <constraints>
@@ -7251,6 +8549,38 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ecdd-2754-441c-8e52" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5b7d-54ea-f7a8-9688" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ba86-eaad-5396-fc07" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="84bc-87b1-1eec-f574" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="aea6-b6a1-a924-d31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="852a-ba39-e93f-6b62" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Nemesor Zahndrekh" hidden="false" id="e59f-adae-9b57-2845">
       <constraints>
@@ -7261,16 +8591,104 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ecdd-2754-441c-8e52" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="0" field="ecdd-2754-441c-8e52">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4c4e-f077-670e-1de9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2e4-afdd-efdd-c5c8" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Royal Warden" hidden="false" id="162f-bca1-3855-a561">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4c4e-f077-670e-1de9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2e4-afdd-efdd-c5c8" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Skorpekh Lord" hidden="false" id="9773-2011-fe82-ceea">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d504-e79e-f4d9-90aa" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4c4e-f077-670e-1de9" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2e4-afdd-efdd-c5c8" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Lokhust Lord" hidden="false" id="cfb6-688d-2044-5011">
       <constraints>
@@ -7292,26 +8710,183 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5b7d-54ea-f7a8-9688" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d977-6a26-bc03-4722" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ba86-eaad-5396-fc07" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb03-a0dc-dc6d-241b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb03-a0dc-dc6d-241b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Psychomancer" hidden="false" id="2f01-10af-20c2-c8db">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5b7d-54ea-f7a8-9688" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d977-6a26-bc03-4722" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ba86-eaad-5396-fc07" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bb03-a0dc-dc6d-241b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="852a-ba39-e93f-6b62" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Plasmancer" hidden="false" id="bb03-a0dc-dc6d-241b">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5b7d-54ea-f7a8-9688" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d977-6a26-bc03-4722" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ba86-eaad-5396-fc07" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="aea6-b6a1-a924-d31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="852a-ba39-e93f-6b62" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="3" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Necron Warriors" hidden="false" id="2fd7-338d-d680-5237">
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="5b4b-b1f9-af2b-a20" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="5b4b-b1f9-af2b-a20">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="2" field="5b4b-b1f9-af2b-a20">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Immortals" hidden="false" id="ed42-b203-25cf-a0dd">
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="5b4b-b1f9-af2b-a20" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="5b4b-b1f9-af2b-a20">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Reanimator" hidden="false" id="721c-7a0-a813-bafa">
       <constraints>
@@ -7323,21 +8898,96 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="49fd-a80d-8cc0-c76b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dbe5-257e-e2bd-1b40" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2e4-afdd-efdd-c5c8" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="379b-d6a0-cd05-ef89" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c401-d95f-c5ce-7738" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c1e6-b88a-2003-174d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Lychguard" hidden="false" id="270-5fd8-6b5c-9165">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="7494-f17a-bbc5-e160" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="7494-f17a-bbc5-e160">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Deathmarks" hidden="false" id="687d-6f40-369d-f336">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Flayed Ones" hidden="false" id="388d-6508-7135-c6a9">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="2" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Cryptothralls" hidden="false" id="fe62-becb-cbf6-8327">
       <constraints>
@@ -7348,6 +8998,26 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="2" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Triarch Stalker" hidden="false" id="1124-c60-ce6-631">
       <constraints>
@@ -7383,11 +9053,85 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c6db-9736-4d53-3ef6" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6829-6dcb-b342-afe4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="2" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Ophydian Destroyers" hidden="false" id="b504-b280-b7f2-37e">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="259b-a8e3-928f-1d0c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6829-6dcb-b342-afe4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="2" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="880c-877e-9545-6ea0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Tomb Blades" hidden="false" id="4af6-f666-3fa0-e3d">
       <constraints>
@@ -7398,11 +9142,50 @@ Once such a unit is at its Starting Strength and all of its models have their s
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1340-1c35-248f-3956" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="259b-a8e3-928f-1d0c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c6db-9736-4d53-3ef6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Wraiths" hidden="false" id="a584-e2d5-6c07-afe">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4363-bd37-61aa-e46c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="4363-bd37-61aa-e46c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="09ce-fcbe-97c2-67c6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Annihilation Barge" hidden="false" id="f733-8fad-fee2-2d31">
       <constraints>

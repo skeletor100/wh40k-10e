@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="30" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <profileTypes>
     <profileType id="02a0-fa96-6f9b-354f" name="Wrathful Presence">
       <characteristicTypes>
@@ -463,6 +463,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="415"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9754-481c-c292-a1f9" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -499,6 +510,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Charge phase, if this model is leading a unit and that unit is not within Engagement Range of one or more enemy units, you must take a Leadership test for this model. If that test is failed, one Bodyguard model of your choice in that unit is destroyed.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="72fe-bca8-a252-eeb2" name="Berserker Frenzy" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -521,6 +544,7 @@
         <infoLink id="ea8b-a883-ceda-0d63" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="9f67-5396-f4b0-e6e4" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="f9e8-d77c-2712-5cbe" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="a600-a7cb-4a96-bdee" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="535a-a5e7-fb00-c650" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -587,6 +611,38 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="3a27-b88e-584c-7d2c">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3b15-b424-2059-71fa" name="Lord Invocatus" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -731,6 +787,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="40c5-9ebd-6d42-2855" name="World Eaters Daemon Prince" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -845,6 +912,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="200"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0294-61a4-c6ed-b2e8" name="World Eaters Daemon Prince with wings" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -961,6 +1039,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="195"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ec72-f024-4283-0558" name="World Eaters Lord on Juggernaut" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1109,6 +1198,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="1b56-682c-ac33-bc5f" name="World Eaters Master of Executions" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -1146,6 +1246,7 @@
         <infoLink id="197d-cc6a-7869-3520" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="22d6-e2dd-a6b3-ebdd" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="45dd-2067-f513-8fe2" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="bf63-c06d-d148-f0fd" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="77ad-98ea-d018-8fd1" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -1215,6 +1316,39 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="2" field="94e5-a1e3-c965-2ccc"/>
+            <modifier type="set" value="0" field="94e5-a1e3-c965-2ccc">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="f909-00c7-8ba4-018a" name="Khorne Berserkers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1222,6 +1356,16 @@
           <conditions>
             <condition field="selections" scope="f909-00c7-8ba4-018a" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1232,11 +1376,23 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6: this unit can be moved a number of inches up to the result, but this unit must finish that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Blood Surge move while it is Battle-shocked.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="9c93-f8db-0db6-65f1" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="12dc-66a0-158e-dcee" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="9260-026b-b7e5-c4db" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4121-aa76-7474-aa0a" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -1431,10 +1587,21 @@
             <association min="1" max="1" scope="f909-00c7-8ba4-018a" childId="model" name="Icon of Khorne" id="a519-c3e8-e4d2-14a8"/>
           </associations>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="befb-034b-101f-cdc6" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="95ca-220b-459e-826c"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="44b0-1947-ea4a-3005" name="Berserker chainblade" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
@@ -1587,6 +1754,17 @@
             <condition field="selections" scope="45f6-8429-a1d9-2a51" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bafc-43a3-0d00-77c9" type="max"/>
@@ -1617,6 +1795,7 @@
         <infoLink id="faba-cb98-fe09-fd89" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="d159-0b19-71b2-32b8" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="f488-ee6f-9a95-d720" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="647a-a859-9c1e-7f47" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="36af-217b-ab6a-680f" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -2008,11 +2187,43 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="4" field="9bef-d87c-a1bb-8302">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="d5f5-b033-d933-38d5" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="bafc-43a3-0d00-77c9"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bafc-43a3-0d00-77c9"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6f81-4538-a414-251e" name="Jakhals" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2020,6 +2231,16 @@
           <conditions>
             <condition field="selections" scope="6f81-4538-a414-251e" value="10" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2030,6 +2251,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="f75d-6910-e063-7e96" name="Jakhal" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
           <characteristics>
@@ -2049,6 +2281,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="c25-388f-b412-4ef3" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="be40-548f-fce8-ecbc" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="633a-b60b-94f4-4d8e" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -2170,6 +2403,13 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="c2d6-b088-fddb-cca6" name="C: 17 chainblades" hidden="false" collective="false" import="true" type="upgrade">
               <selectionEntries>
@@ -2190,6 +2430,13 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="5b7f-e6b5-15e6-fbd8" name="B: 1 mauler chainblade, 7 chainblades" hidden="false" collective="false" import="true" type="upgrade">
               <selectionEntries>
@@ -2332,6 +2579,13 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2442,10 +2696,26 @@
             <association min="1" max="1" scope="6f81-4538-a414-251e" childId="model" name="Icon of Khorne" id="f093-0b51-a387-d94f" includeChildSelections="true"/>
           </associations>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a5d4-7eb6-d1d7-ba91" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="0ce0-ebde-7eb7-c6ac"/>
+            <modifier type="increment" value="1" field="0ce0-ebde-7eb7-c6ac">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="f909-00c7-8ba4-018a" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="32bc-0724-a7cf-f17c" name="Paired accursed weapons" hidden="false" collective="true" import="true" type="upgrade">
       <profiles>
@@ -2576,6 +2846,17 @@
             <condition field="selections" scope="9435-1f44-7e5b-d510" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ece-4482-3679-cdf4" type="max"/>
@@ -2610,6 +2891,7 @@
         </infoLink>
         <infoLink id="f968-12ce-909f-c91a" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="98a1-fd29-f76a-aad7" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="49d3-3147-a216-118a" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ec90-1f1e-4eb3-d2d5" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -2652,6 +2934,18 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="2" field="060a-90b2-e85d-60cd">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="6f2c-fc26-53bc-34bd" name="Eightbound Champion" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2712,6 +3006,32 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a0e1-bd3e-0c5c-5064" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="8ece-4482-3679-cdf4"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="8ece-4482-3679-cdf4"/>
+            <modifier type="set" value="0" field="8ece-4482-3679-cdf4">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9932-3d2b-1e47-d53b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="9932-3d2b-1e47-d53b" name="Exalted Eightbound" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2719,6 +3039,17 @@
           <conditions>
             <condition field="selections" scope="9932-3d2b-1e47-d53b" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2739,6 +3070,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit within 6&quot; of this unit is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d799-5c41-f976-13bd">
           <characteristics>
@@ -2755,6 +3098,7 @@
         <infoLink id="f5f0-af1b-6341-dbe0" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="d927-772d-180e-646b" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="d2bb-3a3b-a028-93c3" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="f96c-2f3d-39a7-62e9" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2002-ef22-46d5-ff9f" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -2799,6 +3143,18 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="2" field="bb0f-73a6-e1d6-145b">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="d009-9bd9-59a1-9119" name="Exalted Eightbound Champion" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -2871,6 +3227,32 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="155"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e6dd-8e4c-74fc-31a8" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="c03a-27d6-373b-d628"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c03a-27d6-373b-d628"/>
+            <modifier type="set" value="0" field="c03a-27d6-373b-d628">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9435-1f44-7e5b-d510" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4251-bd4f-f7ac-9487" name="World Eaters Land Raider" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -2986,6 +3368,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="240"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="caa8-634e-b7e4-a286" name="Twin heavy bolter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3194,6 +3587,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="f76c-0f51-ad33-c118" name="Armoured tracks" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3373,6 +3777,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ea51-5575-9e74-9346" name="World Eaters Defiler" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -3570,6 +3985,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="81e1-b212-69c1-308f" name="World Eaters Forgefiend" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -3718,6 +4144,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="145"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="a343-07e9-e8f9-67f2" name="Hades autocannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -4032,6 +4469,17 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0fc2-382a-b387-9634" name="Twin lascannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -4211,6 +4659,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="210"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="a619-8a52-be03-3bd5" name="World Eaters Maulerfiend" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4330,6 +4789,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="e849-ce40-ee43-7623" name="World Eaters Rhino" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4405,6 +4875,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="edde-57bf-bccc-d8b2" name="World Eaters Chaos Spawn" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -4425,6 +4906,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of each player’s Command phase, one model in this unit regains up to D3 lost wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -4435,6 +4927,7 @@
         </infoLink>
         <infoLink id="f736-c01e-b14c-12e6" name="Relentless Rage" hidden="false" targetId="ba63-2b7b-ad97-0e92" type="profile"/>
         <infoLink name="Blessings of Khorne" hidden="false" type="rule" id="5e00-9791-238d-7a3d" targetId="e68b-b42f-6f7c-4670"/>
+        <infoLink name="Slaughterer&apos;s Glory" id="ae59-5e66-d086-e063" hidden="false" type="rule" targetId="1bc9-11ff-5854-0f2e"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0358-7c0c-167a-9084" name="Faction: World Eaters" hidden="false" targetId="bd1d-c1a5-6ca2-c791" primary="false"/>
@@ -4481,6 +4974,31 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7e07-77ca-585e-6118" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c7fb-1fe5-6958-8464"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="836c-f65b-6bcb-9663" name="Khorne Lord of Skulls" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4690,6 +5208,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="450"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="84c8-b821-877d-72e6" name="Detachment Choice" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4710,6 +5239,51 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Boarding Butchers" hidden="false" id="99b6-c40a-bbe9-cce1" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Focused Ferocity" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="049e-00f3-8238-d2e7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a WORLD EATERS unit from your army declares a charge, each target of that charge must take a Battle-shock test.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Skullsworn" hidden="false" id="7566-62f8-a4d9-080c" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Reap the Tally" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="819f-c6a3-2d10-8a6d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a WORLD EATERS model from your army (excluding KHARN THE BETRAYER) is destroyed by a melee attack and it has not fought this phase, roll one D6: on a 5+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4988,6 +5562,29 @@
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="6d29-05ae-bd7d-9f25" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="917f-f4ca-885b-a9e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="54f1-2f23-246b-b1e4" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="7b6d-6d90-0ffe-b45b" name="Enhancements" hidden="false" collective="false" import="true">
@@ -5011,6 +5608,13 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3490-ec82-70b3-c5cf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="33e2-4ee8-2e10-3e47" name="Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5027,6 +5631,13 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3490-ec82-70b3-c5cf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="6836-5818-2135-a8aa" name="Helm of Brazen Ire" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5043,6 +5654,13 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3490-ec82-70b3-c5cf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="9ecf-cc71-16df-c473" name="Favoured of Khorne" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5059,8 +5677,101 @@
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3490-ec82-70b3-c5cf" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="d08d-d7dd-1031-b8a8" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Boarding Butchers Enhancements" id="eeea-2dc1-82b6-4b4a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Chosen of Khorne" hidden="false" id="ffe5-5413-0b1e-99e4" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eeb8-397a-db01-d452" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1daa-c794-ba83-8c3b" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Chosen of Khorne" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="95c0-06d3-4030-923f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once the bearer has destroyed one or more enemy units, until the end of the battle, each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll all of the dice (if you do, you must re-roll every dice).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Battle Lust" hidden="false" id="fa69-4c28-d811-57fd" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2819-17d6-dddc-726c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4633-c0fa-0545-6a4a" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Battle Lust" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c265-6939-8fe8-c1ce">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit is selected to shoot, after that unit has shot, if the bearer was the target of one or more of those attacks, it can make a Battle Lust move. To do so, roll one D6: the bearer can be moved a distance in inches up to the result, but must end that move as close as possible to the attacking unit. When doing so, the bearer can be moved within Engagement Range of that enemy unit, but only that enemy unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="99b6-c40a-bbe9-cce1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Skullsworn Enhancements" id="57b8-cf96-3379-ed89" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Carmine Corona" hidden="false" id="af1c-12f1-cb0d-e63b" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db54-58fc-719c-c5d5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="40d1-2db7-1b5a-9632" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Carmine Corona" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8974-bc4b-fd86-4a3d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">When the bearer destroys an enemy unit for the first time, until the end of the battle, the bearer has an Objective Control characteristic of 5.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Frenzied" hidden="false" id="e925-5693-7ddb-6208" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0206-6e55-b288-52a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ec19-ef7e-1cc3-83f0" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Frenzied" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="00e2-e05e-a059-8365">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">You can re-roll Advance and Charge rolls made for the bearer, and the bearer is eligible to declare a charge in a turn in which it Advanced.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7566-62f8-a4d9-080c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="0" field="e02a-ceaa-d20f-a3fb">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -5071,6 +5782,16 @@ Once activated, each Blessing of Khorne applies to all units from your army with
 Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
 They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4.
 However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.</description>
+    </rule>
+    <rule name="Slaughterer&apos;s Glory" id="1bc9-11ff-5854-0f2e" hidden="false">
+      <description>At the start of the Battle Round, when making a Blessings of Khorne roll, roll four D6 instead of eight D6. You can only activate one Blessings of Khorne per battle round, instead of up to 2.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

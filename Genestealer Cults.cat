@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="3bdf-a114-5035-c6ac" name="Xenos - Genestealer Cults" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="43" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="3bdf-a114-5035-c6ac" name="Xenos - Genestealer Cults" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="44" battleScribeVersion="2.03" type="catalogue">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="false" name="Detachment" hidden="false" id="b96c-3fb6-1ee9-15ae">
       <constraints>
@@ -37,16 +37,30 @@
             <condition type="greaterThan" value="5" field="selections" scope="f51d-bc51-f301-9dee" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="dcf6-ea49-8129-442f" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="dcf6-ea49-8129-442f" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Feel No Pain" hidden="false" type="rule" id="5e02-c62b-cbbd-6bf4" targetId="9bf4-280f-bbe2-6fbb"/>
         <infoLink name="Cult Ambush" hidden="false" type="rule" id="6e36-834f-11b6-2f66" targetId="8f27-1d49-40ef-b041"/>
+        <infoLink name="Insidious Ambushers" id="c101-6e4f-4946-1b5e" hidden="false" type="rule" targetId="2963-3377-2e0a-010b"/>
       </infoLinks>
       <profiles>
         <profile name="Feel No Pain 5+" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="cc70-2470-1cb3-952c">
@@ -147,6 +161,19 @@
           </selectionEntries>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7a2c-9b00-289a-3a52" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="2" field="ce3c-3b3b-f90d-e13"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Abominant" hidden="false" id="97b1-4873-9fcb-5cb8">
       <categoryLinks>
@@ -211,7 +238,15 @@
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="4208-122f-6c49-c492" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="4208-122f-6c49-c492" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Feel No Pain" hidden="false" type="rule" id="b407-f36d-489-458f" targetId="9bf4-280f-bbe2-6fbb"/>
       </infoLinks>
       <infoGroups>
@@ -236,32 +271,35 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
             <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f4-2157-2cb5-8bb" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a91-a18e-bd08-fa66" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30e9-42fa-3a6e-e8ef" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="908a-9fd8-2270-8dbd" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="725f-8a41-dc78-52f5" shared="true" includeChildForces="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Achilles Ridgerunners" hidden="false" id="cf71-a12a-2730-c40b">
       <categoryLinks>
@@ -472,6 +510,17 @@
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Acolyte Hybrids with Hand Flamers" hidden="false" id="a197-f6c3-5d4a-5326">
       <categoryLinks>
@@ -495,15 +544,34 @@
             <condition type="greaterThan" value="5" field="selections" scope="a197-f6c3-5d4a-5326" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="3" field="ce3c-3b3b-f90d-e13">
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="6fec-79b8-873c-e33b" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="6fec-79b8-873c-e33b" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Cult Ambush" hidden="false" type="rule" id="b942-c225-51f8-9008" targetId="8f27-1d49-40ef-b041"/>
+        <infoLink name="Insidious Ambushers" id="107a-1e50-b907-5a83" hidden="false" type="rule" targetId="2963-3377-2e0a-010b"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Acolyte Leader" hidden="false" id="b831-831f-aadf-ff24">
@@ -658,6 +726,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a06e-d64e-476d-b458" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Acolyte Iconward" hidden="false" id="e367-b2cb-d22a-b17c">
       <categoryLinks>
@@ -673,6 +744,7 @@
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ce3c-3b3b-f90d-e13" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="2a12-3e27-d500-4aed" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Autopistol" hidden="false" type="selectionEntry" id="50b4-94bf-d910-99eb" targetId="ffd4-af63-eb03-4bb5">
@@ -702,7 +774,15 @@
         </infoGroup>
       </infoGroups>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="4443-dccf-4eca-d374" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="4443-dccf-4eca-d374" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Scouts" id="d3a1-1c59-8120-786d" hidden="false" type="rule" targetId="ada6-bac1-ffe0-d6f7">
           <modifiers>
             <modifier type="append" value="6&quot;" field="name"/>
@@ -759,6 +839,49 @@
           </modifiers>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="2" field="2a12-3e27-d500-4aed"/>
+            <modifier type="decrement" value="1" field="2a12-3e27-d500-4aed">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5543-973a-cd2e-c941" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="2a12-3e27-d500-4aed">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5e0e-11d9-181d-3481" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="2a12-3e27-d500-4aed">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="51e8-dac1-561a-aaa9" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="2a12-3e27-d500-4aed">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="3d6c-357e-3c09-813c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Atalan Jackals" hidden="false" id="3a81-2b84-bf4c-4f85">
       <categoryLinks>
@@ -779,6 +902,15 @@
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="3a81-2b84-bf4c-4f85" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -1113,7 +1245,15 @@
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="76cb-b0f1-14c3-6036" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="76cb-b0f1-14c3-6036" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Lethal Hits" hidden="false" type="rule" id="8f50-a5cb-380a-f43e" targetId="d1d1-611e-5191-1095"/>
       </infoLinks>
       <infoGroups>
@@ -1160,6 +1300,38 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="97b1-4873-9fcb-5cb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="908a-9fd8-2270-8dbd" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Clamavus" hidden="false" id="5543-973a-cd2e-c941">
       <categoryLinks>
@@ -1173,6 +1345,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ce3c-3b3b-f90d-e13" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="777d-b230-f21a-a70e" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="f24b-5d5f-5b77-7cf9" targetId="2665-129e-3c44-1270"/>
@@ -1191,7 +1364,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="9fa2-3544-71b7-f4b8" targetId="fb5-9606-c45e-bcdb"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="5eec-982c-d4af-8fc1" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="5eec-982c-d4af-8fc1" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="32f0-1919-562e-761f">
@@ -1233,6 +1414,18 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Goliath Rockgrinder" hidden="false" id="5ac1-3adb-212a-5e02">
       <categoryLinks>
@@ -1372,6 +1565,17 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Goliath Truck" hidden="false" id="1d1-f0d2-b810-12fe">
       <categoryLinks>
@@ -1479,6 +1683,17 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Hybrid Metamorphs" hidden="false" id="8a84-a8fd-977e-9118">
       <categoryLinks>
@@ -1500,10 +1715,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <condition type="greaterThan" value="5" field="selections" scope="8a84-a8fd-977e-9118" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -1610,7 +1830,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="c914-ae4a-6c7f-eae0" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="c914-ae4a-6c7f-eae0" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Scouts" hidden="false" type="rule" id="e59a-621b-9065-9b2d" targetId="ada6-bac1-ffe0-d6f7">
           <modifiers>
             <modifier type="append" value="6&quot;" field="name"/>
@@ -1622,6 +1850,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <modifier type="append" value="5+" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Insidious Ambushers" id="5875-e811-43b1-a962" hidden="false" type="rule" targetId="2963-3377-2e0a-010b"/>
       </infoLinks>
       <profiles>
         <profile name="Brood Surge" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1d1-7a6-c41f-1e86">
@@ -1631,8 +1860,28 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
 
 If, at the start of the battle, every model in this unit is equipped with an autopistol, each time this unit makes a Brood Surge move, it can be moved up to 6&quot; instead of up to D6&quot;. A unit cannot make a Brood Surge move while it is Battle-shocked.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7ff9-dc07-b9bd-757e" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Jackal Alphus" hidden="false" id="6426-ca59-402a-d399">
       <categoryLinks>
@@ -1734,6 +1983,17 @@ If, at the start of the battle, every model in this unit is equipped with an aut
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Kelermorph" hidden="false" id="5e0e-11d9-181d-3481">
       <categoryLinks>
@@ -1748,6 +2008,7 @@ If, at the start of the battle, every model in this unit is equipped with an aut
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ce3c-3b3b-f90d-e13" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="9d08-4f37-7fd3-3bfc" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <entryLinks>
         <entryLink targetId="2f40-74d2-7a49-2eeb" id="db0-3975-f7de-8e54" type="selectionEntry" name="Close Combat Weapon" hidden="false">
@@ -1786,7 +2047,15 @@ If, at the start of the battle, every model in this unit is equipped with an aut
       </selectionEntries>
       <infoLinks>
         <infoLink name="Invulnerable Save 5+" hidden="false" type="profile" id="28d0-c332-a6a-3333" targetId="5549-7c1-ba1b-c59a"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="dbe2-dd24-9b1b-2772" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="dbe2-dd24-9b1b-2772" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Lone Operative" hidden="false" type="rule" id="70b7-10bd-d194-b340" targetId="a8a0-8fe7-898-e0f3"/>
       </infoLinks>
       <profiles>
@@ -1811,6 +2080,49 @@ If, at the start of the battle, every model in this unit is equipped with an aut
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="2" field="9d08-4f37-7fd3-3bfc"/>
+            <modifier type="decrement" value="1" field="9d08-4f37-7fd3-3bfc">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="e367-b2cb-d22a-b17c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="9d08-4f37-7fd3-3bfc">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5543-973a-cd2e-c941" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="9d08-4f37-7fd3-3bfc">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="51e8-dac1-561a-aaa9" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="9d08-4f37-7fd3-3bfc">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="3d6c-357e-3c09-813c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Locus" hidden="false" id="51e8-dac1-561a-aaa9">
       <categoryLinks>
@@ -1825,10 +2137,19 @@ If, at the start of the battle, every model in this unit is equipped with an aut
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ce3c-3b3b-f90d-e13" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="8250-a4f5-21de-98d4" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Invulnerable Save 4+" hidden="false" type="profile" id="e927-fa63-fa74-1e" targetId="1b8a-3e6f-875a-6fac"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="aaa0-be94-bd4c-9188" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="aaa0-be94-bd4c-9188" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fights First" hidden="false" type="rule" id="8980-4449-2462-1d12" targetId="24-c886-e8ba-5a89"/>
       </infoLinks>
       <profiles>
@@ -1903,6 +2224,49 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="bacc-f1c0-cc5c-6a1e" targetId="2665-129e-3c44-1270"/>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="714e-5164-1678-7cd2" targetId="fb5-9606-c45e-bcdb"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="2" field="8250-a4f5-21de-98d4"/>
+            <modifier type="decrement" value="1" field="8250-a4f5-21de-98d4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="e367-b2cb-d22a-b17c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="8250-a4f5-21de-98d4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5543-973a-cd2e-c941" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="8250-a4f5-21de-98d4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5e0e-11d9-181d-3481" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="8250-a4f5-21de-98d4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="3d6c-357e-3c09-813c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Magus" hidden="false" id="4f4-2157-2cb5-8bb">
       <categoryLinks>
@@ -1995,35 +2359,41 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="30e9-42fa-3a6e-e8ef" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="97b1-4873-9fcb-5cb8" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a91-a18e-bd08-fa66" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30e9-42fa-3a6e-e8ef" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifierGroup>
       </modifierGroups>
       <infoLinks>
-        <infoLink name="Deep Strike" id="d370-fd4a-eefd-1338" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" id="d370-fd4a-eefd-1338" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Neophyte Hybrids" hidden="false" id="b5d2-8681-6bba-f05b">
       <categoryLinks>
@@ -2046,9 +2416,19 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <condition type="greaterThan" value="10" field="selections" scope="b5d2-8681-6bba-f05b" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
         <modifier type="set" value="3" field="ce3c-3b3b-f90d-e13">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2443,11 +2823,31 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="266b-4f13-2316-49ce"/>
             <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="da8d-de74-2758-7930"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="9" field="da8d-de74-2758-7930">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="d79-16da-3100-95b3" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="d79-16da-3100-95b3" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Cult Ambush" hidden="false" type="rule" id="297e-b49a-9f8d-36f3" targetId="8f27-1d49-40ef-b041"/>
+        <infoLink name="Insidious Ambushers" id="06c4-16a8-6b41-c0bf" hidden="false" type="rule" targetId="2963-3377-2e0a-010b"/>
       </infoLinks>
       <profiles>
         <profile name="A Plan Generations in the Making" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="12fe-1624-b6ac-9f68">
@@ -2463,6 +2863,9 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </modifiers>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="73b8-fe24-6f9a-6844" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nexos" hidden="false" id="55c7-90e0-419-44f9">
       <categoryLinks>
@@ -2537,6 +2940,17 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="b300-38d6-58de-3029" targetId="7cb5-dd6b-dd87-ad3b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Patriarch" hidden="false" id="2a91-a18e-bd08-fa66">
       <categoryLinks>
@@ -2579,7 +2993,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="ccee-1044-9445-7316" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="ccee-1044-9445-7316" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Infiltrators" hidden="false" type="rule" id="45aa-b29-115c-5733" targetId="c05d-f4c3-f091-4938"/>
         <infoLink name="Invulnerable Save 4+" hidden="false" type="profile" id="f7cd-b96a-f6c5-6924" targetId="1b8a-3e6f-875a-6fac"/>
       </infoLinks>
@@ -2636,32 +3058,25 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="97b1-4873-9fcb-5cb8" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f4-2157-2cb5-8bb" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="30e9-42fa-3a6e-e8ef" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
           </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Primus" hidden="false" id="30e9-42fa-3a6e-e8ef">
       <categoryLinks>
@@ -2810,32 +3225,30 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f4-2157-2cb5-8bb" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="0" field="ce3c-3b3b-f90d-e13">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="97b1-4873-9fcb-5cb8" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f4-2157-2cb5-8bb" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="2a91-a18e-bd08-fa66" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purestrain Genestealers" hidden="false" id="965b-496a-3a1b-22a8">
       <categoryLinks>
@@ -2856,14 +3269,27 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <condition type="greaterThan" value="5" field="selections" scope="965b-496a-3a1b-22a8" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="711e-f870-b525-9c0d" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="711e-f870-b525-9c0d" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Invulnerable Save 5+" hidden="false" type="profile" id="18e-87f-de85-36f1" targetId="5549-7c1-ba1b-c59a"/>
         <infoLink name="Infiltrators" hidden="false" type="rule" id="f019-ed15-a6a5-5c64" targetId="c05d-f4c3-f091-4938"/>
         <infoLink name="Cult Ambush" hidden="false" type="rule" id="8a4d-4374-e941-ba6e" targetId="8f27-1d49-40ef-b041"/>
@@ -2873,6 +3299,13 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This unit is eligible to declare a charge in a turn in which it Advanced.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1e58-2607-7b86-27b9" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -2916,6 +3349,9 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </selectionEntries>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="5c81-53eb-6e9c-2b4f" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Reductus Saboteur" hidden="false" id="4565-bd65-9e8b-284d">
       <categoryLinks>
@@ -3031,6 +3467,17 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         <infoLink name="Stealth" hidden="false" type="rule" id="c4d3-aaf4-21da-7996" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Invulnerable Save 5+" id="441f-6852-0cf5-5b43" hidden="false" type="profile" targetId="5549-7c1-ba1b-c59a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sanctus" hidden="false" id="3d6c-357e-3c09-813c">
       <categoryLinks>
@@ -3045,6 +3492,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ce3c-3b3b-f90d-e13" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="11d2-074e-b542-d53e" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
         <profile name="Sanctus" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="6f45-994d-39f6-9592">
@@ -3076,7 +3524,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <infoLinks>
         <infoLink name="Devastating Wounds" hidden="false" type="rule" id="1741-8680-3c84-ad8c" targetId="be1e-ac8e-1e2c-3528"/>
         <infoLink name="Ignores Cover" hidden="false" type="rule" id="9f26-9454-3cb4-b66d" targetId="4640-43e7-30b-215a"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="1da8-33f5-85ff-f88a" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="1da8-33f5-85ff-f88a" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Lone Operative" hidden="false" type="rule" id="93a3-b702-7aa9-bf3a" targetId="a8a0-8fe7-898-e0f3"/>
         <infoLink name="Infiltrators" hidden="false" type="rule" id="121d-d048-b76e-78cc" targetId="c05d-f4c3-f091-4938"/>
         <infoLink name="Invulnerable Save 5+" hidden="false" type="profile" id="31bb-ec2a-5fdc-3429" targetId="5549-7c1-ba1b-c59a"/>
@@ -3159,6 +3615,49 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="ce3c-3b3b-f90d-e13"/>
+            <modifier type="set" value="2" field="11d2-074e-b542-d53e"/>
+            <modifier type="decrement" value="1" field="11d2-074e-b542-d53e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="e367-b2cb-d22a-b17c" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="11d2-074e-b542-d53e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5543-973a-cd2e-c941" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="11d2-074e-b542-d53e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="5e0e-11d9-181d-3481" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="11d2-074e-b542-d53e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="51e8-dac1-561a-aaa9" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Autopistol" hidden="false" id="d9a7-25e0-3ab8-efad">
       <profiles>
@@ -3659,60 +4158,6 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c35-2e86-6fec-baf7"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Boarding Patrol Options" hidden="false" id="2c83-2005-b8ce-4e68">
-      <constraints>
-        <constraint type="min" value="-1" field="selections" scope="roster" shared="true" id="b2e8-8133-197a-ff41"/>
-      </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Model Selections" hidden="false" id="a1c4-714e-77bd-64d9">
-          <entryLinks>
-            <entryLink import="true" name="Acolyte Iconward" hidden="false" type="selectionEntry" id="fa22-b77a-de4c-9d66" targetId="e367-b2cb-d22a-b17c">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bda2-a682-4a5-1b91"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Biophagus" hidden="false" type="selectionEntry" id="6870-36c0-4d38-a671" targetId="725f-8a41-dc78-52f5">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6818-dc6d-8f75-371b"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Clamavus" hidden="false" type="selectionEntry" id="92a8-d378-416e-143c" targetId="5543-973a-cd2e-c941">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6068-ed47-e76e-1258"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Kelermorph" hidden="false" type="selectionEntry" id="f4e7-fdda-42ba-11f" targetId="5e0e-11d9-181d-3481">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d35b-9835-a90d-91d9"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Locus" hidden="false" type="selectionEntry" id="5804-3895-5b10-d2a9" targetId="51e8-dac1-561a-aaa9">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c90a-af94-3fb6-fcd4"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Sanctus" hidden="false" type="selectionEntry" id="fb00-3d93-cd35-c4b9" targetId="3d6c-357e-3c09-813c">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1fdb-ccca-972f-f422"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="24c6-56ca-a314-8f1f"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="9cfd-1c32-585f-7d5c" id="db76-5467-7256-502a" primary="true" name="Character"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="1" field="b2e8-8133-197a-ff41">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Benefictus" hidden="false" id="908a-9fd8-2270-8dbd">
       <categoryLinks>
         <categoryLink targetId="9cfd-1c32-585f-7d5c" id="39ca-53b3-e647-777c" primary="true" name="Character"/>
@@ -3723,7 +4168,15 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         <categoryLink targetId="2c56-6d8a-3aca-5441" id="6a85-6710-e000-33f3" primary="false" name="Benefictus"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Deep Strike" id="74ba-eeda-f22a-08dd" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" id="74ba-eeda-f22a-08dd" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Invulnerable Save 5+" id="121d-08dc-72e3-5d39" hidden="false" type="profile" targetId="5549-7c1-ba1b-c59a"/>
       </infoLinks>
       <infoGroups>
@@ -3818,6 +4271,38 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="0879-437e-38fc-5ba0"/>
+            <modifier type="set" value="0" field="0879-437e-38fc-5ba0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="97b1-4873-9fcb-5cb8" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="725f-8a41-dc78-52f5" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Acolyte Hybrids with Autopistols" hidden="false" id="04cc-6196-1755-ad58">
       <categoryLinks>
@@ -3843,13 +4328,32 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
         <modifier type="set" value="3" field="74b4-74a8-9c7a-2b1b">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildForces="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink name="Deep Strike" id="5831-1d1e-d8ec-c775" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" id="5831-1d1e-d8ec-c775" hidden="false" type="rule" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Cult Ambush" id="b49e-8907-a840-57e6" hidden="false" type="rule" targetId="8f27-1d49-40ef-b041"/>
+        <infoLink name="Insidious Ambushers" id="d9bf-1874-6f90-b1f3" hidden="false" type="rule" targetId="2963-3377-2e0a-010b"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Acolyte Leader" hidden="false" id="4a56-201a-1c93-ddb5">
@@ -3994,8 +4498,39 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of your Command phase, roll one D6 for each objective marker that you control that has one or more units from your army with this ability within range of it. If one or more of the results is a 4+, you gain 1CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e928-eb72-d654-f633" type="selectionEntry" targetId="f73f-0bd5-286c-006c"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="f73f-0bd5-286c-006c">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="769b-bbdf-199b-5040" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5924-4573-703f-4257" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bf35-4137-493f-f437" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -4010,15 +4545,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Acolyte Iconward" hidden="false" type="selectionEntry" id="58c8-c109-b7d6-62c5" targetId="e367-b2cb-d22a-b17c">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink import="true" name="Acolyte Iconward" hidden="false" type="selectionEntry" id="58c8-c109-b7d6-62c5" targetId="e367-b2cb-d22a-b17c"/>
     <entryLink import="true" name="Atalan Jackals" hidden="false" type="selectionEntry" id="6a6e-8288-4a70-3633" targetId="3a81-2b84-bf4c-4f85">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4028,24 +4555,8 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Biophagus" hidden="false" type="selectionEntry" id="d70b-5d37-70d9-a69e" targetId="725f-8a41-dc78-52f5">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Clamavus" hidden="false" type="selectionEntry" id="3f2-2c6d-8edd-e659" targetId="5543-973a-cd2e-c941">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink import="true" name="Biophagus" hidden="false" type="selectionEntry" id="d70b-5d37-70d9-a69e" targetId="725f-8a41-dc78-52f5"/>
+    <entryLink import="true" name="Clamavus" hidden="false" type="selectionEntry" id="3f2-2c6d-8edd-e659" targetId="5543-973a-cd2e-c941"/>
     <entryLink import="true" name="Goliath Rockgrinder" hidden="false" type="selectionEntry" id="b6b2-af4a-8770-8626" targetId="5ac1-3adb-212a-5e02">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4074,24 +4585,8 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Kelermorph" hidden="false" type="selectionEntry" id="c516-efa3-180-9f0b" targetId="5e0e-11d9-181d-3481">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Locus" hidden="false" type="selectionEntry" id="2a6f-19be-ccbc-1fa3" targetId="51e8-dac1-561a-aaa9">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink import="true" name="Kelermorph" hidden="false" type="selectionEntry" id="c516-efa3-180-9f0b" targetId="5e0e-11d9-181d-3481"/>
+    <entryLink import="true" name="Locus" hidden="false" type="selectionEntry" id="2a6f-19be-ccbc-1fa3" targetId="51e8-dac1-561a-aaa9"/>
     <entryLink import="true" name="Magus" hidden="false" type="selectionEntry" id="48a4-e1b7-a453-7705" targetId="4f4-2157-2cb5-8bb"/>
     <entryLink import="true" name="Neophyte Hybrids" hidden="false" type="selectionEntry" id="f44-cd5f-4a3-f6b7" targetId="b5d2-8681-6bba-f05b"/>
     <entryLink import="true" name="Nexos" hidden="false" type="selectionEntry" id="736-9c33-ae59-e8aa" targetId="55c7-90e0-419-44f9">
@@ -4115,15 +4610,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Sanctus" hidden="false" type="selectionEntry" id="369b-465f-84ca-a1ad" targetId="3d6c-357e-3c09-813c">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
+    <entryLink import="true" name="Sanctus" hidden="false" type="selectionEntry" id="369b-465f-84ca-a1ad" targetId="3d6c-357e-3c09-813c"/>
     <entryLink import="true" name="Acolyte Hybrids with Hand Flamers" hidden="false" type="selectionEntry" id="c9a8-cccd-ac84-240b" targetId="a197-f6c3-5d4a-5326"/>
     <entryLink import="true" name="Aegis Defence Line" hidden="true" type="selectionEntry" id="2c5d-9f8f-b19d-53be" targetId="cb99-456-f100-40ed">
       <modifiers>
@@ -5410,15 +5897,6 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Boarding Patrol Options" hidden="true" type="selectionEntry" id="1a8c-1938-7662-cc7a" targetId="2c83-2005-b8ce-4e68">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
     <entryLink import="true" name="Stormsword" hidden="true" id="cfaa-5d07-b905-1eeb" type="selectionEntry" targetId="67bc-a760-7ed5-9952">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -6012,7 +6490,108 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="053d-ba42-7095-659e" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Cult Unveiled Enhancements" id="762e-1f3f-bc4d-9d48" hidden="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="194e-d85d-36a7-8c60" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Master Saboteur" hidden="false" id="151a-31d5-63d8-94a8">
+              <profiles>
+                <profile name="Master Saboteur" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="584b-d45c-62f5-cb83">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">The first time in the battle that your opponent&apos;s army Secures an objective marker while the bearer is on the battlefield, roll one D6: on a 3+, that objective marker is not Secured by your opponent&apos;s army.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5338-f6db-d499-62c8" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Primary Detonator" hidden="false" id="1279-afbc-a794-b16c">
+              <profiles>
+                <profile name="Primary Detonator" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9bd3-13f9-52da-75b8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, when an enemy unit opens a closed Hatchway, if the bearer is on the battlefield, it can use this Enhancement. If it does, roll one D6: on a 3-4, that enemy unit suffers 1 mortal wound; on a 5+, that enemy unit suffers 2 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="687f-124f-86ef-0719" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86e7-43b1-30e4-ffe1" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Genespawn Onslaught Enhancements" id="d56e-2e96-f448-9e13" hidden="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="9f75-31a2-f9d2-075f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Miasmic Fumes" hidden="true" id="0b3b-c5e3-9241-295d">
+              <profiles>
+                <profile name="Miasmic Fumes" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6887-da27-19ee-a37d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">BIOPHAGUS model only. Each time an attack targets the bearer, subtract 1 from the Hit roll and subtract 1 from the Wound roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="725f-8a41-dc78-52f5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="55cd-1438-4aa6-6df7" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Spiteful Imp" hidden="true" id="f22a-0c4a-8761-a9c2">
+              <profiles>
+                <profile name="Spiteful Imp" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="fd84-08f6-2169-41c3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">ABOMINANT model only. Each time an enemy unit opens a Hatchway, if the bearer is within 1&quot; of that Hatchway, roll one D6: on a 3-4, that enemy unit suffers 1 mortal wound; on a 5+, that enemy unit suffers 2 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="97b1-4873-9fcb-5cb8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e65a-6611-0634-a316" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d6d-f8bd-8aa8-6c61" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="8ef3-0aef-6b7d-8f4c" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+        <entryLink import="true" name="Infestation Swarm Enhancements" hidden="false" id="7d8f-e308-19d1-2b07" type="selectionEntryGroup" targetId="85df-b7cf-8ae8-ad86"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="2" field="f9c6-4231-f90a-17c8">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Detachment" hidden="false" id="7170-c243-d89f-6644">
       <selectionEntries>
@@ -6028,6 +6607,13 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
             <infoLink name="Ignores Cover" id="d4eb-1f63-596f-0248" hidden="false" type="rule" targetId="4640-43e7-30b-215a"/>
             <infoLink name="Sustained Hits" id="6890-0ca1-a2b2-0c1e" hidden="false" type="rule" targetId="1897-c22c-9597-12b1"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Xenocreed Congregation" hidden="false" id="536a-b3ea-7597-81bb">
           <profiles>
@@ -6040,6 +6626,13 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
           <infoLinks>
             <infoLink name="Feel No Pain" id="625a-19a0-4136-54d7" hidden="false" type="rule" targetId="9bf4-280f-bbe2-6fbb"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Biosanctic Broodsurge" hidden="false" id="ff11-0fa4-2950-380e">
           <profiles>
@@ -6049,6 +6642,13 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Outlander Claw" hidden="false" id="59e2-4fec-2b00-b1e8">
           <profiles>
@@ -6058,6 +6658,13 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Brood Brothers Auxilia" hidden="false" id="0a59-1d64-257c-04fb">
           <profiles>
@@ -6076,12 +6683,54 @@ No ASTRA MILITARUM models in your army can be your Warlord, and they lose the Vo
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Cult Unveiled" hidden="false" id="194e-d85d-36a7-8c60">
+          <profiles>
+            <profile name="Harassing Fire" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="28c2-3f00-96e4-b881">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your Shooting phase, you can select one GENESTEALER CULTS unit from your army that is not within Engagement Range of one or more enemy units. If you do, that unit can attempt to operate one open Hatchway it is within 1&quot; of (if there is one), and can make a Normal move of up to 3&quot; (regardless of whether it attempted to operate a Hatchway or not). Until the end of the turn, that unit is not eligible to declare a charge.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Genespawn Onslaught" hidden="false" id="9f75-31a2-f9d2-075f">
+          <profiles>
+            <profile name="Blessed Visages" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e7f1-d100-e356-d6a4">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit declares a charge that targets one or more GENESTEALER CULTS units from your army, that enemy unit must take a Leadership test. If failed, until the end of the turn, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0fc5-7bb0-0193-6f30-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fc5-7bb0-0193-6f30-max" includeChildSelections="false"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Infestation Swarm" hidden="false" id="db08-b75e-1d34-f163" type="selectionEntry" targetId="1e58-2607-7b86-27b9"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <categoryEntries>
@@ -6158,6 +6807,13 @@ If an enemy model (excluding Aircraft models) ends any kind of move within 9&quo
 
 
 CHARACTERS that are attached to a unit with this ability are not returned alongside that unit should it return to the battlefield as described above (only the Bodyguard unit returns).</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
     <rule name="New Rule" hidden="false" id="66c5-5a84-d6d8-9e44">
       <modifiers>
@@ -6174,6 +6830,16 @@ CHARACTERS that are attached to a unit with this ability are not returned alongs
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Insidious Ambushers" id="2963-3377-2e0a-010b" hidden="false">
+      <description>In the Deploy Armies step, your opponent must set up their entire army before you set up any of your units. If both players have a rule that allows them to do this, both players set up their units normally.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </rule>

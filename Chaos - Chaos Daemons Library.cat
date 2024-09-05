@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b45c-af22-788a-dfd6" name="Chaos - Daemons Library" revision="27" battleScribeVersion="2.03" library="true" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b45c-af22-788a-dfd6" name="Chaos - Daemons Library" revision="28" battleScribeVersion="2.03" library="true" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="e3ec-7a32-ae62-8727" name="Index - Chaos Daemons"/>
   </publications>
@@ -310,6 +310,98 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Incursion" hidden="false" id="4b2b-cbc7-911c-85c4" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Unnatural Energies" id="6617-2634-695c-c2ed" hidden="false">
+                  <description>LEGIONES DAEMONICA units from your army can perform one of the following Tactical Manoeuvres in a turn in which they Advanced or Fell Back; Secure Site, Set to Defend, Set Overwatch.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dread Carnival" hidden="false" id="c7b5-c3c2-2be5-0030" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Lithe Killers" id="23de-0e30-0db8-4b7f" hidden="false">
+                  <description>Each time a SLAANESH INFANTRY LEGIONES DAEMONICA unit from your army makes a Normal, Advance or Fall Back move, models in that unit can move through other models as if they were not there. When doing so, for each SLAANESH model that moves through one or more enemy models, roll one D6; on a 1-2, that models unit suffers 1 mortal wound.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Infernal Onslaught" hidden="false" id="4ee2-d241-6af6-94a2" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Brutal Entrance" id="6653-11ba-66d1-df92" hidden="false">
+                  <description>Each time a KHORNE LEGIONES DAEMONICA unit from your army opens a Hatchway, until the end of the battle, that Hatchway cannot be closed. In addition, until the end of the turn, each time that unit declares a charge, if every target of that charge is on the opposite side of that Hatchway from your unit, add 1 to the Charge roll.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pandaemoniac Inferno" hidden="false" id="ece2-8b17-0df7-e02f" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Living Flame" id="5892-3cdd-01d5-5050" hidden="false">
+                  <description>Each time a TZEENTCH LEGIONES DAEMONICA unit from your army is selected to shoot, it can target enemy units within Engagement Range of other friendly TZEENTCH LEGIONES DAEMONICA units. Ranged weapons equipped by TZEENTCH LEGIONES DAEMONICA models have the [SUSTAINED HITS 1] ability while targeting a unit within Engagement Range of one or more friendly units.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rotten and Rusted" hidden="false" id="18a7-17bd-362e-713a" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Toxic Miasma" id="b886-b110-2c66-b69f" hidden="false">
+                  <description>While an enemy unit is within 3&quot; of one or more NURGLE LEGIONES DAEMONICA units from your army, halve the Move characteristic of models in that unit and subtract 1&quot; from Advance and Charge rolls made for it. When measuring this distance, Walls and closed Hatchways are ignored.</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -471,6 +563,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -658,6 +759,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="8872-785a-1efa-7ca1" name="Skulltaker" hidden="false" collective="false" import="true" type="model">
@@ -702,6 +812,7 @@
         <infoLink id="7ef8-fe87-66a3-dcaf" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="9c23-985f-e661-ed22" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="61f9-7ca2-d77b-336c" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
+        <infoLink name="Soul Hunters" id="5c33-743d-51c8-5a66" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="631c-4f1c-723b-2c8d" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -759,7 +870,56 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9f6c-cda6-26ee-c203"/>
+            <modifier type="set" value="0" field="9f6c-cda6-26ee-c203">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="9f6c-cda6-26ee-c203"/>
+            <modifier type="set" value="0" field="9f6c-cda6-26ee-c203">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ccae-b5f1-8787-4c7d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8436-cec1-e65a-d1a7" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ccae-b5f1-8787-4c7d" name="Bloodmaster" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -803,6 +963,7 @@
         <infoLink id="2749-30cf-3ad1-862a" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="7619-af87-4a58-925d" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="741-b871-aae4-8176" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
+        <infoLink name="Soul Hunters" id="045a-6bfe-d311-f47f" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="86a-11ab-7af-6ffa" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -833,7 +994,56 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="79b1-c46f-8763-73f7">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="79b1-c46f-8763-73f7"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="79b1-c46f-8763-73f7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ccae-b5f1-8787-4c7d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8872-785a-1efa-7ca1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="79b1-c46f-8763-73f7"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="dd30-ba4c-34a4-e788" name="Skullmaster" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -907,6 +1117,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -1050,6 +1269,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="8436-cec1-e65a-d1a7" name="Karanak" hidden="false" collective="false" import="true" type="model">
@@ -1094,6 +1322,7 @@
         <infoLink id="d08e-96f4-6f6f-e9e5" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="7e3f-3ea4-65de-5b5d" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="9d22-d9d7-c5cf-12f9" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="e836-1a58-9367-d3a9" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a77b-5fbe-50be-8c49" name="Beast" hidden="false" targetId="4c3e-9310-a516-3590" primary="false"/>
@@ -1150,7 +1379,56 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="8617-31f4-e81f-1248"/>
+            <modifier type="set" value="0" field="8617-31f4-e81f-1248">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="8617-31f4-e81f-1248"/>
+            <modifier type="set" value="0" field="8617-31f4-e81f-1248">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ccae-b5f1-8787-4c7d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8872-785a-1efa-7ca1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4ecc-6aa5-da28-2c57" name="Bloodletters" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1182,6 +1460,7 @@
         <infoLink id="4c1b-56ba-58d5-4a92" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="aeb1-6392-dcc2-8639" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="c9b-56ae-4386-170a" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="2371-a1b9-749e-09a9" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d9a1-3a02-a3e1-3132" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -1210,6 +1489,7 @@
       <entryLinks>
         <entryLink id="3df6-6038-bbe5-833f" name="Instrument of Chaos" hidden="false" collective="false" import="true" targetId="47bc-4cb8-5ff6-e208" type="selectionEntry"/>
         <entryLink id="b667-e8ac-5dc9-2d67" name="Daemonic Icon" hidden="false" collective="false" import="true" targetId="bc2f-662f-58e7-5fef" type="selectionEntry"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e8c6-b874-78c0-2e7c" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
@@ -1225,7 +1505,41 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="f809-72d-c4c-dcd4"/>
+            <modifier type="set" value="0" field="f809-72d-c4c-dcd4">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="f809-72d-c4c-dcd4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="e4f0-79-126a-ac41" name="Hellblade" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
@@ -1301,6 +1615,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1395,6 +1718,17 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ba3-fb67-2f41-2f50" type="max"/>
@@ -1419,12 +1753,25 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="1872-6e4a-3503-1de4" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="4152-2a08-51f3-b124" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="b763-35e0-cb73-2c13" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="8975-6ca7-1de0-4b9b" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="544a-d9a7-e8a4-c37a" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -1450,6 +1797,17 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="4" field="414b-957b-6758-7e97">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="7945-a359-64b8-4bda" name="Gore Hound" hidden="false" collective="false" import="true" type="model">
               <constraints>
@@ -1498,6 +1856,32 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a937-5848-aa8e-d8fb" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4ba3-fb67-2f41-2f50"/>
+            <modifier type="set" value="0" field="4ba3-fb67-2f41-2f50">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4ba3-fb67-2f41-2f50"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="fbad-4487-a8bc-9ef0" name="Collar of Khorne" hidden="false" collective="true" import="true" type="upgrade">
       <constraints>
@@ -1662,6 +2046,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="464a-b548-355f-2058" name="Skull Altar" hidden="false" collective="false" import="true" type="model">
@@ -1717,6 +2110,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -1890,6 +2292,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="8e9f-aa9-17f5-e2d3" name="Khorne Soul Grinder" publicationId="e3ec-7a32-ae62-8727" page="111-112" hidden="false" collective="false" import="true" type="model">
@@ -1973,6 +2384,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="e1b1-146f-6f77-3a15" name="Tzeentch Soul Grinder" publicationId="e3ec-7a32-ae62-8727" page="111-112" hidden="false" collective="false" import="true" type="model">
@@ -2054,6 +2474,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2138,6 +2567,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2226,6 +2664,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2479,6 +2926,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="5800-3978-370d-b573" name="Daemon Prince of Chaos with wings" publicationId="e3ec-7a32-ae62-8727" page="115-116" hidden="false" collective="false" import="true" type="model">
@@ -2731,6 +3187,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="eae1-a823-1885-6bd5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -2874,6 +3339,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3062,6 +3536,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="ac75-c011-9a10-2c4a" name="The Changeling" publicationId="e3ec-7a32-ae62-8727" page="35-36" hidden="false" collective="false" import="true" type="model">
@@ -3088,6 +3571,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="74b9-79ed-1790-3127" name="Mischief and Confusion" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -3101,6 +3596,7 @@
         <infoLink id="43d1-edc8-6172-37e6" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink name="Lone Operative" hidden="false" type="rule" id="9162-9877-3c69-7ad3" targetId="a8a0-8fe7-898-e0f3"/>
         <infoLink name="Stealth" hidden="false" type="rule" id="777f-a230-3c8c-5ce5" targetId="bec5-4288-34a6-ccfa"/>
+        <infoLink name="Soul Hunters" id="0dfc-cd85-c609-95ad" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b7d0-3856-749b-6cb3" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -3197,7 +3693,49 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="c44d-523c-40e-78c9">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="c44d-523c-40e-78c9">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="c199-b27c-7cc2-7935" name="Fateskimmer" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -3301,6 +3839,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="eba5-8a7a-fc5b-d7ec" name="Fluxmaster" hidden="false" collective="false" import="true" type="model">
@@ -3378,6 +3925,15 @@
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3496,6 +4052,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="8b7c-d709-90d4-298e" name="Changecaster" hidden="false" collective="false" import="true" type="model">
@@ -3541,6 +4106,7 @@
         <infoLink id="33f0-c48-a53b-fdac" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="c9c2-2640-3f92-29b7" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="eeb7-deca-9fdd-a986" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="ea6d-3648-f647-3326" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4a8e-81d9-4a0c-ef7" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -3573,7 +4139,51 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4308-4c01-b435-cb90"/>
+            <modifier type="set" value="0" field="4308-4c01-b435-cb90">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="4308-4c01-b435-cb90"/>
+            <modifier type="set" value="0" field="4308-4c01-b435-cb90">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="2024-6ff7-2d17-938d" name="Arcane Fireball" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3666,6 +4276,7 @@
         <infoLink id="212e-7126-76a7-4813" name="Infiltrators" hidden="false" targetId="c05d-f4c3-f091-4938" type="rule"/>
         <infoLink id="6007-abbf-8622-6d67" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="2af6-9ce1-8388-e1f" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="270d-9c73-a950-3423" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b554-c5d4-42d2-87f0" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -3765,7 +4376,44 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="9a57-8189-4b28-4985" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e8b6-ebeb-25c4-8f3"/>
+            <modifier type="set" value="0" field="e8b6-ebeb-25c4-8f3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e8b6-ebeb-25c4-8f3"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="e7b8-aa40-6da7-778e" name="Pink Horrors" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3837,6 +4485,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="b08a-d38d-b429-2fa2" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="2ef3-1144-20ab-f877" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="5e32-710-ec3a-9d9b" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="60f5-4d0e-15de-a8c1" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ac62-f67b-dae4-d85b" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -3937,11 +4586,46 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Daemonic Icon" hidden="false" type="selectionEntry" id="4a96-531c-ddec-6b47" targetId="bc2f-662f-58e7-5fef"/>
         <entryLink import="true" name="Instrument of Chaos" hidden="false" type="selectionEntry" id="74f7-cd4a-2f6e-60be" targetId="47bc-4cb8-5ff6-e208"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e4d0-7dc6-9cff-a236" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e8b6-ebeb-25c4-8f3"/>
+            <modifier type="set" value="0" field="e8b6-ebeb-25c4-8f3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e8b6-ebeb-25c4-8f3"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="5f23-4d6-f2f9-5973" name="Flamers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3959,6 +4643,26 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3990,6 +4694,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="5a10-ccc-c7c3-8b2a" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="31b2-cb84-e7d2-eefa" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="fbd8-f732-3867-c2ca" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="36d4-ff54-bad3-e8da" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e147-459d-ea21-df72" name="Infantry" hidden="false" targetId="cf47-a0d7-7207-29dc" primary="true"/>
@@ -4060,11 +4765,49 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="4219-cf2c-7a0-2092">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="3f7e-d508-0df2-4fc9" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bbdb-e662-8f86-da53"/>
+            <modifier type="set" value="0" field="bbdb-e662-8f86-da53">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bbdb-e662-8f86-da53"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="de54-5b38-8ca1-c39c" name="Exalted Flamer" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -4110,6 +4853,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="2ec7-d947-4b67-6331" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="a502-a93f-4c8b-e981" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="5c9a-2313-cb5-4814" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="93cd-367e-85b0-06b5" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f2c1-ac51-50f-7649" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -4163,7 +4907,63 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f966-47a4-164a-3c99"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="f966-47a4-164a-3c99"/>
+            <modifier type="set" value="0" field="f966-47a4-164a-3c99">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="f966-47a4-164a-3c99"/>
+            <modifier type="set" value="0" field="f966-47a4-164a-3c99">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="550b-c5ab-5e27-f59b" name="Screamers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -4182,6 +4982,26 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8b6-ebeb-25c4-8f3" type="max"/>
@@ -4196,12 +5016,25 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Movement phase, after this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="3704-3f28-fbb6-619c" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="837f-ae4-d24f-e406" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="c20a-618f-108e-4f5a" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="9cb2-cb7b-83a5-be0e" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8147-35ae-8f95-f675" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -4229,6 +5062,17 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <selectionEntries>
@@ -4258,11 +5102,49 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="96f7-2879-342-6c20">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="bca0-6433-d72c-0e6f" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e8b6-ebeb-25c4-8f3"/>
+            <modifier type="set" value="0" field="e8b6-ebeb-25c4-8f3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ece2-8b17-0df7-e02f" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e8b6-ebeb-25c4-8f3"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="f6eb-b62f-5baf-d96d" name="Burning Chariot" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4370,6 +5252,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -4548,6 +5439,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -4767,6 +5667,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="7b06-189d-b11e-c189" name="Poxbringer" hidden="false" collective="false" import="true" type="model">
@@ -4812,6 +5721,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="c6a5-c7a7-74c1-e592" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="fe54-da96-893a-516" name="Feel No Pain" hidden="false" targetId="9bf4-280f-bbe2-6fbb" type="rule"/>
         <infoLink id="1d70-f95a-c1b8-ca42" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
+        <infoLink name="Soul Hunters" id="6214-35db-4f2e-c3de" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4f86-5a9b-1fe7-69a7" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -4869,7 +5779,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="e7cd-468b-37dd-d82f" name="Spoilpox Scrivener" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -4913,6 +5867,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="df85-a377-83fd-b81e" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="9065-608-a959-33c5" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="8f7a-16f4-44fc-f662" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="45bc-b4cc-dbde-daf9" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8962-5ccb-d67d-d049" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -4995,7 +5950,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="5851-dc90-9afe-76a7" name="Epidemius" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5032,6 +6031,18 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Keep a tally of how many enemy models are destroyed by NURGLE LEGIONES DAEMONICA models from your army during the battle. At the start of your Command phase, if this tally is 7 or more, you gain 1CP and the tally is reset to 0.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -5039,6 +6050,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="170d-fbb7-2123-533a" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="b48c-cbe9-fcde-cddc" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="c389-51b9-4c08-837a" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="584b-0f10-7111-4d04" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4f86-d4b2-c494-42a4" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -5095,7 +6107,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3da0-5db0-7531-33b6" name="Sloppity Bilepiper" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5139,6 +6195,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="c279-f222-2344-fedb" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
         <infoLink id="b528-9c76-a5a9-4f6c" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="b1fb-2167-92f-69ad" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="e30d-87d1-6822-7aed" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1eaf-5989-8e34-3c0b" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -5195,7 +6252,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="3f16-77f0-63cc-5fa"/>
+            <modifier type="set" value="0" field="3f16-77f0-63cc-5fa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="7151-238f-a6eb-2f94" name="Horticulous Slimux" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -5321,6 +6422,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="d1eb-b092-d944-e729" name="Plaguebearers" hidden="false" collective="false" import="true" type="unit">
@@ -5337,6 +6447,18 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="8665-6291-45e-81da" name="Plaguebearers" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
           <characteristics>
@@ -5353,6 +6475,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="d5cf-e79f-32a4-b27" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="3544-30d-3c41-3da4" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="be5-35c6-bc9b-a1a" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
+        <infoLink name="Soul Hunters" id="b979-99bb-0269-5796" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5f7e-799-6636-e5f6" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -5405,6 +6528,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
       <entryLinks>
         <entryLink id="8e29-86c6-c71a-5ebc" name="Daemonic Icon" hidden="false" collective="false" import="true" targetId="bc2f-662f-58e7-5fef" type="selectionEntry"/>
         <entryLink id="e4ce-f73-2140-a96b" name="Instrument of Chaos" hidden="false" collective="false" import="true" targetId="47bc-4cb8-5ff6-e208" type="selectionEntry"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="1fa7-0f26-9814-101d" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
@@ -5420,7 +6544,41 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c3f8-2dac-ca29-750"/>
+            <modifier type="set" value="0" field="c3f8-2dac-ca29-750">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c3f8-2dac-ca29-750"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="e403-3a9-279e-41b7" name="Nurglings" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -5443,6 +6601,17 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5468,6 +6637,18 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While an enemy unit (excluding MONSTERS and VEHICLES) is within 6&quot; of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -5475,6 +6656,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="508e-c51a-8cdc-401d" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="669e-179a-875-be76" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="2427-a026-caf8-a9c" name="Infiltrators" hidden="false" targetId="c05d-f4c3-f091-4938" type="rule"/>
+        <infoLink name="Soul Hunters" id="79ea-cd34-cb6e-70da" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e483-e8d8-b3b2-6e13" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -5522,11 +6704,49 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="6e3b-7a53-bcc3-154c">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="40"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="dbe7-9d2a-4215-7b16" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c3f8-2dac-ca29-750"/>
+            <modifier type="set" value="0" field="c3f8-2dac-ca29-750">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="c3f8-2dac-ca29-750"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="2de0-5897-f724-a592" name="Beasts of Nurgle" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -5552,6 +6772,18 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of each phase, if a BEASTS OF NURGLE model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -5563,6 +6795,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <modifier type="append" field="name" value="1"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Soul Hunters" id="8e75-9cb4-f716-9238" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c942-3bdf-5016-4b95" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -5625,7 +6858,44 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e13a-e795-f6a2-ca62" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c3f8-2dac-ca29-750"/>
+            <modifier type="set" value="0" field="c3f8-2dac-ca29-750">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="18a7-17bd-362e-713a" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="c3f8-2dac-ca29-750"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="d620-146a-41cd-f28f" name="Plague Drones" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -5643,6 +6913,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5834,6 +7113,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -6030,6 +7318,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -6260,6 +7557,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="2cc5-ef65-c4b9-28c6" name="Infernal Enrapturess" hidden="false" collective="false" import="true" type="model">
@@ -6292,6 +7598,18 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model is leading a unit, in your Command phase, you can return D3 destroyed Bodyguard models to that unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile id="33dd-808b-b057-630a" name="Discordant Disruption (Aura)" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
@@ -6304,6 +7622,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="f2b1-c728-dd55-319b" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="f03b-5756-1683-d51d" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="d16-a99-1e1e-1595" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
+        <infoLink name="Soul Hunters" id="0315-6e80-cf0d-dc15" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dab2-78d0-e7a0-7375" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -6396,7 +7715,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="8aa8-4c1b-3715-44f8"/>
+            <modifier type="set" value="0" field="8aa8-4c1b-3715-44f8">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="8aa8-4c1b-3715-44f8"/>
+            <modifier type="set" value="0" field="8aa8-4c1b-3715-44f8">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="1567-b99b-bd8f-d485" name="The Masque of Slaanesh" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -6437,6 +7800,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="553d-c4c8-2819-a1cf" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="66f-48d2-164a-32e6" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="7546-be53-5d58-97c8" name="Lone Operative" hidden="false" targetId="a8a0-8fe7-898-e0f3" type="rule"/>
+        <infoLink name="Soul Hunters" id="87aa-fe91-3492-0915" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d437-2c02-1f61-b8c4" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -6494,7 +7858,53 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="c44d-523c-40e-78c9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="c44d-523c-40e-78c9">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="27f6-d907-66f-ca28" name="Syll&apos;esske" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -6669,6 +8079,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="36df-8f40-8a6b-7d4c" name="Contorted Epitome" hidden="false" collective="false" import="true" type="model">
@@ -6713,6 +8132,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="6be-9c02-8d0b-820c" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="f740-c7d9-1371-b55c" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="2d52-14ac-9114-43ae" name="Leader" hidden="false" targetId="b4dd-3e1f-41cb-218f" type="rule"/>
+        <infoLink name="Soul Hunters" id="e3e0-f379-2aeb-5d81" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="54fb-a85-4351-5034" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -6794,7 +8214,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="dcf-cb5-3e4-db74"/>
+            <modifier type="set" value="0" field="dcf-cb5-3e4-db74">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="dcf-cb5-3e4-db74"/>
+            <modifier type="set" value="0" field="dcf-cb5-3e4-db74">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="673b-111b-6dcb-352" name="Tormentbringer on Exalted Seeker Chariot" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -6941,6 +8405,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="dba-34e3-46f2-56e0" name="Tranceweaver" hidden="false" collective="false" import="true" type="model">
@@ -6985,6 +8458,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <infoLink id="f6ef-e7b8-de32-a0bc" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="2340-2cd-fdf5-a2ce" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
         <infoLink id="f42a-a5bd-2a4-21b7" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
+        <infoLink name="Soul Hunters" id="bfce-0ac7-879a-4e1c" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a483-b898-37f8-6402" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -7042,7 +8516,51 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="a2f1-8cba-b498-d7a"/>
+            <modifier type="set" value="0" field="a2f1-8cba-b498-d7a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="a2f1-8cba-b498-d7a"/>
+            <modifier type="set" value="0" field="a2f1-8cba-b498-d7a">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="41c2-d2e6-ae43-3beb" name="Daemonettes" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -7118,6 +8636,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
       <entryLinks>
         <entryLink id="ca46-70c7-8ee0-5d55" name="Daemonic Icon" hidden="false" collective="false" import="true" targetId="bc2f-662f-58e7-5fef" type="selectionEntry"/>
         <entryLink id="db45-4f77-c8cd-289c" name="Instrument of Chaos" hidden="false" collective="false" import="true" targetId="47bc-4cb8-5ff6-e208" type="selectionEntry"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="f1f4-a1d6-86d3-12cf" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
@@ -7133,10 +8652,48 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="10fe-4801-5c43-2397" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Soul Hunters" id="5a50-3dff-365b-b204" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="2af4-7aa4-5994-45ac"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="2af4-7aa4-5994-45ac"/>
+            <modifier type="set" value="0" field="2af4-7aa4-5994-45ac">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="2af4-7aa4-5994-45ac"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="d1ee-8d05-4fae-1727" name="Fiends" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -7155,6 +8712,22 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" value="887b-ab87-92a2-20f5" field="category">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bbdb-e662-8f86-da53" type="max"/>
@@ -7169,12 +8742,25 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While an enemy unit (excluding VEHICLE and TITANIC units) is within 6&quot; of this unit, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll, and each time a model in that enemy unit takes a Desperate Escape test, subtract 1 from that test.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="3848-a5d5-7e08-1e51" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink id="6b1c-6f6c-6f05-92a7" name="The Shadow of Chaos" hidden="false" targetId="a312-a2f1-e1c0-30ed" type="rule"/>
         <infoLink id="eb20-8b34-f3f5-4cca" name="Warp Rifts" hidden="false" targetId="877e-cc0c-8a1d-be46" type="rule"/>
+        <infoLink name="Soul Hunters" id="be04-f277-d9b1-afc3" hidden="false" type="rule" targetId="bb54-3ecb-2a14-7a34"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a50e-545d-f596-83e8" name="Faction: Legiones Daemonica" hidden="false" targetId="571f-ec3a-a5a2-751a" primary="false"/>
@@ -7233,11 +8819,49 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="5543-dc31-4dab-88ac">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e19b-e565-f6e8-c2b2" type="selectionEntry" targetId="88f5-8c31-c0b6-e209"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bbdb-e662-8f86-da53"/>
+            <modifier type="set" value="0" field="bbdb-e662-8f86-da53">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c7b5-c3c2-2be5-0030" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="bbdb-e662-8f86-da53"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="112d-8078-777f-76a5" name="Seekers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -7255,6 +8879,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -7545,6 +9178,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="5fe1-5a7a-9f8e-21e0" name="Seeker Chariot" hidden="false" collective="false" import="true" type="unit">
@@ -7691,6 +9333,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="7f62-6b3f-c4fe-b971" name="Exalted Seeker Chariot" hidden="false" collective="false" import="true" type="model">
@@ -7823,6 +9474,15 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -9497,13 +11157,37 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
         <modifier type="set" value="Nurgle Daemons are visible" field="name"/>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="88f5-8c31-c0b6-e209" collective="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="d265-877b-e03d-30ca" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf05-76a4-846c-0f41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="c6ed-98dc-69af-dc4e" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="621d-b661-7461-4620" name="Enhancements" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" value="2" field="beb0-b746-d96b-b611">
           <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7cf-90fa-4093-6047" type="lessThan"/>
+            <condition type="greaterThan" value="0" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9520,6 +11204,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4bd-5ee0-f179-2fc5" type="notInstanceOf"/>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="4bd-5ee0-f179-2fc5" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a7cf-90fa-4093-6047" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9548,6 +11233,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b188-114f-6ba5-79a1" type="notInstanceOf"/>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="b188-114f-6ba5-79a1" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a7cf-90fa-4093-6047" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9576,6 +11262,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
                   <conditions>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ed0d-8e2a-225c-2340" type="notInstanceOf"/>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="ed0d-8e2a-225c-2340" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a7cf-90fa-4093-6047" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9610,6 +11297,7 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="parent" childId="b2a9-ede5-7a83-4da8" shared="true" includeChildSelections="true"/>
                     <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b2a9-ede5-7a83-4da8" type="notInstanceOf"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a7cf-90fa-4093-6047" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9631,6 +11319,196 @@ Designer’s Note: While this unit contains one or more PINK HORRORS models, the
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="96d7-f49a-51cb-1b4e" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Daemonic Incursion Enhancements" id="7b6b-2644-d87a-3e34" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Spite Made Manifest" hidden="false" id="ec13-6a54-9286-a335" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c0-fd94-9fad-15ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e73f-9a09-f1b1-7eb4" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Spite Made Manifest" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ca58-1107-7b57-7fa4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit is selected to fight, melee weapons equipped by models in that unit have the [HAZARDOUS] ability while targeting the bearer&apos;s unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Geller Breach" hidden="false" id="e30f-1def-e39d-0b57" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c72-99ad-232b-b952" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="600d-eebb-e2ad-56a3" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Geller Breach" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="578b-d397-491d-6b29">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the first battle round, the bearer&apos;s unit can make a Normal move of up to 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4b2b-cbc7-911c-85c4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Dread Carnival Enhancements" id="293d-7475-ea76-7791" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fatal Caress" hidden="false" id="bc11-a5c3-fa20-43fe" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="184b-6cf2-07dd-f818" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d476-7030-05af-c890" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Fatal Caress" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="64bd-3dd8-512e-f5cf">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer makes a melee attack, a Critical Wound is scored on an unmodified Wound roll of 5+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Horrifying Visage" hidden="false" id="b8a9-a61c-e2ca-8e41" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="503b-ee53-4ae7-53ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d95a-f17b-099c-1c84" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Horrifying Visage" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1f93-7f90-2f76-7038">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, when an enemy unit within 9&quot; of the bearer attempts to perform a Tactical Manoeuvre or attempts to operate a Hatchway within 9&quot; of the bearer, the bearer can use this ability. If it does, that enemy unit must take a Leadership test, subtracting 1 from the result: if failed, that unit failed to perform the Tactical Manoeuvre or to operate that Hatchway and, until the start of your opponent&apos;s next turn, that unit cannot perform Tactical Manoevres or operate Hatchways.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="c7b5-c3c2-2be5-0030" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Infernal Onslaught Enhancements" id="de2b-9e12-4b2c-ebe4" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Unholy Fury" hidden="false" id="5c14-1b24-fdc0-a42e" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e07b-ea55-bbc5-a06e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="26eb-f702-681f-e829" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Unholy Fury" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8c3e-7505-bfc1-3a6c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If the bearer is destroyed by a melee attack and it has not fought this phase, roll a D6: on a 2+ do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Worthier Skulls" hidden="false" id="894f-5efe-7847-e077" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d916-d9f1-953d-70be" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0462-4d14-1292-0fd0" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Worthier Skulls" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="760b-8187-93ae-1190">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit within Engagement Range of the bearer Falls Back, after that unit has moved, if the bearer is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="4ee2-d241-6af6-94a2" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Pandaemoniac Inferno Enhancements" id="7813-0c4d-6696-e13c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fulgurating Presence" hidden="false" id="a6e7-413c-c9bd-1135" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7017-3612-7c1f-9726" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="869a-0f5f-ee11-8d0b" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Fulgurating Presence" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c73c-6f75-b927-3135">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an attack targets the bearer, subtract 1 from the Hit roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mutagenic Flames" hidden="false" id="d39f-10b9-17e4-0e1a" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b6e-5b81-7e6c-833f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e9be-cf34-72cc-c5f0" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Mutagenic Flames" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="76b2-0972-4563-b1ae">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="ece2-8b17-0df7-e02f" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Rotten and Rusted Enhancements" id="2976-6bb5-4cab-e843" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Virulent Corruption" hidden="false" id="39b3-4cc2-744f-e44b" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9831-c222-5c00-adb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="003a-69b7-b4fa-4665" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Virulent Corruption" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3f06-2d68-6967-6d02">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an enemy unit within Engagement Range of the bearer is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape attempts.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Endless Gift" hidden="false" id="6d0b-2693-bb2c-5268" publicationId="e3ec-7a32-ae62-8727" page="5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85d0-5f6a-115d-d388" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f78e-6ee7-f7db-ee99" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Endless Gift" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1a55-c9f5-a173-79a1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Add 2 to the bearer&apos;s Wounds characteristic.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="18a7-17bd-362e-713a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="46db-d986-248b-bd2b" name="Melee weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="b289-f2a3-2509-8439">
       <constraints>
@@ -9695,6 +11573,13 @@ While a Legiones Daemonica unit from your army is within your army’s Shadow of
 
 DAEMONIC TERROR
 While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6&quot; of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.’</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
     <rule id="877e-cc0c-8a1d-be46" name="Warp Rifts" publicationId="e3ec-7a32-ae62-8727" page="2" hidden="false">
       <modifiers>
@@ -9705,6 +11590,19 @@ While an enemy unit is within your army’s Shadow of Chaos and/or it is within 
         </modifier>
       </modifiers>
       <description>Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6&quot; of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6&quot; horizontally away from all enemy models, instead of more than 9&quot;.</description>
+    </rule>
+    <rule name="Soul Hunters" id="bb54-3ecb-2a14-7a34" hidden="false" publicationId="e3ec-7a32-ae62-8727" page="1">
+      <description>Enemy units within 7&quot; of this unit are Hunted by it. While an enemy unit is Hunted by this unit:
+
+■ Ranged weapons equipped by models in this unit have the [IGNORES COVER] ability while targeting that enemy unit.
+■ Each time this unit declares a charge, it can include that enemy unit as a target of that charge, even if it is not visible to it.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </sharedRules>
   <sharedProfiles>

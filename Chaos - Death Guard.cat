@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="5108-f98-63c2-53cb" name="Chaos - Death Guard" revision="32" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="5108-f98-63c2-53cb" name="Chaos - Death Guard" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <catalogueLinks>
     <catalogueLink id="9fec-b3ad-9626-6706" name="Chaos - Chaos Knights Library" targetId="8106-aad2-918a-9ac" type="catalogue" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Chaos - Daemons Library" id="4e2e-3067-84f6-f727" targetId="b45c-af22-788a-dfd6" importRootEntries="true"/>
@@ -316,7 +316,63 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="406b-754e-2e87-d074"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Plague Company" hidden="false" id="c7ba-3925-2fed-4539"/>
+            <selectionEntry type="upgrade" import="true" name="Plague Company" hidden="false" id="c7ba-3925-2fed-4539">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Arch-Contaminators" hidden="false" id="cec1-4858-d99d-841c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Inescapable Corruption" id="6a51-253a-1651-5465" hidden="false">
+                  <description>Each time an enemy unit is selected to perform a Tactical Manoeuvre, if that unit is within Contagion Range of one or more units from your army, that enemy unit must take a Leadership test. If that test is failed, that Tactical Manoeuvre has no effect (that enemy unit is still eligible to shoot and declare a charge this turn as normal).
+
+
+In addition, in your Command phase, roll one D6 for each objective marker that is within Contagion Range of one or more units from your army and is Secured by your opponent&apos;s army: on a 5+ that objective marker is no longer Secured by your opponent&apos;s army.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Unclean Uprising" hidden="false" id="dad4-65fd-1c27-af93">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Relentless Spread" id="f37e-1548-199e-7539" hidden="false">
+                  <description>Each time a DEATH GUARD unit from your army makes a Consolidation move:
+
+â–  It can move up to D3+3&quot; instead of up to 3&quot;.
+â–  If it cannot end that move within Engagement Range of one or more enemy units that are visible to it (and in Unit Coherency), it can still make that Consolidation move, and when doing so can move in any direction.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vectors of Decay" hidden="false" id="58dd-8d3f-c0d0-b430">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Sevenfold Offerings" id="a934-96e9-a69e-eff7" hidden="false">
+                  <description>For every seven enemy models that have been destroyed, add 2&quot; to the Contagion Range of units from your army. Note that any increase to the Contagion Range of units from your army as a result of this rule does not take place while a unit from your army is attacking. In such an event, the increase will take effect after such a unit has finished making its attacks.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -382,6 +438,17 @@
         <entryLink import="true" name="Hellforged weapons" hidden="false" type="selectionEntry" id="fdf9-6384-4fa0-ca18" targetId="9530-7fc3-630c-f162"/>
         <entryLink import="true" name="Plague spewer" hidden="false" type="selectionEntry" id="9d29-8a5a-6e67-dde8" targetId="11ee-cdcb-eee3-4db9"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="b526-972f-7394-632a">
       <categoryLinks>
@@ -453,6 +520,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="195"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Typhus" hidden="false" id="e6a4-7055-fd23-5123" publicationId="6bb4-8611-986f-58fa" page="11-12">
       <costs>
@@ -502,6 +580,19 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, you can select one enemy unit within 18&quot; of and visible to this PSYKER and roll one D6: on a 1, this PSYKER&apos;s unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <entryLinks>
@@ -512,6 +603,7 @@
         <infoLink name="Deep Strike" hidden="false" type="rule" id="3fa1-1c61-8d3d-7417" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="fab3-4597-8608-e9d4" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="7281-91bf-2e48-59d1" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="c8f7-95f0-9f2e-7103" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6414-ab21-60a3-1209" includeChildSelections="true"/>
@@ -551,6 +643,62 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="6414-ab21-60a3-1209"/>
+            <modifier type="set" value="0" field="6414-ab21-60a3-1209">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="6414-ab21-60a3-1209"/>
+            <modifier type="set" value="0" field="6414-ab21-60a3-1209">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hellforged weapons" hidden="false" id="9530-7fc3-630c-f162">
       <constraints>
@@ -619,7 +767,21 @@
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="c4e0-df85-14a-4736" targetId="d2e3-6a22-845c-9340"/>
         <infoLink name="Leader" hidden="false" type="rule" id="4254-1e18-a079-482c" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Chaos Lord" hidden="false" type="profile" id="6638-cc1d-3524-58cc" targetId="2e70-7085-af42-e162"/>
-        <infoLink name="Dessication Conduit (Aura)" hidden="false" type="profile" id="31d7-a45f-2be9-cfda" targetId="8e2-8f3e-c390-791a"/>
+        <infoLink name="Dessication Conduit (Aura)" hidden="false" type="profile" id="31d7-a45f-2be9-cfda" targetId="8e2-8f3e-c390-791a">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Slow Decay" id="e89f-093b-4a7e-0641" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f34e-24da-8f79-a9c2">
@@ -780,6 +942,48 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plague fist" hidden="false" id="1ca4-8321-8700-aeef">
       <profiles>
@@ -882,8 +1086,22 @@
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="522b-5186-d5c5-9fd8" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="ae8-1883-1021-b4ac" targetId="d2e3-6a22-845c-9340"/>
         <infoLink name="Chaos Lord" hidden="false" type="profile" id="4463-b42-e2ae-84db" targetId="2e70-7085-af42-e162"/>
-        <infoLink name="Dessication Conduit (Aura)" hidden="false" type="profile" id="efb8-29de-953d-45f1" targetId="8e2-8f3e-c390-791a"/>
+        <infoLink name="Dessication Conduit (Aura)" hidden="false" type="profile" id="efb8-29de-953d-45f1" targetId="8e2-8f3e-c390-791a">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="cb31-1457-e46f-423d" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Slow Decay" id="431d-1fcf-bdc5-8d53" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="fe5a-2fe9-242a-d7fb">
@@ -1001,6 +1219,48 @@
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e07c-d154-7b9d-ddfa" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord of Virulence" hidden="false" id="c15c-2b5a-dcab-7627" publicationId="6bb4-8611-986f-58fa" page="17-18">
       <costs>
@@ -1024,6 +1284,7 @@
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="ba99-1167-43aa-b571" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="49-6391-66a7-31d4" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="663e-1092-1749-4810" targetId="b4dd-3e1f-41cb-218f"/>
+        <infoLink name="Slow Decay" id="5ae0-43bd-6f74-4bf5" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e36d-3711-9601-488b">
@@ -1111,6 +1372,62 @@
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e07c-d154-7b9d-ddfa" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lord of Contagion" hidden="false" id="8700-3d3-efbb-ef8d" publicationId="6bb4-8611-986f-58fa" page="19-20">
       <categoryLinks>
@@ -1132,12 +1449,26 @@
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="baf7-1281-3eba-e637" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="f205-3837-632d-c4be" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Leader" hidden="false" type="rule" id="88bc-314-dfba-6c1f" targetId="b4dd-3e1f-41cb-218f"/>
+        <infoLink name="Slow Decay" id="d6fc-7e17-f338-bfce" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8af0-9fb3-8fa-a1e0">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a 4+ invulnerable save.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Vector of Disease" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="df3c-ad72-1ad5-4d0d">
           <characteristics>
@@ -1148,6 +1479,19 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Fight phase, each time this model loses a wound, roll one D6: on a 4+, the closest enemy unit within Engagement Range of this model suffers 1 mortal wound.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d76-619c-14-2ea9">
           <characteristics>
@@ -1208,6 +1552,62 @@
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e07c-d154-7b9d-ddfa" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Death Guard Sorcerer in Terminator Armour" hidden="false" id="93ac-1b31-4238-d60e" publicationId="6bb4-8611-986f-58fa" page="21-22">
       <entryLinks>
@@ -1218,6 +1618,7 @@
         <infoLink name="Leader" hidden="false" type="rule" id="3442-d8d9-108e-d29f" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="f845-6f6f-108d-c0fa" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="be-e0b6-681e-365a" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="db9b-d8e7-df40-c14c" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="225b-dcc0-3a88-11bb">
@@ -1251,6 +1652,19 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, after selecting targets for a Psychic weapon equipped by this model, until the end of the phase, improve the Strength and Damage characteristics of that weapon by 2.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntryGroups>
@@ -1413,6 +1827,62 @@
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9900-77d7-10e3-5c91" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="2afc-fcc3-c636-e4b8">
       <profiles>
@@ -1449,6 +1919,7 @@
         <infoLink name="Leader" hidden="false" type="rule" id="e44-bb65-6a34-aa35" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="5536-af51-98a0-9582" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="e37f-d0df-d094-fe83" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="e6aa-2ad0-ebf5-975d" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="6658-fda5-6b5b-3a9" targetId="c93c-acdd-5ab4-afb8"/>
@@ -1547,6 +2018,48 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bacc-4f1-649-a051" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="93ac-1b31-4238-d60e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8700-3d3-efbb-ef8d" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c15c-2b5a-dcab-7627" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6a4-7055-fd23-5123" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cfc1-1741-530c-3335" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plague bolt pistol" hidden="false" id="cb66-ea67-29a2-316d">
       <profiles>
@@ -1582,6 +2095,16 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
             <condition field="selections" scope="8467-b3a2-2597-de0d" value="8" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7a0-4d12-850-b8da" name="Plague Marine" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
@@ -1603,6 +2126,7 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
       <infoLinks>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="9e7d-46ff-f4b7-16c7" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="2a7c-597e-811a-fe19" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="563a-a28b-e7f3-a5da" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="9888-ddb2-a141-6037" id="16be-2ca2-c0f0-431c" primary="false" name="Faction: Death Guard"/>
@@ -1829,6 +2353,19 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="cfc0-b724-fef4-e595" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="0eef-3f4f-1003-a507" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="cfc0-b724-fef4-e595"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma pistol" hidden="false" id="18aa-edc7-646c-296">
       <constraints>
@@ -2020,6 +2557,17 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
             <condition type="atLeast" value="11" field="selections" scope="d579-88cd-c634-f800" childId="model" shared="true" id="eb8e-6d69-348b-100a" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="9-19 Cultists" hidden="false" id="bc65-7056-bede-76fc" defaultSelectionEntryId="a25a-a0e9-beae-aaf1">
@@ -2167,6 +2715,18 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
             <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="3fef-4ad3-dd35-92d1"/>
             <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="5b12-d998-315e-1cd3"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="9" field="5b12-d998-315e-1cd3">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
@@ -2189,6 +2749,7 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
             <modifier type="append" value="6&quot;" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Slow Decay" id="baf5-3627-e468-c7e6" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Cultist Champion" hidden="false" id="7f1c-1266-ed79-3929">
@@ -2205,6 +2766,37 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e07c-d154-7b9d-ddfa" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="1f75-5a2c-9522-e044" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="increment" value="1" field="e07c-d154-7b9d-ddfa">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="8467-b3a2-2597-de0d" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="e07c-d154-7b9d-ddfa">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="7c30-1e92-2faa-eb03" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e07c-d154-7b9d-ddfa"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Cultist firearm" hidden="false" id="16c6-ff2d-bc79-4e1a" collective="true">
       <profiles>
@@ -2290,6 +2882,18 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
                 <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="776a-2ea-4309-bac6"/>
                 <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="b6b3-4b27-80a3-f32f"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="10" field="b6b3-4b27-80a3-f32f">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2299,6 +2903,17 @@ until the start of your next turn, subtract 2 from that unitâ€™s Move characteri
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="7c30-1e92-2faa-eb03" childId="model" shared="true" id="f3c9-f1b2-86e0-341f" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2328,10 +2943,42 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         </infoLink>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="8a8c-218b-ad0f-cc3a" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="358b-2c30-787d-fc31" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="7ad8-c5e0-bfb7-9bec" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e07c-d154-7b9d-ddfa" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="973e-a69c-e419-ccaf" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="0" field="e07c-d154-7b9d-ddfa"/>
+            <modifier type="increment" value="1" field="e07c-d154-7b9d-ddfa">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="8467-b3a2-2597-de0d" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="e07c-d154-7b9d-ddfa">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="d579-88cd-c634-f800" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="3" field="e07c-d154-7b9d-ddfa"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Noxious Blightbringer" hidden="false" id="1ffc-27de-8aea-e7bb" publicationId="6bb4-8611-986f-58fa" page="31-32">
       <costs>
@@ -2375,6 +3022,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Leader" hidden="false" type="profile" id="37b-fb90-45c3-aefe" targetId="5df1-a522-e690-dddc"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="3a8-1f5b-7ee8-e2e6" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="5fba-84bc-7cd0-a512" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="85d7-0827-0760-e78f" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="6004-e924-3a2e-7c48" targetId="c93c-acdd-5ab4-afb8"/>
@@ -2409,6 +3057,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="67c4-fa9-bb7a-9186"/>
+            <modifier type="set" value="0" field="67c4-fa9-bb7a-9186">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="690b-a189-5935-f32e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e5b-23db-4ccd-ea97" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c88f-d4dc-84b3-1b31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9a82-ea13-3511-6c08" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="506c-16a8-68f7-c08a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Foul Blightspawn" hidden="false" id="c88f-d4dc-84b3-1b31" publicationId="6bb4-8611-986f-58fa" page="33-34">
       <categoryLinks>
@@ -2445,6 +3134,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Leader" hidden="false" type="profile" id="4691-1403-555-d608" targetId="5df1-a522-e690-dddc"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="5d62-d6c4-a91a-c436" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="c0a5-9dbe-3f8f-bae4" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="5644-91ec-dc9b-5f59" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="cbfc-ab9e-c65-2667" targetId="c93c-acdd-5ab4-afb8"/>
@@ -2498,6 +3188,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="67c4-fa9-bb7a-9186"/>
+            <modifier type="set" value="0" field="67c4-fa9-bb7a-9186">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="690b-a189-5935-f32e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e5b-23db-4ccd-ea97" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ffc-27de-8aea-e7bb" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9a82-ea13-3511-6c08" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="506c-16a8-68f7-c08a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Biologus Putrifier" hidden="false" id="690b-a189-5935-f32e" publicationId="6bb4-8611-986f-58fa" page="35-36">
       <categoryLinks>
@@ -2532,6 +3263,18 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, you can target one unit from your army with this ability with the Grenade Stratagem for 0CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -2544,6 +3287,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         </infoLink>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="45fb-e5a5-f6a7-8f2a" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="84d0-d004-5ff0-d212" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="749d-7bb7-ddb4-ab7c" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="d948-6eb4-8e10-8d99" targetId="c93c-acdd-5ab4-afb8"/>
@@ -2622,6 +3366,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="67c4-fa9-bb7a-9186"/>
+            <modifier type="set" value="0" field="67c4-fa9-bb7a-9186">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e5b-23db-4ccd-ea97" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c88f-d4dc-84b3-1b31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ffc-27de-8aea-e7bb" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9a82-ea13-3511-6c08" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="506c-16a8-68f7-c08a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tallyman" hidden="false" id="506c-16a8-68f7-c08a" publicationId="6bb4-8611-986f-58fa" page="37-38">
       <categoryLinks>
@@ -2655,6 +3440,18 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, if this model is on the battlefield, roll 2D6: on a 7+, you gain 1CP.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -2662,6 +3459,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Leader" hidden="false" type="profile" id="4647-96e6-9ca1-a472" targetId="5df1-a522-e690-dddc"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="da16-7951-4d79-8d4d" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="2c0-9714-66df-f044" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="1a4e-f4ed-5f50-a03e" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="9819-f612-3d2a-5e53" targetId="c93c-acdd-5ab4-afb8"/>
@@ -2725,6 +3523,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="45"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="67c4-fa9-bb7a-9186"/>
+            <modifier type="set" value="0" field="67c4-fa9-bb7a-9186">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="690b-a189-5935-f32e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e5b-23db-4ccd-ea97" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c88f-d4dc-84b3-1b31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ffc-27de-8aea-e7bb" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9a82-ea13-3511-6c08" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Plague Surgeon" hidden="false" id="9a82-ea13-3511-6c08" publicationId="6bb4-8611-986f-58fa" page="39-40">
       <categoryLinks>
@@ -2753,6 +3592,18 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Diseased Healing" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="96ee-97c4-3b67-e45">
           <characteristics>
@@ -2765,6 +3616,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Leader" hidden="false" type="profile" id="1975-53be-6a6e-1d3b" targetId="5df1-a522-e690-dddc"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="452-767e-f7c7-8dce" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="d47b-e896-a6c-1d9e" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="6233-d369-706c-8372" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="a55c-46b1-28e9-15f0" targetId="c93c-acdd-5ab4-afb8"/>
@@ -2802,6 +3654,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="50"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="67c4-fa9-bb7a-9186"/>
+            <modifier type="set" value="0" field="67c4-fa9-bb7a-9186">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="690b-a189-5935-f32e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e5b-23db-4ccd-ea97" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c88f-d4dc-84b3-1b31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ffc-27de-8aea-e7bb" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="506c-16a8-68f7-c08a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathshroud Terminators" hidden="false" id="83e8-ebb7-785a-2115" publicationId="6bb4-8611-986f-58fa" page="43-44">
       <costs>
@@ -2812,6 +3705,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="83e8-ebb7-785a-2115" childId="model" shared="true" id="657e-5957-a34-ce02" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -2840,6 +3744,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="1cfe-25d8-86bf-8e27" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="36b9-b3ec-30d5-ab23" targetId="d2e3-6a22-845c-9340"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="233a-746b-e4b7-b309" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Slow Decay" id="3547-3f48-5d2c-4936" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Deathshroud Terminator Champion" hidden="false" id="b130-da57-6e9d-c693">
@@ -2875,6 +3780,18 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="2" field="558e-4c6e-d2db-43da">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -2888,6 +3805,24 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="a97f-1f38-1627-f82e" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="cfdd-abd2-5fe0-bf65" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="a97f-1f38-1627-f82e"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Manreaper" hidden="false" id="dd42-d33f-d87d-c693" collective="true">
       <constraints>
@@ -3199,6 +4134,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="cffb-c7ec-17f8-7d3e" name="Twin plague heavy bolter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -3285,6 +4231,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <conditions>
             <condition type="atLeast" value="6" field="selections" scope="5b4e-dcf1-5c6f-4d35" childId="model" shared="true" id="e5c4-3db7-7178-66e0" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -3487,6 +4444,18 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="5" field="bad6-4664-75f2-8861">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -3523,7 +4492,29 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="314a-cf71-f1b4-ccc4" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="9ae2-48a7-caf8-b4d4" targetId="d2e3-6a22-845c-9340"/>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="37bf-4e4c-3bc6-dd33" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Slow Decay" id="354a-3061-fb88-21e5" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="778d-7602-5a7c-10e5" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c3dc-195b-2da6-4884" includeChildSelections="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c3dc-195b-2da6-4884"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bubotic blade" hidden="false" id="254c-9031-c4df-2d87" collective="true">
       <constraints>
@@ -3566,6 +4557,19 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of each playerâ€™s Command phase, one model in this unit regains up to D3 lost wounds.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -3576,6 +4580,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         </infoLink>
         <infoLink id="61ad-5eb7-4a06-7fd1" name="Nurgle&apos;s Gift (Aura)" hidden="false" targetId="ea42-7d15-fd81-73d6" type="rule"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="94a9-d9c2-5c37-cc88" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="a238-314a-2e3f-dc1e" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="9888-ddb2-a141-6037" id="111a-e552-962e-e8aa" primary="false" name="Faction: Death Guard"/>
@@ -3616,6 +4621,39 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c1e5-1af9-625a-40fc" type="selectionEntry" targetId="7388-2e8a-5ecb-5732"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c7fb-1fe5-6958-8464"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Myphitic Blight-haulers" hidden="false" id="35b2-7490-1a7b-cd99" publicationId="6bb4-8611-986f-58fa" page="49-50">
       <selectionEntries>
@@ -3773,6 +4811,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink id="b618-1ce3-c6df-1222" name="Nurgle&apos;s Gift (Aura)" hidden="false" targetId="ea42-7d15-fd81-73d6" type="rule"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="5002-e22c-9d3f-17c5" targetId="d2e3-6a22-845c-9340"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Foetid Bloat-drone" hidden="false" id="26d5-ec73-3517-f3f" publicationId="6bb4-8611-986f-58fa" page="51-52">
       <costs>
@@ -3919,6 +4968,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="aaa2-4ec5-7b89-cf42" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Plagueburst Crawler" hidden="false" id="e58b-507a-937f-7abf">
       <costs>
@@ -4099,6 +5159,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Armoured tracks" hidden="false" id="a673-7927-12e3-b2e1">
       <constraints>
@@ -4227,6 +5298,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="240"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="a226-a63a-597f-db94" name="Havoc launcher" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -4357,6 +5439,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="ab4e-466d-e9e8-89d5" name="Death Guard Predator Destructor" hidden="false" collective="false" import="true" type="model" publicationId="6bb4-8611-986f-58fa" page="59-60">
       <constraints>
@@ -4466,6 +5559,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="44ec-412e-8bcf-79a7" name="Lascannon" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -4682,6 +5786,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="b899-92e2-693a-975f" name="Death Guard Rhino" hidden="false" collective="false" import="true" type="model" publicationId="6bb4-8611-986f-58fa" page="63-64">
       <constraints>
@@ -4756,6 +5871,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mortarion" hidden="false" id="f5ac-4f37-fe7b-36b6" publicationId="6bb4-8611-986f-58fa" page="65-66">
       <costs>
@@ -4929,6 +6055,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Death Guard Icon Bearer" hidden="false" id="3e5b-23db-4ccd-ea97" publicationId="6bb4-8611-986f-58fa" page="67-68">
       <constraints>
@@ -4982,6 +6119,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         <infoLink name="Leader" hidden="false" type="profile" id="6307-c34b-f13a-4eb3" targetId="5df1-a522-e690-dddc"/>
         <infoLink name="Nurgle&apos;s Gift (Aura)" hidden="false" type="rule" id="47f-7928-b110-584b" targetId="ea42-7d15-fd81-73d6"/>
         <infoLink name="Spread the Sickness" hidden="false" type="rule" id="f630-7ee4-f276-8347" targetId="d2e3-6a22-845c-9340"/>
+        <infoLink name="Slow Decay" id="abaf-22bc-b023-0425" hidden="false" type="rule" targetId="29e9-aa9b-ea81-e8e8"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Plague knife" hidden="false" id="a43a-3d7b-715e-62ce">
@@ -5004,6 +6142,47 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="ac97-161a-75a7-485a"/>
+            <modifier type="set" value="0" field="ac97-161a-75a7-485a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="690b-a189-5935-f32e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c88f-d4dc-84b3-1b31" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1ffc-27de-8aea-e7bb" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9a82-ea13-3511-6c08" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="506c-16a8-68f7-c08a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Miasmic Malignifier" hidden="false" id="55c7-e5b8-9737-f58e" publicationId="6bb4-8611-986f-58fa" page="69-70">
       <costs>
@@ -5077,6 +6256,17 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chaos Lord on Palanquin of Nurgle [Legends]" hidden="false" id="1d25-87a1-2d17-5d02">
       <costs>
@@ -6296,6 +7486,26 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
       </infoLinks>
       <comment>BS 4+</comment>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="7388-2e8a-5ecb-5732">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="f131-ec14-825c-d68c" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b00-841e-10e5-72ee"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Nurgle&apos;s Gift (Aura)" hidden="false" id="ea42-7d15-fd81-73d6" publicationId="6bb4-8611-986f-58fa" page="1">
@@ -6316,6 +7526,21 @@ If you control an objective marker at the end of your Command phase and a DEATH 
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="c7ba-3925-2fed-4539" shared="true" id="c4f9-c79f-5f56-6639" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Slow Decay" id="29e9-aa9b-ea81-e8e8" hidden="false" publicationId="6bb4-8611-986f-58fa" page="1">
+      <description>When measuring your unit&apos;s Contagion Range, Walls and closed Hatchways are ignored. In addition, Contagion Range changes over the course of the battle as shown below, instead of as specified in the Nurgle&apos;s Gift ability.
+
+CONTAGION RANGE
+1st Battle Round: Contagion Range = 1&quot;
+2nd Battle Round: Contagion Range = 3&quot;
+3rd Battle Round Onwards: Contagion Range = 6&quot;</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6346,6 +7571,13 @@ If you control an objective marker at the end of your Command phase and a DEATH 
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7ba-3925-2fed-4539" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Droning (Aura)" hidden="false" id="c60b-47a4-feda-d666">
           <constraints>
@@ -6362,6 +7594,13 @@ If you control an objective marker at the end of your Command phase and a DEATH 
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7ba-3925-2fed-4539" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Deadly Pathogen" hidden="false" id="555d-13a4-7b88-1c08">
           <constraints>
@@ -6378,6 +7617,13 @@ If you control an objective marker at the end of your Command phase and a DEATH 
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7ba-3925-2fed-4539" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shamblerot" hidden="false" id="e5ca-9950-2e0f-996d">
           <constraints>
@@ -6394,8 +7640,138 @@ If you control an objective marker at the end of your Command phase and a DEATH 
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c7ba-3925-2fed-4539" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Arch-Contaminator Enhancements" id="7932-f5ad-79a6-3664" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Miasmic Odour" hidden="false" id="0d55-affd-87a2-f24f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adab-4801-62c9-3843"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8671-b264-7ebb-c068" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Miasmic Odour" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2c03-0ef9-a8f4-0bef">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Add 3&quot; to the Contagion Range of the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Disgusting Reinvigoration" hidden="false" id="680b-430a-fd6c-b2b1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8556-9c1d-ce02-b3f2"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3d43-5869-0c75-3c5a" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Disgusting Reinvigoration" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="e0b3-a6f7-6322-8d22">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer destroys an enemy model with a melee attack, roll a D6: on a 5+, the bearer regains one lost wound (to a maximum of two lost wounds per phase).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cec1-4858-d99d-841c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Unclean Uprising Enhancements" id="9672-075f-7fd3-4f0a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hand of Nurgle" hidden="false" id="9c59-15a6-2da6-fe44">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e448-4e43-e6cc-e03e"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8295-af64-d579-78d6" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Hand of Nurgle" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ff7e-b4f0-5b6a-9df4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, select one objective marker that you control and is within range of the bearer. Roll one D6; on a 2+, that objective marker is Secured by your army.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pox-Bearer" hidden="false" id="489b-2121-8494-f9f5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f114-1ecd-101a-3d8e"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5fa8-37ef-0918-5679" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Pox-Bearer" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0f27-49cf-da77-be9a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the end of your Movement phase, the bearer can use this Enhancement. If it does, select one friendly POXWALKERS unit within 9&quot; of and visible to the bearer; return up to D3+2 destroyed models to that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dad4-65fd-1c27-af93" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Vectors of Decay Enhancements" id="8b45-a0f2-6cff-0128" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fountaining Filth" hidden="false" id="4a08-055f-bb60-94d0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea57-8900-bb45-bb08"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="76c7-1beb-9df5-b4dd" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Fountaining Filth" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3839-3cdd-0c56-8ff0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">When the bearer is destroyed, before removing it from the battlefield, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5 that enemy unit suffers 2 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Foul Constitution" hidden="false" id="bedb-973d-f7c6-30de">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df33-3114-0f3b-1958"/>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5058-ee8d-3c98-7e26" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Foul Constitution" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="28ea-ce24-0b49-4364">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="58dd-8d3f-c0d0-b430" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="0494-3664-c355-5305" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="2" field="90cf-fe03-9bba-f8d">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <categoryEntries>

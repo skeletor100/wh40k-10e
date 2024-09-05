@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="b00-cd86-4b4c-97ba" name="Imperium - Agents of the Imperium" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="30" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="b00-cd86-4b4c-97ba" name="Imperium - Agents of the Imperium" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="31" battleScribeVersion="2.03" type="catalogue">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Vindicare Assassin" hidden="false" id="efa3-2cf5-dcfb-b976">
       <categoryLinks>
@@ -135,6 +135,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="bb9a-14e7-b947-793b">
@@ -264,6 +273,15 @@
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Eversor Assassin" hidden="false" id="f201-1f4a-b907-d9d1">
@@ -389,6 +407,15 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Callidus Assassin" hidden="false" id="1cfe-be05-5603-133">
@@ -499,6 +526,15 @@
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rogue Trader Entourage" hidden="false" id="9360-d8b2-cd92-9e7f">
@@ -524,6 +560,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If your army contains one or more units with this ability, during the Declare Battle Formations step, select one of those units. While the selected unit is leading a unit, models in that unit have the Infiltrators ability.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Rogue Trader Entourage" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b7e1-478c-fd22-8bad">
           <characteristics>
@@ -539,6 +586,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If your army contains one or more models with this ability, after both players have deployed their armies, select up to D3 IMPERIUM BATTLELINE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserve, regardless of how many units are already in Strategic Reserve.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntries>
@@ -785,6 +843,16 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Leader" id="9df-cbe8-3633-2c70" hidden="false" type="rule" targetId="b4dd-3e1f-41cb-218f"/>
@@ -818,9 +886,20 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="d3bc-29d2-6b8f-9981" targetId="58c1-ec7a-74f5-26b9"/>
+        <infoLink name="Imperial Insights" id="e496-4d4a-81ac-6d2a" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <profiles>
         <profile name="Voidsmen-at-Arms" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="16c2-78c3-4169-3fd5">
@@ -922,6 +1001,15 @@
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <profiles>
             <profile name="Navy Bodyguard" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="06ef-9a1f-72c7-c2ef">
@@ -1018,6 +1106,9 @@
         <categoryLink targetId="d75b-79c6-fe15-a72a" id="e224-29b9-bac8-3820" primary="false" name="Voidsmen-at-Arms"/>
         <categoryLink name="Voidfarers" hidden="false" id="7d39-5f46-1452-11dc" targetId="7aea-df68-2ade-9bd6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="3347-551e-b7f6-f807" type="selectionEntry" targetId="25b6-360d-50b4-265e"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Laspistol" hidden="false" id="7e50-4dc-fae1-c2d4">
       <constraints>
@@ -1107,6 +1198,17 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, when you select this unit as the target of the Grenade Stratagem, you can target one enemy unit visible to and within 18&quot; of this unit that is not within Engagement Range of any units from your army, instead of one within 6&quot;</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="CAT Unit" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="fce7-cb5d-2fe6-19c1">
           <characteristics>
@@ -1523,7 +1625,38 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="e338-111e-d0c6-b687" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set-primary" value="cf47-a0d7-7207-29dc" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="f6ba-a46d-680a-e9d6" type="selectionEntry" targetId="25b6-360d-50b4-265e"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Subductor Squad" hidden="false" id="6db9-cede-3810-f1f0">
       <costs>
@@ -1531,6 +1664,7 @@
       </costs>
       <infoLinks>
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="f9a1-4f77-491e-782" targetId="58c1-ec7a-74f5-26b9"/>
+        <infoLink name="Imperial Insights" id="9f8a-4e30-3350-436c" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="5128-90b-e4a5-dcbd" id="8e1e-e6d5-9481-9b65" primary="false" name="Faction: Agents of the Imperium"/>
@@ -1551,6 +1685,13 @@
             <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="2" field="bef7-942a-1a23-59f8">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Dedication to Duty" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6998-4242-8a2c-5b47">
           <characteristics>
@@ -1588,6 +1729,7 @@
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Cyber-mastiff" hidden="false" type="selectionEntry" id="454b-f1d4-c1f1-9aa6" targetId="14b8-cce5-ed01-5699" sortIndex="2"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="3428-8b82-b7d7-eefb" type="selectionEntry" targetId="25b6-360d-50b4-265e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1596,6 +1738,16 @@
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="e08b-2448-5606-fefb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1652,6 +1804,18 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the start of any Command phase, you can select one objective marker within 6&quot; of the bearer. All enemy units (excluding MONSTERS and VEHICLES) within range of that objective marker must take a Battle-shock test. Each objective marker can only be targeted by this ability once per turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="Nuncio-aquilla (Aura)" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="While an enemy unit is within 3&quot; of the bearer, each time that unit takes a Battle-shock test, subtract 1 from that test." field="9b8f-694b-e5e-b573">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
     </selectionEntry>
@@ -1671,12 +1835,24 @@
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Cyber-mastiff" hidden="false" type="selectionEntry" id="ed9d-47b8-fe55-7d0e" targetId="14b8-cce5-ed01-5699" sortIndex="3"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="6d39-3624-ca17-f509" type="selectionEntry" targetId="25b6-360d-50b4-265e"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="9796-9f61-ca03-2e26" targetId="58c1-ec7a-74f5-26b9"/>
+        <infoLink name="Imperial Insights" id="053c-6c9a-94c7-6d7c" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="5128-90b-e4a5-dcbd" id="53ca-d68b-bb3f-8f37" primary="false" name="Faction: Agents of the Imperium"/>
@@ -1697,6 +1873,19 @@
             <entryLink import="true" name="Close combat weapon" hidden="false" type="selectionEntry" id="bdc-6783-9d76-120a" targetId="b56e-3b3a-25d-2fea"/>
             <entryLink import="true" name="Nuncio-aquila" hidden="false" type="selectionEntry" id="820b-3f84-8b58-6840" targetId="e381-860c-4187-dbd6"/>
             <entryLink import="true" name="Arbites combat shotgun" hidden="false" type="selectionEntry" id="a2ce-b53d-aeb9-e0c0" targetId="9ece-a182-1248-f933"/>
+            <entryLink import="true" name="Enhancements" hidden="false" id="86a8-8f51-8b86-0504" type="selectionEntryGroup" targetId="c3c8-4ca0-ec6e-6686">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -2066,9 +2255,11 @@
       </categoryLinks>
       <infoLinks>
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="f0cb-20fa-f82c-bda7" targetId="58c1-ec7a-74f5-26b9"/>
+        <infoLink name="Imperial Insights" id="11d3-7f78-a783-5d69" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Cyber-mastiff" hidden="false" type="selectionEntry" id="ab3f-46cf-a16b-da83" targetId="14b8-cce5-ed01-5699" sortIndex="3"/>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="4572-401e-12a5-3573" type="selectionEntry" targetId="25b6-360d-50b4-265e"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Proctor-Vigilant" hidden="false" id="fcd8-bac6-df83-ed49" sortIndex="2">
@@ -2270,6 +2461,16 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile name="Vigilant Squad" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="2ea5-bbd7-b070-171f">
@@ -2309,6 +2510,7 @@
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="8f32-427e-2c83-89d8" targetId="58c1-ec7a-74f5-26b9"/>
         <infoLink name="Leader" hidden="false" type="rule" id="6e20-77fb-353-40d1" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Authority of the Inquisition" hidden="false" type="profile" id="59ba-7984-7233-ab7f" targetId="730a-dcfd-f2aa-cdd6"/>
+        <infoLink name="Imperial Insights" id="d1fc-70e1-45fe-ee0f" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <profiles>
         <profile name="Inquisitor Draxus" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="1f1-b4c4-21e3-ba00">
@@ -2429,6 +2631,17 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Inquisitor Coteaz" hidden="false" id="264a-fc24-3a98-31dc">
@@ -2450,6 +2663,7 @@
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="f1c5-64a2-4d54-9276" targetId="58c1-ec7a-74f5-26b9"/>
         <infoLink name="Authority of the Inquisition" hidden="false" type="profile" id="5805-a8ea-bf85-c95b" targetId="730a-dcfd-f2aa-cdd6"/>
         <infoLink name="Leader" hidden="false" type="rule" id="9d3c-500e-8eaa-1527" targetId="b4dd-3e1f-41cb-218f"/>
+        <infoLink name="Imperial Insights" id="1cc5-898b-a8df-179f" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3a55-e4fd-339d-be45">
@@ -2585,6 +2799,17 @@
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Inquisitor Greyfax" hidden="false" id="6e0e-b9a2-f53d-ad0e">
@@ -2607,6 +2832,7 @@
         <infoLink name="Assigned Agents" hidden="false" type="rule" id="e19f-bf10-49a6-ce48" targetId="58c1-ec7a-74f5-26b9"/>
         <infoLink name="Authority of the Inquisition" hidden="false" type="profile" id="cbc5-b264-4089-b3eb" targetId="730a-dcfd-f2aa-cdd6"/>
         <infoLink name="Leader" hidden="false" type="rule" id="21ec-a2bd-f775-36ee" targetId="b4dd-3e1f-41cb-218f"/>
+        <infoLink name="Imperial Insights" id="91e1-9a6d-8c03-20c8" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <profiles>
         <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6b5a-cfe5-481e-fb98">
@@ -2721,6 +2947,17 @@
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="e08b-2448-5606-fefb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2859,6 +3096,7 @@
         <infoLink name="Authority of the Inquisition" hidden="false" type="profile" id="542f-99af-d250-5688" targetId="730a-dcfd-f2aa-cdd6"/>
         <infoLink name="Leader" hidden="false" type="rule" id="a2a0-5489-2410-da2f" targetId="b4dd-3e1f-41cb-218f"/>
         <infoLink name="Power of the Rosette" hidden="false" type="profile" id="e20-46fe-896a-6a6f" targetId="45a6-4631-f66e-3ca2"/>
+        <infoLink name="Imperial Insights" id="de6e-b3e2-23c2-47bf" hidden="false" type="rule" targetId="5c64-a274-58be-33a6"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="fc86-3c06-2d72-446f" targetId="bb9a-14e7-b947-793b"/>
@@ -3037,6 +3275,17 @@
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="e08b-2448-5606-fefb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4758,6 +5007,13 @@ While this Mission Tactic is active, weapons equipped by DEATHWATCH units from y
 While this Mission Tactic is active, each time a DEATHWATCH model from your army makes an attack, on a Critical Wound, that attack has the [PRECISION] ability.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Purgation Force (Ordo Hereticus)" hidden="false" id="cfc6-5531-53cb-1964">
               <rules>
@@ -4768,6 +5024,13 @@ While this Mission Tactic is active, each time a DEATHWATCH model from your army
 Each time an ADEPTUS ARBITES, INQUISITOR, INQUISITORIAL AGENTS or ORDO HERETICUS model from your army makes an attack that targets a CHAOS unit containing 5 or more models, that attack has the [SUSTAINED HITS 1] ability.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Daemon Hunters (Ordo Malleus)" hidden="false" id="bd6f-97c7-6ac4-8320">
               <rules>
@@ -4775,6 +5038,13 @@ Each time an ADEPTUS ARBITES, INQUISITOR, INQUISITORIAL AGENTS or ORDO HERETICUS
                   <description>Each time an INQUISITOR, INQUISITORIAL AGENTS or ORDO MALLEUS unit from your army makes an attack, re-roll a Hit roll of 1 and, if the target is a DAEMON unit, re-roll a Wound roll of 1 as well.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Imperialis Fleet" hidden="false" id="5347-93e5-b3f2-366d">
               <rules>
@@ -4790,6 +5060,41 @@ Select one enemy unit on the battlefield. Until the start of your next Command p
 Select one objective marker on the battlefield. Until the start of your next Command phase, while an AGENTS OF THE IMPERIUM unit from your army is within range of that objective marker, improve the Leadership and Objective Control characteristics of models in that unit by 1 and models in that unit have a 5+ invulnerable save.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Interdiction Team" hidden="false" id="dc8e-ffdf-f5ed-00c9">
+              <rules>
+                <rule name="Chastisor Auto-vox" id="3113-914d-d8e1-0e12" hidden="false">
+                  <description>In your opponent&apos;s Command phase, each enemy unit within 3&quot; of one or more ADEPTUS ARBITES units from your army must take a Battle-shock test. If that enemy unit is also Below Half-strength, subtract 1 from that test. This Detachment rule cannot cause a unit to take two Battle-shock tests in the same phase.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Voidship&apos;s Company" hidden="false" id="790b-b84a-6660-216e">
+              <rules>
+                <rule name="Beseechment Codes" id="3752-1f11-903a-1506" hidden="false">
+                  <description>In your Movement phase, each time a VOIDFARERS unit from your army makes a Normal move, while that unit is moving it can attempt to operate a closed Hatchway that is within 1&quot; of at any point during the move. It cannot do this, however, if there are one or more enemy units also within 1&quot; of that Hatchway. If that VOIDFARERS unit does attempt to operate that Hatchway, it cannot operate a Hatchway again this turn.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4863,6 +5168,15 @@ Select one objective marker on the battlefield. Until the start of your next Com
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -5039,6 +5353,17 @@ Select one objective marker on the battlefield. Until the start of your next Com
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="a583-69dc-fafa-60ac" includeChildSelections="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Inquisitorial Agents" hidden="false" id="4469-7239-717e-9abd">
       <categoryLinks>
@@ -5063,6 +5388,18 @@ Select one objective marker on the battlefield. Until the start of your next Com
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While an INQUISITOR model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <selectionEntryGroups>
@@ -5401,6 +5738,17 @@ Select one objective marker on the battlefield. Until the start of your next Com
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="bcc0-0b7e-d4c1-bba7" includeChildSelections="true"/>
@@ -5432,6 +5780,26 @@ Select one objective marker on the battlefield. Until the start of your next Com
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="bcc0-0b7e-d4c1-bba7"/>
+            <modifier type="set" value="1" field="bcc0-0b7e-d4c1-bba7">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="92d3-447e-a71e-6739" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Agent firearm" hidden="false" id="0117-3fb8-aad2-c164" collective="true">
       <profiles>
@@ -5688,6 +6056,15 @@ Select one objective marker on the battlefield. Until the start of your next Com
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Storm bolter" hidden="false" id="ac72-81fa-ea32-15fe">
@@ -5915,6 +6292,15 @@ Select one objective marker on the battlefield. Until the start of your next Com
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy bolter" hidden="false" id="9011-f8c8-b4de-3a18">
@@ -6064,6 +6450,15 @@ Select one objective marker on the battlefield. Until the start of your next Com
             </conditionGroup>
           </conditionGroups>
           <comment>Agents visibility</comment>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -6543,6 +6938,15 @@ Select one objective marker on the battlefield. Until the start of your next Com
           </conditionGroups>
           <comment>Agents visibility</comment>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt pistol" hidden="false" id="5314-726f-72ba-9014" collective="true">
@@ -6778,6 +7182,15 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
             </conditionGroup>
           </conditionGroups>
           <comment>Agents visibility</comment>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -7056,6 +7469,26 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
         <entryLink import="true" name="Enhancements" hidden="false" id="d87b-48a6-6696-a440" type="selectionEntryGroup" targetId="c3c8-4ca0-ec6e-6686"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="25b6-360d-50b4-265e">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03d0-a940-4f74-5856"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="de19-2a1c-23ed-f1cb" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
     <categoryEntry name="Vindicare Assassin" hidden="false" id="bbce-4a66-765f-6f5f">
@@ -7136,16 +7569,49 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="378a-21f7-4a9b-ccf3" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="378a-21f7-4a9b-ccf3">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Voidsmen-at-Arms" hidden="false" id="d75b-79c6-fe15-a72a">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="9256-d295-ed97-f00d" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="6" field="9256-d295-ed97-f00d">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Imperial Navy Breachers" hidden="false" id="c79c-d8d4-53a1-b7c4">
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="c0b3-35dd-3edb-36cb" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="c0b3-35dd-3edb-36cb">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Subductor Squad" hidden="false" id="7abb-71bd-bc2c-408e">
       <constraints>
@@ -7156,11 +7622,25 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="378a-21f7-4a9b-ccf3" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="378a-21f7-4a9b-ccf3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Vigilant Squad" hidden="false" id="1d89-841c-d40a-4263">
       <constraints>
         <constraint type="max" value="6" field="selections" scope="force" shared="true" id="378a-21f7-4a9b-ccf3" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="378a-21f7-4a9b-ccf3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Draxus" hidden="false" id="a782-bf42-a7d8-e578">
       <constraints>
@@ -7171,6 +7651,18 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="680d-4cf4-e424-524c" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="680d-4cf4-e424-524c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Coteaz" hidden="false" id="5b1c-f22a-438d-be29">
       <constraints>
@@ -7333,9 +7825,29 @@ Onslaught: 3 RETINUE, 3 CHARACTER, 3 REQUISITIONED
 Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Imperial Insights" id="5c64-a274-58be-33a6" hidden="false">
+      <description>Each time this unit performs the Secure Site Tactical Manoeuvre, the objective marker you select for that Tactical Manoeuvre is immediately Secured by your army, instead of at the start of your next Command phase. This unit can then make a Normal move of up to D6&quot; (but is not eligible to shoot or declare a charge this turn).</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b00-cd86-4b4c-97ba" shared="true" includeChildSelections="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </rule>
@@ -8726,6 +9238,120 @@ Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in su
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="6173-cdd8-c126-31d0" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Voidship&apos;s Company Enhancements" id="5cc6-8b30-55cb-66cb" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heirloom Blade" hidden="false" id="f8f7-7b01-6685-f22c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7aea-df68-2ade-9bd6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c23-4560-167c-9656" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="498c-cbb3-571a-f591" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Heirloom Blade" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f00b-9861-d830-9e36">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">VOIDFARERS model only. Once per battle, when the bearer&apos;s unit is selected to fight, it can use this Enhancement. If it does, until the end of the phase, improve every characteristic of the bearer&apos;s monomolecular cane-rapier by 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lathimon&apos;s Flock" hidden="false" id="72f2-7460-9a4c-8900">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7aea-df68-2ade-9bd6" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4c6-563e-50a4-78c5" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f1d5-e3e9-f39f-d1b8" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Lathimon&apos;s Flock" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ada8-8739-0d6c-aaf0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">VOIDFARERS model only. In the Deploy Armies step, your opponent must deploy their entire army before you deploy yours. If both players have this rule, they must roll off and deploy their armies normally. In addition, IMPERIAL NAVY BREACHERS units from your army gain the Infiltrators ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="790b-b84a-6660-216e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Interdiction Team Enhancements" id="4a0c-49f4-f71e-047c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Manhunter&apos;s Helm" hidden="false" id="1f5a-02be-06db-e50c">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c8e9-4c60-dbbd-8be5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2160-cdea-44f8-d6b5" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="91de-8398-b7e6-08f8" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Manhunter&apos;s Helm" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0b29-9042-9326-cec2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Proctor-Exactant model only. At the start of the first battle-round, select one enemy unit to be your Priority Target. Each time an ADEPTUS ARBITES model from your army makes an attack that targets your Priority Target, if the bearer is on the battlefield, add 1 to the Wound roll. Each time your Priority Target is destroyed, if the bearer is on the battlefield, you can select a new enemy unit to be your Priority Target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vasov&apos;s Auto-oppressor" hidden="false" id="e3ce-af72-778a-4764">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c8e9-4c60-dbbd-8be5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a028-233a-4b35-f924" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4e55-22dd-f7df-b30a" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Vasov&apos;s Auto-oppressor" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="53e2-0933-e188-52a0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Proctor-Exactant model only. At the end of your Movement phase, you can select one enemy unit visible to the bearer. Until the start of your next Movement phase, halve the Move characteristic of models in that unit and halve Advance and Charge rolls made for it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="dc8e-ffdf-f5ed-00c9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="2" field="c581-329f-b3b2-169c">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <selectionEntries>

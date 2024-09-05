@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="54" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="55" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Warlord" id="8b5-898c-f79b-5a9c">
       <categoryLinks>
@@ -198,6 +198,17 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="160"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Beast Snagga Boyz" hidden="false" id="b7c3-d00e-daf2-76fb">
       <constraints>
@@ -235,6 +246,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="6c1b-f700-5dd0-9b4a" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="af0c-bc75-6daf-ce7a" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Beast Snagga Nob" hidden="false" id="8495-e7e7-6d41-2f57">
@@ -384,6 +396,17 @@
             <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="2cc4-2841-1020-e8be"/>
             <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="7620-57f1-94b-e983"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="9" field="7620-57f1-94b-e983">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -395,7 +418,30 @@
             <condition type="greaterThan" value="10" field="selections" scope="b7c3-d00e-daf2-76fb" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="6c46-a418-899d-f0f8" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="3" field="dbc9-b7ab-7cf8-3765"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Slugga" hidden="false" id="752e-cd9b-4721-f0b0" collective="false">
       <comment>BS5+</comment>
@@ -424,6 +470,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="bd36-e7ed-e525-f9fc" targetId="bc64-b2f5-f074-67d8"/>
+        <infoLink name="Void Waaagh!" id="9597-4ac8-65a9-f3e0" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="4dda-8cda-ec45-d8d5"/>
@@ -547,6 +594,33 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="4dda-8cda-ec45-d8d5"/>
+            <modifier type="set" value="0" field="4dda-8cda-ec45-d8d5">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Beastboss on Squigosaur" hidden="false" id="a8b7-351-d911-a4d6">
       <constraints>
@@ -660,6 +734,17 @@
           </profiles>
         </infoGroup>
       </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Beastchoppa" hidden="false" id="6084-9fb5-76d2-8487">
       <profiles>
@@ -731,10 +816,22 @@
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="3052-2c98-67ce-1980" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="5f9a-5d9d-e602-080d" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="a9dd-152f-506-7ce9">
@@ -860,6 +957,33 @@ Designer’s Note: Place a Grot Oiler token next to the unit, removing it once t
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="b42d-7934-9b0c-56e4"/>
+            <modifier type="set" value="0" field="b42d-7934-9b0c-56e4">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Kustom mega-blasta" hidden="false" id="7242-bca9-a3c7-ba6a" collective="false">
       <profiles>
@@ -1073,6 +1197,7 @@ Designer’s Note: Place a Grot Helper token next to the bearer, removing it onc
       </infoGroups>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="bb4f-79e6-d5d2-2122" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="8521-81dd-a407-bdc0" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Grot Assistant" hidden="false" id="aa8d-63b1-65cf-1c8f">
@@ -1140,6 +1265,33 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="9694-cc32-c1f5-2d17"/>
+            <modifier type="set" value="0" field="9694-cc32-c1f5-2d17">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="false" name="Detachment" hidden="false" id="73c2-d0ed-3c7e-7e17">
       <categoryLinks>
@@ -1256,6 +1408,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Big shoota" hidden="false" id="1fa0-d99a-154f-ffd8" collective="false">
       <profiles>
@@ -1353,6 +1516,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="115"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Twin supa-shoota" hidden="false" id="7c7-2cc-12e-c710">
       <profiles>
@@ -1474,6 +1648,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Grot blasta" hidden="false" id="140d-7163-8a11-81c5" collective="false">
       <comment>Shared</comment>
@@ -1527,6 +1712,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, in your Movement phase, instead of making a Normal move with this model’s unit, you can remove it from the battlefield and set it up again anywhere on the battlefield that is more than 9&quot; horizontally away from all enemy models.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -1535,6 +1731,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         <infoLink name="Waaagh!" hidden="false" type="rule" id="5f71-184a-ce3a-c2e6" targetId="37c-6ef9-277-9091"/>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="8ab9-aa96-cbb6-70bd" targetId="bc64-b2f5-f074-67d8"/>
         <infoLink name="Lone Operative" hidden="false" type="rule" id="7cc2-10fa-fc7a-607e" targetId="a8a0-8fe7-898-e0f3"/>
+        <infoLink name="Void Waaagh!" id="1897-3887-d1a7-fc74" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="2b9f-8347-89a2-f59e">
@@ -1588,6 +1785,32 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="95"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="ab85-e53b-201a-6844">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Slugga" hidden="false" id="b621-5929-fc60-ed8d" collective="false">
       <comment>BS4+</comment>
@@ -1728,6 +1951,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
           <characteristics>
             <characteristic name="Description" id="a8e6-eada-cc59-9593" hidden="false" typeId="9b8f-694b-e5e-b573">At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Bodyguard" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4e0-4f2f-eacc-24a0">
           <characteristics>
@@ -1745,6 +1979,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       </categoryLinks>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="f07c-8156-c861-9d70" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="017f-5f09-7182-3236" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Boss Nob" hidden="false" id="4660-3a1-f9f9-1a2b">
@@ -1998,6 +2233,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
               </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="9" field="b4d7-19fe-4355-cb1d">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2009,7 +2255,30 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
             <condition type="greaterThan" value="10" field="selections" scope="e3b1-1240-2476-cd86" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="e403-6c06-c08f-7767" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="3" field="a648-a8b2-7dbe-5710"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Big choppa" hidden="false" id="29e9-cd9b-66bd-fe60" collective="false">
       <comment>3A</comment>
@@ -2107,6 +2376,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="5778-3093-6cd1-47a4" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="c942-01f0-9c92-bb2b" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Unit Composition" id="fe77-55a3-e0a-8a6f" hidden="false" defaultSelectionEntryId="1af3-e720-2652-370c">
@@ -2159,7 +2429,30 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
             <condition type="greaterThan" value="5" field="selections" scope="71b2-e955-6588-87f4" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="a096-b86b-78c6-e469" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="f910-67e1-9c04-19a3"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rokkit launcha" hidden="false" id="80bc-5c89-4125-2253" collective="false">
       <profiles>
@@ -2305,6 +2598,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dakkajet" hidden="false" id="3b42-b41f-d11e-bdca">
       <constraints>
@@ -2385,6 +2689,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Deff Dread" hidden="false" id="1594-b986-e77e-d89d">
       <constraints>
@@ -2521,6 +2836,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Skorcha" hidden="false" id="7a18-2212-5898-1149" collective="false">
       <comment>Shared</comment>
@@ -2685,6 +3011,17 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="b946-bcc1-ccc5-5c05" targetId="1dd8-39ae-cbd8-a9fa"/>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="d72b-91c5-6000-65fd" targetId="8b5-898c-f79b-5a9c"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deffkoptas" hidden="false" id="2d6e-aa3b-c28c-5ef0">
       <constraints>
@@ -2844,6 +3181,15 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
             <condition type="greaterThan" value="3" field="selections" scope="2d6e-aa3b-c28c-5ef0" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flash Gitz" hidden="false" id="1de9-b138-28a1-9c4b">
@@ -2869,6 +3215,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="3a3b-9b03-6d51-71ad" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="f324-f839-625a-017b" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Ammo Runt" hidden="false" id="ec33-7337-394-2c8a">
@@ -2989,7 +3336,30 @@ Designer’s Note: Place an Ammo Runt token next to the unit, removing it after 
             <condition type="greaterThan" value="5" field="selections" scope="1de9-b138-28a1-9c4b" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="2186-3f12-7f4e-9a48" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="56ae-c63d-2946-5ab6"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Snazzgun" hidden="false" id="b258-3222-d4f-99b7" collective="true">
       <profiles>
@@ -3206,6 +3576,17 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="235"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gorkanaut" hidden="false" id="56d6-a7fc-fa08-4345">
       <constraints>
@@ -3334,6 +3715,17 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="280"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gretchin" hidden="false" id="de8f-24f9-c543-92b7">
       <constraints>
@@ -3359,6 +3751,7 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="2106-73a2-cb1b-78cc" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="d992-6d44-e6b5-a48b" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Unit Composition" id="816f-2188-7c92-19d" hidden="false" defaultSelectionEntryId="d682-30b9-55d8-8445">
@@ -3394,6 +3787,17 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -3418,10 +3822,33 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
             <condition type="greaterThan" value="11" field="selections" scope="de8f-24f9-c543-92b7" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="40"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="70a9-dda7-ae90-b295" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="d36b-765f-35d3-1604"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hunta Rig" hidden="false" id="70de-d621-8465-f7b8">
       <constraints>
@@ -3510,6 +3937,17 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="’Eavy lobba" hidden="false" id="6dae-573f-7f52-2213">
       <profiles>
@@ -3855,6 +4293,17 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Killa Kans" hidden="false" id="8c36-c946-2e0f-f648">
       <constraints>
@@ -4048,6 +4497,15 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
             <condition type="greaterThan" value="3" field="selections" scope="8c36-c946-2e0f-f648" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Kan klaw" hidden="false" id="d7b7-a7e-ef2-783a" collective="true">
@@ -4073,12 +4531,24 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
         <infoLink name="Stealth" hidden="false" type="rule" id="6f73-e6d0-8ca9-7ede" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Infiltrators" hidden="false" type="rule" id="179d-62-8322-fa4" targetId="c05d-f4c3-f091-4938"/>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="6f87-851a-18f3-b031" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="b598-d3f3-c4a1-815f" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <profiles>
         <profile name="Sneaky Surprise" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9af1-58d9-2635-cc15">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
         <profile name="Kommandos" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="af8f-2d15-bd8e-9136">
           <characteristics>
@@ -4353,6 +4823,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd02-f308-c21a-f811"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4360,6 +4841,31 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="acd6-4e21-6bb3-efe4" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c963-d181-fb8f-8df0"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Kustom Boosta-blasta" hidden="false" id="b803-bafc-2b52-160d">
       <constraints>
@@ -4477,6 +4983,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lootas" hidden="false" id="3bff-9fad-2d11-7866">
       <constraints>
@@ -4554,6 +5071,15 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="3bff-9fad-2d11-7866" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -4691,6 +5217,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="9d50-5084-443d-3565" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="833b-0aa1-0bea-d836" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Krumpin’ Time" hidden="false" id="bb05-74eb-e80a-b916">
@@ -4704,6 +5231,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
           <infoLinks>
             <infoLink name="Feel No Pain" hidden="false" type="rule" id="bd6d-b847-e739-6edb" targetId="9bf4-280f-bbe2-6fbb"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </infoGroup>
       </infoGroups>
       <selectionEntryGroups>
@@ -4838,6 +5376,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="aceb-8cf0-15d1-2314"/>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="3112-7bdb-8445-68b0"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="3112-7bdb-8445-68b0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -4866,7 +5415,30 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
             <condition type="greaterThan" value="5" field="selections" scope="7067-34f4-5272-e05f" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c6a2-8240-6b9f-7580" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="2" field="561f-c74e-70dc-5a49"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Killsaw" hidden="false" id="a3d0-1971-d5df-1651" collective="true">
       <profiles>
@@ -4993,6 +5565,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mek" hidden="false" id="3b2-8c11-616a-1005">
       <constraints>
@@ -5029,6 +5612,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       </infoGroups>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="b4b0-c806-d56f-7ab2" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="8096-e88c-1183-d65b" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <profiles>
         <profile name="Know-wotz" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="7353-c371-3a7e-bb6">
@@ -5121,6 +5705,33 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="45"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="5a6f-50d6-eff1-a697"/>
+            <modifier type="set" value="0" field="5a6f-50d6-eff1-a697">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mek Gunz" hidden="false" id="b37a-8686-db2c-8cbd">
       <constraints>
@@ -5357,6 +5968,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Grot crew" hidden="false" id="f7fb-66bf-2cdb-417a" collective="true">
       <profiles>
@@ -5502,6 +6124,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="295"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mozrog Skragbad" hidden="false" id="b42b-ea0-38f1-6300">
       <constraints>
@@ -5621,6 +6254,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
           </profiles>
         </infoGroup>
       </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nob with Waaagh! Banner [Legends]" hidden="false" id="3b35-92f5-bd1a-af8d">
       <constraints>
@@ -5744,6 +6388,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="28b-7238-bf8a-de11" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="45cd-852b-826d-386c" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Boss Nob" hidden="false" id="f2b7-9bff-748a-8744">
@@ -5921,6 +6566,17 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="8006-2034-a682-c0e6"/>
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="5654-21fe-abfe-5887"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="4" field="5654-21fe-abfe-5887">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Ammo Runts" hidden="false" id="f221-12dc-df28-fa18">
           <selectionEntries>
@@ -5959,7 +6615,39 @@ Designer’s Note: Place the relevant number of Ammo Runt tokens next to the uni
             <condition type="greaterThan" value="5" field="selections" scope="b16a-7132-3f8a-abe5" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="8fb4-4f2e-3702-5424" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="3968-386b-498c-d909"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="2" field="3968-386b-498c-d909"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Painboss" hidden="false" id="a74a-107a-e2ac-7e4c">
       <constraints>
@@ -6001,6 +6689,7 @@ Designer’s Note: Place the relevant number of Ammo Runt tokens next to the uni
           </modifiers>
         </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="f671-2c53-757b-76c1" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="27ea-a70f-1827-7255" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="dd10-e927-17ab-cb35">
@@ -6067,6 +6756,33 @@ Designer’s Note: Place a Grot Orderly token next to the unit, removing it once
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="ac8a-2eab-7657-3dfc"/>
+            <modifier type="set" value="0" field="ac8a-2eab-7657-3dfc">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Painboy" hidden="false" id="7669-1442-2c0b-e0c9">
       <constraints>
@@ -6115,6 +6831,7 @@ Designer’s Note: Place a Grot Orderly token next to the unit, removing it once
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="a8a5-923e-ced3-5ceb" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="30bd-fc60-0ab8-e866" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="39a5-a26c-6e22-f756" targetId="8b5-898c-f79b-5a9c"/>
@@ -6160,6 +6877,33 @@ Designer’s Note: Place a Grot Orderly token next to the unit, removing it once
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="6b4e-6e4d-afff-1143"/>
+            <modifier type="set" value="0" field="6b4e-6e4d-afff-1143">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rukkatrukk Squigbuggy" hidden="false" id="a856-30b7-e56d-57db">
       <constraints>
@@ -6262,6 +7006,17 @@ Designer’s Note: Place a Squig Mine token next to the model, removing it once 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Saw blades" hidden="false" id="ac5-f391-e379-5b99">
       <profiles>
@@ -6358,6 +7113,17 @@ Designer’s Note: Place a Squig Mine token next to the model, removing it once 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Squighog Boyz" hidden="false" id="6a83-8e1f-63ef-50c3">
       <constraints>
@@ -6456,6 +7222,15 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
           <conditions>
             <condition type="greaterThan" value="4" field="selections" scope="6a83-8e1f-63ef-50c3" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -6637,20 +7412,55 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="800"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Stormboyz" hidden="false" id="4adf-8249-c6b2-dd4f">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="8e38-fda6-cad7-7117"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="2f64-134e-d82a-e863" targetId="7cb5-dd6b-dd87-ad3b"/>
+        <infoLink name="Deep Strike" hidden="false" type="rule" id="2f64-134e-d82a-e863" targetId="7cb5-dd6b-dd87-ad3b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="3028-3a0e-95bc-541c" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="dd0f-088b-27df-47df" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <profiles>
         <profile name="Full Throttle" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3ddd-d93d-d7af-ddb7">
           <characteristics>
             <characteristic name="Description" id="15a8-6d9b-bb2b-98cc" hidden="false" typeId="9b8f-694b-e5e-b573">This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <categoryLinks>
@@ -6697,6 +7507,17 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
         </selectionEntry>
@@ -6719,6 +7540,17 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
                     <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                     <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
               <entryLinks>
@@ -6752,7 +7584,39 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
             <condition type="greaterThan" value="5" field="selections" scope="4adf-8249-c6b2-dd4f" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="remove" value="c619-2086-bbcf-69c9" field="category">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="10c0-145e-5141-4cde" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="8e38-fda6-cad7-7117"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tankbustas" hidden="false" id="dadc-d370-ef10-853c">
       <constraints>
@@ -6958,6 +7822,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Trukk" hidden="false" id="1291-7ba8-2c5a-4a92">
       <constraints>
@@ -7065,6 +7940,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warbikers" hidden="false" id="83a7-ea20-ed9-d14a">
       <constraints>
@@ -7292,6 +8178,15 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
             <condition type="greaterThan" value="3" field="selections" scope="83a7-ea20-ed9-d14a" childId="model" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Twin dakkagun" hidden="false" id="523-8684-b3cd-4abe" collective="false">
@@ -7357,6 +8252,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="c904-a83c-f2c1-9512" targetId="37c-6ef9-277-9091"/>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="a504-5723-9db1-82ad" targetId="bc64-b2f5-f074-67d8"/>
+        <infoLink name="Void Waaagh!" id="909f-8423-8934-d40b" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="3fef-baa8-b545-8587">
@@ -7479,6 +8375,52 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="90ac-d004-55e1-6a87"/>
+            <modifier type="set" value="0" field="90ac-d004-55e1-6a87">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="494b-11ce-5af-5b50" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="90ac-d004-55e1-6a87"/>
+            <modifier type="set" value="0" field="90ac-d004-55e1-6a87">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Warboss in Mega Armour" hidden="false" id="494b-11ce-5af-5b50">
       <constraints>
@@ -7516,6 +8458,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <infoLinks>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="3f6c-61a9-6e5-bf2f" targetId="37c-6ef9-277-9091"/>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="8f20-c907-f971-dd5b" targetId="bc64-b2f5-f074-67d8"/>
+        <infoLink name="Void Waaagh!" id="7177-2b87-ee40-dc49" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="3369-4472-5b70-e7ef">
@@ -7591,6 +8534,52 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="7566-8f2b-7db9-721c"/>
+            <modifier type="set" value="0" field="7566-8f2b-7db9-721c">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2efc-c4b3-2ecc-5a37" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="7566-8f2b-7db9-721c"/>
+            <modifier type="set" value="0" field="7566-8f2b-7db9-721c">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wazbom Blastajet" hidden="false" id="3832-ad97-2b3b-8775">
       <constraints>
@@ -7783,6 +8772,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="175"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Weirdboy" hidden="false" id="260d-9ce4-ea1f-a957">
       <constraints>
@@ -7810,6 +8810,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per turn, at the end of your Movement phase, one WEIRDBOY from your army can use this ability. If it does, roll one D6: on a 1, that WEIRDBOY’s unit suffers D6 mortal wounds; on a 2+, remove this WEIRDBOY’s unit from the battlefield and set it up again anywhere on the battlefield that is more than 9&quot; horizontally away from all enemy models.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -7819,6 +8830,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           </modifiers>
         </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="13c6-1439-12d9-be0c" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="a076-bcf3-f172-9972" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="cd14-e7d-bd83-204">
@@ -7845,6 +8857,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <infoLinks>
             <infoLink name="Hazardous" hidden="false" type="rule" id="305d-4074-f5c5-1155" targetId="8367-374c-f87-c627"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </infoGroup>
       </infoGroups>
       <selectionEntries>
@@ -7897,6 +8920,33 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="454b-53fa-a02b-2f0"/>
+            <modifier type="set" value="0" field="454b-53fa-a02b-2f0">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wurrboy" hidden="false" id="290-ff5a-b14f-e432">
       <constraints>
@@ -7939,6 +8989,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           </modifiers>
         </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="b61-a28-2e5b-c5f0" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="98d1-4612-a469-7dc1" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="f998-32b1-aa40-f9f1">
@@ -7965,6 +9016,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <infoLinks>
             <infoLink name="Hazardous" hidden="false" type="rule" id="7527-e425-c37c-cac0" targetId="8367-374c-f87-c627"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </infoGroup>
       </infoGroups>
       <entryLinks>
@@ -8014,6 +9076,33 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="7589-2ed-a85a-5e49"/>
+            <modifier type="set" value="0" field="7589-2ed-a85a-5e49">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Zodgrod Wortsnagga" hidden="false" id="ce45-db08-3795-18a9">
       <constraints>
@@ -8049,6 +9138,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">When you call a Waaagh!, until the start of the next battle round, add 6&quot; to the Move characteristic of models in this model’s unit.</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -8058,6 +9158,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           </modifiers>
         </infoLink>
         <infoLink name="Waaagh!" hidden="false" type="rule" id="705d-79a3-ac9b-4fbe" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="d021-29a6-2b02-72f1" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="3ee5-c841-5620-4592">
@@ -8124,6 +9225,33 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="d499-f79d-b405-ade4"/>
+            <modifier type="set" value="0" field="d499-f79d-b405-ade4">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mekboy Workshop [Legends]" hidden="false" id="2ecf-280b-32e2-3189">
       <constraints>
@@ -9017,6 +10145,17 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="440"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Kill Tank [Legends]" hidden="false" id="b8fe-c7af-20fd-631d">
       <constraints>
@@ -12963,10 +14102,22 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <characteristics>
             <characteristic name="Description" id="fcc3-7e0a-7801-6e52" hidden="false" typeId="9b8f-694b-e5e-b573">You can re-roll Advance rolls made for this model&apos;s unit. In addition, each time this model&apos;s unit makes a Normal, Advance or Fall Back move, until that move is finished, models in that unit can move horizontally through models and terrain features (but cannot finish a move on top of another model or its base).</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Waaagh!" id="c585-591e-f5c3-f5cb" hidden="false" type="rule" targetId="37c-6ef9-277-9091"/>
+        <infoLink name="Void Waaagh!" id="9f6b-0954-2274-2ec3" hidden="false" type="rule" targetId="5bb3-6bbc-1b01-c85b"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" id="d060-ff96-5923-3f29" hidden="false">
@@ -13078,6 +14229,36 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
         <entryLink import="true" name="Warlord" hidden="false" id="9988-ab71-8e2a-37a6" type="selectionEntry" targetId="8b5-898c-f79b-5a9c"/>
         <entryLink import="true" name="Enhancements" hidden="false" id="25b-7e2d-9dd0-842b" type="selectionEntryGroup" targetId="1dd8-39ae-cbd8-a9fa"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c394-e67b-d710-4b6f"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c394-e67b-d710-4b6f"/>
+            <modifier type="set" value="0" field="c394-e67b-d710-4b6f">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Kannon" hidden="false" id="1fcf-a839-4b11-5177">
       <profiles>
@@ -13484,6 +14665,37 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="a601-9a5a-83e7-907b">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="f200-b9cd-242f-b94b" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbdb-181a-184a-64f4"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <rules>
@@ -13492,6 +14704,22 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
 - Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.
 - Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.
 - Models from your army with this ability have a 5+ invulnerable save.</description>
+    </rule>
+    <rule name="Void Waaagh!" id="5bb3-6bbc-1b01-c85b" hidden="false">
+      <description>Once per battle, at the start of the battle round, you can call a Void Waaagh!. If you do, until the start of the next battle round, the Void Waaagh! is active for your army and:
+
+- Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.
+- Models from your army with this ability have a 5+ invulnerable save.
+
+
+A Void Waaagh! counts as a Waaagh! for any datasheet abilities.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </rule>
   </rules>
   <sharedSelectionEntryGroups>
@@ -14400,7 +15628,104 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Ramship Raiders Enhancements" id="9fba-cae5-0e5f-f313" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scarred Brute" hidden="false" id="9fac-db84-a7f9-ceba">
+              <profiles>
+                <profile name="Scarred Brute" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a002-9304-ff4b-7dd3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">The bearer has the Feel No Pain 5+ ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aef8-2bab-ffc4-2813" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Living Battering Ram" hidden="false" id="bc39-02e2-b845-3289">
+              <profiles>
+                <profile name="Living Battering Ram" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ae15-61e7-fc16-dc09">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time the bearer attempts to operate a closed Hatchway, your opponent cannot try to prevent it. In addition, each time the bearer opens a Hatchway, each enemy unit within 6&quot; of that Hatchway and wholly on the opposite side of it from the bearer must take a Battle-shock test.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9fab-a20f-426f-2917" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e016-aa10-f955-0881" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Kaptin Killers Enhancements" id="bf10-2dcf-0881-9ff2" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tellyporta" hidden="false" id="5166-d43f-37c0-7642">
+              <profiles>
+                <profile name="Tellyporta" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8734-8550-f040-2217">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Deploy Armies step, select one MEGANOBZ unit from your army. Until the end of the battle, models in that unit have the Deep Strike ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9e0f-63ad-460d-43b8" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gnasher Squig Crates" hidden="false" id="a459-8c5a-ab76-30d3">
+              <profiles>
+                <profile name="Gnasher Squig Crates" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d3bd-39c4-551b-2e0f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">WARBOSS model only. In you Command phase, you can select one NOBZ or MEGANOBZ unit from your army (excluding Battle-shocked units) that is within 6&quot; of the bearer and is within range of an objective marker. If there are no enemy models within range of that objective marker, it is Secured by your army.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="47cc-4071-6fda-688e" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4f03-abf5-beb0-b15d" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dac-76fa-59c0-e8b7" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="acc8-4e80-88f0-e379" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="3ee8-9286-e355-de3d" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be8b-2126-445d-90b1" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c1b1-6803-3d3b-4762" includeChildForces="true" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="c1b1-6803-3d3b-4762">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Detachment" id="8b85-ad3b-752f-6502" hidden="false">
       <selectionEntries>
@@ -14413,6 +15738,13 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           <infoLinks>
             <infoLink name="Sustained Hits" id="3d9d-5723-add7-c316" hidden="false" type="rule" targetId="1897-c22c-9597-12b1"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Da Big Hunt" hidden="false" id="80e6-2190-9767-a7ed">
           <rules>
@@ -14422,6 +15754,13 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
 - Each time a BEAST SNAGGA model from your army makes an attack that targets your Prey, improve the Armour Penetration characteristic of that attack by 1.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dread Mob" hidden="false" id="807c-9732-5465-5ca5">
           <rules>
@@ -14455,6 +15794,13 @@ GRETCHIN units from your army gain the BATTLELINE keyword.</description>
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Green Tide" hidden="false" id="795f-b961-9504-bd08">
           <rules>
@@ -14462,6 +15808,13 @@ GRETCHIN units from your army gain the BATTLELINE keyword.</description>
               <description>Each time an attack targets a BOYZ unit from your army, models in that unit have a 6+ invulnerable save against that attack. Each time an attack targets a BOYZ unit from your army that contains 10 or more models, models in that unit have a 5+ invulnerable save against that attack.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bully Boyz" hidden="false" id="4b17-a73a-7a0a-a265">
           <rules>
@@ -14469,6 +15822,13 @@ GRETCHIN units from your army gain the BATTLELINE keyword.</description>
               <description>At the start of a battle round in which you have not called a Waaagh!, if you have one or more WARBOSS models on the battlefield (or embarked within a TRANSPORT that is on the battlefield), you can call a Waaagh! for a second time this battle. When doing so, that second Waaagh! only counts as having been called for WARBOSS, NOBZ and MEGANOBZ units from your army.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kult of Speed" hidden="false" id="b404-44f-e9b4-7fe2">
           <rules>
@@ -14476,6 +15836,41 @@ GRETCHIN units from your army gain the BATTLELINE keyword.</description>
               <description>SPEED FREEKS units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Kaptin Killers" hidden="false" id="acc8-4e80-88f0-e379">
+          <rules>
+            <rule name="Comin&apos; Through" id="6de3-fdc4-56c2-161d" hidden="false">
+              <description>In your Movement phase, Desperate Escape tests taken for ORKS models from your army are automatically passed and each time an ORKS unit from your army makes a Normal, Advance or Fall Back move, it can move through other models as if they were not there, provided those other models have a lower Toughness characteristic than it.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ramship Raiders" hidden="false" id="3225-dd9b-158a-eb18">
+          <rules>
+            <rule name="Belligerent Boarders" id="c2d9-05a0-78e6-16e8" hidden="false">
+              <description>Each time an attack targets and ORKS unit from your army (excluding GROTS units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that ORKS unit, subtract 1 from the Wound roll.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
