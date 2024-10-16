@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b984-7317-81cc-20f" name="Xenos - Tyranids" revision="57" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="FitalShell" authorContact="fitalshell">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="b984-7317-81cc-20f" name="Xenos - Tyranids" revision="61" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="FitalShell" authorContact="fitalshell">
   <categoryEntries>
     <categoryEntry name="Synapse" hidden="false" id="4129-a453-686a-d38a"/>
     <categoryEntry id="4f10-fe01-4b80-8d6b" name="Winged Hive Tyrant" hidden="false"/>
@@ -563,7 +563,7 @@
         <entryLink id="e797-cbb5-dc66-bd25" name="Enhancements" hidden="false" collective="false" import="true" targetId="fa5b-f646-b960-a8d3" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="210"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="200"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Tyrant talons" hidden="false" id="f65e-95a4-be9d-282f">
@@ -1399,7 +1399,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="2494-450d-4ec4-78bc" targetId="ceab-62d9-31bf-7c61"/>
@@ -2680,7 +2680,7 @@
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
       <entryLinks>
         <entryLink targetId="dc9f-b3bb-9b44-cb92" id="baa2-9f2b-a204-96ce" type="selectionEntry" name="Lictor Claws and Talons" hidden="false"/>
@@ -3018,13 +3018,10 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="51b2-306e-1021-d207" value="35"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="40"/>
       </costs>
       <infoLinks>
         <infoLink id="e42a-58bc-f34c-8df8" name="Deadly Demise" hidden="false" targetId="b68a-5ded-65ac-98c" type="rule">
@@ -3034,6 +3031,18 @@
         </infoLink>
         <infoLink name="Synapse" hidden="false" type="rule" id="9dfb-27bb-f923-fb4d" targetId="86aa-437f-260b-5cad"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="70" field="51b2-306e-1021-d207">
+          <conditions>
+            <condition type="atLeast" value="2" field="selections" scope="parent" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="105" field="51b2-306e-1021-d207">
+          <conditions>
+            <condition type="atLeast" value="3" field="selections" scope="parent" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Haruspex" hidden="false" id="6249-358f-27d7-ef60">
       <categoryLinks>
@@ -3258,10 +3267,10 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Von Ryan&apos;s Leapers" hidden="false" id="9bd8-ac8c-2d3b-79f6">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="150" field="51b2-306e-1021-d207">
+        <modifier type="set" value="140" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="3" field="selections" scope="9bd8-ac8c-2d3b-79f6" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -4463,7 +4472,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="115"/>
           </costs>
           <selectionEntryGroups>
             <selectionEntryGroup name="Model Options" hidden="false" id="ca44-817f-3529-6c49">

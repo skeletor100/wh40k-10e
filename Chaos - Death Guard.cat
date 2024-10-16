@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="5108-f98-63c2-53cb" name="Chaos - Death Guard" revision="33" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="5108-f98-63c2-53cb" name="Chaos - Death Guard" revision="37" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <catalogueLinks>
     <catalogueLink id="9fec-b3ad-9626-6706" name="Chaos - Chaos Knights Library" targetId="8106-aad2-918a-9ac" type="catalogue" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Chaos - Daemons Library" id="4e2e-3067-84f6-f727" targetId="b45c-af22-788a-dfd6" importRootEntries="true"/>
@@ -3364,7 +3364,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="50"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3698,10 +3698,10 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deathshroud Terminators" hidden="false" id="83e8-ebb7-785a-2115" publicationId="6bb4-8611-986f-58fa" page="43-44">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="240" field="51b2-306e-1021-d207">
+        <modifier type="set" value="220" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="83e8-ebb7-785a-2115" childId="model" shared="true" id="657e-5957-a34-ce02" includeChildSelections="true"/>
           </conditions>
@@ -5885,7 +5885,7 @@ While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUSâ
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mortarion" hidden="false" id="f5ac-4f37-fe7b-36b6" publicationId="6bb4-8611-986f-58fa" page="65-66">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="325"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="300"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="9888-ddb2-a141-6037" id="9df5-9d6e-bd9e-569" primary="false" name="Faction: Death Guard"/>

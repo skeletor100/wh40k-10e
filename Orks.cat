@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="55" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="61" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Warlord" id="8b5-898c-f79b-5a9c">
       <categoryLinks>
@@ -410,10 +410,10 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="95"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="210" field="51b2-306e-1021-d207">
+        <modifier type="set" value="190" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="b7c3-d00e-daf2-76fb" childId="model" shared="true"/>
           </conditions>
@@ -934,7 +934,7 @@ Designer’s Note: Place a Grot Oiler token next to the unit, removing it once t
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="97f7-b1c4-144e-b0e" targetId="8b5-898c-f79b-5a9c"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Power klaw" hidden="false" id="ed0c-2b00-59ae-b2b2">
@@ -1263,7 +1263,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2247,10 +2247,10 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="170" field="51b2-306e-1021-d207">
+        <modifier type="set" value="160" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="e3b1-1240-2476-cd86" childId="model" shared="true"/>
           </conditions>
@@ -2834,7 +2834,7 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         <categoryLink targetId="56cc-5f43-2403-8da0" id="f5ef-2ba7-82bb-43b3" primary="false" name="Faction: Orks"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3173,10 +3173,10 @@ Designer’s Note: Place a Grot Assistant token next to the bearer, removing it 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="200" field="51b2-306e-1021-d207">
+        <modifier type="set" value="280" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="3" field="selections" scope="2d6e-aa3b-c28c-5ef0" childId="model" shared="true"/>
           </conditions>
@@ -3713,7 +3713,7 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="280"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="265"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3935,7 +3935,7 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4291,7 +4291,7 @@ If this unit’s Bodyguard unit is destroyed, Ghazghkull Thraka and Makari becom
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="155"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4839,7 +4839,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="acd6-4e21-6bb3-efe4" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
@@ -5397,20 +5397,20 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
         <categoryLink targetId="ebd4-277b-d164-39da" id="176d-aec6-41c7-b435" primary="false" name="Mega Armour"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="120" field="51b2-306e-1021-d207">
+        <modifier type="set" value="105" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="2" field="selections" scope="7067-34f4-5272-e05f" childId="model" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="200" field="51b2-306e-1021-d207">
+        <modifier type="set" value="175" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="3" field="selections" scope="7067-34f4-5272-e05f" childId="model" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="240" field="51b2-306e-1021-d207">
+        <modifier type="set" value="210" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="7067-34f4-5272-e05f" childId="model" shared="true"/>
           </conditions>
@@ -6122,7 +6122,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="295"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="280"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -7820,7 +7820,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
         <infoLink name="Waaagh!" hidden="false" type="rule" id="6e4b-30ae-1a0c-17bb" targetId="37c-6ef9-277-9091"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -14223,7 +14223,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" id="9988-ab71-8e2a-37a6" type="selectionEntry" targetId="8b5-898c-f79b-5a9c"/>

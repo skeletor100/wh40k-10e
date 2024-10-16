@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="c8da-e875-58f7-f6d6" name="Chaos - Chaos Space Marines" revision="60" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="c8da-e875-58f7-f6d6" name="Chaos - Chaos Space Marines" revision="70" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <profileTypes>
     <profileType id="3084-68b8-1d20-2f26" name="Marks of Chaos">
       <characteristicTypes>
@@ -1078,7 +1078,7 @@ Each time a unit makes a Desperate Pact, it must first take a Leadership test; i
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="295"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="280"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3443,7 +3443,7 @@ Penetration and Damage characteristics of melee weapons equipped by this model b
         <entryLink id="2323-8d7b-afc9-ecc3" name="Warlord" hidden="false" collective="false" import="true" targetId="1a34-f1cc-ec01-ca32" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3770,7 +3770,7 @@ Penetration and Damage characteristics of melee weapons equipped by this model b
         <entryLink id="66c5-4c07-4543-52a5" name="Warlord" hidden="false" collective="false" import="true" targetId="1a34-f1cc-ec01-ca32" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="175"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4736,7 +4736,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink id="3f41-6cf7-431a-c2e0" name="Warlord" hidden="false" collective="false" import="true" targetId="1a34-f1cc-ec01-ca32" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4826,7 +4826,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
     </selectionEntry>
     <selectionEntry id="615-e6bf-cfd2-9384" name="Legionaries" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="51b2-306e-1021-d207" value="180">
+        <modifier type="set" field="51b2-306e-1021-d207" value="170">
           <conditions>
             <condition field="selections" scope="615-e6bf-cfd2-9384" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
@@ -5720,7 +5720,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
     </selectionEntry>
     <selectionEntry id="23aa-b45a-6d5d-e92b" name="Accursed Cultists" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="51b2-306e-1021-d207" value="180">
+        <modifier type="set" field="51b2-306e-1021-d207" value="195">
           <conditions>
             <condition field="selections" scope="23aa-b45a-6d5d-e92b" value="9" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
@@ -6231,7 +6231,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="2b57-0423-0a97-8571" type="selectionEntry" targetId="c78f-5ac6-d43a-893d"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="185"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="f729-1a7d-6d09-ba82"/>
@@ -6585,7 +6585,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
     </selectionEntry>
     <selectionEntry id="cb1-5bcf-9e36-8136" name="Possessed" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="51b2-306e-1021-d207" value="250">
+        <modifier type="set" field="51b2-306e-1021-d207" value="240">
           <conditions>
             <condition field="selections" scope="cb1-5bcf-9e36-8136" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
@@ -6697,7 +6697,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="da96-e385-14ed-abf6" type="selectionEntry" targetId="c78f-5ac6-d43a-893d"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="3b00-05fd-c831-1ec3"/>
@@ -8029,7 +8029,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
     </selectionEntry>
     <selectionEntry id="acb5-dbf2-e3a6-ad94" name="Raptors" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="51b2-306e-1021-d207" value="180">
+        <modifier type="set" field="51b2-306e-1021-d207" value="170">
           <conditions>
             <condition field="selections" scope="acb5-dbf2-e3a6-ad94" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="atLeast"/>
           </conditions>
@@ -8493,7 +8493,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="2baa-982a-021f-92e0" type="selectionEntry" targetId="c78f-5ac6-d43a-893d"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -8824,7 +8824,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink id="c67d-35f7-6498-9ab6" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="5581-5d38-90b8-f8cd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -8979,7 +8979,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink id="1506-a7d9-e56f-e569" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="5581-5d38-90b8-f8cd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="160"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a3ab-ed12-fa70-2042" name="Noctilith Crown" hidden="false" collective="false" import="true" type="model">
@@ -9182,7 +9182,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="175"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="fc1a-4c18-3acc-6c20" targetId="1a34-f1cc-ec01-ca32"/>
@@ -10612,7 +10612,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <entryLink id="fd16-58c7-9e9f-826a" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="5581-5d38-90b8-f8cd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">

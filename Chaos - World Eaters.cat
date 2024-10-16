@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="30" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="34" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <profileTypes>
     <profileType id="02a0-fa96-6f9b-354f" name="Wrathful Presence">
       <characteristicTypes>
@@ -461,7 +461,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="415"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="435"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1037,7 +1037,7 @@
         <entryLink id="341d-3145-c33d-f32e" name="Enhancements" hidden="false" collective="false" import="true" targetId="7b6d-6d90-0ffe-b45b" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="195"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1314,7 +1314,7 @@
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="ff03-58c5-c684-1fe8" targetId="9754-481c-c292-a1f9"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4972,7 +4972,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7e07-77ca-585e-6118" type="selectionEntry" targetId="6d29-05ae-bd7d-9f25"/>
