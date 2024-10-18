@@ -3034,12 +3034,12 @@
       <modifiers>
         <modifier type="set" value="70" field="51b2-306e-1021-d207">
           <conditions>
-            <condition type="atLeast" value="2" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="atLeast" value="2" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" id="7afb-ed7e-f002-01bc" includeChildSelections="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="105" field="51b2-306e-1021-d207">
           <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
+            <condition type="atLeast" value="3" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" id="dea3-7f85-0725-da21" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
