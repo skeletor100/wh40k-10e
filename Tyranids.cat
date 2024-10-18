@@ -2946,7 +2946,7 @@
         <categoryLink targetId="8258-a58e-7cf0-a2c3" id="8c08-be8b-b4ae-dda5" primary="false" name="Harvester"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c218-9b4a-f0a2-b276" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="false" id="c218-9b4a-f0a2-b276" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
         <profile name="Burning Spray" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f6a1-151a-9d0d-37d2">
@@ -2958,8 +2958,8 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Pyrovore" hidden="false" id="c543-2551-1f2a-bcec">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f755-22c-e714-c2ba"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="9f49-c5cd-ac8e-ad53" includeChildSelections="true"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f755-22c-e714-c2ba"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="9f49-c5cd-ac8e-ad53" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile name="Pyrovores" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="ad98-8da-6e74-c4d2">
@@ -3034,12 +3034,12 @@
       <modifiers>
         <modifier type="set" value="70" field="51b2-306e-1021-d207">
           <conditions>
-            <condition type="atLeast" value="2" field="selections" scope="parent" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="2" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
         <modifier type="set" value="105" field="51b2-306e-1021-d207">
           <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="parent" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="3" field="selections" scope="d2c6-bd0b-3205-3319" childId="model" shared="true" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
       </modifiers>
