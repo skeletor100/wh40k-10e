@@ -60,6 +60,7 @@
     <categoryEntry name="Norn Assimilator" hidden="false" id="2982-bf74-9aa7-a7a7"/>
     <categoryEntry name="Harvester" hidden="false" id="8258-a58e-7cf0-a2c3"/>
     <categoryEntry name="Terror of Vardenghast" hidden="false" id="7edf-be7-243d-218e"/>
+    <categoryEntry name="Tyranid Warriors" id="de4f-19dd-7beb-fb87" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="706e-86ff-ae9f-c65f" name="Winged Hive Tyrant" hidden="false" collective="false" import="true" targetId="fa68-fcb9-38c-cd0f" type="selectionEntry">
@@ -1487,6 +1488,13 @@
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="3" field="bef7-942a-1a23-59f8">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9d11-ae32-40b1-316f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <entryLinks>
@@ -1570,6 +1578,13 @@
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="3" field="bef7-942a-1a23-59f8">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9d11-ae32-40b1-316f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <entryLinks>
@@ -1634,6 +1649,7 @@
           <modifiers>
             <modifier type="set" value="6" field="40be-d448-295c-f3f3"/>
             <modifier type="set-primary" value="e338-111e-d0c6-b687" field="category"/>
+            <modifier type="add" value="de4f-19dd-7beb-fb87" field="category"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1671,6 +1687,13 @@
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="3" field="bef7-942a-1a23-59f8">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9d11-ae32-40b1-316f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <costs>
@@ -1706,6 +1729,13 @@
                 <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
                 <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="3" field="bef7-942a-1a23-59f8">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9d11-ae32-40b1-316f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <costs>
@@ -1768,6 +1798,7 @@
           <modifiers>
             <modifier type="set" value="6" field="40be-d448-295c-f3f3"/>
             <modifier type="set-primary" value="e338-111e-d0c6-b687" field="category"/>
+            <modifier type="add" value="de4f-19dd-7beb-fb87" field="category"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
