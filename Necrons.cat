@@ -520,6 +520,111 @@
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dread Majesty (Aura)" hidden="false" id="9d3f-149c-66a6-d8f8">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ebf-7fbb-af53-f57d"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="17b8-cdd9-fa4c-370a" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Dread Majesty (Aura)" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a7b7-2c29-c483-928c">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Overlord or Catacomb Command Barge model only. While a friendly Necrons unit (excluding Titanic units) is within 6&quot; of the bearer, each time a model in
+that unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="25b8-a308-e0f7-5fba" shared="true" id="eeb7-6fdd-9b00-ac45" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2324-ba16-58e4-df2e" shared="true" id="102f-b232-605b-f0ca" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="ee53-cc83-d667-ceb8" shared="true" id="a6b8-c8e8-f43e-6e41" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Miniaturised Nebuloscope" hidden="false" id="29de-0e2f-8e81-d85a">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0ec-544e-ec0f-fb64"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1aa9-8e3e-2319-9286" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Miniaturised Nebuloscope" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="731d-fe76-ff9d-36ba">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Necrons model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="25b8-a308-e0f7-5fba" shared="true" id="7f1d-361b-7205-27ca" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Demanding Leader" hidden="false" id="2ade-46b5-8ab4-dd0d">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c67e-498d-f952-39a5"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ee3e-18f1-0fdf-0b3c" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Demanding Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="fe64-e046-9b66-c20f">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Necrons model only. In your Movement phase, select one friendly Necrons Vehicle or Necrons Mounted unit (excluding Titanic units) within 6&quot; of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="25b8-a308-e0f7-5fba" shared="true" id="c712-8d3f-5e29-0f3b" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chrono Impedance-Fields" hidden="false" id="95dd-dccd-d279-157f">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4a2-570f-be2d-deb0"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="74a2-d29a-02e7-ecb2" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Chrono Impedance-Fields" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="656f-f58b-978e-6868">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Necrons model only. In your Command phase, select one friendly Necrons Vehicle or Necrons Mounted unit (excluding Titanic units) within 6&quot; of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="25b8-a308-e0f7-5fba" shared="true" id="b038-40ea-256e-7147" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="d75f-002a-8679-e13f" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
@@ -773,6 +878,18 @@
                   </characteristics>
                 </profile>
               </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Starshatter Arsenal" hidden="false" id="25b8-a308-e0f7-5fba">
+              <infoLinks>
+                <infoLink name="Detachment Rules" id="877a-be06-b80c-82a0" hidden="false" type="infoGroup" targetId="4ee-d749-4ddc-323d"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -9451,6 +9568,16 @@ Once you have made your selection, remove those units from the battlefield and p
               </conditions>
             </modifier>
           </modifiers>
+        </rule>
+        <rule name="Relentless Onslaught" id="3f31-0ce0-8a50-a59a" hidden="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="25b8-a308-e0f7-5fba" shared="true" id="6941-a2e4-0717-6b4b" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <description>Each time a Necrons model from your army makes an attack that targets a unit within range of one or more objective markers, add 1 to the Hit roll. In addition, ranged weapons equipped by Necrons Vehicle and Necrons Mounted models (excluding Titanic models) from your army have the [ASSAULT] ability</description>
         </rule>
       </rules>
     </infoGroup>
