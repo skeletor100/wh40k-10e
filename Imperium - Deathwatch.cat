@@ -4594,6 +4594,11 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8216-75ba-bef1-bbe2" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="e96e-434a-2c80-9ee6" includeChildSelections="true"/>

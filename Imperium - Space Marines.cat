@@ -3154,6 +3154,11 @@ this unit, add 1 to any armour saving throw made against that attack.</character
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="c4ec-a7af-3d82-d468" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="30e0-105c-327e-180e" type="selectionEntry" targetId="7c74-e89e-bfa2-02d1">
@@ -4078,6 +4083,11 @@ Strategic Reserves.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="3de1-73e8-a0ae-a0ee" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="6234-5199-ab0a-8828" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -5692,6 +5702,11 @@ by 1.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="7228-47a6-c148-d1fa" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="65a3-8163-ad61-f5d7" targetId="7cb5-dd6b-dd87-ad3b"/>
@@ -5962,6 +5977,11 @@ by 1.</characteristic>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="bf3d-2d61-8c6b-d47f" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -6292,6 +6312,11 @@ by 1.</characteristic>
         <modifier type="add" value="e21f-8e64-c5d-7df0" field="category">
           <conditions>
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="dd5d-7d1d-54f9-5ffd" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8159,7 +8184,7 @@ by 1.</characteristic>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="dab7-9be8-dc9-2d55" includeChildSelections="true"/>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="dab7-9be8-dc9-2d55" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8428,6 +8453,11 @@ by 1.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="1734-19f-201d-f146" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="0787-369a-0024-a462" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8788,6 +8818,11 @@ by 1.</characteristic>
         <modifier type="add" value="e9c7-1590-1bda-bf7f" field="category">
           <conditions>
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="a51b-2989-723e-43c0" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9292,6 +9327,11 @@ by 1.</characteristic>
         <modifier type="add" value="e9c7-1590-1bda-bf7f" field="category">
           <conditions>
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="8a6a-b00b-1043-d7aa" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -10928,6 +10968,11 @@ Normal move. If it does so, until the end of the turn, this unit is not eligible
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="0bdb-5ab6-42de-36b8" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -13701,6 +13746,11 @@ Normal move. If it does so, until the end of the turn, this unit is not eligible
         <modifier type="add" value="e9c7-1590-1bda-bf7f" field="category">
           <conditions>
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="943e-127b-47a3-c1c8" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
