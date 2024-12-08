@@ -3361,7 +3361,7 @@ unit instead.</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Indomitor Kill Team" hidden="false" id="6cb-912c-c43-210b">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="120"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="270"/>
       </costs>
       <profiles>
         <profile name="Indomitor Doctrines" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f8b6-3181-7e49-fb57" publicationId="4115-3627-e608-39f6" page="25">
@@ -3595,13 +3595,6 @@ unit instead.</characteristic>
                   </constraints>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="decrement" value="1" field="a0e4-ac3e-ec1d-950d">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="6cb-912c-c43-210b" childId="a666-891-4187-a82" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Melta Rifle Options" id="5126-a0f6-78e2-e0f3" hidden="false" defaultSelectionEntryId="3d5e-e20d-8e00-5b3d">
                   <selectionEntries>
@@ -3673,7 +3666,7 @@ unit instead.</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Spectrus Kill Team" hidden="false" id="2544-5189-7806-30f3">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="200"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="cf47-a0d7-7207-29dc" id="78bb-27f7-5c80-c0ec" primary="true" name="Infantry"/>
@@ -4996,19 +4989,10 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Watch Master" hidden="false" type="selectionEntry" id="d7e1-13bb-2177-b6bc" targetId="f7c3-45d2-a7ac-d8bc"/>
-    <entryLink import="true" name="Watch Captain Artemis" hidden="false" type="selectionEntry" id="4bc4-95ae-422d-1469" targetId="3d7c-2de-31ea-b028"/>
-    <entryLink import="true" name="Corvus Blackstar" hidden="false" type="selectionEntry" id="319e-5b9d-5c49-4e57" targetId="d861-972b-54f9-bdfa"/>
     <entryLink import="false" name="Kill Team Cassius [Legends]" hidden="false" type="selectionEntry" id="7211-5200-e107-dcac" targetId="4042-67ce-8d45-ed33"/>
     <entryLink import="false" name="Veteran Bike Squad [Legends]" hidden="false" type="selectionEntry" id="f3e5-83fc-3580-eab9" targetId="8615-561f-33a5-aa47"/>
-    <entryLink import="true" name="Deathwatch Terminator Squad" hidden="false" type="selectionEntry" id="9a-d0b0-480d-21cd" targetId="390e-706b-a059-378b"/>
-    <entryLink import="true" name="Deathwatch Veterans" hidden="false" type="selectionEntry" id="b078-34b9-e660-a4cb" targetId="8f5b-6c45-652c-33a1"/>
     <entryLink import="false" name="Proteus Kill Team [Legends]" hidden="false" type="selectionEntry" id="bc53-8c26-8a1a-b2af" targetId="95fe-8a43-b82-7230"/>
-    <entryLink import="true" name="Fortis Kill Team" hidden="false" type="selectionEntry" id="a5ae-26d2-12a0-13d7" targetId="a077-e1c9-f8f0-d38"/>
-    <entryLink import="true" name="Indomitor Kill Team" hidden="false" type="selectionEntry" id="6942-fa3c-d518-295f" targetId="6cb-912c-c43-210b"/>
-    <entryLink import="true" name="Spectrus Kill Team" hidden="false" type="selectionEntry" id="6482-591d-fe98-7961" targetId="2544-5189-7806-30f3"/>
     <entryLink import="false" name="Deathwatch Kill Team" hidden="false" id="e17b-05e3-61c0-2ad9" type="selectionEntry" targetId="66ab-476a-134e-ec7b"/>
-    <entryLink import="true" name="Talonstrike Kill Team" hidden="false" id="5050-42b1-d5af-1a0d" type="selectionEntry" targetId="7a78-785d-1e32-555e"/>
   </entryLinks>
   <sharedProfiles>
     <profile name="Power Fist" hidden="false" id="27b9-ba9e-95a5-a6" typeName="Melee Weapons" publicationId="4115-3627-e608-39f6" page="16" typeId="8a40-4aaa-c780-9046">
