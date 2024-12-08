@@ -2967,24 +2967,28 @@ unit instead.</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c145-1ed7-1f06-13fa"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Deathwatch Bolt Rifle" hidden="false" id="b038-0716-e175-a7ad" type="selectionEntry" targetId="9d5e-f421-6d31-49ec"/>
+                    <entryLink import="true" name="Deathwatch Bolt Rifle" hidden="false" id="b038-0716-e175-a7ad" type="selectionEntry" targetId="9d5e-f421-6d31-49ec">
+                      <entryLinks>
+                        <entryLink import="true" name="Astartes Grenade Launcher" hidden="false" id="be73-fb16-9ac1-6239" type="selectionEntry" targetId="38d0-ad26-f9cb-317d">
+                          <modifiers>
+                            <modifier type="set" value="false" field="hidden"/>
+                            <modifier type="increment" value="1" field="a981-6e09-1e89-577f">
+                              <repeats>
+                                <repeat value="5" repeats="1" field="selections" scope="a077-e1c9-f8f0-d38" childId="model" shared="true" roundUp="false"/>
+                              </repeats>
+                            </modifier>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="a077-e1c9-f8f0-d38" shared="true" id="a981-6e09-1e89-577f" includeChildSelections="true" includeChildForces="true"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="275a-90b4-4c13-fdf9"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
                     <entryLink import="true" name="Astartes chainsword" hidden="false" id="f132-2e32-b03c-3c67" type="selectionEntry" targetId="93dc-1a01-97b3-6565"/>
                     <entryLink import="true" name="Hand Flamer" hidden="false" id="5a79-6c83-72ca-d45c" type="selectionEntry" targetId="7c77-666e-38e4-f676"/>
                     <entryLink import="true" name="Plasma pistol" hidden="false" id="a30a-3534-7060-ec61" type="selectionEntry" targetId="2902-b665-48b6-bb09"/>
                     <entryLink import="true" name="Power weapon" hidden="false" id="5ce8-8223-6b20-693b" type="selectionEntry" targetId="63ae-be8a-3203-c6bc"/>
-                    <entryLink import="true" name="Astartes Grenade Launcher" hidden="false" id="be73-fb16-9ac1-6239" type="selectionEntry" targetId="38d0-ad26-f9cb-317d">
-                      <modifiers>
-                        <modifier type="set" value="false" field="hidden"/>
-                        <modifier type="increment" value="1" field="a981-6e09-1e89-577f">
-                          <repeats>
-                            <repeat value="5" repeats="1" field="selections" scope="a077-e1c9-f8f0-d38" childId="model" shared="true" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="a077-e1c9-f8f0-d38" shared="true" id="a981-6e09-1e89-577f" includeChildSelections="true" includeChildForces="true"/>
-                      </constraints>
-                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Close Combat Weapon Options" id="7d45-6043-5284-8035" hidden="false" defaultSelectionEntryId="5c9f-655e-ecad-f297">
@@ -3039,31 +3043,27 @@ unit instead.</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="331a-2d2a-c0ba-459a"/>
                   </constraints>
                 </entryLink>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Deathwatch Bolt Rifle Options" id="3b81-c2ad-ed5c-4ad3" hidden="false" defaultSelectionEntryId="1e4c-8184-c973-89a7">
+                <entryLink import="true" name="Deathwatch Bolt Rifle" hidden="false" id="1e4c-8184-c973-89a7" type="selectionEntry" targetId="9d5e-f421-6d31-49ec">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a86b-c201-4edd-4aa1"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95cb-5618-a4b3-2589"/>
                   </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Deathwatch Bolt Rifle" hidden="false" id="1e4c-8184-c973-89a7" type="selectionEntry" targetId="9d5e-f421-6d31-49ec"/>
-                    <entryLink import="true" name="Astartes Grenade Launcher" hidden="false" id="9227-9938-86d7-f2e3" type="selectionEntry" targetId="38d0-ad26-f9cb-317d">
-                      <modifiers>
-                        <modifier type="set" value="false" field="hidden"/>
-                        <modifier type="increment" value="1" field="77f2-f68b-b33f-aaa3">
-                          <repeats>
-                            <repeat value="5" repeats="1" field="selections" scope="a077-e1c9-f8f0-d38" childId="model" shared="true" roundUp="false"/>
-                          </repeats>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="max" value="0" field="selections" scope="a077-e1c9-f8f0-d38" shared="true" id="77f2-f68b-b33f-aaa3" includeChildSelections="true" includeChildForces="true"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+                </entryLink>
+                <entryLink import="true" name="Astartes Grenade Launcher" hidden="false" id="9227-9938-86d7-f2e3" type="selectionEntry" targetId="38d0-ad26-f9cb-317d">
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="increment" value="1" field="77f2-f68b-b33f-aaa3">
+                      <repeats>
+                        <repeat value="5" repeats="1" field="selections" scope="a077-e1c9-f8f0-d38" childId="model" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="0" field="selections" scope="a077-e1c9-f8f0-d38" shared="true" id="77f2-f68b-b33f-aaa3" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d76-b045-d3e3-d39b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Kill Team Intercessor with Plasma Incinerators" hidden="false" id="5aa9-518f-3abe-593d" publicationId="4115-3627-e608-39f6" page="23" collective="false">
               <constraints>
