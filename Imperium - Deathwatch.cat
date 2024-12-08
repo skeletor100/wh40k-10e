@@ -2033,6 +2033,7 @@ unit instead.</characteristic>
         <categoryLink targetId="8311-8645-4ce3-8b3" id="ae34-3488-a051-fc03" primary="false" name="Deathwatch Terminator Squad"/>
         <categoryLink targetId="740a-892c-8958-defa" id="3051-cc65-d815-3019" primary="false" name="Terminator"/>
         <categoryLink name="Deathwatch" hidden="false" id="c68f-85b2-757d-8351" targetId="15df-a532-a570-461e" primary="false"/>
+        <categoryLink targetId="81b0-a893-4fb7-c298" id="002f-ffef-bf8f-4034" primary="false" name="Kill Team"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Deathwatch Terminators" hidden="false" id="50fb-8de8-f1cf-86b3" publicationId="4115-3627-e608-39f6" page="15" defaultSelectionEntryId="45fa-9a7-8352-362e">
