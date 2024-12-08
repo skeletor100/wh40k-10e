@@ -7,11 +7,7 @@
     <catalogueLink type="catalogue" name="Imperium - Agents of the Imperium" id="f8ba-df9d-e157-8098" targetId="b00-cd86-4b4c-97ba" importRootEntries="true"/>
   </catalogueLinks>
   <entryLinks>
-    <entryLink import="true" name="Spectrus Kill Team" hidden="false" id="d217-726a-e5bb-770c" type="selectionEntry" targetId="2544-5189-7806-30f3">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="b862-e495-2b37-3ef1" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
+    <entryLink import="true" name="Spectrus Kill Team" hidden="false" id="d217-726a-e5bb-770c" type="selectionEntry" targetId="2544-5189-7806-30f3"/>
     <entryLink import="true" name="Watch Master" hidden="false" id="46ff-a91d-963b-a148" type="selectionEntry" targetId="f7c3-45d2-a7ac-d8bc">
       <entryLinks>
         <entryLink import="true" name="Enhancements" hidden="false" id="c3f6-c1c1-d2d0-cd80" type="selectionEntryGroup" targetId="9e5d-de4c-c5d1-1d3e"/>
@@ -23,35 +19,15 @@
         <entryLink import="true" name="Warlord" hidden="false" id="6316-9ea5-c329-169c" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Deathwatch Veterans" hidden="false" id="ef3d-a2b7-a404-a6b8" type="selectionEntry" targetId="8f5b-6c45-652c-33a1">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="6e3a-134e-1a33-3340" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Deathwatch Terminator Squad" hidden="false" id="3673-f46d-60aa-f4c5" type="selectionEntry" targetId="390e-706b-a059-378b">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="24a7-d500-4b14-7bc4" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
+    <entryLink import="true" name="Deathwatch Veterans" hidden="false" id="ef3d-a2b7-a404-a6b8" type="selectionEntry" targetId="8f5b-6c45-652c-33a1"/>
+    <entryLink import="true" name="Deathwatch Terminator Squad" hidden="false" id="3673-f46d-60aa-f4c5" type="selectionEntry" targetId="390e-706b-a059-378b"/>
     <entryLink import="true" name="Corvus Blackstar" hidden="false" id="88d9-e3e9-4b29-5697" type="selectionEntry" targetId="d861-972b-54f9-bdfa">
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" id="3275-a885-7b10-9d72" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Talonstrike Kill Team" hidden="false" id="010e-6d03-2d3f-af43" type="selectionEntry" targetId="7a78-785d-1e32-555e">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="6a65-5452-1810-beb2" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Fortis Kill Team" hidden="false" id="dfc4-eed7-fe73-cb71" type="selectionEntry" targetId="a077-e1c9-f8f0-d38">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="ddc2-b226-580a-0c2e" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Indomitor Kill Team" hidden="false" id="c711-91a2-254b-c718" type="selectionEntry" targetId="6cb-912c-c43-210b">
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" id="f83a-e10d-6a26-2011" type="selectionEntry" targetId="caa-f869-3cbd-b48e"/>
-      </entryLinks>
-    </entryLink>
+    <entryLink import="true" name="Talonstrike Kill Team" hidden="false" id="010e-6d03-2d3f-af43" type="selectionEntry" targetId="7a78-785d-1e32-555e"/>
+    <entryLink import="true" name="Fortis Kill Team" hidden="false" id="dfc4-eed7-fe73-cb71" type="selectionEntry" targetId="a077-e1c9-f8f0-d38"/>
+    <entryLink import="true" name="Indomitor Kill Team" hidden="false" id="c711-91a2-254b-c718" type="selectionEntry" targetId="6cb-912c-c43-210b"/>
   </entryLinks>
 </catalogue>
