@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="77" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="78" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
   <categoryEntries>
     <categoryEntry id="539-7da4-d962-1a64" name="Primaris" hidden="false"/>
     <categoryEntry id="5179-8ede-45e3-49a2" name="Tacticus" hidden="false"/>
@@ -22300,11 +22300,11 @@ In your Command phase, select one Adeptus Astartes unit from your army; until th
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Black Spear Task Force - Mission Tactics" hidden="false" id="4459-12f0-bc-142b">
+        <selectionEntry type="upgrade" import="true" name="Black Spear Task Force" hidden="false" id="4459-12f0-bc-142b">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="8216-75ba-bef1-bbe2" shared="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
@@ -22314,19 +22314,16 @@ In your Command phase, select one Adeptus Astartes unit from your army; until th
             </modifier>
           </modifiers>
           <profiles>
-            <profile name="Furor Tactics" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d0e5-379a-d2c1-898a" publicationId="4115-3627-e608-39f6">
+            <profile name="Mission Tactics" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d0e5-379a-d2c1-898a" publicationId="4115-3627-e608-39f6">
               <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the [SUSTAINED HITS 1] ability.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Malleus Tactics" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="49e6-ffa4-895d-6d1a" publicationId="4115-3627-e608-39f6">
-              <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the [LETHAL HITS] ability.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Purgatus Tactics" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9172-14c8-adb-a0a8" publicationId="4115-3627-e608-39f6">
-              <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this Mission Tactic is active, each time an Adeptus Astartes unit from your army makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability.</characteristic>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic
+is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.
+FUROR TACTICS
+While this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the [SUSTAINED HITS 1] ability.
+MALLEUS TACTICS
+While this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the [LETHAL HITS] ability.
+PURGATUS TACTICS
+While this Mission Tactic is active, each time an Adeptus Astartes unit from your army makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -23062,7 +23059,7 @@ Battle‑shocked, subtract 1 from each of those tests.
               <profiles>
                 <profile name="Thief of Secrets" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ef5c-295b-6117-663c">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes model only. Improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 1. If an enemy model is destroyed as the result of a melee attack made by the bearer, at the end of that phase, until the end of the battle, improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes model only. Improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 1. At the end of the Fight phase, if one or more enemy models were destroyed as a result of a melee attack made by the bearer this phase, until the end of the battle, improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -23071,14 +23068,14 @@ Battle‑shocked, subtract 1 from each of those tests.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b831-977a-e0c9-1efd" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Beacon Angelis" hidden="false" id="cd83-ab05-5a76-b92b" publicationId="4115-3627-e608-39f6">
               <profiles>
                 <profile name="Beacon Angelis" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1d0c-b8c9-5b60-22b3">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes model only. Models in the bearer’s unit have the Deep Strike ability. In addition, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes model only. Models in the bearer’s unit have the Deep Strike ability. In addition, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -23087,14 +23084,14 @@ Battle‑shocked, subtract 1 from each of those tests.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3784-847a-ff88-1397" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Osseus Key" hidden="false" id="768c-ece8-b71d-1681" publicationId="4115-3627-e608-39f6">
               <profiles>
                 <profile name="Osseus Key" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6d2f-f39e-d284-3b7a">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Watch Master or Techmarine model only. At the start of your opponent’s Shooting phase, select one enemy Vehicle unit (excluding Titanic units) within 12&quot; of and visible to the bearer. That model must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Watch Master or Techmarine model only. At the start of your opponent’s Shooting phase, select one enemy Vehicle unit (excluding Titanic units) within 12&quot; of and visible to the bearer. That unit must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -23115,15 +23112,14 @@ Battle‑shocked, subtract 1 from each of those tests.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="260c-b1b9-547-8aa2" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Tome of Ectoclades" hidden="false" id="fd68-a53b-19f4-59d8">
               <profiles>
                 <profile name="The Tome of Ectoclades" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="bfe2-b185-ed41-789f">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Watch Master or Captain model only. Once per battle, after you have selected an enemy unit using the Oath of Moment ability in your Command phase, the bearer can use this Enhancement if they are on the battlefield. When they do, select a second enemy unit – until the start of your next Command phase, each time an Adeptus Astartes model from your army makes an attack that targets either of those
-enemy units, you can re-roll the Hit roll and you can re-roll the Wound roll.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Watch Master or Captain model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -23144,7 +23140,7 @@ enemy units, you can re-roll the Hit roll and you can re-roll the Wound roll.</c
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="394-ce00-93e0-1879" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="40"/>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
