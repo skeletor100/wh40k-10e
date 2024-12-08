@@ -875,7 +875,7 @@ FORTIS KILL TEAM</characteristic>
         <infoLink name="Hazardous" hidden="false" type="rule" id="595-67ed-90dc-36c9" targetId="8367-374c-f87-c627"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Plasma pistol" hidden="false" id="2902-b665-48b6-bb09" publicationId="4115-3627-e608-39f6" page="29" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Plasma pistol" hidden="false" id="2902-b665-48b6-bb09" publicationId="4115-3627-e608-39f6" page="29" collective="false">
       <comment>Armoury - 3+</comment>
       <profiles>
         <profile name="➤ Plasma pistol - Standard" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="c4be-29a8-52c7-949" publicationId="4115-3627-e608-39f6" page="29">
@@ -2987,7 +2987,7 @@ unit instead.</characteristic>
                     </entryLink>
                     <entryLink import="true" name="Astartes chainsword" hidden="false" id="f132-2e32-b03c-3c67" type="selectionEntry" targetId="93dc-1a01-97b3-6565"/>
                     <entryLink import="true" name="Hand Flamer" hidden="false" id="5a79-6c83-72ca-d45c" type="selectionEntry" targetId="7c77-666e-38e4-f676"/>
-                    <entryLink import="true" name="Plasma pistol" hidden="false" id="a30a-3534-7060-ec61" type="selectionEntry" targetId="2902-b665-48b6-bb09"/>
+                    <entryLink import="true" name="Plasma pistol" hidden="false" id="a30a-3534-7060-ec61" type="selectionEntry" targetId="2902-b665-48b6-bb09" collective="true"/>
                     <entryLink import="true" name="Power weapon" hidden="false" id="5ce8-8223-6b20-693b" type="selectionEntry" targetId="63ae-be8a-3203-c6bc"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -3755,9 +3755,6 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                 <selectionEntryGroup name="Equipment" hidden="false" id="28a6-7946-513d-948a">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Helix Gauntlet" hidden="false" id="1863-f99c-c8dd-7cca">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b1c-35dd-514a-425c"/>
-                      </constraints>
                       <profiles>
                         <profile name="Helix Gauntlet" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="62db-8998-860b-8b93">
                           <characteristics>
@@ -3767,9 +3764,6 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                       </profiles>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Infiltrator Comms Array" hidden="false" id="514e-dcf6-fcbf-918">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4766-cb1d-cc41-aff0"/>
-                      </constraints>
                       <profiles>
                         <profile name="Infiltrator Comms Array" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4f63-f053-e97e-fddf">
                           <characteristics>
@@ -3781,6 +3775,7 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                   </selectionEntries>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="2544-5189-7806-30f3" shared="true" id="448-c386-265b-69a2" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3761-7b34-8ec0-04a3" includeChildSelections="true"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -4019,6 +4014,11 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                             <characteristic name="AP" typeId="9ead-8a10-520-de15">-2</characteristic>
                             <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
                             <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Heavy</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Insitgator Bolt carbine" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2ee8-d84b-2579-2b6e">
+                          <characteristics>
+                            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4736,7 +4736,12 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="Close combat weapon" hidden="false" id="9803-5762-f20c-b4c5" type="selectionEntry" targetId="2078-20a8-181f-a708"/>
+                <entryLink import="true" name="Close combat weapon" hidden="false" id="9803-5762-f20c-b4c5" type="selectionEntry" targetId="2078-20a8-181f-a708">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8236-8bbe-7e31-fe8f"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de12-b8db-4143-fc86"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon" id="b758-8e26-fb79-ebb5" hidden="false" defaultSelectionEntryId="e474-553c-6828-3bec">
@@ -4808,7 +4813,12 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                 <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="891f-cee3-9f6f-9951"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Astartes chainsword" hidden="false" id="4dee-ea69-fdc4-5058" type="selectionEntry" targetId="19a4-aecd-52bc-2ad9"/>
+                <entryLink import="true" name="Astartes chainsword" hidden="false" id="4dee-ea69-fdc4-5058" type="selectionEntry" targetId="19a4-aecd-52bc-2ad9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eed1-c9a4-2214-c59d"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2fbc-0947-82e0-14a7"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Pistol" id="3e23-8bc1-61d9-2d11" hidden="false" defaultSelectionEntryId="fe20-8936-9805-094a">
@@ -4816,12 +4826,12 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                     <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="fe20-8936-9805-094a" type="selectionEntry" targetId="2cd5-f521-7c4a-16b2"/>
                     <entryLink import="true" name="Plasma pistol" hidden="false" id="2331-41ef-5ccf-0e51" type="selectionEntry" targetId="2902-b665-48b6-bb09">
                       <constraints>
-                        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="9790-d5e6-3348-ea2c"/>
+                        <constraint type="max" value="0" field="selections" scope="7a78-785d-1e32-555e" shared="true" id="9790-d5e6-3348-ea2c" includeChildSelections="true" includeChildForces="true"/>
                       </constraints>
                       <modifiers>
                         <modifier type="increment" value="1" field="9790-d5e6-3348-ea2c">
                           <repeats>
-                            <repeat value="5" repeats="1" field="selections" scope="7a78-785d-1e32-555e" childId="model" shared="true" roundUp="false"/>
+                            <repeat value="5" repeats="1" field="selections" scope="7a78-785d-1e32-555e" childId="model" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                           </repeats>
                         </modifier>
                       </modifiers>
@@ -4842,10 +4852,41 @@ If this unit has a Leader unit attached to it during the Declare Battle Formatio
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="68bd-ae38-7571-5b48"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Plasma pistol" hidden="false" id="e3ea-eeaa-0823-1627" type="selectionEntry" targetId="2902-b665-48b6-bb09"/>
                     <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="fdc8-1e26-4c7b-81ad" type="selectionEntry" targetId="2cd5-f521-7c4a-16b2"/>
                     <entryLink import="true" name="Hand Flamer" hidden="false" id="ee55-604b-d654-4eab" type="selectionEntry" targetId="7c77-666e-38e4-f676"/>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="3171-1a91-85c0-bc81">
+                      <profiles>
+                        <profile name="➤ Plasma pistol - Standard" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="f90b-5e9c-56e0-1c05" publicationId="4115-3627-e608-39f6" page="29">
+                          <characteristics>
+                            <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
+                            <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                            <characteristic name="BS" typeId="94d-8a98-cf90-183e">3+</characteristic>
+                            <characteristic name="S" typeId="2229-f494-25db-c5d3">7</characteristic>
+                            <characteristic name="AP" typeId="9ead-8a10-520-de15">-2</characteristic>
+                            <characteristic name="D" typeId="a354-c1c8-a745-f9e3">1</characteristic>
+                            <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Pistol</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="➤ Plasma pistol - Supercharge" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="64fd-c94f-9f15-3cbe" publicationId="4115-3627-e608-39f6" page="29">
+                          <characteristics>
+                            <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
+                            <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                            <characteristic name="BS" typeId="94d-8a98-cf90-183e">3+</characteristic>
+                            <characteristic name="S" typeId="2229-f494-25db-c5d3">8</characteristic>
+                            <characteristic name="AP" typeId="9ead-8a10-520-de15">-3</characteristic>
+                            <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
+                            <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Hazardous, Pistol</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Hazardous" id="41bb-1357-5152-f6dd" hidden="false" type="rule" targetId="8367-374c-f87-c627"/>
+                        <infoLink name="Pistol" id="8ff3-8600-7af3-c25b" hidden="false" type="rule" targetId="8bf7-8812-923d-29e4"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Melee Weapon" id="bbcf-ce60-5c60-97d6" hidden="false" defaultSelectionEntryId="ab88-cb73-cd79-a2a3">
                   <constraints>
