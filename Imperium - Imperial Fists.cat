@@ -50,6 +50,11 @@
 ■ Terminator Squad</characteristic>
           </characteristics>
         </profile>
+        <profile name="Darnath Lysander" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="cca7-b0fe-5622-a619">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Leader" hidden="false" type="rule" id="e33e-f051-a514-e459" targetId="b4dd-3e1f-41cb-218f"/>
@@ -360,6 +365,11 @@
 ■ Bladeguard Veteran Squad
 ■ Sternguard Veteran Squad
 ■ Tactical Squad</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Inspiring Commander" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3de1-afff-6fdc-416e">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.’</characteristic>
           </characteristics>
         </profile>
       </profiles>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="34" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="df9a-59b2-f464-59ad" name="Chaos - World Eaters" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <profileTypes>
     <profileType id="02a0-fa96-6f9b-354f" name="Wrathful Presence">
       <characteristicTypes>
@@ -811,7 +811,7 @@
         </profile>
         <profile id="cc39-46f4-3101-c4f0" name="Infernal Fortitude (Aura)" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While a friendly WORLD EATERS INFANTRY unit is within 6&quot; of this model, models in that unit have a 5+ invulnerable save, unless they already have an invulnerable save, in which case they have a 4+ invulnerable save.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While a friendly WORLD EATERS INFANTRY unit is within 6&quot; of this model, models in that unit have a 5+ invulnerable save, unless they already have a 5+ invulnerable save, in which case they have a 4+ invulnerable save.</characteristic>
           </characteristics>
         </profile>
         <profile id="9fd3-61f8-95ae-118a" name="Devastating Assault" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
@@ -3487,7 +3487,7 @@
         </profile>
         <profile id="b946-1c12-5192-5d2f" name="Annihilator" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model makes a ranged attack that targets a MONSTER or VEHICLE unit, re-roll a Damage roll of 1.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a ranged attack made by this model is allocated to a Monster or Vehicle model, you can re‑roll the Damage roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>

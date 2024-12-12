@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="true" id="5a44-f048-114b-e3ff" name="Imperium - Astra Militarum - Library" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="70" battleScribeVersion="2.03" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="true" id="5a44-f048-114b-e3ff" name="Imperium - Astra Militarum - Library" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="80" battleScribeVersion="2.03" type="catalogue">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Aegis Defence Line" hidden="false" id="cb99-456-f100-40ed">
       <categoryLinks>
@@ -1374,7 +1374,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="1645-3202-7cc-f36b" id="2bd6-41c0-7f71-d3f8" primary="false" name="Cadian Shock Troops"/>
@@ -1549,7 +1549,7 @@
         <categoryLink targetId="5a61-81ac-eb7c-a87e" id="8967-ddca-ac56-7faa" primary="false" name="Grenades"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set" value="110" field="51b2-306e-1021-d207">
+        <modifier type="set" value="120" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="fe5a-764e-37ed-7cef" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
@@ -1643,7 +1643,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1671,7 +1671,7 @@
         <categoryLink targetId="6df-937-16bc-8c1a" id="b678-eae9-4ee3-d2f0" primary="false" name="Smoke"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
       </costs>
       <constraints>
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="acd1-da30-2656-832a" includeChildSelections="true" includeChildForces="true"/>
@@ -2474,7 +2474,7 @@
         <categoryLink targetId="5a61-81ac-eb7c-a87e" id="e63-23c4-ea08-4c93" primary="false" name="Grenades"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acd1-da30-2656-832a" includeChildSelections="true" includeChildForces="true"/>
@@ -3094,7 +3094,7 @@
         <categoryLink targetId="6df-937-16bc-8c1a" id="d602-5904-a16a-a874" primary="false" name="Smoke"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="115"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="acd1-da30-2656-832a" includeChildSelections="true" includeChildForces="true"/>
@@ -4634,7 +4634,7 @@
         <categoryLink targetId="e4d8-c6a1-7c23-ae25" id="fc8f-f76c-4ba9-c51" primary="false" name="Officer"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="125"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4672,7 +4672,9 @@
         </profile>
         <profile name="Officer" typeId="3fc9-16d8-8670-c8e2" typeName="Orders" hidden="false" id="4768-11ce-3c8b-3ce4">
           <characteristics>
-            <characteristic name="Officer" typeId="36b-c3c9-245f-e97d">This Officer can issue up to 3 Orders to Astra Militarum units.</characteristic>
+            <characteristic name="Officer" typeId="36b-c3c9-245f-e97d">This Officer can issue up to 3 Orders to:
+■ Regiment units
+■ Squadron units</characteristic>
           </characteristics>
         </profile>
         <profile name="The Lord Solar" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ea84-ea61-c0c8-2dd6">
@@ -5732,7 +5734,7 @@
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="120" field="51b2-306e-1021-d207">
+        <modifier type="set" value="130" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="3" field="selections" scope="c9eb-2007-af01-a853" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
@@ -8527,10 +8529,10 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tempestus Scions" hidden="false" id="679b-f37f-2388-748">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="50"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="100" field="51b2-306e-1021-d207">
+        <modifier type="set" value="120" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="679b-f37f-2388-748" childId="model" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
