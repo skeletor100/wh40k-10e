@@ -43507,16 +43507,16 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one e
         <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <selectionEntries>
-                <characteristic name="D" id="1670-ce66-3cd2-3209" hidden="false" typeId="a354-c1c8-a745-f9e3">1</characteristic>
-                <characteristic name="Keywords" id="bfd9-bb51-9154-e39c" hidden="false" typeId="7f1b-8591-2fcf-d01c">Assault</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Assault" id="f5f5-6314-4b74-5b12" hidden="false" type="rule" targetId="fc8a-8c24-bae9-cc1c"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Stikka" hidden="false" id="5efb-f61f-fdb6-a7d7" collective="true">
+        <selectionEntry type="model" import="true" name="Boss Nob" hidden="false" id="02b4-bc44-8e0e-9830">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Choppa" hidden="false" id="ee9c-9a71-1ba9-ad64">
+              <profiles>
+                <profile name="Choppa" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="9339-1e03-ccd4-6ffe">
+                  <characteristics>
+                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                    <characteristic name="A" typeId="2337-daa1-6682-b110">4</characteristic>
+                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">3+</characteristic>
+                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">5</characteristic>
                     <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
                     <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
                     <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
