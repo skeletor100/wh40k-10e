@@ -199,6 +199,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
       </infoLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -230,6 +234,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
     <selectionEntry type="model" import="true" name="High Marshal Helbrecht" hidden="false" id="da8a-de9f-1fe7-2513">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="4f3a-f0f7-6647-348d" id="ace8-c505-59f5-9b12" primary="true" name="Epic Hero"/>
@@ -374,6 +382,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
     <selectionEntry type="unit" import="true" name="Primaris Crusader Squad" hidden="false" id="8bbe-e7fc-44b7-ed94">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Primaris Crusaders" hidden="false" id="6fc8-d787-7895-ec66">
@@ -440,6 +452,12 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="357d-6032-c1c2-b1f5"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cadd-2da2-6fca-3910"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="9f1e-73dc-af4c-8c98" type="selectionEntry" targetId="18b0-8c2-173f-5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1919-4f10-c96a-7c85" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b35c-b4b1-e4a3-97c1" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -511,6 +529,12 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff09-baeb-6fae-2e71"/>
                       </constraints>
                     </entryLink>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="5239-a6df-4870-f11c" type="selectionEntry" targetId="18b0-8c2-173f-5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="800f-97d7-ea24-eff5" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4af5-97b7-110b-27c0" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                   <modifiers>
                     <modifier type="set" value="4" field="4e33-906e-881e-be2b">
@@ -524,6 +548,27 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
                       </repeats>
                     </modifier>
                   </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Pyreblaster" hidden="false" id="20c1-28a2-f3fe-590a" collective="true">
+                      <profiles>
+                        <profile name="Pyreblaster" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="e95b-9a08-e0a0-c3f1">
+                          <characteristics>
+                            <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
+                            <characteristic name="A" typeId="3bb-c35f-f54-fb08">D6</characteristic>
+                            <characteristic name="BS" typeId="94d-8a98-cf90-183e">N/A</characteristic>
+                            <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
+                            <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                            <characteristic name="D" typeId="a354-c1c8-a745-f9e3">1</characteristic>
+                            <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Torrent</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Ignores Cover" id="2cf6-8e67-ce01-76c3" hidden="false" type="rule" targetId="4640-43e7-30b-215a"/>
+                        <infoLink name="Torrent" id="6551-e9f9-e290-6aa7" hidden="false" type="rule" targetId="5edf-d619-23e0-9b56"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -1644,23 +1689,33 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="4144-d2c1-e753-353"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Sponson Weapons" hidden="false" id="a6c6-38b-f9d2-a778" defaultSelectionEntryId="524-4773-a3de-75c9">
+        <selectionEntryGroup name="Sponson Weapons" hidden="false" id="a6c6-38b-f9d2-a778" defaultSelectionEntryId="abd2-2ce6-1691-3f9d">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75cc-d5b8-3f94-ae45"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab14-8f06-7ad0-4da5"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Fragstorm Grenade Launcher" hidden="false" type="selectionEntry" id="a2ad-13b2-17e5-c1a5" targetId="2557-ebbd-6ea5-3785">
-              <modifiers>
-                <modifier type="set" value="2 Fragstorm Grenade Launchers" field="name"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Storm Bolter" hidden="false" type="selectionEntry" id="49ce-fc0e-79e3-18f0" targetId="eb61-5cd0-5242-74cc">
-              <modifiers>
-                <modifier type="set" value="2 Storm Bolters" field="name"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="2 Fragstorm Grenade Launchers" hidden="false" id="1c04-55c9-791c-033d">
+              <entryLinks>
+                <entryLink import="true" name="Fragstorm Grenade Launcher" hidden="false" id="a2ad-13b2-17e5-c1a5" type="selectionEntry" targetId="2557-ebbd-6ea5-3785">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="33f0-372c-1885-3f13-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="33f0-372c-1885-3f13-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="2 Storm Bolters" hidden="false" id="abd2-2ce6-1691-3f9d">
+              <entryLinks>
+                <entryLink import="true" name="Storm Bolter" hidden="false" id="49ce-fc0e-79e3-18f0" type="selectionEntry" targetId="eb61-5cd0-5242-74cc">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="85de-2e2e-68be-a830-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="85de-2e2e-68be-a830-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Pintle Mount Option" hidden="false" id="855a-ed4d-f6ec-e6a1">
           <entryLinks>
@@ -1990,7 +2045,7 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
         </profile>
         <profile name="Transport" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="81d0-6092-93e0-d602">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 6 Tacticus or Phobos Infantry models. It cannot transport Jump Pack models.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models.</characteristic>
           </characteristics>
         </profile>
         <profile name="Assault Vehicle" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5acc-d822-413-23b4">
@@ -2024,23 +2079,33 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Sponsons" hidden="false" id="76b6-9c09-5e50-127f" defaultSelectionEntryId="6716-dd41-6f4c-ef3c">
+        <selectionEntryGroup name="Sponsons" hidden="false" id="76b6-9c09-5e50-127f" defaultSelectionEntryId="9242-224b-28ad-c3e2">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ea55-48c6-bc6c-900e"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="689-e464-5676-1384"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Storm Bolter" hidden="false" type="selectionEntry" id="aa1e-bc0d-c457-b6a6" targetId="eb61-5cd0-5242-74cc">
-              <modifiers>
-                <modifier type="set" value="2 Storm Bolters" field="name"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Fragstorm Grenade Launcher" hidden="false" type="selectionEntry" id="9da1-6df-4887-2966" targetId="2557-ebbd-6ea5-3785">
-              <modifiers>
-                <modifier type="set" value="2 Fragstorm Grenade Launchers" field="name"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="2 Fragstorm Grenade Launchers" hidden="false" id="54f5-c4a7-8eea-a435">
+              <entryLinks>
+                <entryLink import="true" name="Fragstorm Grenade Launcher" hidden="false" id="2375-7de9-e5d1-f8d2" type="selectionEntry" targetId="2557-ebbd-6ea5-3785">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="614d-65ce-dc42-d434-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="614d-65ce-dc42-d434-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="2 Storm Bolters" hidden="false" id="9242-224b-28ad-c3e2">
+              <entryLinks>
+                <entryLink import="true" name="Storm Bolter" hidden="false" id="087d-0210-10cd-2471" type="selectionEntry" targetId="eb61-5cd0-5242-74cc">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6226-52b1-5aec-06dd-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6226-52b1-5aec-06dd-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Option" hidden="false" id="3ab0-ac18-e44d-42c1">
           <selectionEntries>
@@ -2155,6 +2220,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
     <selectionEntry type="model" import="true" name="Black Templars Repulsor" hidden="false" id="c3e8-3cde-8b39-4b19">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="dbd4-63-af05-998" id="55be-54a6-5ca0-bbb1" primary="true" name="Vehicle"/>
@@ -2178,7 +2247,7 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
         </profile>
         <profile name="Transport" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="30b7-f838-af91-b9ee">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 14 ADEPTUS ASTARTES INFANTRY models. Each JUMP PACK, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models.</characteristic>
           </characteristics>
         </profile>
         <profile name="Emergency Combat Embarkation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="302a-8708-2da5-e44">
@@ -2296,6 +2365,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
     <selectionEntry type="model" import="true" name="Black Templars Repulsor Executioner" hidden="false" id="a344-192f-aae2-16e5">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="230"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="4144-d2c1-e753-353"/>
@@ -2450,6 +2523,10 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
     <selectionEntry type="model" import="true" name="Castellan" hidden="false" id="f151-e676-d3b8-200c">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="9cfd-1c32-585f-7d5c" id="86a3-9849-6eec-dfab" primary="true" name="Character"/>
@@ -2687,6 +2764,10 @@ You can attach this model to one of the above units even if one Captain or Chap
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="7b14-70f8-fb08-4b9e"/>
