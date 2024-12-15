@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="015a-6212-d737-9044" name="Index - Thousand Sons"/>
   </publications>
@@ -73,7 +73,7 @@
         <profile id="3ec8-073a-6733-faed" name="3. Echoes from the Warp (Psychic)" hidden="false" typeId="6be6-a982-36ad-841a" typeName="Cabal Rituals">
           <characteristics>
             <characteristic name="Cost" typeId="ace0-c8c2-e1fe-18b0">6</characteristic>
-            <characteristic name="Effect" typeId="4e3c-58dd-9e6e-e1f4">Use this Ritual at the start of any phase. Once this phase, you can select this PSYKER’s unit as the target of a Stratagem for 0CP, even if you have already used that Stratagem this phase.</characteristic>
+            <characteristic name="Effect" typeId="4e3c-58dd-9e6e-e1f4">Use this Ritual at the start of any phase. Once this phase, you can select this PSYKER’s unit as the target of a Stratagem. If you do, reduce the CP cost of that use of that Stratagem by 1CP.</characteristic>
           </characteristics>
         </profile>
         <profile id="d0ad-643f-41db-76b4" name="4. Doombolt (Psychic)" hidden="false" typeId="6be6-a982-36ad-841a" typeName="Cabal Rituals">
@@ -309,7 +309,7 @@
         <categoryLink id="f68a-6e07-0936-90a1" name="Configuration" hidden="false" targetId="4ac9-fd30-1e3d-b249" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e74a-04a4-bb91-d5ec" name="Detachment" hidden="false" collective="false" import="true" defaultSelectionEntryId="16cb-7eb7-e9fc-f7ea">
+        <selectionEntryGroup id="e74a-04a4-bb91-d5ec" name="Detachment" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c19-2e4d-3b70-04d2" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5006-5ba3-4f99-7ce1" type="max"/>
@@ -319,6 +319,9 @@
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Kindred Sorcery" id="88b4-4f6c-d4eb-9fa2" hidden="false" type="rule" targetId="4258-60ff-8457-a123"/>
+              </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -327,6 +330,18 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hexwarp Thrallband" hidden="false" id="7b92-cca6-0617-1b6d">
+              <infoLinks>
+                <infoLink name="Flow of Magic" id="f955-110f-964e-8e29" hidden="false" type="rule" targetId="9fa6-3c29-04b1-b428"/>
+              </infoLinks>
+            </selectionEntry>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             <selectionEntry type="upgrade" import="true" name="Chosen Cabal" hidden="false" id="4667-97b0-afff-e270" collective="false">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
@@ -587,6 +602,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="3"/>
       </costs>
       <modifierGroups>
@@ -772,6 +791,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="150"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="3"/>
       </costs>
     </selectionEntry>
@@ -1007,7 +1030,7 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
         </profile>
         <profile id="efa5-c1d9-a512-e566" name="Annihilator" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re‑roll the Damage roll.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re-roll the Damage roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1308,7 +1331,7 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
     </selectionEntry>
     <selectionEntry id="8d9b-b949-2557-dcc4" name="Thousand Sons Rhino" hidden="false" collective="false" import="true" type="model" publicationId="015a-6212-d737-9044" page="17-18">
       <constraints>
-        <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bfd2-930d-d229-597e" type="max"/>
+        <constraint field="selections" scope="force" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bfd2-930d-d229-597e" type="max"/>
       </constraints>
       <profiles>
         <profile id="26fb-2ff1-9da1-f641" name="Thousand Sons Rhino" hidden="false" typeId="c547-1836-d8a-ff4f" typeName="Unit">
@@ -1999,6 +2022,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
       <constraints>
@@ -2206,6 +2233,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="115"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
       <constraints>
@@ -2368,6 +2399,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="145"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
@@ -3008,7 +3043,11 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
         <entryLink id="d4f9-d775-ee24-ba0d" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
       <constraints>
@@ -3260,6 +3299,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="465"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="4"/>
       </costs>
       <constraints>
@@ -3545,6 +3588,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="160"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <constraints>
@@ -3565,6 +3612,10 @@ Each time a Thousand Sons model from your army makes a Psychic Attack, re‑rol
     <selectionEntry type="unit" import="true" name="Rubric Marines" hidden="false" id="5d3d-e13b-8b76-dad3" publicationId="015a-6212-d737-9044" page="43-44">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
@@ -4493,6 +4544,10 @@ Wound roll.</characteristic>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="1"/>
       </costs>
       <constraints>
@@ -5477,6 +5532,10 @@ Wound roll.</characteristic>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="50"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
@@ -5689,13 +5748,13 @@ Wound roll.</characteristic>
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="1 Twistbray and 9-19 Tzaangors" hidden="false" id="4e4e-d54e-2597-521e" defaultSelectionEntryId="5b9-7d59-48fd-b485">
+        <selectionEntryGroup name="9-19 Tzaangors" hidden="false" id="4e4e-d54e-2597-521e" defaultSelectionEntryId="5b9-7d59-48fd-b485">
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="4d96-7820-3900-e3e2"/>
-            <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="3f8c-46f1-937f-44ef"/>
+            <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="4d96-7820-3900-e3e2"/>
+            <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="3f8c-46f1-937f-44ef"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Tzaangor blades" hidden="false" id="5b9-7d59-48fd-b485">
+            <selectionEntry type="model" import="true" name="Tzaangor w/ Tzaangor blades" hidden="false" id="5b9-7d59-48fd-b485">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Tzaangor blades" hidden="false" id="a484-6a41-3648-bce1" collective="true">
                   <constraints>
@@ -5717,8 +5776,11 @@ Wound roll.</characteristic>
                   </profiles>
                 </selectionEntry>
               </selectionEntries>
+              <constraints>
+                <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="aac9-e0d1-0bf3-f9bc"/>
+              </constraints>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Pistol and chainsword" hidden="false" id="c0b0-d4f8-c617-7c2a">
+            <selectionEntry type="model" import="true" name="Tzaangor w/ pistol and chainsword" hidden="false" id="c0b0-d4f8-c617-7c2a">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Autopistol" hidden="false" id="bf00-4f42-3ff8-9881" collective="true">
                   <constraints>
@@ -5762,6 +5824,9 @@ Wound roll.</characteristic>
                   </profiles>
                 </selectionEntry>
               </selectionEntries>
+              <constraints>
+                <constraint type="max" value="19" field="selections" scope="parent" shared="true" id="e0b6-762a-d858-e503" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -5790,6 +5855,9 @@ Wound roll.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <associations>
+                <association min="1" max="1" scope="f5b9-50c8-5c60-d8ea" childId="4e4e-d54e-2597-521e" name="Brayhorn" id="e2ea-94fb-6c09-48b0" includeChildSelections="true"/>
+              </associations>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Herd banner" hidden="false" id="a61b-434-6817-679a">
               <constraints>
@@ -5802,6 +5870,9 @@ Wound roll.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <associations>
+                <association min="1" max="1" scope="f5b9-50c8-5c60-d8ea" childId="4e4e-d54e-2597-521e" name="Herd Banner" id="4821-422f-ef20-0729"/>
+              </associations>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5810,6 +5881,93 @@ Wound roll.</characteristic>
         <infoLink name="Kindred Sorcery" hidden="false" type="rule" id="3f28-2c07-313f-10eb" targetId="4258-60ff-8457-a123"/>
         <infoLink name="Twisting Fate" id="39a3-59ba-f3a0-5581" hidden="false" type="rule" targetId="c212-8746-aa4c-95d0"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Twistbray" hidden="false" id="255b-146d-ca61-55fb">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapons" id="3630-5be9-4f25-e751" hidden="false" defaultSelectionEntryId="ee84-120d-a66b-0b72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1fd-a5e2-4822-a7ec-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1fd-a5e2-4822-a7ec-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Pistol and chainsword" hidden="false" id="da8f-c310-499e-0107">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Autopistol" hidden="false" id="48bc-c725-1a32-8b69" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e964-ff21-5fcf-389d"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a97-e687-5ede-b5c0"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Autopistol" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="4e86-3db9-4618-d285">
+                          <characteristics>
+                            <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
+                            <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                            <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                            <characteristic name="S" typeId="2229-f494-25db-c5d3">3</characteristic>
+                            <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                            <characteristic name="D" typeId="a354-c1c8-a745-f9e3">1</characteristic>
+                            <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">-</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Pistol" id="b434-f849-ef3c-5412" hidden="false" type="rule" targetId="8bf7-8812-923d-29e4"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="b951-afc2-e321-2dee" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b342-6003-cb69-75f5"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3228-0437-73b5-52ee"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Chainsword" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="37df-506a-b955-6033">
+                          <characteristics>
+                            <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                            <characteristic name="A" typeId="2337-daa1-6682-b110">3</characteristic>
+                            <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                            <characteristic name="S" typeId="ab33-d393-96ce-ccba">4</characteristic>
+                            <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                            <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                            <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Tzaangor blades" hidden="false" id="ee84-120d-a66b-0b72">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Tzaangor blades" hidden="false" id="9286-1912-5c80-ee24" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a908-e6cf-45e3-0510"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6824-6456-77e2-815a"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Tzaangor blades" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="aeb3-54e2-d0b6-1554">
+                          <characteristics>
+                            <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                            <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
+                            <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                            <characteristic name="S" typeId="ab33-d393-96ce-ccba">5</characteristic>
+                            <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
+                            <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                            <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e2f-36b3-576f-199d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e2f-36b3-576f-199d-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="c74d-3b8c-8a3d-111b" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
           <modifiers>
@@ -6382,7 +6540,7 @@ Wound roll.</characteristic>
         </profile>
         <profile id="4e6e-d72b-8f57-b9ae" name="Lord of Chaos" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6722,15 +6880,15 @@ Wound roll.</characteristic>
       <selectionEntries>
         <selectionEntry id="eef6-4b12-1eff-f412" name="Lord of Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13bf-2bee-3ae0-b414" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -6765,7 +6923,7 @@ Wound roll.</characteristic>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6788,7 +6946,7 @@ Wound roll.</characteristic>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6796,14 +6954,14 @@ Wound roll.</characteristic>
         <selectionEntry id="1150-7501-d526-d373" name="Athenaen Scrolls" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="13bf-2bee-3ae0-b414" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -6819,6 +6977,114 @@ Wound roll.</characteristic>
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Arcane Might" hidden="false" id="9d89-dede-5aac-0bcb">
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b9c1-a4b1-bb2e-3472" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="7b92-cca6-0617-1b6d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Arcane Might" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2f79-0968-0cff-59df">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Empowered Manifestation" hidden="false" id="4a67-5764-0da1-196e">
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d639-c7d5-b2d7-6bf2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="7b92-cca6-0617-1b6d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Empowered Manifestation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8f5c-41e6-3d38-260f">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While the bearer’s unit is wholly within your army’s Flow of Magic, add 6&quot; to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re‑roll the result.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Empyric Onslaught" hidden="false" id="ee5d-56ac-adc7-c050">
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="88d3-d877-bf59-5727" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="7b92-cca6-0617-1b6d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Empyric Onslaught" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2f58-bad5-7d6b-bc2c">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Noctilith Mantle" hidden="false" id="aa8d-db59-d651-a759">
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5cd4-0941-4e3e-95bd" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="7b92-cca6-0617-1b6d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Noctilith Mantle" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="68fe-e60d-0b40-856b">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -6954,85 +7220,6 @@ Wound roll.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Hexwarp Thrallband Enhancements" id="722c-b0e1-eddf-00a3" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Arcane Might" hidden="false" id="a7a2-d91c-a692-c5de" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="357b-2f57-642b-7a7d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7932-f69d-8406-51dd" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Arcane Might" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="79d2-e094-3dfa-cc1d">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Thousand Sons model only. Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
-                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Empowered Manifestation" hidden="false" id="318f-3077-0076-6f67" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03f7-61b0-0b68-1505" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="72ab-f5b4-494b-dc37" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Empowered Manifestation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="024f-0984-e4d2-6cac">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Thousand Sons model only. While the bearer’s unit is wholly within your army’s Flow of Magic, add 6&quot; to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re‑roll the result.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
-                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Empyric Onslaught" hidden="false" id="58ce-79af-ed03-d7a9" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a137-c7b0-2cb6-8e18" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5cea-4127-0985-14ba" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Empyric Onslaught" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="bfc8-a3a9-18fb-a41f">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Thousand Sons model only. While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
-                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Noctilith Mantle" hidden="false" id="0c59-e666-cb45-99f3" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8646-d17a-f0dc-b956" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b082-e63d-71f9-ecf8" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Noctilith Mantle" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5ef1-28df-0a92-8afb">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Thousand Sons model only. While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
-                <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="force" childId="9be9-63fd-1b18-008a" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -7050,9 +7237,14 @@ Wound roll.</characteristic>
     <rule id="4258-60ff-8457-a123" name="Kindred Sorcery" hidden="false">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="16cb-7eb7-e9fc-f7ea" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="16cb-7eb7-e9fc-f7ea" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <description>In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase.
@@ -7062,6 +7254,27 @@ PSYCHIC MAELSTROM
 Psychic weapons equipped by THOUSAND SONS models from your army have the [SUSTAINED HITS 1] ability.
 WRATH OF THE IMMATERIUM
 Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.</description>
+    </rule>
+    <rule name="Flow of Magic" id="9fa6-3c29-04b1-b428" hidden="false">
+      <description>Certain areas of the battlefield are within your army’s Flow of Magic, as follows: 
+- Your deployment zone is always within your army’s Flow of Magic.
+- At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Flow of Magic. 
+- At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Flow of Magic. 
+
+
+Each time a Thousand Sons model from your army makes a Psychic Attack, re‑roll a Wound roll of 1. If such a model is wholly within your army’s Flow of Magic, each time it makes a Psychic Attack, add 1 to the Wound roll instead.</description>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="7b92-cca6-0617-1b6d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="7b92-cca6-0617-1b6d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </rule>
     <rule name="Twisting Fate" id="c212-8746-aa4c-95d0" hidden="false">
       <description>While a THOUSAND SONS PSYKER model from your army is on the battlefield and you control at least as many objective markers as your opponent does, your plan is considered to be in Ascendance. Each time you or your opponent spend one or more Command points to use a Stratagem, roll one D6, adding 1 if your plan is in Ascendance: on a 1-2, your opponent gains 1CP; on a 6+, you gain 1CP.</description>
