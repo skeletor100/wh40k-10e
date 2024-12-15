@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="4ef9-15ce-e3e6-36de" name="Imperium - Adeptus Astartes - Blood Angels" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="32" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="4ef9-15ce-e3e6-36de" name="Imperium - Adeptus Astartes - Blood Angels" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="33" battleScribeVersion="2.03" type="catalogue" authorName="Acebaur">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Imperium - Space Marines" id="abd0-8ebd-6fbd-2d94" targetId="e0af-67df-9d63-8fb7" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Imperium - Imperial Knights - Library" id="9c08-8ffc-d746-7384" targetId="1b6d-dc06-5db9-c7d1" importRootEntries="true"/>
@@ -1524,15 +1524,6 @@
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="e338-111e-d0c6-b687" field="category"/>
-            <modifier type="set" value="6" field="540f-f347-c069-b8f0"/>
-          </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4106-7bb5-bdd6-2c4e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
