@@ -183,6 +183,9 @@
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="a34b-6a88-3768-3a37" targetId="eea3-949a-21d2-d33f"/>
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="66b0-cc6a-fae-50c8" targetId="5e69-8258-9ee5-3b6b"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="9c76-a080-072e-ce84" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -342,6 +345,9 @@
       <entryLinks>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="c3fa-7553-d82e-bfa8" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e1cc-0302-eedc-92f3" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -442,6 +448,9 @@
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="562b-78e8-ea0b-3ed3" targetId="5e69-8258-9ee5-3b6b"/>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="1732-1849-97cf-d8f8" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="5674-7e6e-99b6-a33a" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -604,6 +613,9 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="de54-8761-ed73-6bb2" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -720,12 +732,16 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="6958-586c-6fd5-06f5" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1097-4be8-b6db-c014"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="559b-0874-e28c-dbbc" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -733,7 +749,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="1097-4be8-b6db-c014"/>
+            <modifier type="set" value="1" field="559b-0874-e28c-dbbc"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -741,7 +757,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="1097-4be8-b6db-c014"/>
+            <modifier type="set" value="1" field="559b-0874-e28c-dbbc"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -837,12 +853,16 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="7871-312d-70bf-fbd2" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="bd59-0f31-0dfd-4f27"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="9758-1452-5411-ca4c" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -850,7 +870,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="bd59-0f31-0dfd-4f27"/>
+            <modifier type="set" value="1" field="7871-312d-70bf-fbd2"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -858,7 +878,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="bd59-0f31-0dfd-4f27"/>
+            <modifier type="set" value="1" field="7871-312d-70bf-fbd2"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -912,6 +932,10 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <selectionEntry id="2d5d-40b5-4ac8-cedc" name="Ironstrider Ballistarius (Twin cognis autocannon)" hidden="false" collective="false" import="true" type="model">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
               </costs>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Twin cognis autocannon" hidden="false" id="5be8-d319-e2a9-8409" collective="true">
@@ -930,7 +954,6 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
                   </profiles>
                   <infoLinks>
                     <infoLink name="Sustained Hits" hidden="false" type="rule" id="27bd-755c-71d6-3789" targetId="1897-c22c-9597-12b1"/>
-                    <infoLink name="Twin-linked" hidden="false" type="rule" id="5f22-4af8-b4b3-20bb" targetId="cf93-ad4d-2f08-a79d"/>
                   </infoLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b40e-463f-170f-6069-min"/>
@@ -948,6 +971,10 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <selectionEntry id="8fc1-9168-5137-2b5d" name="Ironstrider Ballistarius (Twin cognis lascannon)" hidden="false" collective="false" import="true" type="model">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
               </costs>
               <entryLinks>
                 <entryLink import="true" name="Ironstrider feet" hidden="false" type="selectionEntry" id="11fa-2496-6b8-905" targetId="a3ad-1621-c20a-7e3a"/>
@@ -969,7 +996,6 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
                   </profiles>
                   <infoLinks>
                     <infoLink name="Sustained Hits" hidden="false" type="rule" id="4394-97cb-11d6-7f6a" targetId="1897-c22c-9597-12b1"/>
-                    <infoLink name="Twin-linked" hidden="false" type="rule" id="1c2c-d703-c4a7-1074" targetId="cf93-ad4d-2f08-a79d"/>
                   </infoLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="caae-e06b-f880-7c9d-min"/>
@@ -987,6 +1013,9 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="24e2-d64b-9fdf-2b1e" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -1246,7 +1275,14 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="3302-b892-cc19-bd92" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="a46f-848-b87d-4484" name="Kataphron Breachers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1378,7 +1414,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="0e7b-3e2e-edcb-880d" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e0a3-ecc7-f56f-878c"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="94fc-943a-5663-a135" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1386,7 +1422,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="e0a3-ecc7-f56f-878c"/>
+            <modifier type="set" value="1" field="94fc-943a-5663-a135"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -1394,7 +1430,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="e0a3-ecc7-f56f-878c"/>
+            <modifier type="set" value="1" field="94fc-943a-5663-a135"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1521,7 +1557,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="bbd9-afb1-5bcd-c9a7" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4ad0-fdfa-9746-2bec"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="fba4-f5f3-d57e-a729" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1529,7 +1565,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="4ad0-fdfa-9746-2bec"/>
+            <modifier type="set" value="1" field="fba4-f5f3-d57e-a729"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -1537,7 +1573,7 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="4ad0-fdfa-9746-2bec"/>
+            <modifier type="set" value="1" field="fba4-f5f3-d57e-a729"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1825,6 +1861,10 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="155"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <modifiers>
         <modifier type="remove" value="6df-937-16bc-8c1a" field="category">
@@ -1842,6 +1882,9 @@ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6&quot; o
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="5b6f-ed1e-0aab-80f9" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="b31e-5003-5b63-a305" name="Pteraxii Skystalkers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2020,7 +2063,14 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="1381-606c-7843-6274" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="958-a256-360-8620" name="Pteraxii Sterylizors" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2213,11 +2263,18 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <infoLinks>
         <infoLink id="dbda-a3f5-5509-6319" name="Deep Strike" hidden="false" targetId="7cb5-dd6b-dd87-ad3b" type="rule"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="8392-bc23-8b89-eb74" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e890-3ba5-ef31-878c" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="5797-adb8-930-e832" name="Serberys Raiders" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2469,6 +2526,9 @@ In either case, if it does, until the end of the turn, this unit is not eligible
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="f83a-9272-5e95-982d" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="e775-4fe1-832b-95ca" name="Serberys Sulphurhounds" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2615,30 +2675,6 @@ In either case, if it does, until the end of the turn, this unit is not eligible
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Twin phosphor pistols" hidden="false" id="cc07-2e27-3b26-5023" collective="true">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f154-9c4b-6283-c5e4-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f154-9c4b-6283-c5e4-max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="6157-3a9b-e501-4988" name="Twin phosphor pistols" hidden="false" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons">
-                      <characteristics>
-                        <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
-                        <characteristic name="A" typeId="3bb-c35f-f54-fb08">2</characteristic>
-                        <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
-                        <characteristic name="S" typeId="2229-f494-25db-c5d3">4</characteristic>
-                        <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
-                        <characteristic name="D" typeId="a354-c1c8-a745-f9e3">1</characteristic>
-                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Pistol, Twin-linked</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Ignores Cover" hidden="false" type="rule" id="df23-8dc8-1559-a0d1" targetId="4640-43e7-30b-215a"/>
-                    <infoLink name="Pistol" hidden="false" type="rule" id="55d6-d2b7-921-b41" targetId="8bf7-8812-923d-29e4"/>
-                    <infoLink name="Twin-linked" hidden="false" type="rule" id="4560-32e2-3343-9854" targetId="cf93-ad4d-2f08-a79d"/>
-                  </infoLinks>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Clawed limbs" hidden="false" id="a5c5-cf28-b807-183b" collective="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b887-38dc-553d-1f25-min"/>
@@ -2680,6 +2716,29 @@ In either case, if it does, until the end of the turn, this unit is not eligible
                     <infoLink name="Ignores Cover" hidden="false" type="rule" id="64d6-5285-bc8a-3af1" targetId="4640-43e7-30b-215a"/>
                     <infoLink name="Pistol" hidden="false" type="rule" id="9c8b-8f14-7249-739" targetId="8bf7-8812-923d-29e4"/>
                     <infoLink name="Torrent" hidden="false" type="rule" id="9dc9-b2e7-b9e9-fb01" targetId="5edf-d619-23e0-9b56"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Phosphor pistol" hidden="false" id="1062-eb26-46bd-17ac" collective="true">
+                  <profiles>
+                    <profile name="Phosphor pistol" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="848e-27eb-d354-d7b8">
+                      <characteristics>
+                        <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
+                        <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
+                        <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                        <characteristic name="S" typeId="2229-f494-25db-c5d3">4</characteristic>
+                        <characteristic name="AP" typeId="9ead-8a10-520-de15">0</characteristic>
+                        <characteristic name="D" typeId="a354-c1c8-a745-f9e3">1</characteristic>
+                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Pistol</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f4ab-fa2d-5671-48d3"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8a0f-44d1-6f97-5c8a"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Ignores Cover" id="27be-abe3-24fa-11a0" hidden="false" type="rule" targetId="4640-43e7-30b-215a"/>
+                    <infoLink name="Pistol" id="cfc2-7efc-1632-63c9" hidden="false" type="rule" targetId="8bf7-8812-923d-29e4"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -2795,10 +2854,17 @@ In either case, if it does, until the end of the turn, this unit is not eligible
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="10d5-c035-1dbf-146b" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="97fa-7706-61c2-8f46" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="9b4-26b2-9e6d-a62d" name="Sicarian Infiltrators" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -3077,7 +3143,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="b687-7337-b110-85c3" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="31cd-56c4-2366-b514"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="4a69-027a-5708-20a7" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3085,7 +3151,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="31cd-56c4-2366-b514"/>
+            <modifier type="set" value="1" field="4a69-027a-5708-20a7"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -3093,7 +3159,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="31cd-56c4-2366-b514"/>
+            <modifier type="set" value="1" field="4a69-027a-5708-20a7"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3297,7 +3363,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="372d-8a46-b26d-8f87" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2477-2173-44e7-cf50"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="2638-738e-b190-60a3" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3305,7 +3371,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="2477-2173-44e7-cf50"/>
+            <modifier type="set" value="1" field="2638-738e-b190-60a3"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -3313,7 +3379,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="2477-2173-44e7-cf50"/>
+            <modifier type="set" value="1" field="2638-738e-b190-60a3"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3344,7 +3410,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
         </profile>
         <profile id="3afd-1276-beb2-adf7" name="Servo-skull Uplink" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the start of any phase, you can select one friendly Skitarii unit that is Battle-shocked and within 6&quot; of this model. That unit is no longer Battle-shocked.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, at the start of any phase, you can select one friendly SKITARII unit that is Battle-shocked and within 6&quot; of this model. That unit is no longer Battle-shocked.</characteristic>
           </characteristics>
         </profile>
         <profile id="02cd-c8dd-a26b-15ef" name="Invulnerable Save" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
@@ -3403,7 +3469,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5a39-ec55-33dc-f946"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="5b27-e756-7f97-7434" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3424,7 +3490,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="5a39-ec55-33dc-f946"/>
+            <modifier type="set" value="1" field="5b27-e756-7f97-7434"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -3432,7 +3498,7 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="2" field="5a39-ec55-33dc-f946"/>
+            <modifier type="set" value="2" field="5b27-e756-7f97-7434"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3525,42 +3591,36 @@ In either case, if it does, until the end of the turn, this unit is not eligible
                 <entryLink import="true" name="Mechanicus pistol" hidden="false" type="selectionEntry" id="81fb-ddc2-edef-4aab" targetId="2b1f-798d-9bca-4ad9"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Melee Weapon" hidden="false" id="537-47d-fe18-86cd">
-              <entryLinks>
-                <entryLink import="true" name="Close combat weapon" hidden="false" type="selectionEntry" id="c88b-f6ce-fc07-df7a" targetId="2f1a-2fc7-2843-549d"/>
-              </entryLinks>
-              <selectionEntries>
-                <selectionEntry id="5e8b-2f7f-6ef5-42e3" name="Alpha combat weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="532e-9f57-5eb5-5a29" name="Alpha combat weapon" hidden="false" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons">
-                      <characteristics>
-                        <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
-                        <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
-                        <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
-                        <characteristic name="S" typeId="ab33-d393-96ce-ccba">5</characteristic>
-                        <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
-                        <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
-                        <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b4b-f3fe-5e21-adb4"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5e8-89be-b197-a65d"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e4f-c741-218e-7f1d"/>
-              </constraints>
-            </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alpha combat weapon" hidden="false" id="5e8b-2f7f-6ef5-42e3" collective="false">
+              <profiles>
+                <profile name="Alpha combat weapon" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="532e-9f57-5eb5-5a29">
+                  <characteristics>
+                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                    <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
+                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">5</characteristic>
+                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
+                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b4b-f3fe-5e21-adb4"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Close combat weapon" hidden="false" id="c88b-f6ce-fc07-df7a" type="selectionEntry" targetId="2f1a-2fc7-2843-549d"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3569,13 +3629,6 @@ In either case, if it does, until the end of the turn, this unit is not eligible
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0748-8852-2e32-1a8f" type="min"/>
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4db-c782-1afb-be64" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="cc36-b813-1929-34e1" name="Invulnerable Save" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
-              <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <selectionEntries>
             <selectionEntry id="22b3-9c84-0982-8627" name="Skitarii Ranger w/ transuranic arquebus" hidden="false" collective="false" import="true" type="model">
               <costs>
@@ -3870,7 +3923,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="c3a1-ece1-2389-d6fc" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="646c-5cda-89c8-08c9"/>
+        <constraint type="max" value="6" field="selections" scope="force" shared="true" id="4a42-4de5-c54e-fbe6" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3891,7 +3944,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="3" field="646c-5cda-89c8-08c9"/>
+            <modifier type="set" value="3" field="4a42-4de5-c54e-fbe6"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -3899,7 +3952,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="3" field="646c-5cda-89c8-08c9"/>
+            <modifier type="set" value="3" field="4a42-4de5-c54e-fbe6"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4050,19 +4103,6 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="3e45-6c2d-267f-b7cf" name="Skitarii Vanguard w/ arc rifle" hidden="false" collective="false" import="true" type="model">
-              <profiles>
-                <profile id="1fa2-87ef-752c-379c" name="Arc rifle" hidden="false" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons">
-                  <characteristics>
-                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">30&quot;</characteristic>
-                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
-                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
-                    <characteristic name="S" typeId="2229-f494-25db-c5d3">8</characteristic>
-                    <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
-                    <characteristic name="D" typeId="a354-c1c8-a745-f9e3">D3</characteristic>
-                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Anti-vehicle 4+, Devastating wounds, Rapid fire 1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
@@ -4322,6 +4362,10 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="95"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="f4e4-5bc-bcea-6d16" targetId="7a21-a958-e47d-5c0d"/>
@@ -4331,7 +4375,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="0f62-c24b-9683-54a1" type="selectionEntry" targetId="3ffa-e8d5-a54a-fcac"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="c54a-d26d-6473-92d6"/>
+        <constraint type="max" value="6" field="selections" scope="force" shared="true" id="b927-203f-b50e-6162" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4352,7 +4396,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="3" field="c54a-d26d-6473-92d6"/>
+            <modifier type="set" value="3" field="b927-203f-b50e-6162"/>
           </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
@@ -4360,7 +4404,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="f44b-f954-695d-acad" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="3" field="c54a-d26d-6473-92d6"/>
+            <modifier type="set" value="3" field="b927-203f-b50e-6162"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4512,6 +4556,9 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       <entryLinks>
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="95ee-4601-8c92-b047" targetId="eea3-949a-21d2-d33f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="75f2-ff45-4dd3-f97d" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -4582,6 +4629,9 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <entryLink import="true" name="Armoured hull" hidden="false" type="selectionEntry" id="9cc2-72a4-c4-60aa" targetId="eea3-949a-21d2-d33f"/>
         <entryLink import="true" name="Cognis heavy stubber array" hidden="false" type="selectionEntry" id="4ed3-afa8-1416-9c20" targetId="5e69-8258-9ee5-3b6b"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="6" field="selections" scope="force" shared="true" id="31bf-b391-7a5f-17c7" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -4687,7 +4737,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
                         <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
                         <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
                         <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover</characteristic>
+                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Pistol</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4744,6 +4794,9 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         <infoLink name="Stealth" hidden="false" type="rule" id="f172-e613-bcd5-7da" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="aed5-a853-ce89-2ae8" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="2451-aff7-e605-ca04" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -4856,7 +4909,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
                     <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
                     <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
                     <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover</characteristic>
+                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Pistol</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4930,6 +4983,10 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Omnissian axe" hidden="false" id="4587-20b2-c305-10c6">
@@ -4953,7 +5010,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="c453-ca29-fe42-fa2e"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="ff99-d8df-a738-eb63" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4974,8 +5031,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="c453-ca29-fe42-fa2e"/>
-            <modifier type="set" value="0" field="c453-ca29-fe42-fa2e">
+            <modifier type="set" value="1" field="ff99-d8df-a738-eb63"/>
+            <modifier type="set" value="0" field="ff99-d8df-a738-eb63">
               <conditions>
                 <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -4987,8 +5044,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="c453-ca29-fe42-fa2e"/>
-            <modifier type="set" value="0" field="c453-ca29-fe42-fa2e">
+            <modifier type="set" value="1" field="ff99-d8df-a738-eb63"/>
+            <modifier type="set" value="0" field="ff99-d8df-a738-eb63">
               <conditions>
                 <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5071,6 +5128,10 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Omnissian axe" hidden="false" id="f209-cd62-f531-edc0">
@@ -5103,7 +5164,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
                 <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
                 <characteristic name="A" typeId="2337-daa1-6682-b110">1</characteristic>
                 <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
-                <characteristic name="S" typeId="ab33-d393-96ce-ccba">8</characteristic>
+                <characteristic name="S" typeId="ab33-d393-96ce-ccba">6</characteristic>
                 <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-2</characteristic>
                 <characteristic name="D" typeId="3254-9fe6-d824-513e">2</characteristic>
                 <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">Extra Attacks</characteristic>
@@ -5116,7 +5177,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="9539-cd35-0573-04e9"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="5eca-e9d3-99f0-ae09" includeChildSelections="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -5124,8 +5185,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="9539-cd35-0573-04e9"/>
-            <modifier type="set" value="0" field="9539-cd35-0573-04e9">
+            <modifier type="set" value="1" field="5eca-e9d3-99f0-ae09"/>
+            <modifier type="set" value="0" field="5eca-e9d3-99f0-ae09">
               <conditions>
                 <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5137,8 +5198,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="9539-cd35-0573-04e9"/>
-            <modifier type="set" value="0" field="9539-cd35-0573-04e9">
+            <modifier type="set" value="1" field="5eca-e9d3-99f0-ae09"/>
+            <modifier type="set" value="0" field="5eca-e9d3-99f0-ae09">
               <conditions>
                 <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5270,6 +5331,10 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
       </entryLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Omnissian staff" hidden="false" id="ed2c-31b2-8f67-9f05">
@@ -5293,7 +5358,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="71db-a6f5-7284-5713"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="8a7a-1aac-0c4d-cc03" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -5314,8 +5379,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="71db-a6f5-7284-5713"/>
-            <modifier type="set" value="0" field="71db-a6f5-7284-5713">
+            <modifier type="set" value="1" field="8a7a-1aac-0c4d-cc03"/>
+            <modifier type="set" value="0" field="8a7a-1aac-0c4d-cc03">
               <conditions>
                 <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5327,8 +5392,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="71db-a6f5-7284-5713"/>
-            <modifier type="set" value="0" field="71db-a6f5-7284-5713">
+            <modifier type="set" value="1" field="8a7a-1aac-0c4d-cc03"/>
+            <modifier type="set" value="0" field="8a7a-1aac-0c4d-cc03">
               <conditions>
                 <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5432,7 +5497,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
         </selectionEntry>
       </selectionEntries>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d3f1-8822-5285-e124"/>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="3d78-bd1d-8c32-68d6" includeChildSelections="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -5453,8 +5518,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="0591-34e3-2836-f46e" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="d3f1-8822-5285-e124"/>
-            <modifier type="set" value="0" field="d3f1-8822-5285-e124">
+            <modifier type="set" value="1" field="3d78-bd1d-8c32-68d6"/>
+            <modifier type="set" value="0" field="3d78-bd1d-8c32-68d6">
               <conditions>
                 <condition type="greaterThan" value="1" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5466,8 +5531,8 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="db37-19bc-3450-585f" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
           <modifiers>
-            <modifier type="set" value="1" field="d3f1-8822-5285-e124"/>
-            <modifier type="set" value="0" field="d3f1-8822-5285-e124">
+            <modifier type="set" value="1" field="3d78-bd1d-8c32-68d6"/>
+            <modifier type="set" value="0" field="3d78-bd1d-8c32-68d6">
               <conditions>
                 <condition type="greaterThan" value="2" field="selections" scope="roster" childId="59a9-b5cc-7c11-aaad" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
@@ -5493,7 +5558,7 @@ as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.</characteristi
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model must be attached to the following unit:
 ■ Kastelan Robots
 
-You must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models havealready been attached to it. In such cases, if that bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round.</characteristic>
+You must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models havealready been attached to it. In such cases, if that bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round. While attached to a Kastelan Robots unit, this model loses the INFANTRY keyword.</characteristic>
           </characteristics>
         </profile>
         <profile id="4016-04e6-9751-89e3" name="Battle Protocols" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
@@ -5555,6 +5620,9 @@ You must attach this model to a Kastelan Robots unit, even if one or more other 
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="3a22-994f-ecfa-2fd1" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -5886,6 +5954,9 @@ You must attach this model to a Kastelan Robots unit, even if one or more other 
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="7392-436b-e50b-243a" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="c029-f7a0-e353-3824" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="7774-a50b-cb1e-8372" name="Secutarii Peltasts [Legends]" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -6267,6 +6338,9 @@ You must attach this model to a Kastelan Robots unit, even if one or more other 
       <infoLinks>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="621c-a19e-3f15-1705" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="be0a-ee37-8cc6-c015" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="3639-75ba-cab2-c159" name="Terrax-Pattern Termite [Legends]" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -6463,6 +6537,9 @@ You must attach this model to a Kastelan Robots unit, even if one or more other 
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="ff44-7bd9-e07f-c6b9" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Detachment" hidden="false" id="c82f-1b42-946-9c9a">
       <constraints>
@@ -6550,6 +6627,47 @@ Each time a CULT MECHANICUS unit from your army is selected to fight, if that u
               <rules>
                 <rule name="Cyber Psalm-Programming" hidden="false" id="6cd2-7fa1-3feb-5b8b">
                   <description>LEGIO CYBERNETICA units from your army gain the Doctrina Imperatives army rule.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Haloscreed Battleclade" hidden="false" id="ce65-6b89-4a0e-4f3b">
+              <rules>
+                <rule name="Noospheric Transference" id="d8b4-a13d-c7da-cfb7" hidden="false">
+                  <description>In your Command phase, select one ormore units from your army (including units that are embarked withinTransports). The maximum number of units you can select depends on the battle size, as follows:
+
+
+INCURSION: 1 UNIT
+STRIKE FORCE: 2 UNITS
+ONSLAUGHT: 3 UNITS
+
+
+Until the start of your next Commandphase, those units gain the Halo Override
+keyword. Then, select one of the Override abilities below. Until the start of your next
+Command phase, units from your army with the Halo Override keyword have the
+selected Override ability:
+
+
+Electromotive Energisation
+Add 2&quot; to the Move characteristic ofmodels in this unit.
+
+
+Microactuator Bracing
+Add 1 to the Toughness characteristic of models in this unit.
+
+
+Predation Protocols
+This unit is eligible to declare a charge in a turn in which it Advanced.
+
+
+Muted Servomotors
+Models in this unit have the Stealth ability.</description>
                 </rule>
               </rules>
               <modifiers>
@@ -6693,6 +6811,9 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b27f-cd94-268c-88fc" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Armoured hull" hidden="false" id="eea3-949a-21d2-d33f">
       <constraints>
@@ -6828,7 +6949,7 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
       <profiles>
         <profile id="f4a5-9d1d-2718-62e5" name="Torsion cannon" hidden="false" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons">
           <characteristics>
-            <characteristic name="Range" typeId="9896-9419-16a1-92fc">48&quot;</characteristic>
+            <characteristic name="Range" typeId="9896-9419-16a1-92fc">36&quot;</characteristic>
             <characteristic name="A" typeId="3bb-c35f-f54-fb08">D3</characteristic>
             <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
             <characteristic name="S" typeId="2229-f494-25db-c5d3">6</characteristic>
@@ -7028,6 +7149,10 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
     <selectionEntry type="unit" import="true" name="Sydonian Skatros" hidden="false" id="52e7-9347-3f16-9eec">
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="50"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="9cfd-1c32-585f-7d5c" id="a397-ca77-99b3-62e6" primary="true" name="Character"/>
@@ -7056,6 +7181,11 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
         <profile name="Dread Snipers" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="daae-3991-9097-425a">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sydonian Sentinel" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4248-c55c-19a7-e46d">
+          <characteristics>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model cannot be your WARLORD.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7144,6 +7274,9 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
           </constraints>
         </entryLink>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="83cc-c050-bf7c-dc0e" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -7202,7 +7335,10 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
           <selectionEntries>
             <selectionEntry id="4986-3b55-f-419e" name="Sydonian Dragoon (Radium jezzail &amp; phosphor serpenta)" hidden="false" collective="false" import="true" type="model">
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
               </costs>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Phosphor serpenta" hidden="false" id="5e77-5d34-8fdd-e7c0" collective="true">
@@ -7215,7 +7351,7 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
                         <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
                         <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
                         <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover</characteristic>
+                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Pistol</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7262,7 +7398,11 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
             </selectionEntry>
             <selectionEntry id="e0e4-319c-d8a8-a18a" name="Sydonian Dragoon (Radium jezzail)" hidden="false" collective="false" import="true" type="model">
               <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
               </costs>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Radium jezzail" hidden="false" id="9212-f4c3-5f8d-68b6" collective="true">
@@ -7301,7 +7441,11 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
       <infoLinks>
         <infoLink name="Deadly Demise" hidden="false" type="rule" id="6426-5828-2f9c-ff0f" targetId="b68a-5ded-65ac-98c">
@@ -7312,7 +7456,20 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
         <infoLink name="Stealth" hidden="false" type="rule" id="9dff-defa-50e9-dfa3" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Doctrina Imperatives" hidden="false" type="rule" id="fd54-fdd2-2501-524e" targetId="7a21-a958-e47d-5c0d"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="6c9b-164e-6819-094e" includeChildSelections="true"/>
+      </constraints>
       <modifiers>
+        <modifier type="set" value="100" field="51b2-306e-1021-d207">
+          <conditions>
+            <condition type="atLeast" value="2" field="selections" scope="d99a-6563-8c08-23c" childId="model" shared="true" includeChildSelections="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="150" field="51b2-306e-1021-d207">
+          <conditions>
+            <condition type="atLeast" value="3" field="selections" scope="d99a-6563-8c08-23c" childId="model" shared="true" includeChildSelections="false"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
@@ -8063,6 +8220,133 @@ Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased acco
             <profile name="Arch Negator" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c84f-f2a3-5d47-895a">
               <characteristics>
                 <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Transoracular Dyad Wafers" hidden="false" id="c672-929d-3d04-ace4">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce65-6b89-4a0e-4f3b" shared="true" id="e6b0-d009-f844-93cb" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5418-f86b-6e76-c5a" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="6785-add8-89f-d960" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Transoracular Dyad Wafers" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="96b7-429d-f947-3015">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Cybernetica Datasmith model only. When the bearer is attached to a Kastelan Robots unit, until
+the end of the battle, models in that unit have the Doctrina Imperatives ability and gain the Halo
+Override keyword. This unit cannot be selected when selecting units as part of the Noospheric Transference Detachment rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Cognitive Reinforcement" hidden="false" id="6825-6a1a-1398-2e0d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce65-6b89-4a0e-4f3b" shared="true" id="cd6c-81bb-eb5c-a876" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5418-f86b-6e76-c5a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6785-add8-89f-d960" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="35"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Cognitive Reinforcement" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="c166-36f2-3110-44ee">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Mechanicus model only (excluding Cybernetica Datasmith models). 
+The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sanctified Ordnance" hidden="false" id="f4be-4aee-8549-c961">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce65-6b89-4a0e-4f3b" shared="true" id="fae8-24d2-86b4-f99e" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5418-f86b-6e76-c5a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Santified Ordnance" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1bb0-0d70-be66-2ea9">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Mechanicus model only. 
+Add 6&quot; to the range characteristic of ranged weapons equipped by models in the bearer’s unit and, each time a Hazardous test is taken for that unit, you can re‑roll the result.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Inloaded Lethality" hidden="false" id="d484-3dab-c879-c717">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce65-6b89-4a0e-4f3b" shared="true" id="e3a8-31b2-ec86-8c60" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5418-f86b-6e76-c5a" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c39d-5908-6bc1-8212" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="63f-669c-2b61-cb04" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Inloaded Lethality" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="f97a-e9ae-d98c-d824">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Tech‑Priest Dominus or Tech‑Priest Manipulus model only. 
+Add 3 to the Attacks characteristic of the bearer’s melee weapons and add 1 to the Damage characteristic of the bearer’s melee weapons.</characteristic>
               </characteristics>
             </profile>
           </profiles>
