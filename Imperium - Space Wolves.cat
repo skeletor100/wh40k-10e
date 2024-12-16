@@ -6985,7 +6985,7 @@ Strategic Reserves.</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry name="Ulric the Slayer" hidden="false" id="594a-6b8b-3a63-14c5">
+    <categoryEntry name="Ulrik the Slayer" hidden="false" id="594a-6b8b-3a63-14c5">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a3fa-f659-b61-d66b" includeChildSelections="true"/>
       </constraints>

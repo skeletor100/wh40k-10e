@@ -1575,7 +1575,7 @@ If your army includes one or more of the Vehicle models listed below, Sergeant C
         <categoryLink targetId="d777-b754-4fb3-a65b" id="db42-f6d5-176f-f495" primary="false" name="Titus"/>
         <categoryLink targetId="6e7-40c-58d9-e402" id="9eba-e92c-3ee5-fca8" primary="false" name="Faction: Adeptus Astartes"/>
         <categoryLink targetId="1a2d-2f00-c054-4dcb" id="4e75-0b85-5c94-2ea4" primary="false" name="Faction: Ultramarines"/>
-        <categoryLink targetId="5179-8ede-45e3-49a2" id="9313-f5c5-e5c7-2602" primary="false" name="Tacticus"/>
+        <categoryLink targetId="5179-8ede-45e3-49a2" id="6d93-57db-3907-dd66" primary="false" name="Tacticus"/>
       </categoryLinks>
       <profiles>
         <profile name="Lieutenant Titus" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="d094-610c-5bab-b5f7">

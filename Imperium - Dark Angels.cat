@@ -2671,7 +2671,7 @@
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Great Weapon of the Unforgiven" hidden="false" id="eb18-22be-ad2a-64a2">
                       <profiles>
-                        <profile name="Flail of the Unforgiven" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="1011-2c75-98ea-8655">
+                        <profile name="Great Weapon of the Unforgiven" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="1011-2c75-98ea-8655">
                           <characteristics>
                             <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
                             <characteristic name="A" typeId="2337-daa1-6682-b110">5</characteristic>

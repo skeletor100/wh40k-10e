@@ -4559,6 +4559,10 @@ You can attach this model to one of the above units even if one other CHARACTER 
           <costs>
             <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Warlord" hidden="false" id="3f41-6cf7-431a-c2e0" collective="false" targetId="1a34-f1cc-ec01-ca32" type="selectionEntry"/>
+            <entryLink import="true" name="Enhancements" hidden="false" id="453c-d452-65c4-31ce" collective="false" targetId="f4dd-5662-f7ca-a614" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry id="3e27-e482-1d9-2037" name="Mindwitch" hidden="false" collective="false" import="true" type="model">
           <constraints>

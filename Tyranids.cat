@@ -7467,8 +7467,12 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
             <profile name="Leader-beasts" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2fad-3a56-b66f-a0e6">
               <characteristics>
                 <characteristic name="Description" typeId="9b8f-694b-e5e-b573">TYRANID WARRIORS (see below) and WINGED TYRANID PRIME units from your army have a 5+ invulnerable save.
-
-TYRANID WARRIORS WITH RANGED BIO‑WEAPONS and TYRANID WARRIORS WITH MELEE BIO‑WEAPONS units from your army gain the TYRANID WARRIORS and BATTLELINE keywords, and while such a unit is not Battle‑shocked, TYRANID WARRIORS models in that unit have an Objective Control characteristic of 3.</characteristic>
+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Keywords" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="11a9-1ff2-8c17-d848">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">TYRANID WARRIORS WITH RANGED BIO‑WEAPONS and TYRANID WARRIORS WITH MELEE BIO‑WEAPONS units from your army gain the TYRANID WARRIORS and BATTLELINE keywords, and while such a unit is not Battle‑shocked, TYRANID WARRIORS models in that unit have an Objective Control characteristic of 3.</characteristic>
               </characteristics>
             </profile>
           </profiles>

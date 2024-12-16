@@ -517,12 +517,6 @@ Sceptre of Anointing: Improve the Armour Penetration characteristic of melee wea
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4e33-906e-881e-be2b"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Pyreblaster" hidden="false" type="selectionEntry" id="bbc0-a57a-a8be-27de" targetId="bcf-9f6b-f51e-6332">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="329f-c2bb-b05-f8c9"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8dd5-d3b2-4204-84e4"/>
-                      </constraints>
-                    </entryLink>
                     <entryLink import="true" name="Close Combat Weapon" hidden="false" type="selectionEntry" id="5aca-4274-fe47-302d" targetId="6c7d-af5b-482-6fbe">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af76-815b-397a-d2e4"/>

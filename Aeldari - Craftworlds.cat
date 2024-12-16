@@ -62,7 +62,7 @@
     </entryLink>
     <entryLink import="true" name="Warlock Conclave" hidden="false" type="selectionEntry" id="95cc-3f6-f56b-3638" targetId="d61-c058-6bd1-112f"/>
     <entryLink import="true" name="Warlock Skyrunner Conclave" hidden="false" type="selectionEntry" id="1eaa-4ce0-b46e-f5" targetId="ecfe-8994-b61e-f1c5"/>
-    <entryLink import="true" name="Warlock Skyrunner" hidden="false" type="selectionEntry" id="7fe1-5b20-b119-a9f" targetId="b98a-4fbb-a3d8-1ada"/>
+    <entryLink import="true" name="Warlock Skyrunner" hidden="false" type="selectionEntry" id="7fe1-5b20-b119-a9f" targetId="f52d-1814-7d66-1f7b"/>
     <entryLink import="true" name="Warp Spiders" hidden="false" type="selectionEntry" id="e43e-9113-736d-cdf6" targetId="57ec-47a8-a59a-6a46"/>
     <entryLink import="true" name="Wave Serpent" hidden="false" type="selectionEntry" id="c302-5769-871e-853b" targetId="ad88-f706-318c-e70e"/>
     <entryLink import="true" name="Webway Gate" hidden="false" type="selectionEntry" id="bdf5-36f4-8fc-1358" targetId="2f21-23a3-48e0-5788"/>
