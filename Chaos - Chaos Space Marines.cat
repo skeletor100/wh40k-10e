@@ -19569,6 +19569,9 @@ You can attach this model to one of the above units even if one other CHARACTER 
         <infoLink name="Stealth" id="2338-ac52-b49a-4caa" hidden="false" type="rule" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Dark Pacts" id="eb14-1727-d32e-a018" hidden="false" targetId="fd69-68cc-5d63-c84d" type="rule"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Mark of Chaos" hidden="false" id="2364-5140-f332-68f5" type="selectionEntryGroup" targetId="5581-5d38-90b8-f8cd"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="c78f-5ac6-d43a-893d" collective="false">
       <constraints>
@@ -20736,7 +20739,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="5581-5d38-90b8-f8cd" name="Mark of Chaos" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="5581-5d38-90b8-f8cd" name="Mark of Chaos" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
       <constraints>
         <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4ae-1dc8-3dfe-e03a" type="min"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84a9-b121-4012-6ffc" type="max"/>

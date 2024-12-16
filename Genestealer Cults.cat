@@ -5619,7 +5619,11 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Show/Hide Options" hidden="false" type="selectionEntry" id="fab-583a-af-46f7" targetId="e8ef-836a-a9d1-901d"/>
+    <entryLink import="true" name="Show/Hide Options" hidden="false" type="selectionEntry" id="fab-583a-af-46f7" targetId="e8ef-836a-a9d1-901d">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="d278-ad8b-493e-31b6" targetId="4ac9-fd30-1e3d-b249" primary="true"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Gorgon Heavy Transport [Legends]" hidden="false" type="selectionEntry" id="b691-ac32-3768-769d" targetId="5d8e-2b2a-6ed1-8309">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -6037,11 +6041,6 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
     </entryLink>
     <entryLink import="true" name="Stormsword" hidden="false" id="cfaa-5d07-b905-1eeb" type="selectionEntry" targetId="67bc-a760-7ed5-9952">
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="0a59-1d64-257c-04fb" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="0a59-1d64-257c-04fb" shared="true" includeChildForces="true" includeChildSelections="true"/>
