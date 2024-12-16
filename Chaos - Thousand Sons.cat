@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="35" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="36" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="015a-6212-d737-9044" name="Index - Thousand Sons"/>
   </publications>
@@ -334,7 +334,6 @@
               <infoLinks>
                 <infoLink name="Flow of Magic" id="f955-110f-964e-8e29" hidden="false" type="rule" targetId="9fa6-3c29-04b1-b428"/>
               </infoLinks>
-            </selectionEntry>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -342,6 +341,7 @@
                   </conditions>
                 </modifier>
               </modifiers>
+            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Chosen Cabal" hidden="false" id="4667-97b0-afff-e270" collective="false">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
@@ -390,27 +390,6 @@
               <rules>
                 <rule name="Methodical Conquest" id="b3ae-9542-f84f-4696" hidden="false">
                   <description>Each time a THOUSAND SONS models from your army makes an attack while firing Overwatch, an unmodified Hit roll of 5+ is required to score a hit, instead of an unmodified 6. In addition, SCARAB OCCULT TERMINATORS units from your army can perform the Set Overwatch Tactical Manoeuvre in the same turn as performing the Secure Site Tactical Manoeuvre</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hexwarp Thrallband" hidden="false" id="9be9-63fd-1b18-008a" collective="false">
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <rules>
-                <rule name="Flow of Magic" id="aae1-8485-4b6d-2afc" hidden="false">
-                  <description>Certain areas of the battlefield are within your army’s Flow of Magic, as follows:
-■ Your deployment zone is always within your army’s Flow of Magic.
-■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Flow of Magic.
-■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Flow of Magic.
-Each time a Thousand Sons model from your army makes a Psychic Attack, re‑roll a Wound roll of 1. If such a model is wholly within your army’s Flow of Magic, each time it makes a Psychic Attack, add 1 to the Wound roll instead</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -5967,7 +5946,6 @@ Wound roll.</characteristic>
           </constraints>
         </selectionEntry>
       </selectionEntries>
-
       <entryLinks>
         <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="c74d-3b8c-8a3d-111b" type="selectionEntry" targetId="a3ad-f479-58c8-c846">
           <modifiers>

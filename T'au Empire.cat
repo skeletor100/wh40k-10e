@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="64" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="65" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
   <rules>
     <rule name="For The Greater Good" hidden="false" id="eeb6-c42-48f7-cc21">
       <description>If your Army Faction is T’AU EMPIRE, then in your Shooting phase units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy they are targeting is called their Spotted unit.
@@ -6404,22 +6404,6 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="4f5c-a782-73b1-531c" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="4da3-2f39-d216-4355" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="e834-29e8-9819-c072" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="6" field="e3e2-c67f-1b6f-4c79">
           <conditions>
@@ -6484,7 +6468,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="self" childId="d1a5-4297-168b-11cd" shared="true" roundUp="false" includeChildSelections="true"/>
           </repeats>
-		</modifier>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
@@ -6506,6 +6490,20 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="be68-ffa6-5da8-60d4" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="e834-29e8-9819-c072" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -8137,7 +8135,6 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           </conditionGroups>
         </modifier>
       </modifiers>
-
       <entryLinks>
         <entryLink import="true" name="Crusade" hidden="false" id="0366-67d7-27e8-3f46" type="selectionEntryGroup" targetId="a877-78a7-06f2-f04d" sortIndex="1">
           <entryLinks>
@@ -8907,22 +8904,6 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="26e6-5f0f-6576-f9bd" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="append" value="(Battle-ready)" field="name">
           <conditions>
@@ -8993,7 +8974,6 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
             </conditionGroup>
           </conditionGroups>
         </modifier>
-
         <modifier type="set" value="60" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="equalTo" value="2" field="selections" scope="self" childId="model" shared="true" includeChildSelections="true"/>
@@ -9025,6 +9005,20 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="3b5c-6027-5384-5e93" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="26e6-5f0f-6576-f9bd" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
@@ -13944,22 +13938,6 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="ae55-8408-77d7-d995" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="6" field="8c98-1677-8a24-dd4e">
           <conditions>
@@ -14041,6 +14019,20 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="9064-4463-99ca-f503" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="ae55-8408-77d7-d995" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -14769,22 +14761,6 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="c019-cc42-63bb-2242" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="6" field="a974-d7ab-d42e-6880">
           <conditions>
@@ -14881,6 +14857,20 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="f863-933f-6d54-de11" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="c019-cc42-63bb-2242" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
@@ -15634,11 +15624,11 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
               </conditionGroups>
             </modifier>
           </modifiers>
+        </entryLink>
         <entryLink import="true" name="Crusade" hidden="false" id="070f-9a3e-f1b3-2bdd" type="selectionEntryGroup" targetId="a877-78a7-06f2-f04d">
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="8851-cc0f-5429-3d9e" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
-        </entryLink>
         </entryLink>
       </entryLinks>
       <modifierGroups>
@@ -24013,22 +24003,6 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="b9dd-db01-5380-a864" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="6" field="15f9-07e8-81ba-5197">
           <conditions>
@@ -24135,6 +24109,20 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="f616-795f-f9c3-e0d6" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="b9dd-db01-5380-a864" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -35844,22 +35832,6 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="25aa-e8a7-ca59-0fbb" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="append" value="(Battle-ready)" field="name">
           <conditions>
@@ -35978,6 +35950,20 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="6574-cec1-e105-73e8" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="25aa-e8a7-ca59-0fbb" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -36149,23 +36135,6 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
       </costs>
-
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="849a-5a79-96af-d466" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Crisis Fireknife Shas’vre" id="8a97-0161-5e7c-076c" hidden="false" sortIndex="2">
           <selectionEntries>
@@ -36694,6 +36663,20 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
             <entryLink import="true" name="Battle Traits" hidden="false" id="3775-01ee-fd4c-fc1e" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="849a-5a79-96af-d466" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Crisis Starscythe Battlesuits" hidden="false" id="fb32-c683-b38f-d339">
@@ -36833,72 +36816,6 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
                     <condition type="atLeast" value="1" field="selections" scope="ancestor" childId="3ef0-a48a-cafc-ce23" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Crisis Starscythe Shas’ui" hidden="false" id="18ef-28de-78cd-e9e1" collective="false" defaultAmount="1,1">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3374-48db-6618-62a3"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3cdf-2b81-e792-9c72"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Drones (0-2)" hidden="false" type="selectionEntryGroup" id="caf3-77b7-405a-a0cc" targetId="b128-4886-a9ca-23c7" collective="false"/>
-            <entryLink import="true" name="Battlesuit fists" hidden="false" type="selectionEntry" id="dd27-dde5-4660-bdba" targetId="d357-859f-3b61-42f1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b39-687d-29f6-c865"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15c9-1e2-7434-52eb"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Weapons" hidden="false" id="a1f2-2246-32c2-b3b7">
-              <entryLinks>
-                <entryLink import="true" name="Burst cannon" hidden="false" id="e0ad-d61c-64db-98f5" type="selectionEntry" targetId="1790-25b7-8264-f6ba">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6426-ec1b-5928-ccfb" includeChildSelections="false"/>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2deb-f036-2e6d-44ac" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="0" field="6426-ec1b-5928-ccfb"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="T&apos;au flamer" hidden="false" id="aec0-6731-a113-a8c5" type="selectionEntry" targetId="6e8-cf2e-cedd-9028">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dca8-a8b9-d39d-8859" includeChildSelections="false"/>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="32f5-142d-f51d-edf8" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="0" field="dca8-a8b9-d39d-8859"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b31a-2dee-2c7d-3324" includeChildSelections="false"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f794-f088-ffd5-5d32" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <profiles>
-            <profile name="Crisis Starscythe Battlesuits" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="6d47-e3be-3c23-7abc">
-              <characteristics>
-                <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">10&quot;</characteristic>
-                <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">5</characteristic>
-                <characteristic name="SV" typeId="450-a17e-9d5e-29da">3+</characteristic>
-                <characteristic name="W" typeId="750a-a2ec-90d3-21fe">4</characteristic>
-                <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
-                <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
-              </characteristics>
-              <modifiers>
                 <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
                   <conditionGroups>
                     <conditionGroup type="or">
@@ -37353,22 +37270,6 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="22a6-5138-5a9b-fbfc" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="append" value="(Battle-ready)" field="name">
           <conditions>
@@ -37487,6 +37388,20 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
           <entryLinks>
             <entryLink import="true" name="Battle Traits" hidden="false" id="c9ba-cc61-c907-9364" type="selectionEntryGroup" targetId="3743-d313-0fa1-54f4"/>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="true" id="22a6-5138-5a9b-fbfc" type="selectionEntry" targetId="17e2-f419-fcfb-64d1">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>

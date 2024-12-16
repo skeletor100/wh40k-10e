@@ -10018,25 +10018,6 @@ Designer’s Note: Place an Ammo Runt token next to the unit, removing it after 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Snazzgun" hidden="false" id="b258-3222-d4f-99b7" collective="true">
-      <profiles>
-        <profile name="Snazzgun" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="eccd-214-7bc-4d9c">
-          <characteristics>
-            <characteristic name="Range" typeId="9896-9419-16a1-92fc">24&quot;</characteristic>
-            <characteristic name="A" typeId="3bb-c35f-f54-fb08">3</characteristic>
-            <characteristic name="BS" typeId="94d-8a98-cf90-183e">5+</characteristic>
-            <characteristic name="S" typeId="2229-f494-25db-c5d3">6</characteristic>
-            <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
-            <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-            <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Heavy, Sustained Hits 1</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Heavy" hidden="false" type="rule" id="e513-3f6c-1405-d3b1" targetId="1202-10a8-78e9-4c67"/>
-        <infoLink name="Sustained Hits" hidden="false" type="rule" id="7e36-a63f-cf84-97b2" targetId="1897-c22c-9597-12b1"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ghazghkull Thraka" hidden="false" id="4ea0-6b70-c17c-bc00">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3d9f-ad30-b750-5f5a"/>
@@ -13223,9 +13204,6 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
         <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="acd6-4e21-6bb3-efe4" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
-      </entryLinks>
       <modifiers>
         <modifier type="append" value="(Battle-ready)" field="name">
           <conditions>
@@ -13318,6 +13296,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
             <entryLink import="true" name="Battle Traits" hidden="false" id="62e4-3cc7-bacf-ffe4" type="selectionEntryGroup" targetId="1db3-e5eb-c7f2-fba7"/>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Boarding Action Warlord" hidden="false" id="acd6-4e21-6bb3-efe4" type="selectionEntry" targetId="a601-9a5a-83e7-907b"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Kustom Boosta-blasta" hidden="false" id="b803-bafc-2b52-160d">
@@ -42299,9 +42278,6 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <constraints>
-        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c394-e67b-d710-4b6f"/>
-      </constraints>
       <modifiers>
         <modifier type="append" value="(Battle-ready)" field="name">
           <conditions>
@@ -42389,6 +42365,7 @@ Designer’s Note: Place two Bomb Squig tokens next to the unit, removing one ea
         </modifierGroup>
       </modifierGroups>
       <constraints>
+        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c394-e67b-d710-4b6f"/>
         <constraint type="max" value="0" field="716d-91b7-d55a-1022" scope="self" shared="true" id="9126-eaaf-99f4-d1c0" includeChildSelections="true"/>
         <constraint type="min" value="0" field="716d-91b7-d55a-1022" scope="self" shared="true" id="e39b-885b-1ae2-6617" includeChildSelections="true"/>
         <constraint type="max" value="6" field="75bb-ded1-c86d-bdf0" scope="self" shared="true" id="075a-643f-0ecb-73e2" includeChildSelections="false"/>
