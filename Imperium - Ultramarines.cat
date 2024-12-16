@@ -1678,6 +1678,32 @@ If your army includes one or more of the Vehicle models listed below, Sergeant C
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be65-ec75-5f25-1a1e" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="be65-ec75-5f25-1a1e">
+              <conditions>
+                <condition type="greaterThan" value="2" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>

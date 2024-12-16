@@ -3987,11 +3987,22 @@ At the start of the Declare Battle Formations step, you can select one Hearthkyn
             <conditionGroup type="and">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a385-cc3a-7903-2c3d" shared="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="7894-ec29-034e-d4b8"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="3ca5-ff1a-193a-bd6f" collective="false">
       <constraints>
