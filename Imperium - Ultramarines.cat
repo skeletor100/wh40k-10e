@@ -522,12 +522,12 @@ Heroic Intervention.</characteristic>
         <selectionEntry type="model" import="true" name="Marneus Calgar" hidden="false" id="9ee9-60dc-e65-b0c5">
           <categoryLinks>
             <categoryLink targetId="4f3a-f0f7-6647-348d" id="c855-4504-4bdb-b7dd" primary="true" name="Epic Hero"/>
-            <categoryLink targetId="9cfd-1c32-585f-7d5c" id="f5ff-3e6e-99bf-e710" primary="false" name="Character"/>
             <categoryLink targetId="81f0-f40e-c36c-5a30" id="3ac-fe0c-b486-d4a8" primary="false" name="Gravis"/>
             <categoryLink targetId="5bd8-882d-302b-48f3" id="5bac-672d-533-1427" primary="false" name="Chapter Master"/>
             <categoryLink targetId="4623-32ee-a055-6db3" id="c4e7-68d6-edb2-9b1a" primary="false" name="Marneus Calgar"/>
             <categoryLink targetId="6e7-40c-58d9-e402" id="40b1-c86e-5360-e96b" primary="false" name="Faction: Adeptus Astartes"/>
             <categoryLink targetId="1a2d-2f00-c054-4dcb" id="ec3b-bbe2-8a2-ed56" primary="false" name="Faction: Ultramarines"/>
+            <categoryLink targetId="89b3-9c08-48da-ca09" id="3587-7126-d52a-4660" primary="false" name="Character Model"/>
           </categoryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e121-8138-bc71-4480"/>
@@ -601,6 +601,8 @@ Heroic Intervention.</characteristic>
       <categoryLinks>
         <categoryLink targetId="aff3-d6a3-2a95-9dc" id="f299-1703-3cc5-66e3" primary="false" name="Imperium"/>
         <categoryLink targetId="cf47-a0d7-7207-29dc" id="7252-c269-18e9-9a11" primary="false" name="Infantry"/>
+        <categoryLink targetId="9cfd-1c32-585f-7d5c" id="4767-894f-7dc1-99a8" primary="false" name="Character"/>
+        <categoryLink targetId="4f3a-f0f7-6647-348d" id="3318-35b1-e655-3084" primary="true" name="Epic Hero"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f645-ed9f-3464-84a0"/>

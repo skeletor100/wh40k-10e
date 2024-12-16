@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="sys-352e-adc2-7639-d6a9" name="Warhammer 40,000 10th Edition" revision="21" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="sys-352e-adc2-7639-d6a9" name="Warhammer 40,000 10th Edition" revision="22" battleScribeVersion="2.03" type="gameSystem">
   <publications>
     <publication id="48fc-15aa-b307-9443" name="10th Edition Core Rules" shortName="10th Ed Core"/>
     <publication name="Github" hidden="false" id="8db3-575d-91b-47f8" shortName="BSData/wh40k-10e" publisherUrl="https://github.com/BSData/wh40k-10e"/>
@@ -83,7 +83,9 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="9cfd-1c32-585f-7d5c" name="Character" hidden="false"/>
+    <categoryEntry id="9cfd-1c32-585f-7d5c" name="Character" hidden="false">
+      <comment>Unit</comment>
+    </categoryEntry>
     <categoryEntry id="4f3a-f0f7-6647-348d" name="Epic Hero" hidden="false"/>
     <categoryEntry id="cf47-a0d7-7207-29dc" name="Infantry" hidden="false"/>
     <categoryEntry id="9693-cf84-fe69-37a9" name="Monster" hidden="false"/>
@@ -347,6 +349,9 @@
     <categoryEntry name="Cerastus" hidden="false" id="481c-3b2e-5c99-c248"/>
     <categoryEntry name="Artillery" hidden="false" id="8cab-448d-37b7-32bc"/>
     <categoryEntry name="Order of Battle" id="ac7e-be7b-eb02-4752" hidden="false"/>
+    <categoryEntry name="Character Model" id="89b3-9c08-48da-ca09" hidden="false">
+      <comment>Model</comment>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="bb9d-299a-ed60-2d8a" name="Army Roster" hidden="false">
@@ -619,41 +624,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Order of Battle" hidden="false" id="eda7-8b4b-3719-af36">
-      <categoryLinks>
-        <categoryLink name="Order of Battle" hidden="false" id="9cd2-0658-7168-7881" targetId="ac7e-be7b-eb02-4752" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d59f-2804-3c43-6b7e" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b3a1-d8c7-6085-5d98" includeChildSelections="true"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Requisition Points" hidden="false" id="ce7f-9d46-52a9-947c" defaultAmount="5">
-          <constraints>
-            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="b320-bdb5-fe91-6078" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Battle Tally" hidden="false" id="3dd5-2e5a-a042-6595"/>
-        <selectionEntry type="upgrade" import="true" name="Victories" hidden="false" id="1d15-6e78-ba49-ace9"/>
-        <selectionEntry type="upgrade" import="true" name="Supply Limit" hidden="false" id="4213-a51d-bffe-87dc">
-          <constraints>
-            <constraint type="min" value="1000" field="selections" scope="parent" shared="true" id="6be6-c41c-ea86-298a" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="0" field="d59f-2804-3c43-6b7e">
-          <conditions>
-            <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="cac3-71d1-ea4b-795d" shared="true" includeChildSelections="false" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="cac3-71d1-ea4b-795d" shared="true" includeChildSelections="false" includeChildForces="false"/>
-          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
