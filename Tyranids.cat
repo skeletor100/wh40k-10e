@@ -59,7 +59,6 @@
     <categoryEntry name="Norn Emissary" hidden="false" id="50ee-d05c-da9c-eda2"/>
     <categoryEntry name="Norn Assimilator" hidden="false" id="2982-bf74-9aa7-a7a7"/>
     <categoryEntry name="Harvester" hidden="false" id="8258-a58e-7cf0-a2c3"/>
-    <categoryEntry name="Terror of Vardenghast" hidden="false" id="7edf-be7-243d-218e"/>
     <categoryEntry name="Tyranid Warriors" id="e3d4-6430-ea62-8d6d" hidden="false"/>
   </categoryEntries>
   <entryLinks>
@@ -430,15 +429,6 @@
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Terror of Vardenghast" hidden="false" type="selectionEntry" id="5009-2ca9-6545-a138" targetId="cc4a-75ac-22a8-77a7">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
     <entryLink import="true" name="Norn Assimilator" hidden="false" type="selectionEntry" id="28a-e2b8-c42e-3dea" targetId="6a9b-8e2f-edac-fa2d">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -527,19 +517,6 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3b3-d152-a2d8-9b1" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed83-7d2e-a97e-5121" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="1b78-1168-ce51-fe52" name="Tyrant Talons" hidden="false" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons">
-              <characteristics>
-                <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
-                <characteristic name="A" typeId="2337-daa1-6682-b110">5</characteristic>
-                <characteristic name="WS" typeId="95d1-95f-45b4-11d6">2+</characteristic>
-                <characteristic name="S" typeId="ab33-d393-96ce-ccba">7</characteristic>
-                <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-2</characteristic>
-                <characteristic name="D" typeId="3254-9fe6-d824-513e">2</characteristic>
-                <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <entryLinks>
             <entryLink id="2019-583b-ca88-546c" name="Monstrous Scything Talons" hidden="false" collective="false" import="true" targetId="d0cf-a582-5166-fbba" type="selectionEntry"/>
             <entryLink id="79d7-2c8d-a55e-af25" name="Stranglethorn Cannon" hidden="false" collective="false" import="true" targetId="b9ec-cb81-44f6-49" type="selectionEntry">
@@ -587,22 +564,6 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
-    </selectionEntry>
-    <selectionEntry id="f2b8-d1b2-af95-b9b1" name="Will of the Hive Mind" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd5-b43f-cc17-8a57" type="min"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65b6-f118-ebe1-ff38" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="7784-d522-b926-ccbb" name="Will of the Hive Mind" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per turn, one friendly Tyranids unit within 12&quot; of one or more models with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="3e96-8098-3401-77af" name="Hive Tyrant" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -3398,11 +3359,6 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2c81-2b4b-afd8-3a8b">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This Unit has a 6+ Invulnerable Save</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink targetId="cf47-a0d7-7207-29dc" id="d613-54fd-ce49-6a92" primary="true" name="Infantry"/>
@@ -6062,11 +6018,6 @@
             <characteristic name="Capacity" typeId="30f2-be70-861d-1b84">This model has a transport capacity of 20 TYRANIDS INFANTRY models. Each model with a Wounds characteristic of more than 1 takes up the space of 3 models. This model cannot transport models that can FLY.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="579e-5e5f-31cf-5923">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This Model has a 5+ Invulnerable Save</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Dire bio-cannon" hidden="false" id="344c-f9e4-3661-6315">
@@ -6217,11 +6168,6 @@
         <profile name="Vanguard Predator" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="96f0-f77f-527d-7554">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll 1 as well.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ee61-b503-3c59-1e88">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Models in this unit have a 5+ invulnerable save.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6458,11 +6404,6 @@
         <profile name="Digestion Spine" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a205-6bf5-658a-a9c6">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model fights, after it has resolved its attacks, if one or more enemy models (excluding Vehicle models) were destroyed as the result of those attacks, this model regains up to D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Invulnerable Save" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a096-3bd7-2eff-4ade">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a 5+ invulnerable save.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7116,69 +7057,6 @@
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="2448-b69d-8827-6c61" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Terror of Vardenghast" hidden="true" id="cc4a-75ac-22a8-77a7">
-      <categoryLinks>
-        <categoryLink targetId="cf47-a0d7-7207-29dc" id="d8db-7323-22e8-1c27" primary="false" name="Infantry"/>
-        <categoryLink targetId="9cfd-1c32-585f-7d5c" id="4eb1-de7c-1429-ad51" primary="true" name="Character"/>
-        <categoryLink targetId="c619-2086-bbcf-69c9" id="553d-e8ca-57eb-19ed" primary="false" name="Fly"/>
-        <categoryLink targetId="7850-cc5a-c191-b80d" id="63a0-fe81-f0e1-6dbb" primary="false" name="Great Devourer"/>
-        <categoryLink targetId="4129-a453-686a-d38a" id="c238-7ad5-c45b-6293" primary="false" name="Synapse"/>
-        <categoryLink targetId="5ff0-d52d-e2b8-9de" id="7e0d-1b5b-20f9-6d5" primary="false" name="Vanguard Invader"/>
-        <categoryLink targetId="d5b9-2986-70fe-f755" id="fdb6-5981-d065-7c7f" primary="false" name="Winged Tyranid Prime"/>
-        <categoryLink targetId="7edf-be7-243d-218e" id="1049-5e85-f64c-f328" primary="false" name="Terror of Vardenghast"/>
-        <categoryLink targetId="d1d8-6ae0-1be7-e9e" id="76cd-3f61-feb6-fd1e" primary="false" name="Faction: Tyranids"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Shadow in the Warp" hidden="false" type="rule" id="d394-544-4412-f632" targetId="395b-a159-b293-27aa"/>
-        <infoLink name="Synapse" hidden="false" type="rule" id="fbd-8bc-7eec-b3a2" targetId="86aa-437f-260b-5cad"/>
-        <infoLink name="Deep Strike" hidden="false" type="rule" id="f2a0-8115-2dab-bea5" targetId="7cb5-dd6b-dd87-ad3b"/>
-      </infoLinks>
-      <profiles>
-        <profile name="Terror of Vardenghast" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="b88-e5ec-3973-65d0">
-          <characteristics>
-            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">12&quot;</characteristic>
-            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">5</characteristic>
-            <characteristic name="SV" typeId="450-a17e-9d5e-29da">4+</characteristic>
-            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">6</characteristic>
-            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
-            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Death Blow" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6758-6ece-456a-eb57">
-          <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If this model is destroyed by a melee attack, if it has not fought this phase rolle one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model has finished making its attacks, and is then removed from play.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Prime Talons" hidden="false" id="5642-8d0d-1005-3890">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e71b-6f79-19c-4c8c"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c11a-bb45-c8d5-48b"/>
-          </constraints>
-          <profiles>
-            <profile name="Prime Talons" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="8a71-751d-7cb3-21ee">
-              <characteristics>
-                <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
-                <characteristic name="A" typeId="2337-daa1-6682-b110">6</characteristic>
-                <characteristic name="WS" typeId="95d1-95f-45b4-11d6">2+</characteristic>
-                <characteristic name="S" typeId="ab33-d393-96ce-ccba">6</characteristic>
-                <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
-                <characteristic name="D" typeId="3254-9fe6-d824-513e">2</characteristic>
-                <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-      <constraints>
-        <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="dcc0-4e97-be11-7695" includeChildForces="true"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="a02a-5d68-a5e8-c95d" targetId="ceab-62d9-31bf-7c61"/>
-        <entryLink import="true" name="Enhancements" hidden="false" type="selectionEntryGroup" id="20c8-1bfe-d91a-7d9f" targetId="fa5b-f646-b960-a8d3"/>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry id="4729-1986-370e-a8a" name="Deathspitter" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="e907-3a54-6a98-245f" name="Deathspitter" hidden="false" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons">
@@ -7373,7 +7251,7 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="7ada-e361-1f7e-af" name="Detachment Rule" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="7ada-e361-1f7e-af" name="Detachment Rule" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
       <constraints>
         <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9771-9344-412d-6850" type="min"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="932-a6c9-b917-9279" type="max"/>
@@ -7413,7 +7291,6 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
             <profile name="Feed the Swarm" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6b5a-5109-2eea-a35b">
               <characteristics>
                 <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6&quot; of it. A unit can only be regenerated once per phase. Each time a unit regenerates do one of the following:
-
 
 - One model in that unit regains up to D3+1 lost wounds
 - One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds. If that unit is an ENDLESS MULTITUDE unit, return up to 3 destroyed models are returned instead.</characteristic>
@@ -8593,7 +8470,7 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>

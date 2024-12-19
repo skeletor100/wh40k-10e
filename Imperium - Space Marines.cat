@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="82" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="85" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
   <categoryEntries>
     <categoryEntry id="539-7da4-d962-1a64" name="Primaris" hidden="false"/>
     <categoryEntry id="5179-8ede-45e3-49a2" name="Tacticus" hidden="false"/>
@@ -1022,7 +1022,7 @@
       <profiles>
         <profile name="Master of Deceit" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" id="2d39-4b7-eecd-9111">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">After both players have deployed their armies and determined who has the first turn, if your army includes one or more models with this ability, you can  select up to three friendly Adeptus Astartes Infantry unit and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">After both players have deployed their armies, if your army includes one or more models with this ability, you can select up to three friendly ADEPTUS ASTARTES INFANTRY units and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.</characteristic>
           </characteristics>
         </profile>
         <profile name="Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="707b-cbab-54ac-96eb">
@@ -13625,7 +13625,7 @@ Normal move. If it does so, until the end of the turn, this unit is not eligible
         </profile>
         <profile name="Transport" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="218-97c0-d456-35ed">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 6 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Tacticus, Phobos, Gravis, Centurion or Terminator models.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">This model has a transport capacity of 6 Adeptus Astartes Infantry models.  It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -23213,15 +23213,15 @@ Once you have made your selections, remove those units from the battlefield and 
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Librarius Conclave" hidden="false" id="05fd-6df6-3162-a24c">
+        <selectionEntry type="upgrade" import="true" name="Librarius Conclave" hidden="false" id="ce39-a420-4206-827c">
           <profiles>
-            <profile name="Psychic Disciplines" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b020-a034-f38a-431a">
+            <profile name="Pyschic Disciplines" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="bf7e-bdca-d5b7-1043">
               <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all Adeptus Astartes Psyker units from your army.
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all Adeptus Astartes Psyker units from your army. 
 
 
 Biomancy Discipline
-Add 2&quot; to the Move characteristic of models in this unit.
+Add 2&quot; to the Move characteristic of models in this unit. 
 
 
 Divination Discipline
@@ -23245,6 +23245,11 @@ Each time a model in this unit makes an attack, you can ignore any or all modi
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="36d3-36bc-68dd-40ac" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -24998,99 +25003,113 @@ is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.
             <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="7d80-3cf9-78c5-0924" includeChildSelections="true"/>
           </constraints>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Librarius Conclave Enhancements" id="ed05-9add-47b1-09ef" hidden="false">
+        <selectionEntryGroup name="Librarius Conclave Enhancements" id="6f7c-305e-2710-51c5" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Prescience" hidden="false" id="0e97-94be-8a4a-c8cd">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="83b9-8b96-4d13-f0be" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Prescience" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="37f2-9dbe-5989-911f">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9&quot; of the bearer’s unit, the bearer’s unit can make a Normal move of up to D6&quot;, or up to 6&quot; instead if the Divination Discipline is active for your army</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="740a-892c-8958-defa" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Celerity" hidden="false" id="23f9-8432-93e6-75a5">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f651-e106-f0ad-83dc" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Celerity" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a9a2-66cc-fab0-82ca">
-                  <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced, and if the Biomancy Discipline is active for your army, it is eligible to declare a charge in a turn in which it Fell Back</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" id="d0c9-4efb-8b56-0bc2" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            <selectionEntry type="upgrade" import="true" name="Prescience" hidden="false" id="e096-95ba-7196-6dec">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Obfuscation" hidden="false" id="8d86-f55c-165d-b84d">
               <profiles>
-                <profile name="Obfuscation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="9b9e-10e7-c2a8-f552">
+                <profile name="Prescience" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="1c71-0228-7d98-eea9">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit, and if the Telepathy Discipline is active for your army, the bearer’s unit cannot be targeted by ranged attacks unless the attacking model is within 18&quot;.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy
+unit ends a Normal, Advance or Fall Back move within 9&quot; of the bearer’s unit, the bearer’s unit can
+make a Normal move of up to D6&quot;, or up to 6&quot; instead if the Divination Discipline is active for your army</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3a61-5e42-81e0-2323" includeChildSelections="true"/>
-              </constraints>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" id="e763-6db9-848f-58d5" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="740a-892c-8958-defa" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
-              </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fusillade" hidden="false" id="47ff-382c-e74a-e403">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9852-c9aa-eb33-e4b9" includeChildSelections="true"/>
-              </constraints>
+            <selectionEntry type="upgrade" import="true" name="Celerity" hidden="false" id="3ad6-26c4-206b-aa4f">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+              </costs>
               <profiles>
-                <profile name="Fusillade" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="cad4-6e9e-5422-0a3e">
+                <profile name="Celerity" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="547a-cc4f-5b67-b5ee">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. Ranged weapons equipped by models in the bearer’s unit have the [ANTI‑MONSTER 5+] and [ANTI‑VEHICLE 5+] abilities, and:
-■ The [SUSTAINED HITS 1] ability if the Pyromancy Discipline is active for your army.
-■ Add 6&quot; to the Range characteristic of those weapons if the Telekinesis Discipline is active for your army.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced, and if the Biomancy Discipline is active for your army, it is eligible to declare a charge in a turn in which it Fell Back.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
-              </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" id="97ce-5896-2b57-52a9" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Obfuscation" hidden="false" id="3adc-5ebb-e384-4ac9">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Obfuscation" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="b28c-8067-25c4-88d4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot
+at the bearer’s unit, and if the Telepathy Discipline is active for your army, the bearer’s unit cannot be
+targeted by ranged attacks unless the attacking model is within 18&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fusillade" hidden="false" id="83b5-8f79-f92f-b64f">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Fusillade" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3107-ddb4-d645-b988">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Adeptus Astartes Psyker model only. Ranged weapons equipped by models in the bearer’s unit have
+the [ANTI‑MONSTER 5+] and [ANTI‑VEHICLE 5+] abilities, and:
+
+
+■ The [SUSTAINED HITS 1] ability if the Pyromancy
+Discipline is active for your army.
+■ Add 6&quot; to the Range characteristic of those
+weapons if the Telekinesis Discipline is active for
+your army</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="13bf-2bee-3ae0-b414" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -25103,7 +25122,7 @@ is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="05fd-6df6-3162-a24c" shared="true" id="7340-543e-a397-025f" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce39-a420-4206-827c" shared="true" id="a32f-8bd1-b24e-2268" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>

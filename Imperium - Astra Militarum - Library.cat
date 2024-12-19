@@ -19589,7 +19589,7 @@ While this model is joined to a unit, it can embark within any Transport that un
     </profileType>
   </profileTypes>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Detachment" hidden="false" id="bfc1-eb63-c641-3ac4">
+    <selectionEntryGroup name="Detachment" hidden="false" id="bfc1-eb63-c641-3ac4" defaultSelectionEntryId="none">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
