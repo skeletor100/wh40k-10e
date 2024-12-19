@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="70" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="a55f-b7b3-6c65-a05f" name="Xenos - Orks" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="71" battleScribeVersion="2.03" type="catalogue" authorName="BSData Developers" authorContact="Dunamis55 &amp; AbonShell">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Warlord" id="8b5-898c-f79b-5a9c">
       <categoryLinks>
@@ -13296,7 +13296,7 @@ Designer’s Note: Place a Bomb Squig token next to the unit, removing it when t
             <modifier type="set" value="1" field="c963-d181-fb8f-8df0"/>
           </modifiers>
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1511-18fe-f51e-7b9d" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3225-dd9b-158a-eb18" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -20487,6 +20487,17 @@ Designer’s Note: Place the relevant number of Bomb Squig tokens next to the un
                       <comment>Battle Scars: Fatigued</comment>
                     </modifierGroup>
                   </modifierGroups>
+                  <modifiers>
+                    <modifier type="set" value="9&quot;" field="e703-ecb6-5ce7-aec1">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
             </selectionEntry>
