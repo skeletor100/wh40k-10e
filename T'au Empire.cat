@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="65" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="67" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
   <rules>
     <rule name="For The Greater Good" hidden="false" id="eeb6-c42-48f7-cc21">
       <description>If your Army Faction is T’AU EMPIRE, then in your Shooting phase units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy they are targeting is called their Spotted unit.
@@ -96,6 +96,7 @@ Until the end of the phase:
         <infoLink name="Stealth" hidden="false" type="rule" id="2bd0-da75-5958-6f3" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="561f-a241-6921-1d0e" targetId="27f4-7449-a636-ae8c"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="2a80-4ea2-fc93-5757" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="57f5-a6b2-1a86-21c3" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <profiles>
         <profile name="Agile Combatant" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="79c3-f1c9-8372-de8b">
@@ -263,6 +264,7 @@ Until the end of the phase:
         <infoLink name="Deep Strike" hidden="false" type="rule" id="9fdd-c9a3-b984-5cc1" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="112d-40ae-9f4c-6f14" targetId="5b77-29f8-7b77-75e3"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="e8c8-744b-8bcb-456f" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="74cd-de7e-83ad-ac65" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="4f3a-f0f7-6647-348d" id="6225-7e48-e627-2a7a" primary="true" name="Epic Hero"/>
@@ -1611,6 +1613,7 @@ Until the end of the phase:
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="1bfe-9987-6e7c-2056" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="3488-60ca-b08c-1f5d" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="a649-5404-6663-c806" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="3bb2-e014-c225-129a">
@@ -2743,6 +2746,7 @@ Until the end of the phase:
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="f2a1-5438-f96f-f7e2" targetId="7cb5-dd6b-dd87-ad3b"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="15e6-7688-2047-a6bd" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="4a92-1ead-3a2d-7a78" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="387c-abd8-34ca-55fb">
@@ -4087,6 +4091,7 @@ Until the end of the phase:
       <infoLinks>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="43d1-f538-3481-387b" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="614b-4182-969d-f946" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="4898-e7ee-fba2-3321" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="cadd-8930-5c9d-f2a3" hidden="false" sortIndex="4">
@@ -4604,6 +4609,7 @@ Until the end of the phase:
       <infoLinks>
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="3bd3-1b3c-41d6-a73" targetId="27f4-7449-a636-ae8c"/>
         <infoLink name="Void Combat Discipline" id="7265-7ba9-38c2-b972" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="8409-5cfe-1acf-5a7c" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="5f04-86df-441e-8128">
@@ -5114,6 +5120,7 @@ Until the end of the phase:
         </infoLink>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="f88f-8ba6-8301-72f5" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="0148-4d77-afee-6583" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="4213-0434-15a8-8713" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="8b8d-d50-4f2a-bf87">
@@ -6403,6 +6410,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
       <infoLinks>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="4f5c-a782-73b1-531c" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="4da3-2f39-d216-4355" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="a1b1-35a7-5aa3-5113" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="6" field="e3e2-c67f-1b6f-4c79">
@@ -6665,6 +6673,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
       <infoLinks>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="911a-7f32-c2aa-6b3c" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="88d9-b773-e20e-dfbc" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="2ff3-2ee8-91d5-afb7" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Crusade" hidden="false" id="d22e-3683-e5cb-e9fa" type="selectionEntryGroup" targetId="a877-78a7-06f2-f04d" sortIndex="1">
@@ -7476,6 +7485,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
         </infoLink>
         <infoLink name="Stealth" hidden="false" type="rule" id="6b6f-90d4-8899-2848" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="c657-94cd-4a8e-eab2" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="a74e-3073-2e0a-9077" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="1eab-7969-2e3e-4f2d"/>
@@ -8243,6 +8253,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
           </modifiers>
         </infoLink>
         <infoLink name="Void Combat Discipline" id="1435-36ad-9e93-605a" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="3986-329b-3e82-85f9" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="50d7-8a49-d850-e856"/>
@@ -10484,6 +10495,7 @@ Designer’s Note: Place a Support Turret token next to this unit to remind you.
         <infoLink name="Stealth" hidden="false" type="rule" id="8380-9bbc-e805-cf33" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="551f-7c42-61fa-4bbc" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="a1a8-ae3d-b4dc-d747" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="feb3-f502-d76f-526e" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="6144-5ac3-94ae-e040"/>
@@ -11367,6 +11379,7 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
         <infoLink name="Stealth" hidden="false" type="rule" id="c25c-dbaf-a9c7-2552" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Damaged: 1-4 Wounds Remaining" hidden="false" type="profile" id="69f9-2f2b-ecba-4259" targetId="2220-2459-9f07-490e"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="2ba-c7db-ab32-d74e" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="1b1c-4458-33dd-a43a" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="b66b-419b-794d-130d" hidden="false">
@@ -12244,6 +12257,7 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
         <infoLink name="Lone Operative" hidden="false" type="rule" id="416-7e70-c90-83fe" targetId="a8a0-8fe7-898-e0f3"/>
         <infoLink name="Stealth" hidden="false" type="rule" id="996c-fad2-f61b-ad21" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="ad77-4d6e-912b-2128" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="1867-dcb9-a48e-3094" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="2330-c0-86bb-d406" targetId="179c-d88a-d49b-48b9" sortIndex="2"/>
@@ -12671,6 +12685,7 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
           </modifiers>
         </infoLink>
         <infoLink name="Void Combat Discipline" id="a1e6-216c-0157-6a6d" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="a726-e7ce-bdf5-281b" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="712a-bc0d-1fb8-72f7"/>
@@ -14155,6 +14170,7 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
           </modifiers>
         </infoLink>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="9054-e082-642-32a2" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="0326-bcc2-28a4-cbdf" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Piranhas" hidden="false" id="fe61-6f7e-e7e8-f6ce" sortIndex="2">
@@ -14771,6 +14787,7 @@ Designer’s Note: Place two Stealth Drone tokens next to the unit, removing one
           </modifiers>
         </infoLink>
         <infoLink name="Void Combat Discipline" id="4a02-4c0a-ccae-f931" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="b257-d9c3-cccd-23d9" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="30db-1915-83b0-8dc9"/>
@@ -15438,6 +15455,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         </infoLink>
         <infoLink name="Stealth" hidden="false" type="rule" id="29f6-40e2-cf9c-b153" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="0716-98f5-c0de-f2f1" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="acbd-c369-cc91-a22c" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Kroot Hounds (5-10)" id="28b9-c686-23b0-a9ae" hidden="false">
@@ -16763,6 +16781,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="17a9-8bb3-3705-91d0" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="caf7-1d60-31da-3fff" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
@@ -16924,6 +16943,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         <infoLink name="Battlesuit Support System" hidden="false" type="profile" id="8560-6343-52a8-de4" targetId="b5b2-f430-5dc1-106b"/>
         <infoLink name="Weapon Support System" hidden="false" type="profile" id="6387-82ef-9ccc-b208" targetId="3d6e-7d4-ba81-9a8f"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="884-bd55-8355-90b3" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="06e8-68b9-2c3f-1dcb" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Nova Charge" hidden="false" id="667e-75db-3088-89e6">
@@ -17916,6 +17936,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         <infoLink name="Damaged: 1-5 Wounds Remaining" hidden="false" type="profile" id="fb57-a3b8-30e-5325" targetId="4f24-6581-c017-3daa"/>
         <infoLink name="Targeting Array" hidden="false" type="profile" id="31ac-fe19-ecae-43cf" targetId="6c1e-179e-a2dc-85d6"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="cb8e-c725-eb4f-d703" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="d245-e7ae-e25d-6b8e" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="6b03-40c0-1d98-d7f1" hidden="false" sortIndex="2">
@@ -18834,6 +18855,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         </infoLink>
         <infoLink name="Targeting Array" hidden="false" type="profile" id="dcc8-afa7-e37a-5146" targetId="6c1e-179e-a2dc-85d6"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="6439-495c-c439-e091" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="a8cb-9923-0d26-36bd" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="3b5-7dee-1edc-d93e"/>
@@ -19545,6 +19567,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
           </modifiers>
         </infoLink>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="16ce-784f-e1ca-8b9" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="d126-923d-7c4f-81b6" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="6" field="selections" scope="roster" shared="true" id="4bc0-150e-849b-2e5b"/>
@@ -20784,6 +20807,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         </infoLink>
         <infoLink name="Damaged: 1-4 Wounds Remaining" hidden="false" type="profile" id="b096-f2e9-178f-957e" targetId="2220-2459-9f07-490e"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="ecb-a10b-7fbe-8752" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="fa96-e0aa-6870-576e" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="be27-ec47-3149-8f10" hidden="false">
@@ -21737,6 +21761,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         </infoLink>
         <infoLink name="Invulnerable Save (4+)" hidden="false" type="profile" id="75d1-7e80-d917-e9b2" targetId="5b77-29f8-7b77-75e3"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="7eee-506c-d91d-e648" targetId="eeb6-c42-48f7-cc21"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="00f7-c69f-ae3f-acb0" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="dbd4-63-af05-998" id="f8c8-5eec-cb53-411a" primary="true" name="Vehicle"/>
@@ -23253,48 +23278,6 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
             </modifierGroup>
           </modifierGroups>
         </profile>
-        <profile name="Kroot Hounds" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="5816-9f88-e3e5-67ab">
-          <characteristics>
-            <characteristic name="M" typeId="e703-ecb6-5ce7-aec1">12&quot;</characteristic>
-            <characteristic name="T" typeId="d29d-cf75-fc2d-34a4">3</characteristic>
-            <characteristic name="SV" typeId="450-a17e-9d5e-29da">6+</characteristic>
-            <characteristic name="W" typeId="750a-a2ec-90d3-21fe">1</characteristic>
-            <characteristic name="LD" typeId="58d2-b879-49c7-43bc">7+</characteristic>
-            <characteristic name="OC" typeId="bef7-942a-1a23-59f8">0</characteristic>
-          </characteristics>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>Battle Scars: Crippling Damage</comment>
-              <modifiers>
-                <modifier type="decrement" value="1" field="e703-ecb6-5ce7-aec1">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="4135-1065-ae32-09a4" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="append" value="Crippling Damage" field="annotation" join=", ">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="4135-1065-ae32-09a4" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="decrement" value="1" field="bef7-942a-1a23-59f8">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="9d70-a94e-3f89-5eed" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="append" value="Fatigued" field="annotation" join=", ">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="self" childId="9d70-a94e-3f89-5eed" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <comment>Battle Scars: Fatigued</comment>
-            </modifierGroup>
-          </modifierGroups>
-        </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="69df-ed38-2bef-60d6"/>
@@ -23306,6 +23289,8 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         <infoLink name="Infiltrators" hidden="false" type="rule" id="a535-3aee-e88c-dcda" targetId="c05d-f4c3-f091-4938"/>
         <infoLink name="Stealth" hidden="false" type="rule" id="fe3c-d815-d4aa-47b1" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="1c3f-fbcd-ce37-f980" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="5bf0-6da0-2d14-f7ca" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="4379-8583-d834-ca57" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Bounty Hunters" hidden="false" id="8c3a-5cb2-6a94-891b">
@@ -26389,6 +26374,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         </infoLink>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="7618-9732-bda4-a3b2" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Super-Heavy Walker" hidden="false" type="rule" id="dc3e-9a8d-af83-97ba" targetId="5e13-1624-d280-418d"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="62c5-e22b-5357-56cc" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Crusade" hidden="false" id="3e1a-232d-504e-d3d3" type="selectionEntryGroup" targetId="a877-78a7-06f2-f04d">
@@ -28741,6 +28727,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="c4bc-eca7-11f5-88a4" targetId="27f4-7449-a636-ae8c"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="45b3-ab8d-1c34-6557" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Damaged: 1-6 Wounds Remaining" hidden="false" type="profile" id="88b1-7c9a-f504-efcf" targetId="3a1d-540f-ebbf-700e"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="8ebd-472c-da73-91e8" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="0fb7-63d7-33cf-538d" hidden="false">
@@ -29947,6 +29934,7 @@ Designer’s Note: Place an Oversight Drone token next to the bearer, removing i
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="1f6f-b984-eff-4fdf" targetId="27f4-7449-a636-ae8c"/>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="d97a-32c0-dacf-45f" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Damaged: 1-6 Wounds Remaining" hidden="false" type="profile" id="ceb6-7b48-9364-7703" targetId="3a1d-540f-ebbf-700e"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="e603-aede-a902-04bc" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="cd3f-473c-ea7e-b32a" hidden="false">
@@ -35407,6 +35395,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
       </profiles>
       <infoLinks>
         <infoLink name="Rapid Fire" hidden="false" type="rule" id="806d-feec-6c46-748f" targetId="c5c8-8b58-b8b6-7786"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="11d8-1d6f-96e9-b78d" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Crisis Sunforge Battlesuits" hidden="false" id="e88f-bc7a-c3f5-8e47">
@@ -35549,6 +35538,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         </infoLink>
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="6cb2-d56c-5681-963c" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Void Combat Discipline" id="22cf-53f9-8244-5a9b" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="5bb9-20b0-d3c4-b148" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="8f5d-412f-d058-6c5b"/>
@@ -36158,6 +36148,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="3d7f-a105-8d5-63fb" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Weapon Support System" hidden="false" id="4ef6-8788-3cef-3db6" type="profile" targetId="3d6e-7d4-ba81-9a8f"/>
         <infoLink name="Void Combat Discipline" id="f182-5006-155a-42d8" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="54a1-116b-ff70-546d" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="c702-650f-c2fa-7292"/>
@@ -36872,6 +36863,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         <infoLink name="For The Greater Good" hidden="false" type="rule" id="1c1-549a-2e50-e590" targetId="eeb6-c42-48f7-cc21"/>
         <infoLink name="Battlesuit Support System" hidden="false" id="c453-fd6e-7aeb-a9cc" type="profile" targetId="b5b2-f430-5dc1-106b"/>
         <infoLink name="Void Combat Discipline" id="05c6-d40e-dd2d-b776" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Localised Stealth Projectors (Aura)" id="2070-e006-f4f2-ff4f" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="b967-43cf-d7c7-ac3e"/>
@@ -37494,6 +37486,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         </infoLink>
         <infoLink name="Stealth" hidden="false" id="977f-a72e-889b-6e98" type="rule" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="9a13-29bd-d49b-5929" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="5ce1-d4b5-e1d9-87e5" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="7233-b51f-7356-29fc">
@@ -37907,6 +37900,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         </infoLink>
         <infoLink name="Stealth" hidden="false" id="3a8a-17d-391c-75a6" type="rule" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="d951-6297-9f11-a2a3" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="31dd-9221-db38-1890" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="e826-6836-c84-522">
@@ -38533,6 +38527,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         </infoLink>
         <infoLink name="Stealth" hidden="false" id="7795-3b95-f10a-9197" type="rule" targetId="bec5-4288-34a6-ccfa"/>
         <infoLink name="Void Combat Discipline" id="96e6-5489-20f1-d630" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
+        <infoLink name="Targeting Triangulation (Aura)" id="32fe-9c8c-f128-17eb" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="15b8-96eb-8145-80ab">
@@ -38971,6 +38966,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
             <modifier type="set" value="7&quot;" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Targeting Triangulation (Aura)" id="81b1-113b-679b-b74e" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Wargear" id="6afa-3589-0ffb-8688" hidden="false" sortIndex="4">
@@ -39656,6 +39652,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
             <modifier type="append" value="7&quot;" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Targeting Triangulation (Aura)" id="2d4b-12cb-8b70-53af" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Krootox Rampagers" hidden="false" id="7db2-f936-132b-6d3a" defaultSelectionEntryId="f957-56b5-3a86-e923">
@@ -41023,6 +41020,178 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Kroot Hunting Pack Enhancements" id="2ac1-263c-a75d-ca87" hidden="false" flatten="false" collapsible="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Admired Leader" hidden="false" id="ff4c-6c6d-5d59-effa">
+              <profiles>
+                <profile name="Admired Leader" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="3932-dd6a-044b-6e5e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">T’AU EMPIRE model (excluding KROOT models) only. In your Command phase, you can select one KROOT or VESPID STINGWINGS unit within 12&quot; of the bearer. If you do, until the start of your next Command phase, improve the Leadership characteristic of models in that unit by 1, and while such a unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in that unit</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ff4c-6c6d-5d59-effa" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="ff4c-6c6d-5d59-effa" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="79c5-9fc4-7b97-7c3f" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6fd6-ea72-f51b-147e" includeChildForces="true" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Student of Kauyon" hidden="false" id="847a-a911-2a6b-f1e7">
+              <profiles>
+                <profile name="Student of Kauyon" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0ffe-f648-e59e-e2bf">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three KROOT CARNIVORES or KROOT FARSTALKERS units from your army. Models in those units have the Deep Strike ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="79c5-9fc4-7b97-7c3f" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="39f9-dcd3-1e80-fa1f" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="847a-a911-2a6b-f1e7" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="847a-a911-2a6b-f1e7" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="716a-696c-5e20-1030" includeChildForces="true" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Transponder Lock Module" hidden="false" id="5674-066f-b09a-9e29">
+              <profiles>
+                <profile name="Transponder Lock Module" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="bef6-bea8-a8a3-ffe7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">T’AU EMPIRE WALKER model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. During your first Movement phase, when you set up the bearer’s unit, it must be set up within 12&quot; of one or more friendly KROOT or VESPID STINGWINGS units and not within 9&quot; horizontally of one or more enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="6dda-e157-334d-e93a" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5674-066f-b09a-9e29" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="5674-066f-b09a-9e29" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+                <cost name="Diplomatic Power" typeId="4d7c-04b6-8a79-837f" value="0"/>
+                <cost name="Military Power" typeId="1cbe-d9c9-86a8-2d41" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3c81-e36f-2f60-42c3" includeChildForces="true" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fanatical Convert" hidden="false" id="9bfe-273e-22df-43b2">
+              <profiles>
+                <profile name="Fanatical Convert" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="0a2e-a169-8847-7d76">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">KROOT model only. The bearer’s unit has the For the Greater Good ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9bfe-273e-22df-43b2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="9bfe-273e-22df-43b2" shared="true" includeChildForces="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="79c5-9fc4-7b97-7c3f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="For The Greater Good" id="dce4-2000-e11c-c59f" hidden="false" type="rule" targetId="eeb6-c42-48f7-cc21"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="59a7-8336-fd7c-b77d" includeChildForces="true" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a78-ce79-8820-fef2" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="06fb-866c-01ef-7bdf" includeChildForces="true" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="cac3-71d1-ea4b-795d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="b692-c213-9937-f455" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Boarding Action Enhancements" hidden="false" id="642f-0376-86fe-2585" type="selectionEntryGroup" targetId="8b20-8ddd-b7fc-5127"/>
@@ -41189,6 +41358,29 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Auxiliary Cadre" hidden="false" id="b692-c213-9937-f455">
+          <rules>
+            <rule name="Integrated Command Structure" id="3374-4db3-c9fc-a9de" hidden="false">
+              <description>KROOT and VESPID STINGWINGS units from your army have the following ability:
+
+
+Targeting Triangulation (Aura): While an enemy unit is within 9&quot; of and visible to this unit, each time a ranged attack made by a friendly T’AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.
+
+
+T’AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:
+
+
+Localised Stealth Projectors (Aura): While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6&quot; of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18&quot;.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -42918,6 +43110,30 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
       <characteristics>
         <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.</characteristic>
       </characteristics>
+    </profile>
+    <profile name="Targeting Triangulation (Aura)" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="d9b1-32e5-80ed-a7c5">
+      <characteristics>
+        <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While an enemy unit is within 9&quot; of and visible to this unit, each time a ranged attack made by a friendly T’AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="b692-c213-9937-f455" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile name="Localised Stealth Projectors (Aura)" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="90e5-dc2f-1de3-1c06">
+      <characteristics>
+        <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6&quot; of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18&quot;.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="b692-c213-9937-f455" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
   <catalogueLinks>
