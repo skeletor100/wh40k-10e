@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="dfcf-1214-b57-2205" name="Aeldari - Aeldari Library" revision="59" battleScribeVersion="2.03" library="true" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="dfcf-1214-b57-2205" name="Aeldari - Aeldari Library" revision="60" battleScribeVersion="2.03" library="true" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="442c-a37c-3908-d701" name="Index: Aeldari" shortName="I:Aeldari" publisher="Index: Aeldari" publicationDate="6/15/2023"/>
     <publication id="1427-7c5c-863f-ac94" name="Index: Drukhari" shortName="I:Drukhari" publisher="Index: Drukhari" publicationDate="6/15/2023"/>
@@ -3819,6 +3819,7 @@
         <entryLink import="true" name="Battle Host Enhancements" hidden="false" type="selectionEntryGroup" id="9f5c-12a-1700-4f86" targetId="e26f-c156-51e9-9608"/>
         <entryLink import="true" name="Aeldari Boarding Action Enhancements" hidden="false" id="47fe-eaf2-e6ca-f382" type="selectionEntryGroup" targetId="2f99-28bb-abb2-f326"/>
         <entryLink import="true" name="Armoured Warhost Enhancements" hidden="false" id="b6d9-6889-0b0e-b8d5" type="selectionEntryGroup" targetId="b8b5-e20b-604b-032f"/>
+        <entryLink import="true" name="Reaper&apos;s Wager Enhancements" hidden="false" id="9c09-9753-143c-eb8d" type="selectionEntryGroup" targetId="90b8-32e1-d346-a0ec"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="roster" shared="true" id="25f8-be58-e72e-6e57" includeChildSelections="true" includeChildForces="true"/>
@@ -7242,6 +7243,7 @@
         <entryLink import="true" name="Battle Host Enhancements" hidden="false" type="selectionEntryGroup" id="282b-1044-d821-9741" targetId="e26f-c156-51e9-9608"/>
         <entryLink import="true" name="Aeldari Boarding Action Enhancements" hidden="false" id="1c7f-864a-d570-9140" type="selectionEntryGroup" targetId="2f99-28bb-abb2-f326"/>
         <entryLink import="true" name="Armoured Warhost Enhancements" hidden="false" id="b1a5-c549-6460-3edc" type="selectionEntryGroup" targetId="b8b5-e20b-604b-032f"/>
+        <entryLink import="true" name="Reaper&apos;s Wager Enhancements" hidden="false" id="fa69-6a31-71e8-4071" type="selectionEntryGroup" targetId="90b8-32e1-d346-a0ec"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10284,6 +10286,7 @@ become separate units, with their original Starting Strengths.</characteristic>
         <entryLink import="true" name="Battle Host Enhancements" hidden="false" type="selectionEntryGroup" id="bf28-6482-2c4b-826e" targetId="e26f-c156-51e9-9608"/>
         <entryLink import="true" name="Aeldari Boarding Action Enhancements" hidden="false" id="d192-8019-f306-fbea" type="selectionEntryGroup" targetId="2f99-28bb-abb2-f326"/>
         <entryLink import="true" name="Armoured Warhost Enhancements" hidden="false" id="df23-132e-2c2d-7a6b" type="selectionEntryGroup" targetId="b8b5-e20b-604b-032f"/>
+        <entryLink import="true" name="Reaper&apos;s Wager Enhancements" hidden="false" id="4e5c-f230-33bb-1ed8" type="selectionEntryGroup" targetId="90b8-32e1-d346-a0ec"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -19781,6 +19784,7 @@ makes an attack, subtract 1 from the Hit roll</characteristic>
         <categoryLink targetId="c619-2086-bbcf-69c9" id="434b-572c-2ce9-d808" primary="false" name="Fly"/>
         <categoryLink targetId="4378-1827-4988-be4e" id="6c21-acaf-796f-c2b4" primary="false" name="Faction: Aeldari"/>
         <categoryLink targetId="78dc-ec35-941b-4d0f" id="dff1-562-f9cf-5a38" primary="false" name="Shadow Spectres"/>
+        <categoryLink targetId="dda2-bb0a-215e-ad9c" id="4453-85a0-ae7d-2b93" primary="false" name="Jump Pack"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="e3ad-c19d-3269-9f2c" targetId="7cb5-dd6b-dd87-ad3b"/>

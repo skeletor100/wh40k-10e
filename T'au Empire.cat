@@ -38962,7 +38962,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         <infoLink name="Lone Operative" hidden="false" id="db51-b0ab-6540-c3fc" type="rule" targetId="a8a0-8fe7-898-e0f3"/>
         <infoLink name="Scouts" hidden="false" id="f829-a9d6-75f2-eaeb" type="rule" targetId="ada6-bac1-ffe0-d6f7">
           <modifiers>
-            <modifier type="set" value="7&quot;" field="name"/>
+            <modifier type="append" value="7&quot;" field="name" join=" "/>
           </modifiers>
         </infoLink>
         <infoLink name="Targeting Triangulation (Aura)" id="81b1-113b-679b-b74e" hidden="false" type="profile" targetId="d9b1-32e5-80ed-a7c5"/>
