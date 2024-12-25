@@ -23298,6 +23298,30 @@ Models in this unit have a 5+ invulnerable save against ranged attacks</charact
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Champions of Fenris" hidden="false" id="f322-461f-e002-a349">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="94bb-3284-ee14-57a1" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Great Wolf Watches" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="7b2a-0f85-c987-cfdc">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the end of your opponent’s Charge phase, each ADEPTUS ASTARTES INFANTRY and ADEPTUS ASTARTES WALKER unit from your army that is within 3&quot; of one or more enemy units and would be eligible to declare a charge against one or more of those units can declare a charge against one or more of those units, and you resolve that charge as if it were your Charge phase. If that charge is successful, your unit does not receive any Charge bonus this turn.
+
+
+While ADEPTUS ASTARTES TERMINATOR units from your army are not Battle‑shocked, add 1 to the Objective Control characteristic of models in those units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Enhancements" hidden="false" id="9e5d-de4c-c5d1-1d3e">
@@ -25296,6 +25320,108 @@ this Enhancement. If it does, until the end of the phase, models in the bearer�
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Champions of Fenris Enhancements" id="570f-ad59-faa0-9f5b" hidden="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="94bb-3284-ee14-57a1" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f322-461f-e002-a349" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fangrune Pendant" hidden="false" id="fd30-8206-1f89-6aa4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="84a8-18f3-2ddb-cabc" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Fangrune Pendant" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a602-e07b-70fe-009b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">ADEPTUS ASTARTES TERMINATOR model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wolves&apos; Wisdom" hidden="false" id="6768-a19c-98f1-2954">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ac40-2439-861c-3d4d" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Wolves&apos; Wisdom" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6b14-65c6-1e4f-fa4f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">ADEPTUS ASTARTES INFANTRY model only. The bearer’s unit can declare a charge against one or more units within 6&quot; instead of within 3&quot; when using The Great Wolf Watches Detachment rule</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+                <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+                <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+                <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+                <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="cf47-a0d7-7207-29dc" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Longstrider" hidden="false" id="9ef0-6c6c-eb31-aa8a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="bd19-09fa-d47c-3653" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Longstrider" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4ada-5451-6027-cd98">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">ADEPTUS ASTARTES model only. You can re‑roll Charge rolls made for the bearer’s unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Foes&apos; Fate" hidden="false" id="b959-bb17-9dd6-dcbd">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="24e8-a05e-d3da-9a90" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Foes&apos; Fate" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="8de1-38ac-bd29-b5f7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">ADEPTUS ASTARTES TERMINATOR model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer’s unit Falls Back, all models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="740a-892c-8958-defa" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c86-6e77-cc78-64b1"/>
+            <constraint type="max" value="3" field="selections" scope="force" shared="true" id="e707-3335-663e-c04e" includeChildSelections="true"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
