@@ -462,6 +462,11 @@
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b984-7317-81cc-20f" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </rule>
   </rules>
@@ -8471,6 +8476,11 @@ Each time a Tyranids model with this Hyper-adaptation makes an attack that targe
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="b984-7317-81cc-20f" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>

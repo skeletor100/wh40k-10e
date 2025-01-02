@@ -20589,6 +20589,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="roster" childId="1c30-e099-1aca-8708" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4026-8a3e-9922-eec" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="cf47-a0d7-7207-29dc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -20617,6 +20618,7 @@ You can attach this model to one of the above units even if one other CHARACTER 
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="roster" childId="1c30-e099-1aca-8708" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4026-8a3e-9922-eec" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="cf47-a0d7-7207-29dc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
