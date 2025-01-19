@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="89" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e0af-67df-9d63-8fb7" name="Imperium - Space Marines" revision="93" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue" authorName="Acebaur">
   <categoryEntries>
     <categoryEntry id="539-7da4-d962-1a64" name="Primaris" hidden="false"/>
     <categoryEntry id="5179-8ede-45e3-49a2" name="Tacticus" hidden="false"/>
@@ -143,7 +143,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7047-73a6-28e-c859" shared="true" id="c30a-afe9-4196-4f08" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -157,7 +157,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7047-73a6-28e-c859" shared="true" id="5f75-ca47-28be-2060" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -245,13 +245,9 @@
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -309,13 +305,9 @@
     <entryLink import="true" name="Scout Sniper Squad [Legends]" hidden="false" type="selectionEntry" id="b90d-26e-4e1e-73ab" targetId="9a96-8de3-f4aa-7497">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -333,7 +325,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7047-73a6-28e-c859" shared="true" id="249-e740-fe4b-89ed" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -521,7 +513,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="7047-73a6-28e-c859" shared="true" id="5bc8-461e-d384-3518" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3956,7 +3948,7 @@ Strategic Reserves.</characteristic>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4459-12f0-bc-142b" shared="true" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4134,16 +4126,6 @@ Strategic Reserves.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="3de1-73e8-a0ae-a0ee" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="9f4f-6117-4373-ee52" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="6234-5199-ab0a-8828" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4518,13 +4500,6 @@ Strategic Reserves.</characteristic>
               </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
-          <profiles>
-            <profile name="Vanguard Assault" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ed7d-3a91-a740-9f7c">
-              <characteristics>
-                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this unit ends a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [LETHAL HITS] ability.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="d10a-7497-e931-228a"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="48a0-10f7-79e6-8f8"/>
@@ -5926,6 +5901,11 @@ by 1.</characteristic>
             <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="7228-47a6-c148-d1fa" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="65a3-8163-ad61-f5d7" targetId="7cb5-dd6b-dd87-ad3b"/>
@@ -6204,6 +6184,11 @@ by 1.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="bf3d-2d61-8c6b-d47f" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6539,7 +6524,7 @@ by 1.</characteristic>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="ffa1-3222-095a-afb5" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
@@ -8418,16 +8403,6 @@ by 1.</characteristic>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="2606-5906-323a-38f3" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="dab7-9be8-dc9-2d55" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="dab7-9be8-dc9-2d55" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile name="Assault Squad" typeId="c547-1836-d8a-ff4f" typeName="Unit" hidden="false" id="5a7b-fd6a-63d9-e93">
@@ -8464,7 +8439,7 @@ by 1.</characteristic>
             <characteristic name="S" typeId="ab33-d393-96ce-ccba">7</characteristic>
             <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-2</characteristic>
             <characteristic name="D" typeId="3254-9fe6-d824-513e">2</characteristic>
-            <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">Sustained Hits</characteristic>
+            <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">Sustained Hits 1</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8694,16 +8669,6 @@ by 1.</characteristic>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="force" childId="9ed-cbf4-bfe5-90bf" shared="true" id="1734-19f-201d-f146" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="f547-20a4-61e8-472b" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="0787-369a-0024-a462" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9078,16 +9043,6 @@ by 1.</characteristic>
         <modifier type="add" value="e9c7-1590-1bda-bf7f" field="category">
           <conditions>
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="846c-ef46-e8f5-52d8" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="a51b-2989-723e-43c0" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9595,7 +9550,7 @@ by 1.</characteristic>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="1e46-5062-680b-b5d8" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="true" field="hidden">
@@ -11259,16 +11214,6 @@ Normal move. If it does so, until the end of the turn, this unit is not eligible
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="d4dd-17d0-acd7-a00a" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="0bdb-5ab6-42de-36b8" includeChildSelections="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -14057,16 +14002,6 @@ Normal move. If it does so, until the end of the turn, this unit is not eligible
             <condition type="instanceOf" value="0" field="selections" scope="primary-catalogue" childId="470a-6daa-9014-12df" shared="true" includeChildSelections="false" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="f89b-84e0-6e3b-f1e2" shared="true" id="1163-b5b7-c810-f9f2" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="force" childId="4459-12f0-bc-142b" shared="true" id="943e-127b-47a3-c1c8" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stormhawk Interceptor" hidden="false" id="3d99-47aa-8cf3-883f">
@@ -16369,6 +16304,7 @@ Attacks characteristic of 7.</characteristic>
 
 ■ Assault Intercessor Squad
 ■ Desolation Squad
+■ Devastator Squad
 ■ Intercessor Squad
 ■ Tactical Squad</characteristic>
           </characteristics>
@@ -16639,7 +16575,7 @@ Attacks characteristic of 7.</characteristic>
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Priority Objective Identified [Aura]" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2288-75ee-5b84-2775">
+        <profile name="Priority Objective Identified" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="2288-75ee-5b84-2775">
           <characteristics>
             <characteristic name="Description" typeId="9b8f-694b-e5e-b573">At the start of the first battle round, if your army includes one or more models with this ability, you can select one objective marker on the battlefield. Until the end of the battle, while one or more models with this ability are on the battlefield, each time a friendly ADEPTUS ASTARTES model makes an attack that targets an enemy unit that is within range of that objective marker, re-roll a Wound roll of 1.</characteristic>
           </characteristics>
@@ -17811,6 +17747,7 @@ You can attach this model to one of the above units even if one Captain, Chapte
                 <entryLink import="true" name="Plasma Cannon" hidden="false" type="selectionEntry" id="e86a-b4bb-a085-bc98" targetId="47ef-a0e2-2cb0-845d"/>
                 <entryLink import="true" name="Power Weapon" hidden="false" type="selectionEntry" id="cea8-e281-b713-557a" targetId="a7b6-eeb7-d0e4-b84c"/>
                 <entryLink import="true" name="Thunder Hammer" hidden="false" type="selectionEntry" id="9ff3-e412-ae67-90dc" targetId="7ead-a4ee-c2e-fcf9"/>
+                <entryLink import="true" name="Plasma Gun" hidden="false" id="de66-f567-8e3c-1465" type="selectionEntry" targetId="4f0e-770d-bae4-bfc3"/>
               </entryLinks>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Astartes Shield" hidden="false" id="2075-16d6-3a7b-e138">
@@ -24598,7 +24535,7 @@ is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.
               <profiles>
                 <profile name="Eye of the Unseen" hidden="false" id="ab51-9f1e-c8ee-7900" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
                   <characteristics>
-                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Deathwing model only. Each time you target the bearer&apos;s unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you cain 1CP.</characteristic>
+                    <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Deathwing model only. Each time you target the bearer&apos;s unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

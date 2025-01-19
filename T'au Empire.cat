@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="68" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" library="false" id="d81a-61dd-6d27-a3ce" name="Xenos - T&apos;au Empire" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" revision="73" battleScribeVersion="2.03" authorContact="Dunamis55 &amp; AbonShell" authorName="BSData Developers" type="catalogue">
   <rules>
     <rule name="For The Greater Good" hidden="false" id="eeb6-c42-48f7-cc21">
       <description>If your Army Faction is T’AU EMPIRE, then in your Shooting phase units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy they are targeting is called their Spotted unit.
@@ -282,7 +282,7 @@ Until the end of the phase:
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="e6e-aad6-ee91-7c3c" shared="true" id="5c71-b554-47b9-2455" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="add" value="Cannot take COMMANDER FARSIGHT and an ETHEREAL in the same army." field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -404,6 +404,11 @@ Until the end of the phase:
         <cost name="Diplomatic Power" typeId="4d7c-04b6-8a79-837f" value="0"/>
         <cost name="Military Power" typeId="1cbe-d9c9-86a8-2d41" value="0"/>
       </costs>
+      <rules>
+        <rule name="Independent Power" id="1f2b-315c-b0e4-b993" hidden="false">
+          <description>If your army includes COMMANDER FARSIGHT, it cannot include any ETHEREAL units. If your army includes any ETHEREAL units, it cannot include COMMANDER FARSIGHT.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="T&apos;au flamer" hidden="false" id="6e8-cf2e-cedd-9028">
       <profiles>
@@ -2741,7 +2746,7 @@ Until the end of the phase:
         <categoryLink targetId="c619-2086-bbcf-69c9" id="bd2b-bc8b-2205-2740" primary="false" name="Fly"/>
         <categoryLink targetId="7288-48b3-c4df-66c6" id="93fb-728e-1485-f382" primary="false" name="Battlesuit"/>
         <categoryLink targetId="3d58-2655-391e-ecc" id="787b-6af8-b672-90bb" primary="false" name="Faction: T&apos;au Empire"/>
-        <categoryLink targetId="c043-d7fe-d0b2-6951" id="20ce-73a9-b7b1-47f9" primary="false" name="Commander in Enforcer Battlesuit"/>
+        <categoryLink name="Commander in Coldstar Battlesuit" hidden="false" id="5079-4e87-34c1-20ac" targetId="56c8-e8e0-6ef6-f050" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Deep Strike" hidden="false" type="rule" id="f2a1-5438-f96f-f7e2" targetId="7cb5-dd6b-dd87-ad3b"/>
@@ -4430,7 +4435,7 @@ Until the end of the phase:
         </entryLink>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="add" value="Cannot take COMMANDER FARSIGHT and an ETHEREAL in the same army." field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -4610,6 +4615,7 @@ Until the end of the phase:
         <infoLink name="Invulnerable Save (5+)" hidden="false" type="profile" id="3bd3-1b3c-41d6-a73" targetId="27f4-7449-a636-ae8c"/>
         <infoLink name="Void Combat Discipline" id="7265-7ba9-38c2-b972" hidden="false" type="rule" targetId="ea18-a384-82e6-1ef6"/>
         <infoLink name="Localised Stealth Projectors (Aura)" id="8409-5cfe-1acf-5a7c" hidden="false" type="profile" targetId="90e5-dc2f-1de3-1c06"/>
+        <infoLink name="For The Greater Good" id="4761-8404-ea96-bb79" hidden="false" type="rule" targetId="eeb6-c42-48f7-cc21"/>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Leader" hidden="false" id="5f04-86df-441e-8128">
@@ -4818,7 +4824,7 @@ Until the end of the phase:
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="519f-8c77-9188-2214" targetId="179c-d88a-d49b-48b9" sortIndex="1"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="add" value="Cannot take COMMANDER FARSIGHT and an ETHEREAL in the same army." field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -4965,7 +4971,7 @@ Until the end of the phase:
         <entryLink import="true" name="Warlord" hidden="false" type="selectionEntry" id="85be-24cf-12a2-b4ff" targetId="179c-d88a-d49b-48b9" sortIndex="1"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="add" value="Cannot take COMMANDER FARSIGHT and an ETHEREAL in the same army." field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -41316,7 +41322,7 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         <selectionEntry type="upgrade" import="true" name="Retaliation Cadre" id="3bae-cf7-b9e3-4f00">
           <rules>
             <rule name="Bonded Heroes" id="400b-c724-6710-76b1" hidden="false">
-              <description>Each time a T&apos;AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12&quot;, improve the Strength characteristic of that attack by 1. If that attack targets a unit within 6&quot;, improve the Armour Penetration characteristic of that attack by 1 as well.</description>
+              <description>Each time a T&apos;AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12&quot;, improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9&quot;, improve the Armour Penetration characteristic of that attack by 1 as well.</description>
             </rule>
           </rules>
           <modifiers>
