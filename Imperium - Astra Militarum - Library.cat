@@ -2166,6 +2166,12 @@
             </modifier>
           </modifiers>
           <comment>Crusade modifiers</comment>
+        </modifierGroup>
+      </modifierGroups>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Cadian Commander" id="9b16-d2ac-0438-bd82" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Cadian Commander" hidden="false" id="e830-b3b0-1c4f-cc0d">
               <categoryLinks>
                 <categoryLink name="Character" hidden="false" id="dec4-d17d-3287-89d" targetId="9cfd-1c32-585f-7d5c" primary="false"/>
                 <categoryLink name="Officer" hidden="false" id="c9df-57bb-1bcc-565d" targetId="e4d8-c6a1-7c23-ae25" primary="false"/>
@@ -19506,6 +19512,7 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+		</modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup type="and">

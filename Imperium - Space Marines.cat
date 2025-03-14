@@ -25792,54 +25792,6 @@ You can attach this model a unit it can lead even if one Captain or Chapter Mas
         <constraint type="max" value="0" field="716d-91b7-d55a-1022" scope="self" shared="true" id="a3eb-318b-0e88-2ceb" includeChildSelections="true"/>
         <constraint type="min" value="0" field="716d-91b7-d55a-1022" scope="self" shared="true" id="8629-83e0-e99d-0aa5" includeChildSelections="true"/>
       </constraints>
-<<<<<<< HEAD
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Master-crafted Special Issue Bolt Pistol" hidden="false" id="290f-d644-7a7e-24b">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="16a9-3ba1-a0bb-b2dd"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80d3-ba05-4a78-ce9e"/>
-          </constraints>
-          <profiles>
-            <profile name="Master-crafted Special Issue Bolt Pistol" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="e221-6f6-c7cc-ebad">
-              <characteristics>
-                <characteristic name="Range" typeId="9896-9419-16a1-92fc">12&quot;</characteristic>
-                <characteristic name="A" typeId="3bb-c35f-f54-fb08">1</characteristic>
-                <characteristic name="BS" typeId="94d-8a98-cf90-183e">2+</characteristic>
-                <characteristic name="S" typeId="2229-f494-25db-c5d3">4</characteristic>
-                <characteristic name="AP" typeId="9ead-8a10-520-de15">-1</characteristic>
-                <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-                <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Pistol, Precision</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Pistol" type="rule" id="9859-6097-dcae-e28e" targetId="8bf7-8812-923d-29e4"/>
-            <infoLink name="Precision" type="rule" id="f1ee-605-6db2-7515" targetId="9143-31ae-e0a6-6007"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Combat Knife" hidden="false" id="f65b-d0b3-8bff-a87b">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b893-8886-5a07-b002"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a4b-e3c5-b782-f0a"/>
-          </constraints>
-          <profiles>
-            <profile name="Combat Knife" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="5932-17d0-4002-8a70">
-              <characteristics>
-                <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
-                <characteristic name="A" typeId="2337-daa1-6682-b110">6</characteristic>
-                <characteristic name="WS" typeId="95d1-95f-45b4-11d6">2+</characteristic>
-                <characteristic name="S" typeId="ab33-d393-96ce-ccba">4</characteristic>
-                <characteristic name="AP" typeId="41a0-1301-112a-e2f2">-1</characteristic>
-                <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
-                <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">Precision</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Precision" type="rule" id="8720-d02-b289-d143" targetId="9143-31ae-e0a6-6007"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -25880,9 +25832,6 @@ You can attach this model a unit it can lead even if one Captain or Chapter Mas
             </modifier>
           </modifiers>
         </modifierGroup>
-      </modifierGroups>
-=======
-      <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="append" value="(Battle-ready)" field="name">
@@ -26014,7 +25963,6 @@ You can attach this model a unit it can lead even if one Captain or Chapter Mas
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
->>>>>>> refs/remotes/origin/main
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lieutenant in Phobos Armour" hidden="false" id="fe0e-6070-e7b-d4b8">
       <categoryLinks>
@@ -38277,6 +38225,19 @@ per turn.</characteristic>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set" value="1" field="651b-e57e-3bbc-1ca2"/>
+            <modifier type="decrement" value="1" field="651b-e57e-3bbc-1ca2">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+		<modifierGroup type="and">
           <modifiers>
             <modifier type="append" value="(Battle-ready)" field="name">
               <conditions>
@@ -38294,22 +38255,6 @@ per turn.</characteristic>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
-            </modifier>
-<<<<<<< HEAD
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="862c-087e-adf7-b57d" shared="true" includeChildForces="true" includeChildSelections="true"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" value="1" field="651b-e57e-3bbc-1ca2"/>
-            <modifier type="decrement" value="1" field="651b-e57e-3bbc-1ca2">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="roster" childId="9e9c-bf4d-2d40-be82" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
             </modifier>
             <modifier type="append" value="(Blooded)" field="name">
               <conditionGroups>

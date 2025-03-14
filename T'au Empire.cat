@@ -1736,8 +1736,6 @@ Until the end of the phase:
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-<<<<<<< HEAD
-=======
             <modifier type="append" value="(Battle-hardened)" field="name">
               <conditionGroups>
                 <conditionGroup type="and">
@@ -1780,7 +1778,6 @@ Until the end of the phase:
                 <repeat value="1" repeats="1" field="selections" scope="self" childId="d1a5-4297-168b-11cd" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
             </modifier>
->>>>>>> refs/remotes/origin/main
           </modifiers>
         </modifierGroup>
       </modifierGroups>

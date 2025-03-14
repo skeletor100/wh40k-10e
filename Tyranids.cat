@@ -9633,9 +9633,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildForces="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="da11-ca45-ee4a-bcfc" shared="true" includeChildForces="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
+			</conditionGroup>
+		  </conditionGroups>
+        </modifier>
+      </modifiers>
+	  <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="append" value="(Battle-ready)" field="name">
@@ -9927,8 +9929,8 @@
                   <entryLinks>
                     <entryLink import="true" name="Weapon Modifications" hidden="false" id="e625-0033-8b39-db26" type="selectionEntryGroup" targetId="f9da-852a-d7f0-92e9"/>
                   </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>

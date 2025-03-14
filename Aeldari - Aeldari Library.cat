@@ -3449,7 +3449,6 @@ While this model is leading a Striking Scorpions unit, it has the Infiltrators, 
             <condition type="atLeast" value="1" field="forces" scope="roster" childId="bb9d-299a-ed60-2d8a" shared="true"/>
           </conditions>
         </modifier>
-        </modifier>
         <modifier type="set" value="3" field="25f8-be58-e72e-6e57">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="be59-ec7d-2f02-b6ec" shared="true" includeChildForces="true" includeChildSelections="true"/>

@@ -1531,7 +1531,7 @@ In your Command phase, if your opponent has one or more Flux tokens, you gain on
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="4b2b-cbc7-911c-85c4" shared="true" includeChildSelections="true"/>
           </conditions>
-          <modifiers>
+		  <modifiers>
             <modifier type="set" value="1" field="8617-31f4-e81f-1248"/>
             <modifier type="set" value="0" field="8617-31f4-e81f-1248">
               <conditionGroups>
@@ -1544,7 +1544,9 @@ In your Command phase, if your opponent has one or more Flux tokens, you gain on
               </conditionGroups>
             </modifier>
           </modifiers>
-        </modifierGroup>
+        </modifier>
+	  </modifiers>
+	  <modifierGroups>
         <modifierGroup type="and">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ee2-d241-6af6-94a2" shared="true" includeChildSelections="true"/>
