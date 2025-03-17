@@ -17002,6 +17002,26 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boarding Action Warlord" hidden="false" id="17e2-f419-fcfb-64d1">
+      <categoryLinks>
+        <categoryLink name="Warlord" hidden="false" id="1f41-a387-2a38-42ae" targetId="5c0e-4c31-d51b-e470" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b6af-2c03-66dd-1535"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9cfd-1c32-585f-7d5c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Accelerator Rifle upgrade" hidden="false" id="e396-458e-e066-fdbb" collective="false">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
