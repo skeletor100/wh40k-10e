@@ -1933,7 +1933,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d28-f2a7-67c1-eb2e" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="653d-80-d715-7d55" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="913f-3cb6-fb80-7f6a" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d50-e535-616a-259c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b6b2-9971-ec0c-349e" shared="true"/>
                   </conditions>
@@ -2090,7 +2089,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="2b49-4d03-aaf5-3532" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="653d-80-d715-7d55" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="913f-3cb6-fb80-7f6a" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d50-e535-616a-259c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b6b2-9971-ec0c-349e" shared="true"/>
                   </conditions>
@@ -3532,7 +3530,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcda-f4bb-e726-9bfe" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a8d5-81f9-96a0-fd12" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -3552,7 +3549,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5500,7 +5496,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="2b49-4d03-aaf5-3532" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d28-f2a7-67c1-eb2e" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="913f-3cb6-fb80-7f6a" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d50-e535-616a-259c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b6b2-9971-ec0c-349e" shared="true"/>
                   </conditions>
@@ -6676,7 +6671,6 @@
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="2b49-4d03-aaf5-3532" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d28-f2a7-67c1-eb2e" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="653d-80-d715-7d55" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d50-e535-616a-259c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b6b2-9971-ec0c-349e" shared="true"/>
                   </conditions>
@@ -9416,7 +9410,6 @@ This model cannot be selected as your **^^Warlord^^**.</characteristic>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a8d5-81f9-96a0-fd12" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -9643,7 +9636,6 @@ This model cannot be selected as your **^^Warlord^^** and cannot be given Enhanc
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcda-f4bb-e726-9bfe" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a8d5-81f9-96a0-fd12" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -9663,7 +9655,6 @@ This model cannot be selected as your **^^Warlord^^** and cannot be given Enhanc
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf38-2338-aa71-ed56" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10029,7 +10020,6 @@ This model cannot be selected as your **^^Warlord^^** and cannot be given Enhanc
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcda-f4bb-e726-9bfe" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a8d5-81f9-96a0-fd12" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -10049,7 +10039,6 @@ This model cannot be selected as your **^^Warlord^^** and cannot be given Enhanc
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf38-2338-aa71-ed56" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10605,7 +10594,6 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcda-f4bb-e726-9bfe" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a8d5-81f9-96a0-fd12" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -10625,7 +10613,6 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="cf38-2338-aa71-ed56" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="a7c2-1534-93b0-c0eb" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11323,7 +11310,6 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcda-f4bb-e726-9bfe" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4ad0-e988-a513-9530" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="f556-a33d-dc90-d6fc" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7ea9-13aa-8aaf-645c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11671,7 +11657,6 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d28-f2a7-67c1-eb2e" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="653d-80-d715-7d55" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="913f-3cb6-fb80-7f6a" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="b6b2-9971-ec0c-349e" shared="true"/>
                   </conditions>
                 </conditionGroup>
@@ -13530,7 +13515,6 @@ While this unit is joined to a unit, it can embark within any **^^Transport^^** 
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d28-f2a7-67c1-eb2e" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="653d-80-d715-7d55" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="913f-3cb6-fb80-7f6a" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4683-67ac-7744-d5e3" shared="true"/>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d50-e535-616a-259c" shared="true"/>
                   </conditions>
                 </conditionGroup>

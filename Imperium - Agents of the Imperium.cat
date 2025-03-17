@@ -11824,12 +11824,6 @@ At the start of the Declare Battle Formations step, you can select one SISTERS O
           <comment>Inq + Agents</comment>
         </modifier>
         <modifier type="increment" value="1" field="2842-fde8-36ca-60f7">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="9d77-a14d-d0ca-088c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="701b-07a8-22cf-c3f0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" value="1" field="2842-fde8-36ca-60f7">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
