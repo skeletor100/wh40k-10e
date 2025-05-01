@@ -16158,17 +16158,15 @@ Designer’s Note: Place two Blacklight Marker Drone tokens next to this model, 
         <cost name="Diplomatic Power" typeId="4d7c-04b6-8a79-837f" value="0"/>
         <cost name="Military Power" typeId="1cbe-d9c9-86a8-2d41" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Crusade" hidden="false" id="67c1-a643-ca8e-65bc" type="selectionEntryGroup" targetId="bc88-2f42-15bd-1714" sortIndex="1"/>
+      </entryLinks>
       <modifiers>
         <modifier type="set" value="170" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="atLeast" value="4" field="selections" scope="self" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Crusade" hidden="false" id="67c1-a643-ca8e-65bc" type="selectionEntryGroup" targetId="bc88-2f42-15bd-1714" sortIndex="1"/>
-      </entryLinks>
-      <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="or">
