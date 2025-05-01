@@ -4783,7 +4783,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
                   <profiles>
                     <profile name="Cult Icon" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="4ed9-34a-7356-a80c">
                       <characteristics>
-                        <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Command phase, you can return up to 3 destroyed models to the bearer’s unit. If the bearer’s unit is within range of an objective marker you control, you can return up to D3+3 destroyed models to that unit instead. This ability cannot be used to return destroyed CHARACTER models in Attached units and any [ONE SHOT] weapons equipped with by returned models that were shot before they were destroyed are still considered to have been shot.</characteristic>
+                        <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, you can return up to 3 destroyed models to the bearer’s unit. If the bearer’s unit is within range of an objective marker you control, you can return up to D3+3 destroyed models to that unit instead. This ability cannot be used to return destroyed CHARACTER models in Attached units and any [ONE SHOT] weapons equipped with by returned models that were shot before they were destroyed are still considered to have been shot.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7237,7 +7237,7 @@ You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if
       <profiles>
         <profile name="Cult Icon" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="22c6-be05-5fd4-ebc8">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In the Command phase, you can return up to D3 destroyed models to the bearer’s unit. If the bearer’s unit is within range of an objective marker you control, you can return up to 3 destroyed models to that unit instead. This ability cannot be used to return destroyed CHARACTER models in Attached units and any [ONE SHOT] weapons equipped with by returned models that were shot before they were destroyed are still considered to have been shot.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">In your Command phase, you can return up to D3 destroyed models to the bearer’s unit. If the bearer’s unit is within range of an objective marker you control, you can return up to 3 destroyed models to that unit instead. This ability cannot be used to return destroyed CHARACTER models in Attached units and any [ONE SHOT] weapons equipped with by returned models that were shot before they were destroyed are still considered to have been shot.</characteristic>
           </characteristics>
         </profile>
       </profiles>
