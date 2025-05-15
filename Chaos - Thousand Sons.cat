@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="43" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="1069-10ff-3ba9-873b" name="Chaos - Thousand Sons" revision="44" battleScribeVersion="2.03" library="false" gameSystemId="sys-352e-adc2-7639-d6a9" gameSystemRevision="1" type="catalogue">
   <publications>
     <publication id="015a-6212-d737-9044" name="Index - Thousand Sons"/>
   </publications>
@@ -315,7 +315,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5006-5ba3-4f99-7ce1" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="16cb-7eb7-e9fc-f7ea" name="Cult of Magic" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="16cb-7eb7-e9fc-f7ea" name="Grand Coven" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
@@ -392,6 +392,51 @@
                   <description>Each time a THOUSAND SONS models from your army makes an attack while firing Overwatch, an unmodified Hit roll of 5+ is required to score a hit, instead of an unmodified 6. In addition, SCARAB OCCULT TERMINATORS units from your army can perform the Set Overwatch Tactical Manoeuvre in the same turn as performing the Secure Site Tactical Manoeuvre</description>
                 </rule>
               </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warpmeld Pact" hidden="false" id="18c3-42ce-bb0f-542a" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Kindred Sorcery" id="559c-d7f4-4e13-1652" hidden="false" type="rule" targetId="4258-60ff-8457-a123"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rubricae Phalanx" hidden="false" id="c701-e965-9624-b0fe" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Kindred Sorcery" id="1af5-5123-ebab-b007" hidden="false" type="rule" targetId="4258-60ff-8457-a123"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warpforged Cabal" hidden="false" id="06f3-6eab-5d1c-4cfd" collective="false">
+              <costs>
+                <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Kindred Sorcery" id="24bb-612c-134b-c987" hidden="false" type="rule" targetId="4258-60ff-8457-a123"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1d6e-2579-8e7f-1ed4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -580,7 +625,7 @@
         <entryLink id="1a04-3d6d-9c8f-08e8" name="Warlord" hidden="false" collective="false" import="true" targetId="a021-c1a0-c35c-f10f" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -1106,7 +1151,7 @@
         <entryLink id="32a6-87d1-264f-3814" name="Havoc launcher" hidden="false" collective="false" import="true" targetId="6cce-b8be-75bc-c249" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="135"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -1386,7 +1431,12 @@
         <entryLink id="0624-7c56-316a-8415" name="Havoc launcher" hidden="false" collective="false" import="true" targetId="6cce-b8be-75bc-c249" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="90"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+        <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1843,7 +1893,11 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="190"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="165"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
@@ -2014,7 +2068,7 @@
         <entryLink id="c184-aa8c-0332-da76" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="80"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -2279,7 +2333,7 @@
         <entryLink id="58c8-75d4-a684-c507" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="115"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -2445,7 +2499,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="145"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -2802,7 +2856,11 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <selectionEntries>
@@ -2946,7 +3004,12 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="195"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="215"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+        <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -3090,7 +3153,7 @@
         <entryLink id="d4f9-d775-ee24-ba0d" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -3346,7 +3409,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="465"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="420"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -3483,7 +3546,11 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="140"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="130"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
@@ -3635,7 +3702,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="165"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="160"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -3659,7 +3726,7 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rubric Marines" hidden="false" id="5d3d-e13b-8b76-dad3" publicationId="015a-6212-d737-9044" page="43-44">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="110"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="100"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -3667,7 +3734,7 @@
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="200" field="51b2-306e-1021-d207">
+        <modifier type="set" value="190" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="5d3d-e13b-8b76-dad3" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -4073,7 +4140,7 @@
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="360" field="51b2-306e-1021-d207">
+        <modifier type="set" value="375" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="5" field="selections" scope="b1cf-c5-5121-92a4" childId="model" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -4605,7 +4672,7 @@ Wound roll.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="75"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -4659,7 +4726,7 @@ Wound roll.</characteristic>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Thousand Sons Sorcerer in Terminator Armour" hidden="false" id="c6d1-e73b-9d26-5d8b" publicationId="015a-6212-d737-9044" page="49-50">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="105"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="85"/>
         <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
         <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
         <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
@@ -5278,7 +5345,11 @@ Wound roll.</characteristic>
         <entryLink id="ad33-2eb7-442a-621c" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
       <modifiers>
@@ -5407,7 +5478,11 @@ Wound roll.</characteristic>
         <entryLink id="b870-1d36-cda9-a3db" name="Enhancements" hidden="false" collective="false" import="true" targetId="25f1-9949-5ee8-8b93" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="180"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="170"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="2"/>
       </costs>
       <modifiers>
@@ -5623,7 +5698,11 @@ Wound roll.</characteristic>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tzaangor Shaman" hidden="false" id="c251-bd54-441-4799">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="60"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="55"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
         <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="1"/>
       </costs>
       <constraints>
@@ -5748,10 +5827,15 @@ Wound roll.</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tzaangors" hidden="false" id="f5b9-50c8-5c60-d8ea">
       <costs>
-        <cost name="pts" typeId="51b2-306e-1021-d207" value="65"/>
+        <cost name="pts" typeId="51b2-306e-1021-d207" value="70"/>
+        <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+        <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+        <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+        <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+        <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="120" field="51b2-306e-1021-d207">
+        <modifier type="set" value="160" field="51b2-306e-1021-d207">
           <conditions>
             <condition type="greaterThan" value="10" field="selections" scope="f5b9-50c8-5c60-d8ea" childId="model" shared="true" id="ece4-2cf1-277-83d0" includeChildSelections="true"/>
           </conditions>
@@ -6943,7 +7027,7 @@ Wound roll.</characteristic>
         <constraint field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3a6-0da1-ace0-94eb" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="eef6-4b12-1eff-f412" name="Lord of Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eef6-4b12-1eff-f412" name="Incandaeum" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -6967,7 +7051,11 @@ Wound roll.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="51b2-306e-1021-d207" value="35"/>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
             <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
           </costs>
         </selectionEntry>
@@ -6993,7 +7081,7 @@ Wound roll.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry id="7213-a7b3-4c8e-96bc" name="Arcane Vortex" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7213-a7b3-4c8e-96bc" name="Flowing Flesh" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e272-466e-d1b3-7d71" type="max"/>
           </constraints>
@@ -7005,18 +7093,27 @@ Wound roll.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
             <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="18c3-42ce-bb0f-542a" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="527e-a024-3c7f-e5df" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry id="1150-7501-d526-d373" name="Athenaen Scrolls" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1150-7501-d526-d373" name="Lord of Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -7150,6 +7247,358 @@ Wound roll.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warpmeld Dagger" hidden="false" id="eae4-ed35-651d-42a1" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="cb3d-63f3-3a6f-6f2d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="37f7-416c-eb58-6961">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="18c3-42ce-bb0f-542a" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="527e-a024-3c7f-e5df" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Diamond of Distortion" hidden="false" id="419a-a310-5727-bf39" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fd4e-450e-da30-fac9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ab09-2f44-e18a-d869">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="18c3-42ce-bb0f-542a" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="527e-a024-3c7f-e5df" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Eldritch Vortex of E&apos;taph" hidden="false" id="d540-47fa-9c81-9873" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b213-87e3-b025-5fe4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="ab27-44d5-b090-9b5e">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="25"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="16cb-7eb7-e9fc-f7ea" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bray Lord" hidden="false" id="b8d9-809d-eab9-4210" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="95ec-38f8-23ec-de3a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="66a4-a009-be27-5055">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="18c3-42ce-bb0f-542a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="14c6-7790-6e57-92b9" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="3789-4546-1d0a-f02b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rubricae Risen" hidden="false" id="3cc9-96ee-c3e2-0079" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ac63-4599-400b-3c9b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a6a6-2a31-9a3c-464c">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="30"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="c701-e965-9624-b0fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Arcane Thralls (Aura)" hidden="false" id="453d-727a-2d02-b735" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="28c7-a78b-a69f-4873" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="544a-8431-eca1-7929">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="5"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="c701-e965-9624-b0fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lord of the Rubricae" hidden="false" id="09eb-74b9-9151-8f61" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b4b1-c6f7-7f0c-df79" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="a9f5-7d32-0e46-911f">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="c701-e965-9624-b0fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Stave Abominus" hidden="false" id="1ff3-2a43-7699-bd2c" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8411-868b-5d58-135e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="855e-bbdb-7ce4-130e">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="c701-e965-9624-b0fe" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="cf47-a0d7-7207-29dc" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warp Syphon" hidden="false" id="fa4c-fffe-1efa-dd7e" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2d22-a834-2b5f-19f6" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="eea0-b840-6805-36eb">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="5"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="06f3-6eab-5d1c-4cfd" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Perplexing Cloak" hidden="false" id="2537-7530-bf3e-efc9" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d7cc-978e-a995-413d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="5da1-dcbc-e117-9af8">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="20"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="06f3-6eab-5d1c-4cfd" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="cf47-a0d7-7207-29dc" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Biomechanical Mutation" hidden="false" id="4e84-846c-a2f7-8431" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="82e0-17fe-ad9a-d7b9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6342-76a1-90be-590a">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="15"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="06f3-6eab-5d1c-4cfd" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warp-Cursed Runemaster" hidden="false" id="d2f6-b3a5-a667-57a3" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="de35-61db-aa87-d310" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Arcane Vortex" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities" hidden="false" id="6aa9-0e6d-bca5-95ef">
+              <characteristics>
+                <characteristic name="Description" typeId="9b8f-694b-e5e-b573">THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="51b2-306e-1021-d207" value="10"/>
+            <cost name="Crusade Points" typeId="b03b-c239-15a5-da55" value="0"/>
+            <cost name="Crusade: Battle Honours" typeId="75bb-ded1-c86d-bdf0" value="0"/>
+            <cost name="Crusade: Experience" typeId="a623-fe74-1d33-cddf" value="0"/>
+            <cost name="Crusade: Weapon Modifications" typeId="716d-91b7-d55a-1022" value="0"/>
+            <cost name="Cabal Points" typeId="5878-a561-3259-89b6" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="06f3-6eab-5d1c-4cfd" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
