@@ -6775,7 +6775,7 @@
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sekhetar Robots" hidden="false" id="a322-1a51-1c28-bd62" collective="false" publicationId="015a-6212-d737-9044" page="31-32">
+    <selectionEntry type="unit" import="true" name="Sekhetar Robots" hidden="false" id="a322-1a51-1c28-bd62" collective="false" publicationId="015a-6212-d737-9044" page="31-32">
       <constraints>
         <constraint type="max" value="3" field="selections" scope="force" shared="true" id="399c-236c-562d-249c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
