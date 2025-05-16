@@ -6899,6 +6899,10 @@
               </selectionEntryGroups>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Hellfyre missile rack" hidden="false" id="7789-e538-29a6-5802">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abae-71fb-adbb-a14c"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1829-bf8f-24a3-3d3c"/>
+                  </constraints>
                   <profiles>
                     <profile name="Hellfyre missile rack" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="ff30-0a86-73d5-f23b">
                       <characteristics>
@@ -6933,6 +6937,10 @@
                   </profiles>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Heavy Warpflamer" hidden="false" id="ce88-0900-93f8-3817">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b746-ec32-5394-9a86"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86cf-fd4f-9529-d975"/>
+                  </constraints>
                   <profiles>
                     <profile name="Heavy Warpflamer" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="015e-2638-82a8-3643">
                       <characteristics>
