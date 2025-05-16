@@ -480,14 +480,14 @@
             <characteristic name="OC" typeId="bef7-942a-1a23-59f8">2</characteristic>
           </characteristics>
         </profile>
-        <profile id="8f1d-56cb-a37f-2a5e" name="Rubric Lord" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
+        <profile id="8f1d-56cb-a37f-2a5e" name="Scryer of Fates (Psychic)" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserve if you wish, regardless of how many units are already in Strategic Reserves.</characteristic>
           </characteristics>
         </profile>
         <profile id="e117-9164-7606-ef92" name="Arch-Sorcerer of Tzeentch (Psychic)" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
           <characteristics>
-            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Once per battle, you can select this model to use a Ritual for 0 Cabal points (see Cabal of Sorcerers). If you do, all the other rules for using Rituals still apply.</characteristic>
+            <characteristic name="Description" typeId="9b8f-694b-e5e-b573">Each time this model attempts a Ritual, add 1 to the Psychic test result.</characteristic>
           </characteristics>
         </profile>
         <profile id="2c8e-c194-2a9b-e9ba" name="Invulnerable Save" hidden="false" typeId="9cc3-6d83-4dd3-9b64" typeName="Abilities">
