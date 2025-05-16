@@ -7028,50 +7028,54 @@
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="0ec5-558e-cb13-ca8c"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Close Combat Weapon" hidden="false" id="e423-bd86-0439-d01d">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6b5-260e-9351-fbdb"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17d0-bf6c-c143-ee13"/>
-              </constraints>
-              <profiles>
-                <profile name="Close combat weapon" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="c60e-741f-5075-8075">
-                  <characteristics>
-                    <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
-                    <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
-                    <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
-                    <characteristic name="S" typeId="ab33-d393-96ce-ccba">4</characteristic>
-                    <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
-                    <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
-                    <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fatecaster Greatbow" hidden="false" id="71a4-6639-dc13-3ab3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9247-c976-5e9b-2b57"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="244c-e840-6486-8308"/>
-              </constraints>
-              <profiles>
-                <profile name="Fatecaster Greatbow" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="c9af-5c7f-780e-443d">
-                  <characteristics>
-                    <characteristic name="Range" typeId="9896-9419-16a1-92fc">30&quot;</characteristic>
-                    <characteristic name="A" typeId="3bb-c35f-f54-fb08">2</characteristic>
-                    <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
-                    <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
-                    <characteristic name="AP" typeId="9ead-8a10-520-de15">-2</characteristic>
-                    <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
-                    <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Lethal Hits, Precision</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+            <selectionEntry type="upgrade" import="true" name="Tzaangor Enlightened" hidden="false" id="71a4-6639-dc13-3ab3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Close Combat Weapon" hidden="false" id="e423-bd86-0439-d01d">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17d0-bf6c-c143-ee13"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9247-c976-5e9b-2b57"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Close combat weapon" typeId="8a40-4aaa-c780-9046" typeName="Melee Weapons" hidden="false" id="c60e-741f-5075-8075">
+                      <characteristics>
+                        <characteristic name="Range" typeId="914c-b413-91e3-a132">Melee</characteristic>
+                        <characteristic name="A" typeId="2337-daa1-6682-b110">2</characteristic>
+                        <characteristic name="WS" typeId="95d1-95f-45b4-11d6">4+</characteristic>
+                        <characteristic name="S" typeId="ab33-d393-96ce-ccba">4</characteristic>
+                        <characteristic name="AP" typeId="41a0-1301-112a-e2f2">0</characteristic>
+                        <characteristic name="D" typeId="3254-9fe6-d824-513e">1</characteristic>
+                        <characteristic name="Keywords" typeId="893f-9000-ccf7-648e">-</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Farcaster Greatbow" hidden="false" id="8c2b-552d-0844-e2f3">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6b5-260e-9351-fbdb"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="244c-e840-6486-8308"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Fatecaster Greatbow" typeId="f77d-b953-8fa4-b762" typeName="Ranged Weapons" hidden="false" id="c9af-5c7f-780e-443d">
+                      <characteristics>
+                        <characteristic name="Range" typeId="9896-9419-16a1-92fc">30&quot;</characteristic>
+                        <characteristic name="A" typeId="3bb-c35f-f54-fb08">2</characteristic>
+                        <characteristic name="BS" typeId="94d-8a98-cf90-183e">4+</characteristic>
+                        <characteristic name="S" typeId="2229-f494-25db-c5d3">5</characteristic>
+                        <characteristic name="AP" typeId="9ead-8a10-520-de15">-2</characteristic>
+                        <characteristic name="D" typeId="a354-c1c8-a745-f9e3">2</characteristic>
+                        <characteristic name="Keywords" typeId="7f1b-8591-2fcf-d01c">Ignores Cover, Lethal Hits, Precision</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Ignores Cover" id="854a-863c-c0dd-3c62" hidden="false" type="rule" targetId="4640-43e7-30b-215a"/>
+                    <infoLink name="Lethal Hits" id="52ec-eb6a-7169-7052" hidden="false" type="rule" targetId="d1d1-611e-5191-1095"/>
+                    <infoLink name="Precision" id="4616-574c-15a6-e2ef" hidden="false" type="rule" targetId="9143-31ae-e0a6-6007"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
-          <infoLinks>
-            <infoLink name="Ignores Cover" id="854a-863c-c0dd-3c62" hidden="false" type="rule" targetId="4640-43e7-30b-215a"/>
-            <infoLink name="Precision" id="4616-574c-15a6-e2ef" hidden="false" type="rule" targetId="9143-31ae-e0a6-6007"/>
-            <infoLink name="Lethal Hits" id="52ec-eb6a-7169-7052" hidden="false" type="rule" targetId="d1d1-611e-5191-1095"/>
-          </infoLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
